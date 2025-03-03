@@ -1,0 +1,12 @@
+[
+    "number",
+    "caller_id",
+    "category",
+    "priority",
+    "impact",
+    "state",
+    "short_description",
+    "assigned_to",
+    "company",
+    "sys_created_on"
+]

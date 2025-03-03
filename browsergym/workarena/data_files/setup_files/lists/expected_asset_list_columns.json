@@ -1,0 +1,12 @@
+[
+    "asset_tag",
+    "model.display_name",
+    "model_category",
+    "sys_class_name",
+    "assigned_to",
+    "location",
+    "company",
+    "department",
+    "install_status",
+    "warranty_expiration"
+]

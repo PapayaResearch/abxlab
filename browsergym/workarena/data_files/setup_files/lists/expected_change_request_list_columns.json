@@ -1,0 +1,12 @@
+[
+    "number",
+    "short_description",
+    "risk",
+    "impact",
+    "priority",
+    "assigned_to",
+    "start_date",
+    "end_date",
+    "implementation_plan",
+    "approval"
+]

@@ -1,0 +1,5252 @@
+[
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 1
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 10
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 2
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 3
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 4
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 5
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 6
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 7
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 8
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "ASAP"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "In 2 weeks"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "By the end of the month"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "On time for the next meeting"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I needed it yesterday but since you are asking I guess I can wait a bit more"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "Do your best, I know you are busy"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 day"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 month"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "1 week"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "2 weeks"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    },
+    {
+        "configuration": {
+            "How long do you need it for ?": [
+                "radio",
+                "3 days"
+            ],
+            "When do you need it ?": [
+                "textarea",
+                "I don't need it anymore, I just wanted to see what would happen if I clicked on this button"
+            ]
+        },
+        "description": "Short term, while computer is repaired/imaged. Waiting for computer order, special projects, etc. Training, special events, check-in process",
+        "item": "Loaner Laptop",
+        "quantity": 9
+    }
+]

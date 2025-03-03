@@ -68,12 +68,36 @@ AgentLab Features:
 AgentLab requires python 3.11 or 3.12.
 
 ```bash
-
+git submodule update --init --recursive
 ```
 
 ```bash
-pip install agentlab
+pip install -r requirements.txt
 ```
+
+```bash
+cd browsergym
+pip install -e .
+cd ..
+```
+
+```bash
+cd nudgingarena
+pip install -e .
+cd ..
+```
+
+```bash
+cd agentlab
+pip install -e .
+cd ..
+```
+
+To avoid error of playwright version, install an earlier version.
+```bash
+pip install playwright==1.49.0
+```
+
 
 If not done already, install Playwright:
 ```bash
@@ -81,51 +105,95 @@ playwright install
 ```
 
 Make sure to prepare the required benchmark according to the instructions provided in the [setup
-column](#-supported-benchmarks).
+column](#-supported-benchmarks). This is for the preparation of results inspection (using AgentXray, etc.).
 
 ```bash
 export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # defaults to $HOME/agentlab_results
 export OPENAI_API_KEY=<your openai api key> # if openai models are used
 ```
 
-
-## 🛠️ Setup AgentLab
-
-AgentLab requires python 3.11 or 3.12.
-
+Test run with the nudgingarena benchmark.
 ```bash
-pip install agentlab
+python agent_lab_run.py
 ```
 
-If not done already, install Playwright:
+If you are on a remote server, you can try the following command to run the experiment.
 ```bash
-playwright install
+xvfb-run python agent_lab_run.py
 ```
 
-Make sure to prepare the required benchmark according to the instructions provided in the [setup
-column](#-supported-benchmarks).
+### Configure a new nudge
 
+Currently, the nudgingarena_tiny benchmark is used for testing. To configure a new nudge, you need to add the paths to your config files at browsergym/experiments/benchmark/configs.py:
+
+```python
+"nudgingarena_tiny": lambda: Benchmark(
+        name="nudgingarena_tiny",
+        high_level_action_set_args=DEFAULT_HIGHLEVEL_ACTION_SET_ARGS["webarena"],
+        is_multi_tab=True,
+        supports_parallel_seeds=False,
+        backends=["nudgingarena"],
+        env_args_list=make_env_args_list_from_nudging_configs(
+            config_files=[
+                "config_files/test_shop.json",
+            ],
+            max_steps=30,
+        ),
+        task_metadata=pd.DataFrame([
+            {
+                "task_name": "nudgingarena.shopping-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            }
+        ])
+    ),
+```
+
+Also, you need to register each task (as specified in the config files) as a gym environment in browsergym/nudgingarena/__init__.py following the example:
+
+```python
+# Register task using webarena-style format
+task_id = "nudgingarena.shopping-v0"  # Use dot notation like webarena.{task_id}
+
+print("Registering nudgingarena task")
+
+config_path = Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_shop.json"
+
+# Register nudgingarena task with config
+register_task(
+    task_id,
+    task.GenericWebArenaTask,
+    task_kwargs={"config_file": str(config_path)},
+)
+
+```
+
+### AgentXray
+
+https://github.com/user-attachments/assets/06c4dac0-b78f-45b7-9405-003da4af6b37
+
+In a terminal, execute:
 ```bash
 export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # defaults to $HOME/agentlab_results
-export OPENAI_API_KEY=<your openai api key> # if openai models are used
+cd agent_lab_exp
+agentlab-xray
 ```
 
-<details>
-<summary>Setup OpenRouter API</summary>
+You can load previous or ongoing experiments in the directory `AGENTLAB_EXP_ROOT` and visualize
+the results in a gradio interface.
 
-```bash
-export OPENROUTER_API_KEY=<your openrouter api key> # if openrouter models are used
-```
-</details>
+In the following order, select:
+* The experiment you want to visualize
+* The agent if there is more than one
+* The task
+* And the seed
 
-<details>
-<summary>Setup Azure API</summary>
+Once this is selected, you can see the trace of your agent on the given task. Click on the profiling
+image to select a step and observe the action taken by the agent.
 
-```bash
-export AZURE_OPENAI_API_KEY=<your azure api key> # if using azure models
-export AZURE_OPENAI_ENDPOINT=<your endpoint> # if using azure models
-```
-</details>
+
+**⚠️ Note**: Gradio is still developing, and unexpected behavior has been frequently noticed. Version 5.5 seems to work properly so far. If you're not sure that the proper information is displaying, refresh the page and select your experiment again.
+
 
 ## 🤖 UI-Assistant 
 
@@ -226,30 +294,6 @@ step_0_screenshot = exp_result.screenshots[0]
 step_0_action = exp_result.steps_info[0].action
 ```
 
-
-### AgentXray
-
-https://github.com/user-attachments/assets/06c4dac0-b78f-45b7-9405-003da4af6b37
-
-In a terminal, execute:
-```bash
-agentlab-xray
-```
-
-You can load previous or ongoing experiments in the directory `AGENTLAB_EXP_ROOT` and visualize
-the results in a gradio interface.
-
-In the following order, select:
-* The experiment you want to visualize
-* The agent if there is more than one
-* The task
-* And the seed
-
-Once this is selected, you can see the trace of your agent on the given task. Click on the profiling
-image to select a step and observe the action taken by the agent.
-
-
-**⚠️ Note**: Gradio is still developing, and unexpected behavior has been frequently noticed. Version 5.5 seems to work properly so far. If you're not sure that the proper information is displaying, refresh the page and select your experiment again.
 
 
 ## 🏆 Leaderboard

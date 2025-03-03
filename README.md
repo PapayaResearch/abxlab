@@ -63,6 +63,32 @@ AgentLab Features:
 | [MiniWoB](https://miniwob.farama.org/index.html) | [setup](https://github.com/ServiceNow/BrowserGym/blob/main/browsergym/miniwob/README.md) | 125 | Medium | 10 | no | self hosted (static files) | soon |
 
 
+## Setup AgentLab With NudgingArena
+
+AgentLab requires python 3.11 or 3.12.
+
+```bash
+
+```
+
+```bash
+pip install agentlab
+```
+
+If not done already, install Playwright:
+```bash
+playwright install
+```
+
+Make sure to prepare the required benchmark according to the instructions provided in the [setup
+column](#-supported-benchmarks).
+
+```bash
+export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # defaults to $HOME/agentlab_results
+export OPENAI_API_KEY=<your openai api key> # if openai models are used
+```
+
+
 ## 🛠️ Setup AgentLab
 
 AgentLab requires python 3.11 or 3.12.

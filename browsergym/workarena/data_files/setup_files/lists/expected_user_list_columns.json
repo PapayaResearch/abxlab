@@ -1,0 +1,12 @@
+[
+    "user_name",
+    "name",
+    "email",
+    "avatar",
+    "title",
+    "company",
+    "department",
+    "location",
+    "time_zone",
+    "phone"
+]

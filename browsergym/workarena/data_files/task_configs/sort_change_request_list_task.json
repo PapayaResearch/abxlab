@@ -1,0 +1,1652 @@
+[
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "active"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "active"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (descending)\n - Approval set (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "active",
+            "approval_set"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (descending)\n - Change plan (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "active",
+            "change_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (descending)\n - Delivery plan (ascending)\n - Active (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "type",
+            "delivery_plan",
+            "active"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (ascending)\n - Requested by (ascending)\n - Description (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "active",
+            "requested_by",
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (ascending)\n - Planned end date (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "active",
+            "end_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Impact (ascending)\n - Active (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "impact",
+            "active"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (ascending)\n - Priority (descending)\n - Justification (ascending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "active",
+            "priority",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Active (ascending)\n - Opened (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "active",
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval (ascending)\n - Category (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "approval",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Model (descending)\n - Close code (ascending)\n - Approval (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "chg_model",
+            "close_code",
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (ascending)\n - Approval (descending)\n - Conflict last run (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "state",
+            "approval",
+            "conflict_last_run"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Delivery task (ascending)\n - Approval (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "delivery_task",
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (ascending)\n - Approval (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "knowledge",
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Approval (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "approval"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval set (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "approval_set"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval set (descending)\n - Created (ascending)\n - Assignment group (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "approval_set",
+            "sys_created_on",
+            "assignment_group"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (descending)\n - Approval set (descending)\n - Close notes (ascending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "approval_set",
+            "close_notes"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (ascending)\n - Requested by (descending)\n - Approval set (ascending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "number",
+            "requested_by",
+            "approval_set"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Approval set (descending)\n - Planned start date (descending)\n - Opened (ascending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "approval_set",
+            "start_date",
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Assigned to (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "assigned_to"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Assigned to (ascending)\n - Assignment group (ascending)\n - Category (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "assigned_to",
+            "assignment_group",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Assigned to (descending)\n - Backout plan (descending)\n - Opened (ascending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "assigned_to",
+            "backout_plan",
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Assigned to (descending)\n - Planned start date (ascending)\n - Model (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "assigned_to",
+            "start_date",
+            "chg_model"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Delivery plan (ascending)\n - Requested by (ascending)\n - Assigned to (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "delivery_plan",
+            "requested_by",
+            "assigned_to"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Assigned to (ascending)\n - Justification (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "assigned_to",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (ascending)\n - Assigned to (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "type",
+            "assigned_to"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Assignment group (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "assignment_group"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Change plan (ascending)\n - Opened (ascending)\n - Assignment group (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "change_plan",
+            "opened_at",
+            "assignment_group"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (descending)\n - Assignment group (descending)\n - Contact type (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "phase",
+            "assignment_group",
+            "contact_type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created (descending)\n - Assignment group (ascending)\n - Justification (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "sys_created_on",
+            "assignment_group",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Opened (descending)\n - Assignment group (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "opened_at",
+            "assignment_group"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Backout plan (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "backout_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Backout plan (ascending)\n - Opened (descending)\n - Contact type (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "backout_plan",
+            "opened_at",
+            "contact_type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Planned end date (descending)\n - Backout plan (ascending)\n - Created (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "end_date",
+            "backout_plan",
+            "sys_created_on"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Impact (descending)\n - Backout plan (descending)\n - Opened by (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "impact",
+            "backout_plan",
+            "opened_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Requested by (ascending)\n - Backout plan (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "requested_by",
+            "backout_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Category (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (descending)\n - Change plan (ascending)\n - Category (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "knowledge",
+            "change_plan",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Close code (ascending)\n - Risk (ascending)\n - Category (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "close_code",
+            "risk",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Conflict status (descending)\n - Opened by (ascending)\n - Category (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "conflict_status",
+            "opened_by",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Escalation (ascending)\n - Category (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "escalation",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Escalation (ascending)\n - Category (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "escalation",
+            "category"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Change plan (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "change_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Change plan (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "change_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Change plan (ascending)\n - Close code (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "number",
+            "change_plan",
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Change plan (ascending)\n - Delivery task (descending)\n - Closed by (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "change_plan",
+            "delivery_task",
+            "closed_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Model (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "chg_model"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (ascending)\n - Model (ascending)\n - Close code (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "knowledge",
+            "chg_model",
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed by (descending)\n - Conflict status (descending)\n - Model (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "closed_by",
+            "conflict_status",
+            "chg_model"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Opened by (ascending)\n - Model (descending)\n - Conflict last run (ascending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "opened_by",
+            "chg_model",
+            "conflict_last_run"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Reassignment count (descending)\n - Model (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "reassignment_count",
+            "chg_model"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Close code (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Conflict status (ascending)\n - Close code (ascending)\n - Description (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "conflict_status",
+            "close_code",
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (ascending)\n - Close code (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "number",
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Reassignment count (descending)\n - Opened by (ascending)\n - Close code (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "reassignment_count",
+            "opened_by",
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Requested by (ascending)\n - Created (ascending)\n - Close code (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "requested_by",
+            "sys_created_on",
+            "close_code"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Close notes (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "close_notes"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Close notes (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "close_notes"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "closed_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "closed_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (ascending)\n - Created (descending)\n - Closed (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "sys_created_on",
+            "closed_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Delivery task (ascending)\n - Closed (ascending)\n - Phase state (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "delivery_task",
+            "closed_at",
+            "phase_state"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Planned end date (descending)\n - Closed by (descending)\n - Conflict last run (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "end_date",
+            "closed_by",
+            "conflict_last_run"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed by (ascending)\n - Description (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "closed_by",
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed by (descending)\n - Made SLA (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "closed_by",
+            "made_sla"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed by (descending)\n - Planned start date (ascending)\n - Phase state (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "closed_by",
+            "start_date",
+            "phase_state"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Closed by (ascending)\n - Reassignment count (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "closed_by",
+            "reassignment_count"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Short description (descending)\n - Closed by (descending)\n - Effective number (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "short_description",
+            "closed_by",
+            "task_effective_number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (descending)\n - Contact type (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "contact_type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (ascending)\n - Planned end date (descending)\n - Phase state (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "end_date",
+            "phase_state"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (ascending)\n - Made SLA (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "made_sla"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Configuration item (ascending)\n - Priority (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "cmdb_ci",
+            "priority"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)\n - Description (ascending)\n - Conflict last run (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "phase",
+            "description",
+            "conflict_last_run"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Conflict status (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "conflict_status"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (descending)\n - Conflict status (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "phase",
+            "conflict_status"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Conflict status (descending)\n - Risk (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "conflict_status",
+            "risk"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (ascending)\n - Impact (ascending)\n - Contact type (descending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "impact",
+            "contact_type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created (descending)\n - Contact type (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "sys_created_on",
+            "contact_type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)\n - Delivery plan (ascending)\n - Planned end date (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "phase",
+            "delivery_plan",
+            "end_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Delivery plan (descending)\n - Opened by (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "delivery_plan",
+            "opened_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (descending)\n - Delivery plan (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "state",
+            "delivery_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (descending)\n - Delivery plan (descending)\n - Effective number (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "state",
+            "delivery_plan",
+            "task_effective_number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created by (descending)\n - Delivery plan (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "sys_created_by",
+            "delivery_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Delivery task (descending)\n - Made SLA (descending)\n - Opened (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "delivery_task",
+            "made_sla",
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (descending)\n - Delivery task (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "phase",
+            "delivery_task"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Description (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Description (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Description (descending)\n - Justification (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "description",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase state (descending)\n - Description (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "phase_state",
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Short description (ascending)\n - Description (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "short_description",
+            "description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Planned end date (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "end_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (ascending)\n - Planned end date (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "number",
+            "end_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (descending)\n - Planned end date (ascending)\n - Actual end date (descending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "type",
+            "end_date",
+            "work_end"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Escalation (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "escalation"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual start date (descending)\n - Escalation (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "work_start",
+            "escalation"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Impact (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "impact"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Impact (ascending)\n - Opened by (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "impact",
+            "opened_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (descending)\n - Impact (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "state",
+            "impact"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Implementation plan (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "implementation_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Implementation plan (ascending)\n - Opened by (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "implementation_plan",
+            "opened_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)\n - Priority (descending)\n - Implementation plan (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "phase",
+            "priority",
+            "implementation_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Implementation plan (descending)\n - Risk (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "implementation_plan",
+            "risk"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (ascending)\n - Implementation plan (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "type",
+            "implementation_plan"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)\n - Planned start date (descending)\n - Justification (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "phase",
+            "start_date",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Short description (descending)\n - Justification (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "short_description",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Effective number (ascending)\n - Justification (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "task_effective_number",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Effective number (descending)\n - Justification (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "task_effective_number",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual end date (ascending)\n - Justification (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "work_end",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual end date (descending)\n - Justification (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "work_end",
+            "justification"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "knowledge"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (descending)\n - Requested by (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "knowledge",
+            "requested_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Knowledge (ascending)\n - Effective number (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc"
+        ],
+        "sort_fields": [
+            "knowledge",
+            "task_effective_number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Made SLA (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "made_sla"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (ascending)\n - Requested by (descending)\n - Planned start date (descending)",
+        "sort_dirs": [
+            "asc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "requested_by",
+            "start_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Short description (descending)\n - Actual start date (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "number",
+            "short_description",
+            "work_start"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Number (descending)\n - Actual start date (ascending)\n - Planned start date (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "number",
+            "work_start",
+            "start_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Opened (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Opened (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)\n - Opened (ascending)",
+        "sort_dirs": [
+            "asc",
+            "asc"
+        ],
+        "sort_fields": [
+            "phase",
+            "opened_at"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Opened by (descending)\n - Risk (ascending)",
+        "sort_dirs": [
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "opened_by",
+            "risk"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "phase"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "phase"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Phase (descending)\n - Planned start date (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "phase",
+            "start_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Priority (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "priority"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Priority (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "priority"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (descending)\n - Priority (descending)",
+        "sort_dirs": [
+            "desc",
+            "desc"
+        ],
+        "sort_fields": [
+            "state",
+            "priority"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Reassignment count (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "reassignment_count"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Requested by (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "requested_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Requested by (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "requested_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Risk (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "risk"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Short description (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "short_description"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Planned start date (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "start_date"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created by (descending)\n - Planned start date (descending)\n - Created (ascending)",
+        "sort_dirs": [
+            "desc",
+            "desc",
+            "asc"
+        ],
+        "sort_fields": [
+            "sys_created_by",
+            "start_date",
+            "sys_created_on"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "state"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - State (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "state"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created by (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "sys_created_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created by (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "sys_created_by"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Created (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "sys_created_on"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Effective number (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "task_effective_number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Effective number (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "task_effective_number"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Type (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "type"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual end date (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "work_end"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual start date (ascending)",
+        "sort_dirs": [
+            "asc"
+        ],
+        "sort_fields": [
+            "work_start"
+        ]
+    },
+    {
+        "goal": "Sort the \"change requests\" list by the following fields:\n - Actual start date (descending)",
+        "sort_dirs": [
+            "desc"
+        ],
+        "sort_fields": [
+            "work_start"
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+[
+    "display_name",
+    "model_category",
+    "serial_number",
+    "assigned_to",
+    "company",
+    "cost_center",
+    "install_status",
+    "ci",
+    "purchase_date",
+    "warranty_expiration"
+]

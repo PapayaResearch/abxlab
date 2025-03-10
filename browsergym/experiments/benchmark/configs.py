@@ -164,13 +164,49 @@ DEFAULT_BENCHMARKS = {
         backends=["nudgingarena"],
         env_args_list=make_env_args_list_from_nudging_configs(
             config_files=[
-                "config_files/test_shop.json",
+                "config_files/test_default_product_quantity.json",
+                "config_files/shipping_example.json",
+                "config_files/test_product_rating.json",
+                "config_files/test_product_reviews.json",
+                "config_files/test_shop_description.json",
+                "config_files/test_shop_pricing.json",
+                "config_files/test_shop_title.json",
             ],
             max_steps=30,
         ),
         task_metadata=pd.DataFrame([
             {
-                "task_name": "nudgingarena.shopping-v0",
+                "task_name": "nudgingarena.DefaultProductQuantity-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.ShippingExample-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.TestProductRating-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.TestProductReviews-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.TestShopDescription-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.TestShopPricing-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+            {
+                "task_name": "nudgingarena.TestShopTitle-v0",
                 "task_category": "shopping",
                 "browsergym_split": "train"
             }

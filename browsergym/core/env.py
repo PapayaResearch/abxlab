@@ -659,7 +659,7 @@ document.addEventListener("visibilitychange", () => {
                 pass
             
             if request.resource_type == "document":
-                print(f"Document request detected for {request.url}")
+                # print(f"Document request detected for {request.url}")
                 response = route.fetch()
                 if response.ok:
                     # print(f"Response OK, status: {response.status}")
@@ -671,7 +671,7 @@ document.addEventListener("visibilitychange", () => {
                         (c for c in choices if c["url"] == request.url),
                         None
                     )
-                    print(f"Found choice for URL {request.url}: {bool(choice)}")
+                    # print(f"Found choice for URL {request.url}: {bool(choice)}")
 
                     if choice:
                         try:

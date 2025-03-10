@@ -124,49 +124,61 @@ xvfb-run python agent_lab_run.py
 
 ### Configure a new nudge
 
-Currently, the nudgingarena_tiny benchmark is used for testing. To configure a new nudge, you need to add the paths to your config files at browsergym/experiments/benchmark/configs.py:
+Currently, the nudgingarena_tiny benchmark is used for testing. To configure a new nudge, you need to follow the steps:
+
+1. Register each task (as specified in the config files) as a gym environment in browsergym/nudgingarena/__init__.py:
 
 ```python
-"nudgingarena_tiny": lambda: Benchmark(
-        name="nudgingarena_tiny",
-        high_level_action_set_args=DEFAULT_HIGHLEVEL_ACTION_SET_ARGS["webarena"],
-        is_multi_tab=True,
-        supports_parallel_seeds=False,
-        backends=["nudgingarena"],
-        env_args_list=make_env_args_list_from_nudging_configs(
-            config_files=[
-                "config_files/test_shop.json",
-            ],
-            max_steps=30,
-        ),
-        task_metadata=pd.DataFrame([
-            {
-                "task_name": "nudgingarena.shopping-v0",
-                "task_category": "shopping",
-                "browsergym_split": "train"
-            }
-        ])
-    ),
-```
-
-Also, you need to register each task (as specified in the config files) as a gym environment in browsergym/nudgingarena/__init__.py following the example:
-
-```python
-# Register task using webarena-style format
-task_id = "nudgingarena.shopping-v0"  # Use dot notation like webarena.{task_id}
-
-print("Registering nudgingarena task")
-
-config_path = Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_shop.json"
-
-# Register nudgingarena task with config
 register_task(
-    task_id,
+    "nudgingarena.DefaultProductQuantity-v0",
     task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(config_path)},
+    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_default_product_quantity.json")},
 )
 
 ```
+
+2. Add the paths and task metadata to your config files at browsergym/experiments/benchmark/configs.py. Note that the paths and task name should be consistent with the task registration in step 1.
+
+```python
+env_args_list=make_env_args_list_from_nudging_configs(
+            config_files=[
+                "config_files/test_default_product_quantity.json",
+                "config_files/shipping_example.json",
+                "config_files/test_product_rating.json",
+                "config_files/test_product_reviews.json",
+                "config_files/test_shop_description.json",
+                "config_files/test_shop_pricing.json",
+                "config_files/test_shop_title.json",
+            ],
+```
+
+```python
+task_metadata=pd.DataFrame([
+    {
+                "task_name": "nudgingarena.DefaultProductQuantity-v0",
+                "task_category": "shopping",
+                "browsergym_split": "train"
+            },
+    ...
+])
+```
+
+3. Update the task names and config files in browsergym/experiments/benchmark/utils.py:
+
+```python
+config_to_task = {
+        "config_files/test_default_product_quantity.json": "nudgingarena.DefaultProductQuantity-v0",
+        "config_files/shipping_example.json": "nudgingarena.ShippingExample-v0",
+        "config_files/test_product_rating.json": "nudgingarena.TestProductRating-v0",
+        "config_files/test_product_reviews.json": "nudgingarena.TestProductReviews-v0",
+        "config_files/test_shop_description.json": "nudgingarena.TestShopDescription-v0",
+        "config_files/test_shop_pricing.json": "nudgingarena.TestShopPricing-v0",
+        "config_files/test_shop_title.json": "nudgingarena.TestShopTitle-v0",
+    }
+```
+
+
+
 
 ### AgentXray
 

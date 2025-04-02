@@ -1,3 +1,3 @@
 [submodule "nudgingarena"]
 	path = nudgingarena
-	url = https://github.com/PapayaResearch/nudgingarena.git
+	url = git@github.com:PapayaResearch/nudgingarena.git

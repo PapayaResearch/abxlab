@@ -1,10 +1,14 @@
 import base64
 import os
+import sys
 import traceback
 from copy import deepcopy
 from io import BytesIO
 from logging import warning
 from pathlib import Path
+
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
 
 import gradio as gr
 import matplotlib.patches as patches
@@ -16,6 +20,7 @@ from browsergym.experiments.loop import ExpResult, StepInfo
 from langchain.schema import BaseMessage, HumanMessage
 from openai import OpenAI
 from PIL import Image
+
 
 from agentlab.analyze import inspect_results
 from agentlab.experiments.exp_utils import RESULTS_DIR

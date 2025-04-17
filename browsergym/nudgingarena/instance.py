@@ -7,7 +7,7 @@ import requests
 
 logger = logging.getLogger(__name__)
 
-ENV_VARS = ("SHOPPING", "SHOPPING_ADMIN", "REDDIT", "GITLAB", "WIKIPEDIA", "MAP", "HOMEPAGE")
+ENV_VARS = ("SHOPPING",)
 
 
 class WebArenaInstance:
@@ -34,23 +34,13 @@ class WebArenaInstance:
 
         # import webarena on instanciation
         from nudgingarena.browser_env.env_config import (
-            ACCOUNTS,
-            GITLAB,
             HOMEPAGE,
-            MAP,
-            REDDIT,
             SHOPPING,
-            SHOPPING_ADMIN,
-            WIKIPEDIA,
+            ACCOUNTS
         )
 
         self.urls = {
-            "reddit": REDDIT,
-            "gitlab": GITLAB,
             "shopping": SHOPPING,
-            "shopping_admin": SHOPPING_ADMIN,
-            "wikipedia": WIKIPEDIA,
-            "map": MAP,
         }
         self.home_url = HOMEPAGE
 

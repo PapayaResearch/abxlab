@@ -32,50 +32,7 @@ except:
 
 
 register_task(
-    "nudgingarena.DefaultProductQuantity-v0",
+    "nudgingarena.BestsellerProduct-v0",
     task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_default_product_quantity.json")},
+    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_bestseller_product.json")},
 )
-
-register_task(
-    "nudgingarena.ShippingExample-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "shipping_example.json")},
-)
-
-register_task(
-    "nudgingarena.TestProductRating-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_product_rating.json")},
-)
-
-
-register_task(
-    "nudgingarena.TestProductReviews-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_product_reviews.json")},
-)
-
-
-register_task(
-    "nudgingarena.TestShopDescription-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_shop_description.json")},
-)
-
-
-register_task(
-    "nudgingarena.TestShopPricing-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_shop_pricing.json")},
-)
-
-
-register_task(
-    "nudgingarena.TestShopTitle-v0",
-    task.GenericWebArenaTask,
-    task_kwargs={"config_file": str(Path(__file__).parent.parent.parent / "nudgingarena" / "config_files" / "test_shop_title.json")},
-)
-
-
-

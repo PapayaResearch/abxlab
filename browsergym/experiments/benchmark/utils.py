@@ -111,13 +111,7 @@ def make_env_args_list_from_nudging_configs(config_files: list[str], max_steps: 
 
     # Mapping of config files to their corresponding task names
     config_to_task = {
-        "config_files/test_default_product_quantity.json": "nudgingarena.DefaultProductQuantity-v0",
-        "config_files/shipping_example.json": "nudgingarena.ShippingExample-v0",
-        "config_files/test_product_rating.json": "nudgingarena.TestProductRating-v0",
-        "config_files/test_product_reviews.json": "nudgingarena.TestProductReviews-v0",
-        "config_files/test_shop_description.json": "nudgingarena.TestShopDescription-v0",
-        "config_files/test_shop_pricing.json": "nudgingarena.TestShopPricing-v0",
-        "config_files/test_shop_title.json": "nudgingarena.TestShopTitle-v0",
+        "config_files/test_bestseller_product.json": "nudgingarena.BestsellerProduct-v0",
     }
 
     for config_file in config_files:
@@ -268,7 +262,7 @@ def prepare_backend(backend: str):
                 [
                     f"nudgingarena.{id}"
                     for id in [
-                        "DefaultProductQuantity",  # shopping
+                        "BestsellerProduct",  # shopping
                     ]
                 ]
             )

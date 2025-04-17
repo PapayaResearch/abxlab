@@ -102,13 +102,13 @@ def make_env_args_list_from_fixed_seeds(
 def make_env_args_list_from_nudging_configs(config_files: list[str], max_steps: int) -> list[EnvArgs]:
     """
     Create a list of EnvArgs for nudging arena tasks based on config files.
-    
+
     Args:
         config_files: List of config file paths relative to nudgingarena/config_files/
         max_steps: Maximum number of steps per episode
     """
     env_args_list = []
-    
+
     # Mapping of config files to their corresponding task names
     config_to_task = {
         "config_files/test_default_product_quantity.json": "nudgingarena.DefaultProductQuantity-v0",
@@ -119,13 +119,13 @@ def make_env_args_list_from_nudging_configs(config_files: list[str], max_steps: 
         "config_files/test_shop_pricing.json": "nudgingarena.TestShopPricing-v0",
         "config_files/test_shop_title.json": "nudgingarena.TestShopTitle-v0",
     }
-    
+
     for config_file in config_files:
         if config_file not in config_to_task:
             raise ValueError(f"Unknown config file: {config_file}. Must be one of: {list(config_to_task.keys())}")
-            
+
         task_name = config_to_task[config_file]
-        
+
         env_args = EnvArgs(
             task_name=task_name,
             task_seed=0,
@@ -139,7 +139,7 @@ def make_env_args_list_from_nudging_configs(config_files: list[str], max_steps: 
             task_kwargs=None
         )
         env_args_list.append(env_args)
-    
+
     return env_args_list
 
 
@@ -266,13 +266,13 @@ def prepare_backend(backend: str):
             )
             massage_tasks(
                 [
-                    f"webarena.{id}"
+                    f"nudgingarena.{id}"
                     for id in [
-                        276,  # shopping
+                        "DefaultProductQuantity",  # shopping
                     ]
                 ]
             )
-            
+
         case _:
             raise NotImplementedError(f"Unknown benchmark backend {repr(backend)}")
 

@@ -9,7 +9,7 @@ import numpy as np
 import playwright.sync_api
 
 from browsergym.core.task import AbstractBrowserTask
-from browsergym.webarena.instance import WebArenaInstance
+from browsergym.nudgingarena.instance import WebArenaInstance
 
 logger = logging.getLogger(__name__)
 

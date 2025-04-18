@@ -14,4 +14,10 @@ setup(
         'peft',
         'einops',
     ],
+    entry_points={
+        'console_scripts': [
+            'agentlab-assistant = ui_assistant:main',
+            'agentlab-xray = analyze.agent_xray:main',
+        ],
+    },
 ) 

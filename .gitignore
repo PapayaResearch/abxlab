@@ -170,3 +170,4 @@ results/
 .gradio/
 
 agent_lab_exp/
+trajectories_human/

@@ -33,11 +33,13 @@ class WebArenaInstance:
             os.environ[key] = os.environ[append_wa(key)]
 
         # import webarena on instanciation
+        # print("importing nudgingarena.browser_env ###################################################################################")
         from nudgingarena.browser_env.env_config import (
             HOMEPAGE,
             SHOPPING,
             ACCOUNTS
         )
+        # print("imported nudgingarena.browser_env ###################################################################################")
 
         self.urls = {
             "shopping": SHOPPING,
@@ -137,7 +139,9 @@ class WebArenaInstance:
         """
         for site, url in self.urls.items():
             try:
+                print(f"trying to reach {url}")
                 requests.get(url, timeout=timeout)
+                print(f"Reached {url}")
             except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
                 raise RuntimeError(
                     f'WebArena site "{site}" ({url}) is not reacheable. Please check the URL.'

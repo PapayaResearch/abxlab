@@ -184,12 +184,21 @@ config_to_task = {
 
 https://github.com/user-attachments/assets/06c4dac0-b78f-45b7-9405-003da4af6b37
 
+Make sure that you have 'agentlab-xray = analyze.agent_xray:main' in the agenlab/agentlab.egg-info/entry_points.txt file.
+
+
 In a terminal, execute:
 ```bash
 export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # defaults to $HOME/agentlab_results
 cd agent_lab_exp
 agentlab-xray
 ```
+
+You can also run the following command to run it
+```bash
+python agentlab/analyze/agent_xray.py
+```
+
 
 You can load previous or ongoing experiments in the directory `AGENTLAB_EXP_ROOT` and visualize
 the results in a gradio interface.

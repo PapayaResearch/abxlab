@@ -63,6 +63,13 @@ CHAT_MODEL_ARGS_DICT = {
         max_input_tokens=16_384,
         max_new_tokens=4096,
     ),
+    "openai/o1-mini": OpenAIModelArgs(
+        model_name="openai/o1-mini",
+        max_total_tokens=128_000,
+        max_input_tokens=128_000,
+        max_new_tokens=64_000,
+        temperature=1e-1,
+    ),
     "azure/gpt-35-turbo/gpt-35-turbo": AzureModelArgs(
         model_name="gpt-35-turbo",
         deployment_name="gpt-35-turbo",
@@ -176,6 +183,14 @@ CHAT_MODEL_ARGS_DICT = {
         max_input_tokens=30_000,
         max_new_tokens=2_000,
         temperature=1e-1,
+    ),
+    "openrouter/anthropic/claude-3.7-sonnet": OpenRouterModelArgs(
+        model_name="anthropic/claude-3.7-sonnet",
+        max_total_tokens=200_000,
+        max_input_tokens=200_000,
+        max_new_tokens=8_192,
+        temperature=1e-1,
+        vision_support=True,
     ),
     "openrouter/openai/o1-mini-2024-09-12": OpenRouterModelArgs(
         model_name="openai/o1-mini-2024-09-12",

@@ -1,1 +1,1 @@
-TASK_IDS = [276]
+TASK_IDS = range(812)

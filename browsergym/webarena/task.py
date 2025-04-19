@@ -48,7 +48,7 @@ class GenericWebArenaTask(AbstractBrowserTask):
             )
 
         # read the list of all webarena task configs
-        import nudgingarena as webarena
+        import webarena
 
         all_configs_str = importlib.resources.files(webarena).joinpath("test.raw.json").read_text()
 
@@ -87,7 +87,7 @@ class GenericWebArenaTask(AbstractBrowserTask):
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
         # import webarena on instanciation
-        from nudgingarena.evaluation_harness.evaluators import evaluator_router
+        from webarena.evaluation_harness.evaluators import evaluator_router
 
         # pick a task at random
         self.config = self.random.choice(self.task_configs)
@@ -167,7 +167,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
                 return 0, True, "", {"error": "Unauthorized url, terminating task"}
 
         # import webarena dynamically
-        from nudgingarena.browser_env.actions import ActionTypes
+        from webarena.browser_env.actions import ActionTypes
 
         # if any, use the last assistant message as the stop answer for webarena
         if chat_messages and chat_messages[-1]["role"] == "assistant":

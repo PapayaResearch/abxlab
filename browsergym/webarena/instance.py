@@ -33,7 +33,7 @@ class WebArenaInstance:
             os.environ[key] = os.environ[append_wa(key)]
 
         # import webarena on instanciation
-        from nudgingarena.browser_env.env_config import (
+        from webarena.browser_env.env_config import (
             ACCOUNTS,
             GITLAB,
             HOMEPAGE,
@@ -187,7 +187,7 @@ class WebArenaInstance:
                 username = self.credentials[site]["username"]
                 password = self.credentials[site]["password"]
 
-                page.goto(f"{url}/customer/account/login/", timeout=50000)
+                page.goto(f"{url}/customer/account/login/")
                 page.get_by_label("Email", exact=True).fill(username)
                 page.get_by_label("Password", exact=True).fill(password)
                 page.get_by_role("button", name="Sign In").click()

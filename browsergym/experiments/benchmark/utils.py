@@ -1,11 +1,11 @@
 import logging
+import multiprocessing as mp
 import os
-from typing import Literal
 import traceback
+import typing
+from typing import Literal
 
-import gymnasium as gym
 import numpy as np
-import pandas as pd
 
 from browsergym.experiments.loop import SEED_MAX, EnvArgs
 
@@ -73,7 +73,7 @@ def make_env_args_list_from_repeat_tasks(
 
 
 def make_env_args_list_from_fixed_seeds(
-    task_list: list[str], max_steps: int, fixed_seeds: list[int]
+    task_list: list[str], max_steps: int, fixed_seeds: list[int], n_repeats: int = 1
 ):
     """
     Generates a list of `len(task_list)` time `n_repeats` environments arguments, using randomly generated seeds.
@@ -81,20 +81,21 @@ def make_env_args_list_from_fixed_seeds(
     env_args_list = []
     for task in task_list:
         for seed in fixed_seeds:
-            env_args_list.append(
-                EnvArgs(
-                    task_name=task,
-                    task_seed=int(seed),
-                    max_steps=max_steps,
-                    headless=True,
-                    record_video=False,
-                    wait_for_user_message=False,
-                    viewport=None,
-                    slow_mo=None,
-                    storage_state=None,
-                    task_kwargs=None,
+            for _ in range(n_repeats):
+                env_args_list.append(
+                    EnvArgs(
+                        task_name=task,
+                        task_seed=int(seed),
+                        max_steps=max_steps,
+                        headless=True,
+                        record_video=False,
+                        wait_for_user_message=False,
+                        viewport=None,
+                        slow_mo=None,
+                        storage_state=None,
+                        task_kwargs=None,
+                    )
                 )
-            )
 
     return env_args_list
 
@@ -162,18 +163,15 @@ def prepare_backend(backend: str):
             massage_tasks(
                 [
                     f"webarena.{id}"
-                    # for id in [
-                    #     410,  # reddit
-                    #     533,  # gitlab
-                    #     561,  # gitlab wiki
-                    #     562,  # gitlab reddit
-                    #     574,  # shopping
-                    #     640,  # reddit
-                    #     680,  # shopping_admin
-                    #     740,  # wiki map
-                    # ]
                     for id in [
-                        276,  # shopping
+                        410,  # reddit
+                        533,  # gitlab
+                        561,  # gitlab wiki
+                        562,  # gitlab reddit
+                        574,  # shopping
+                        640,  # reddit
+                        680,  # shopping_admin
+                        740,  # wiki map
                     ]
                 ]
             )
@@ -256,7 +254,7 @@ def prepare_backend(backend: str):
             default_instance.full_reset()
 
             logging.info(
-                f"Initiating WebArena instance warm-up. Some tasks will be pre-loaded (massaged) to trigger some caching mechanisms and make the server more responsive."
+                f"Initiating NudgingArena instance warm-up. Some tasks will be pre-loaded (massaged) to trigger some caching mechanisms and make the server more responsive."
             )
             massage_tasks(
                 [
@@ -271,34 +269,74 @@ def prepare_backend(backend: str):
             raise NotImplementedError(f"Unknown benchmark backend {repr(backend)}")
 
 
-def massage_tasks(task_ids: list[str], max_retries: int = 1):
+def massage_tasks(task_ids: list[str], max_retries: int = 1, timeout: int = 60):
     for i, task_id in enumerate(task_ids):
-        gym_id = f"browsergym/{task_id}"
-        logger.info(f"Massaging task {i + 1} / {len(task_ids)}: {gym_id}")
-        task_retries = 0
-        while True:
-            env = gym.make(gym_id)
-            try:
-                env.reset()  # task setup
-                try:
-                    no_action = "noop()"
-                    # check if action space exists and is compatible with "noop()"
-                    env.unwrapped.action_mapping(no_action)
-                except:
-                    # fallback plan
-                    no_action = ""
-                env.step(no_action)  # task validation
-                env.step(no_action)  # task validation again
-                logger.info(f"Massage successful")
+        logger.info(f"Massaging task {i + 1} / {len(task_ids)}: {task_id}")
+        for retries in range(max_retries + 1):
+            outcome, err_msg = massage_task_within_subprocess(task_id=task_id, timeout=timeout)
+            if outcome == "success":
                 break
-            except Exception as e:
-                if task_retries < max_retries:
-                    task_retries += 1
-                    logger.info(f"Massage failed, retrying ({task_retries} / {max_retries})")
-                    continue
-                else:
-                    logger.error(f"Error during task massage after {task_retries} retries ({gym_id}): {str(e)}")
-                    logger.error(f"Full traceback:\n{traceback.format_exc()}")
-                    break
-            finally:
-                env.close()
+            if retries < max_retries:
+                logger.info(
+                    f"Massage resulted in {outcome}, retrying ({retries + 1} / {max_retries} retries)"
+                )
+            else:
+                logger.warning(
+                    f"Massage unsuccessful after {retries} retries, skipping. Last error message: {err_msg}"
+                )
+
+
+def run_massage(outcome_queue: mp.Queue, task_id: str):
+    import gymnasium as gym
+
+    gym_id = f"browsergym/{task_id}"
+    env = gym.make(gym_id)
+    no_action = "noop()"
+    # check if action space exists and is compatible with "noop()"
+    try:
+        env.unwrapped.action_mapping(no_action)
+    except:
+        no_action = ""  # fallback plan
+    # run massage
+    try:
+        env.reset()  # task setup
+        env.step(no_action)  # task validation
+        env.step(no_action)  # task validation again
+        outcome = "success", None
+    except Exception as e:
+        outcome = "exception", traceback.format_exception(e)
+    finally:
+        env.close()
+        outcome_queue.put(outcome)
+
+
+def massage_task_within_subprocess(
+    task_id: str, timeout: int, kill_timeout: int = 10
+) -> typing.Tuple[str, str]:
+    """Massages a BrowserGym task (reset, noop, noop) inside a subprocess to monitor execution
+    times and kill the process after a timeout.
+
+    Returns: an (outcome, err_msg) tuple.
+      - outcome: the outcome of the massage, one of 'success', 'exception' or 'timeout'.
+      - err_msg: error message if any, or None.
+    """
+
+    queue = mp.Queue()
+    process = mp.Process(target=run_massage, args=(queue, task_id))
+    process.start()
+    process.join(timeout=timeout)
+
+    if process.is_alive():
+        # if the process is still alive after the timeout
+        outcome = "timeout", f"Timeout {timeout} seconds exceeded"
+        process.kill()
+        process.join(timeout=kill_timeout)
+        if process.is_alive():
+            # if the process is still alive after the kill
+            logger.warning(
+                f"Massage sub-process still alive {kill_timeout} seconds after kill(), you might have a zombie process now."
+            )
+    else:
+        outcome = queue.get_nowait()
+
+    return outcome

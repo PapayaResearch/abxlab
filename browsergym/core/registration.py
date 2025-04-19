@@ -50,6 +50,7 @@ def register_task(
         *kwargs: additional keyword arguments for either the gym or the browsergym environment.
     """
     if task_kwargs and default_task_kwargs:
+        # check overlap between frozen and default task_kwargs
         clashing_kwargs = set(task_kwargs) & set(default_task_kwargs)
         if clashing_kwargs:
             raise ValueError(
@@ -77,7 +78,7 @@ def register_task(
         task_entrypoint = task_class
         task_entrypoint = frozen_partial(task_class, **task_kwargs)
         task_entrypoint = partial(task_entrypoint, **default_task_kwargs)
-        
+
         gym.register(
             id=f"browsergym/{id}",
             entry_point=lambda *env_args, **env_kwargs: BrowserEnv(
@@ -90,5 +91,3 @@ def register_task(
             *args,
             **kwargs,
         )
-
-    print(f"Registered task {id} with kwargs {task_kwargs}")

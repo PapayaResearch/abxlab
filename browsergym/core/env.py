@@ -175,7 +175,7 @@ class BrowserEnv(gym.Env, ABC):
         self.action_space = Unicode()
 
         print("Initializing BrowserEnv with task_kwargs:", task_kwargs)
-        
+
         # Load config file if specified in task_kwargs
         self.config = None
         if task_kwargs.get("config_file"):
@@ -185,13 +185,13 @@ class BrowserEnv(gym.Env, ABC):
                 with open(config_path, "r") as f:
                     self.config = json.load(f)
                     print(f"Loaded config with choices: {bool('choices' in self.config)}")
-                    
+
                     # Store full config for environment use (like route handler)
                     self.env_config = {**task_kwargs, **self.config}
-                    
+
                     # Only pass config_file to task
                     self.task_kwargs = {"config_file": task_kwargs["config_file"]}
-                    
+
                     print("Task kwargs:", self.task_kwargs)
             else:
                 logger.warning(f"Config file {config_path} does not exist")
@@ -231,10 +231,8 @@ class BrowserEnv(gym.Env, ABC):
             self.chat.close()
             self.browser.close()
 
-        # Create task with only config_file
+        # create a new task
         self.task = self.task_entrypoint(seed=seed, **self.task_kwargs)
-        print(f"Task created with kwargs: {self.task_kwargs}")
-        print(f"Task start URL: {self.task.start_url if hasattr(self.task, 'start_url') else 'Not set'}")
 
         def override_property(task, env, property):
             """Extract property value from env if not None, otherwise from task."""
@@ -394,7 +392,6 @@ document.addEventListener("visibilitychange", () => {
         self.last_action = ""
         self.last_action_error = ""
         self.infeasible_message_received = False
-
 
         # if asked, wait for user message
         self._wait_for_user_message()
@@ -594,7 +591,7 @@ document.addEventListener("visibilitychange", () => {
                     or "Cannot read properties of undefined" in err_msg
                 ):
                     logger.warning(
-                        f"An error occured while extracting the dom and axtree. Retrying ({retries_left}/{EXTRACT_OBS_MAX_TRIES} tries left).\n{repr(e)}"
+                        f"An error occurred while extracting the dom and axtree. Retrying ({retries_left}/{EXTRACT_OBS_MAX_TRIES} tries left).\n{repr(e)}"
                     )
                     # post-extract cleanup (ARIA attributes)
                     _post_extract(self.page)
@@ -635,29 +632,29 @@ document.addEventListener("visibilitychange", () => {
         if not context:
             print("No context found")
             return
-        
+
         # Use env_config instead of task_kwargs for choices
         choices = self.env_config.get("choices")
         print(f"Setting up route handler with choices: {choices}")
         target_url = choices[0]["url"] if choices else None
         print(f"Target URL for modification: {target_url}")
-        
+
         if not choices:
             logger.debug("No choices found in config")
             print("No choices found in config")
             return
-        
+
         def modify_html(route, request):
             # print(f"Processing request for URL: {request.url}")
             # print(f"Request type: {request.resource_type}")
             # print(f"Request method: {request.method}")
             # print(f"Request headers: {request.headers}")
-            
+
             # Check if URL matches exactly
             if request.url == target_url:
                 # print(f"Found exact match for target URL!")
                 pass
-            
+
             if request.resource_type == "document":
                 # print(f"Document request detected for {request.url}")
                 response = route.fetch()
@@ -665,7 +662,7 @@ document.addEventListener("visibilitychange", () => {
                     # print(f"Response OK, status: {response.status}")
                     html = response.body()
                     # print(f"HTML length: {len(html)}")
-                    
+
                     # Find matching choice architecture for current URL
                     choice = next(
                         (c for c in choices if c["url"] == request.url),
@@ -681,7 +678,7 @@ document.addEventListener("visibilitychange", () => {
                                 module_name = func_config.get("module")
                                 func_name = func_config.get("name")
                                 args = func_config.get("args", {})
-                                
+
                                 print(f"Attempting to import {module_name}")
                                 try:
                                     # Try importing from nudgingarena first
@@ -690,11 +687,11 @@ document.addEventListener("visibilitychange", () => {
                                     except ImportError:
                                         # If that fails, try direct import
                                         module = importlib.import_module(module_name)
-                                    
+
                                     print(f"Successfully imported {module_name}")
                                     func = getattr(module, func_name)
                                     print(f"Found function {func_name}")
-                                    
+
                                     html = func(html, **args)
                                     print(f"Successfully applied {module_name}.{func_name}")
                                 except ImportError as e:
@@ -709,7 +706,7 @@ document.addEventListener("visibilitychange", () => {
                                     logger.error(f"Error applying function {module_name}.{func_name}: {e}")
                                     print(f"Function error: {e}")
                                     continue
-                            
+
                             route.fulfill(
                                 status=response.status,
                                 headers=response.headers,

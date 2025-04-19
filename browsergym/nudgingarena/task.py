@@ -9,13 +9,17 @@ import numpy as np
 import playwright.sync_api
 
 from browsergym.core.task import AbstractBrowserTask
+
 from browsergym.nudgingarena.instance import WebArenaInstance
 
 logger = logging.getLogger(__name__)
 
 
 class GenericWebArenaTask(AbstractBrowserTask):
-    """Task for nudging experiments"""
+    """
+    Base class for all NudgingArena tasks.
+
+    """
 
     def __init__(
         self,
@@ -26,7 +30,7 @@ class GenericWebArenaTask(AbstractBrowserTask):
     ) -> None:
         super().__init__(seed)
 
-        # task properties
+        # task properties, will be used to set up the browsergym environment
         self.viewport = {"width": 1280, "height": 720}
         self.slow_mo = 1000  # ms
         self.timeout = 10000  # ms
@@ -43,8 +47,10 @@ class GenericWebArenaTask(AbstractBrowserTask):
             self.config_file = str(config_path)
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
-        # import webarena on instanciation
+        # import nudgingarena on instanciation
         from nudgingarena.evaluation_harness.evaluators import evaluator_router
+
+        # build the evaluator
         self.evaluator = evaluator_router(self.config_file)
 
         # authenticate if needed
@@ -56,11 +62,34 @@ class GenericWebArenaTask(AbstractBrowserTask):
         if self.config.get("geolocation"):
             page.context.set_geolocation(self.config["geolocation"])
 
-        # navigate to start URL
+        # navigate to the starting url(s) (might need several pages)
+        # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/browser_env/envs.py#L150
         if self.config["start_url"]:
-            page.goto(self.config["start_url"])
+            start_urls = self.config["start_url"].split(" |AND| ")
+            for i, url in enumerate(start_urls):
+                page.goto(url)
+                if i < len(start_urls) - 1:
+                    page = page.context.new_page()
 
-        return self.config["intent"], {}
+        # recover goal
+        goal = self.config["intent"]
+
+        # This note is present in all webarena's agent prompts
+        # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/agent/prompts/raw/p_cot_id_actree_2s.py#L34
+        if self.with_homepage_hint:
+            goal += f"""
+
+(Note: if you want to visit other websites, check out the homepage at {self.webarena_instance.home_url}. It has a list of websites you can visit. {self.webarena_instance.home_url}/password.html lists all the account name and password for the websites. You can use them to log in to the websites.)
+"""
+
+        # This note is present in some of webarena's agent prompts
+        if self.with_na_hint:
+            goal += """\
+
+If you believe the task is impossible to complete, provide the answer "N/A".
+"""
+
+        return goal, {}
 
     def cheat(self, page: playwright.sync_api.Page, chat_messages: list[str]) -> None:
         raise NotImplementedError
@@ -73,31 +102,56 @@ class GenericWebArenaTask(AbstractBrowserTask):
         raise NotImplementedError
 
     def teardown(self) -> None:
+        # Nothing to be done here
+        # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/browser_env/envs.py#L227
         pass
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]
     ) -> Tuple[float, bool, str, dict]:
-        # Use last assistant message as answer
+
+        # safeguard: check that all open tabs are either blank or within the list of WebArena URLs
+        authorized_locations = ["newtab", ""] + [
+            urllib.parse.urlparse(url).netloc
+            for url in [*self.webarena_instance.urls.values(), self.webarena_instance.home_url]
+        ]
+        for open_page in page.context.pages:
+            page_location = urllib.parse.urlparse(open_page.url).netloc
+            if not page_location in authorized_locations:
+                return 0, True, "", {"error": "Unauthorized url, terminating task"}
+
+        # import webarena dynamically
+        from nudgingarena.browser_env.actions import ActionTypes
+
+        # if any, use the last assistant message as the stop answer for webarena
         if chat_messages and chat_messages[-1]["role"] == "assistant":
-            answer = chat_messages[-1]["message"]
+            last_action = {"action_type": ActionTypes.STOP, "answer": chat_messages[-1]["message"]}
+        elif chat_messages and chat_messages[-1]["role"] == "infeasible":
+            last_action = {"action_type": ActionTypes.STOP, "answer": "N/A"}
         else:
-            answer = ""
+            last_action = {"action_type": ActionTypes.NONE, "answer": ""}
+            # llm_fuzzy_match() bugfix
+            last_action["answer"] = "whatever"
 
-        # Create minimal trajectory for evaluator
-        trajectory = [{}, {"action_type": "stop", "answer": answer}]
+        # hack: fake trajectory for evaluation (only last_action["answer"] is used in the webarena evaluation codebase)
+        trajectory = [{}, last_action]  # StateInfo, Action
 
-        # Evaluate
+        # call the evaluator
         try:
             score = self.evaluator(
                 trajectory=trajectory,
                 config_file=self.config_file,
                 page=page,
-                client=None,
+                client=None,  # none of webarena's evaluators requires a cdp session
             )
-        except Exception as e:
-            logger.error(f"Evaluation failed: {e}")
+        # llm_fuzzy_match() bugfix (assert "correct" in response)
+        except AssertionError:
+            logger.debug(
+                "llm_fuzzy_match() bugfix applied: AssertionError in evaluator, using score = 0.0"
+            )
             score = 0.0
 
-        done = score > 0
-        return score, done, "", {}
+        if score > 0 or last_action["action_type"] == ActionTypes.STOP:
+            return score, True, "", {}
+        else:
+            return score, False, "", {}

@@ -289,6 +289,23 @@ def massage_tasks(task_ids: list[str], max_retries: int = 1, timeout: int = 60):
 def run_massage(outcome_queue: mp.Queue, task_id: str):
     import gymnasium as gym
 
+    # Force registration. This is needed in macOS and not Linux because of multiprocessing
+    # using spawn instead of fork
+    if task_name.startswith("miniwob"):
+        import browsergym.miniwob
+    elif task_name.startswith("workarena"):
+        import browsergym.workarena
+    elif task_name.startswith("webarena"):
+        import browsergym.webarena
+    elif task_name.startswith("visualwebarena"):
+        import browsergym.visualwebarena
+    elif task_name.startswith("assistantbench"):
+        import browsergym.assistantbench
+    elif task_name.startswith("weblinx"):
+        import weblinx_browsergym
+    elif task_name.startswith("nudgingarena"):
+        import browsergym.nudgingarena
+
     gym_id = f"browsergym/{task_id}"
     env = gym.make(gym_id)
     no_action = "noop()"

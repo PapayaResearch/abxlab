@@ -291,19 +291,19 @@ def run_massage(outcome_queue: mp.Queue, task_id: str):
 
     # Force registration. This is needed in macOS and not Linux because of multiprocessing
     # using spawn instead of fork
-    if task_name.startswith("miniwob"):
+    if task_id.startswith("miniwob"):
         import browsergym.miniwob
-    elif task_name.startswith("workarena"):
+    elif task_id.startswith("workarena"):
         import browsergym.workarena
-    elif task_name.startswith("webarena"):
+    elif task_id.startswith("webarena"):
         import browsergym.webarena
-    elif task_name.startswith("visualwebarena"):
+    elif task_id.startswith("visualwebarena"):
         import browsergym.visualwebarena
-    elif task_name.startswith("assistantbench"):
+    elif task_id.startswith("assistantbench"):
         import browsergym.assistantbench
-    elif task_name.startswith("weblinx"):
+    elif task_id.startswith("weblinx"):
         import weblinx_browsergym
-    elif task_name.startswith("nudgingarena"):
+    elif task_id.startswith("nudgingarena"):
         import browsergym.nudgingarena
 
     gym_id = f"browsergym/{task_id}"

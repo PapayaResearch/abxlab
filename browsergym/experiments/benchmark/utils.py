@@ -260,7 +260,7 @@ def prepare_backend(backend: str):
                 [
                     f"nudgingarena.{id}"
                     for id in [
-                        "BestsellerProduct",  # shopping
+                        "BestsellerProduct-v0", # shopping
                     ]
                 ]
             )

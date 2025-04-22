@@ -459,7 +459,7 @@ class Study(AbstractStudy):
         if not isinstance(agents, (list, tuple)):
             agents = [agents]
 
-        if benchmark.name.startswith("visualwebarena") or benchmark.name.startswith("webarena"):
+        if benchmark.name.startswith("visualwebarena") or benchmark.name.startswith("webarena") or benchmark.name.startswith("nudgingarena"):
             if len(agents) > 1:
                 raise ValueError(
                     f"Only one agent can be run on {benchmark.name} since the instance requires manual reset after each evaluation."

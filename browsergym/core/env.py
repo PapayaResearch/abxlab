@@ -174,17 +174,17 @@ class BrowserEnv(gym.Env, ABC):
         # action space
         self.action_space = Unicode()
 
-        print("Initializing BrowserEnv with task_kwargs:", task_kwargs)
+        # print("Initializing BrowserEnv with task_kwargs:", task_kwargs)
 
         # Load config file if specified in task_kwargs
         self.config = None
         if task_kwargs.get("config_file"):
             config_path = Path(task_kwargs["config_file"])
-            print(f"Loading config from {config_path}")
+            # print(f"Loading config from {config_path}")
             if config_path.exists():
                 with open(config_path, "r") as f:
                     self.config = json.load(f)
-                    print(f"Loaded config with choices: {bool('choices' in self.config)}")
+                    # print(f"Loaded config with choices: {bool('choices' in self.config)}")
 
                     # Store full config for environment use (like route handler)
                     self.env_config = {**task_kwargs, **self.config}
@@ -192,7 +192,7 @@ class BrowserEnv(gym.Env, ABC):
                     # Only pass config_file to task
                     self.task_kwargs = {"config_file": task_kwargs["config_file"]}
 
-                    print("Task kwargs:", self.task_kwargs)
+                    # print("Task kwargs:", self.task_kwargs)
             else:
                 logger.warning(f"Config file {config_path} does not exist")
                 self.task_kwargs = dict(**task_kwargs)
@@ -293,7 +293,7 @@ class BrowserEnv(gym.Env, ABC):
         # Now setup route handler since we have context
         if self.env_config and "choices" in self.env_config:
             # print("Setting up route handler before page loads")
-            self.setup_route_handler(self.context, self.env_config)
+            self.setup_route_handler(self.context)
             logger.info("Route handler setup complete")
             # print("Route handler setup complete")
 
@@ -627,106 +627,42 @@ document.addEventListener("visibilitychange", () => {
 
         return obs
 
-    def setup_route_handler(self, context, task_kwargs):
+    def setup_route_handler(self, context):
         """Setup route handler for modifying HTML based on choice configurations"""
-        if not context:
-            print("No context found")
-            return
 
-        # Use env_config instead of task_kwargs for choices
-        choices = self.env_config.get("choices")
-        print(f"Setting up route handler with choices: {choices}")
-        target_url = choices[0]["url"] if choices else None
-        print(f"Target URL for modification: {target_url}")
-
-        if not choices:
-            logger.debug("No choices found in config")
-            print("No choices found in config")
-            return
-
+        # Enable response interception for all HTML documents
         def modify_html(route, request):
-            # print(f"Processing request for URL: {request.url}")
-            # print(f"Request type: {request.resource_type}")
-            # print(f"Request method: {request.method}")
-            # print(f"Request headers: {request.headers}")
+            # print(request.url)
+            response = route.fetch()
+            if response.ok:
+                # Modify the HTML before passing it to the browser and agent
+                html = response.body()
+                # Find if there's a choice architecture for the current url
+                choice = next(
+                    filter(
+                        lambda choice: choice["url"] == request.url, self.env_config.get("choices")
+                    ),
+                    None
+                )
 
-            # Check if URL matches exactly
-            if request.url == target_url:
-                # print(f"Found exact match for target URL!")
-                pass
+                if choice is not None:
+                    for f in choice["functions"]:
+                        module_name = f["module"]
+                        func_name = f["name"]
+                        args = f["args"]
 
-            if request.resource_type == "document":
-                # print(f"Document request detected for {request.url}")
-                response = route.fetch()
-                if response.ok:
-                    # print(f"Response OK, status: {response.status}")
-                    html = response.body()
-                    # print(f"HTML length: {len(html)}")
+                        module = importlib.import_module(module_name)
+                        func = getattr(module, func_name)
 
-                    # Find matching choice architecture for current URL
-                    choice = next(
-                        (c for c in choices if c["url"] == request.url),
-                        None
-                    )
-                    # print(f"Found choice for URL {request.url}: {bool(choice)}")
+                        html = func(html, **args)
 
-                    if choice:
-                        try:
-                            print(f"Attempting to modify HTML with functions: {choice['functions']}")
-                            # Apply each modification function
-                            for func_config in choice["functions"]:
-                                module_name = func_config.get("module")
-                                func_name = func_config.get("name")
-                                args = func_config.get("args", {})
-
-                                print(f"Attempting to import {module_name}")
-                                try:
-                                    # Try importing from nudgingarena first
-                                    try:
-                                        module = importlib.import_module(f"nudgingarena.{module_name}")
-                                    except ImportError:
-                                        # If that fails, try direct import
-                                        module = importlib.import_module(module_name)
-
-                                    print(f"Successfully imported {module_name}")
-                                    func = getattr(module, func_name)
-                                    print(f"Found function {func_name}")
-
-                                    html = func(html, **args)
-                                    print(f"Successfully applied {module_name}.{func_name}")
-                                except ImportError as e:
-                                    logger.error(f"Could not import module {module_name}: {e}")
-                                    print(f"Import error: {e}")
-                                    continue
-                                except AttributeError as e:
-                                    logger.error(f"Could not find function {func_name} in module {module_name}: {e}")
-                                    print(f"Function not found: {e}")
-                                    continue
-                                except Exception as e:
-                                    logger.error(f"Error applying function {module_name}.{func_name}: {e}")
-                                    print(f"Function error: {e}")
-                                    continue
-
-                            route.fulfill(
-                                status=response.status,
-                                headers=response.headers,
-                                body=html
-                            )
-                            print(f"Successfully modified and fulfilled HTML for {request.url}")
-                        except Exception as e:
-                            logger.error(f"Error modifying HTML: {e}")
-                            # print(f"Error during modification: {e}")
-                            route.continue_()
-                    else:
-                        # print(f"No choice found for URL {request.url}, continuing...")
-                        route.continue_()
-                else:
-                    print(f"Response not OK for {request.url}")
-                    route.continue_()
+                route.fulfill(
+                    status=response.status,
+                    headers=response.headers,
+                    body=html,
+                )
             else:
-                # print(f"Non-document request for {request.url}: {request.resource_type}")
                 route.continue_()
 
-        # Add the route handler
+        # Apply the interception to the entire browser context
         context.route("**/*", modify_html)
-        print("Route handler setup complete with choices for URLs:", [c["url"] for c in choices])

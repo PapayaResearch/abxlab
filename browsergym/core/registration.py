@@ -59,7 +59,7 @@ def register_task(
 
     # Special handling for nudging arena tasks
     if id.startswith("nudgingarena."):
-        print(f"Registering nudging arena task with config: {task_kwargs}")
+        # print(f"Registering nudging arena task with config: {task_kwargs}")
         # For nudging arena tasks, don't use any frozen parameters
         gym.register(
             id=f"browsergym/{id}",

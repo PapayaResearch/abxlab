@@ -289,13 +289,9 @@ class BrowserEnv(gym.Env, ABC):
         # set default timeout
         self.context.set_default_timeout(timeout)
 
-        # print("task_kwargs", self.task_kwargs)
-        # Now setup route handler since we have context
+        # Route calls to complete interventions
         if self.env_config and "choices" in self.env_config:
-            # print("Setting up route handler before page loads")
             self.setup_route_handler(self.context)
-            logger.info("Route handler setup complete")
-            # print("Route handler setup complete")
 
         # hack: keep track of the active page with a javascript callback
         # there is no concept of active page in playwright
@@ -337,9 +333,6 @@ document.addEventListener("visibilitychange", () => {
         # create a new page
         self.page = self.context.new_page()
         recording_start_time = time.time()
-
-        # Set a longer timeout
-        self.page.set_default_timeout(50000)
 
         # setup the task
         task_goal, task_info = self.task.setup(page=self.page)

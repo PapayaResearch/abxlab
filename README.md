@@ -93,12 +93,6 @@ pip install -e .
 cd ..
 ```
 
-To avoid error of playwright version, install an earlier version.
-```bash
-pip install playwright==1.49.0
-```
-
-
 If not done already, install Playwright:
 ```bash
 playwright install

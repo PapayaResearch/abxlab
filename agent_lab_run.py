@@ -1,11 +1,5 @@
 import os
 import logging
-import warnings
-
-# Suppress all deprecation warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-warnings.filterwarnings("ignore", category=UserWarning, module="beartype")
-warnings.filterwarnings("ignore", module="beartype")
 
 from agentlab.agents.generic_agent import (
     AGENT_LLAMA3_70B,

@@ -8,7 +8,6 @@ from textwrap import dedent
 from typing import Literal
 from warnings import warn
 
-import bgym
 from browsergym.core.action.base import AbstractActionSet
 from browsergym.utils.obs import (
     flatten_axtree_to_str,
@@ -16,6 +15,7 @@ from browsergym.utils.obs import (
     overlay_som,
     prune_html,
 )
+from browsergym.experiments.benchmark.base import HighLevelActionSetArgs
 
 from agentlab.llm.llm_utils import (
     BaseMessage,
@@ -99,7 +99,7 @@ class ObsFlags(Flags):
 
 @dataclass
 class ActionFlags(Flags):
-    action_set: bgym.HighLevelActionSetArgs = None  # should be set by the set_benchmark method
+    action_set: HighLevelActionSetArgs = None  # should be set by the set_benchmark method
     long_description: bool = True
     individual_examples: bool = False
 

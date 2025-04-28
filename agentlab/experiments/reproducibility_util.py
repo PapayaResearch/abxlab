@@ -6,8 +6,8 @@ from datetime import datetime
 from importlib import metadata
 from pathlib import Path
 
-import bgym
 import pandas as pd
+from browsergym.experiments.benchmark import Benchmark
 from git import InvalidGitRepositoryError, Repo
 from git.config import GitConfigParser
 
@@ -20,7 +20,7 @@ def _get_repo(module):
 
 
 def _get_benchmark_version(
-    benchmark: bgym.Benchmark, allow_bypass_benchmark_version: bool = False
+    benchmark: Benchmark, allow_bypass_benchmark_version: bool = False
 ) -> str:
     benchmark_name = benchmark.name
 
@@ -178,7 +178,7 @@ def _get_git_info(module, changes_white_list=()) -> tuple[str, list[tuple[str, P
 
 def get_reproducibility_info(
     agent_names: str | list[str],
-    benchmark: bgym.Benchmark,
+    benchmark: Benchmark,
     study_id: str = "",
     comment=None,
     changes_white_list=(  # Files that are often modified during experiments but do not affect reproducibility

@@ -11,8 +11,8 @@ from datetime import datetime
 from multiprocessing import Manager, Pool, Queue
 from pathlib import Path
 
-import bgym
-from bgym import Benchmark, EnvArgs, ExpArgs
+from browsergym.experiments.benchmark import Benchmark, DEFAULT_BENCHMARKS
+from browsergym.experiments.loop import EnvArgs, ExpArgs
 from slugify import slugify
 
 from agentlab.agents.agent_args import AgentArgs
@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 def make_study(
     agent_args: list[AgentArgs] | AgentArgs,
-    benchmark: bgym.Benchmark | str,
+    benchmark: Benchmark | str,
     logging_level_stdout=logging.WARNING,
     suffix="",
     comment=None,
@@ -41,8 +41,8 @@ def make_study(
             The agent configuration(s) to run. *IMPORTANT*: these objects will be pickled and
             unpickled.  Make sure they are imported from a package that is accessible from
             PYTHONPATH. Otherwise, it won't load in agentlab-xray.
-        benchmark: bgym.Benchmark | str
-            The benchmark to run the agents on. See bgym.DEFAULT_BENCHMARKS for the main ones. You
+        benchmark: Benchmark | str
+            The benchmark to run the agents on. See DEFAULT_BENCHMARKS for the main ones. You
             can also make your own by modifying an existing one.
         logging_level_stdout: int
             The logging level for the stdout of the main script. Each job will have its own logging
@@ -81,7 +81,7 @@ def make_study(
         agent_args = [agent_args]
 
     if isinstance(benchmark, str):
-        benchmark = bgym.DEFAULT_BENCHMARKS[benchmark.lower()]()
+        benchmark = DEFAULT_BENCHMARKS[benchmark.lower()]()
 
     if len(agent_args) > 1 and ("webarena" in benchmark.name or parallel_servers is not None):
         logger.warning(
@@ -174,8 +174,8 @@ class Study(AbstractStudy):
             The agent configuration(s) to run. *IMPORTANT*: these objects will be pickled and
             unpickled.  Make sure they are imported from a package that is accessible from
             PYTHONPATH. Otherwise, it won't load in agentlab-xray.
-        benchmark: bgym.Benchmark | str
-            The benchmark to run the agents on. See bgym.DEFAULT_BENCHMARKS for the main ones. You
+        benchmark: Benchmark | str
+            The benchmark to run the agents on. See DEFAULT_BENCHMARKS for the main ones. You
             can also make your own by modifying an existing one.
         dir: Path
             The directory where the study will be saved. If None, a directory will be created in
@@ -231,7 +231,7 @@ class Study(AbstractStudy):
         """Initialize the study. Set the uuid, and generate the exp_args_list."""
         self.uuid = uuid.uuid4()
         if isinstance(self.benchmark, str):
-            self.benchmark = bgym.DEFAULT_BENCHMARKS[self.benchmark.lower()]()
+            self.benchmark = DEFAULT_BENCHMARKS[self.benchmark.lower()]()
         if isinstance(self.dir, str):
             self.dir = Path(self.dir)
         self.make_exp_args_list()
@@ -361,9 +361,10 @@ class Study(AbstractStudy):
         if self.exp_args_list is None:
             raise ValueError("exp_args_list is None. Please set exp_args_list before running.")
 
-        logger.info("Preparing backends...")
-        self.benchmark.prepare_backends()
-        logger.info("Backends ready.")
+        # We do this on the assumption we do not need task massaging
+        # logger.info("Preparing backends...")
+        # self.benchmark.prepare_backends()
+        # logger.info("Backends ready.")
 
         run_experiments(
             n_jobs,
@@ -427,7 +428,7 @@ class Study(AbstractStudy):
     def agents_on_benchmark(
         self,
         agents: list[AgentArgs] | AgentArgs,
-        benchmark: bgym.Benchmark,
+        benchmark: Benchmark,
         demo_mode=False,
         logging_level: int = logging.INFO,
         logging_level_stdout: int = logging.INFO,
@@ -438,7 +439,7 @@ class Study(AbstractStudy):
         Args:
             agents: list[AgentArgs] | AgentArgs
                 The agent configuration(s) to run.
-            benchmark: bgym.Benchmark
+            benchmark: Benchmark
                 The benchmark to run the agents on.
             demo_mode: bool
                 If True, the experiments will be run in demo mode.

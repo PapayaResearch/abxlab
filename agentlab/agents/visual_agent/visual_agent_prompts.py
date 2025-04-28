@@ -6,7 +6,6 @@ It is based on the dynamic_prompting module from the agentlab package.
 
 import logging
 from dataclasses import dataclass
-import bgym
 
 from browsergym.core.action.base import AbstractActionSet
 

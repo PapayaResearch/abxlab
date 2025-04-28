@@ -1,0 +1,17 @@
+defaults:
+  - obs: default_ax_tree
+  - action: default_bid_only
+
+_target_: agentlab.agents.generic_agent.generic_agent_prompt.GenericPromptFlags
+use_plan: false
+use_criticise: false
+use_thinking: true
+use_memory: true # Important!
+use_concrete_example: true
+use_abstract_example: true
+use_hints: true
+enable_chat: false
+max_prompt_tokens: 40000
+be_cautious: true
+extra_instructions: null
+add_missparsed_messages: false

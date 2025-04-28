@@ -2,8 +2,7 @@ import logging
 from importlib import import_module
 from pathlib import Path
 
-import bgym
-from browsergym.experiments.loop import ExpArgs, yield_all_exp_results
+from browsergym.experiments.loop import ExpArgs, yield_all_exp_results, ExpResult
 
 from agentlab.experiments.exp_utils import run_exp
 
@@ -158,14 +157,14 @@ def noop(*args, **kwargs):
     pass
 
 
-def _hide_completed(exp_result: bgym.ExpResult, include_errors: bool = True):
+def _hide_completed(exp_result: ExpResult, include_errors: bool = True):
     """Hide completed experiments from the list.
 
     This little hack, allows an elegant way to keep the task dependencies for e.g. webarena
     while skipping the tasks that are completed when relaunching.
 
     Args:
-        exp_result: bgym.ExpResult
+        exp_result: ExpResult
             The experiment result to hide.
         include_errors: bool
             If True, include experiments that errored.

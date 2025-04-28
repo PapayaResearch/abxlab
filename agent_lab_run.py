@@ -1,43 +1,59 @@
-import os
 import logging
+import dotenv
+import hydra
+import typing
+import browsergym.experiments.benchmark.base
 
-from agentlab.agents.generic_agent import (
-    AGENT_LLAMA3_70B,
-    AGENT_LLAMA31_70B,
-    RANDOM_SEARCH_AGENT,
-    AGENT_4o,
-    AGENT_4o_MINI,
-    AGENT_o3_MINI,
-    AGENT_o1_MINI,
-    AGENT_37_SONNET,
-    AGENT_CLAUDE_SONNET_35,
-)
+browsergym.experiments.benchmark.base.BenchmarkBackend = typing.Literal[
+    "miniwob", "webarena", "visualwebarena", "workarena",
+    "assistantbench", "weblinx", "nudgingarena"
+]
+
+from browsergym.core.registration import register_task
+from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
+from browsergym.experiments.loop import EnvArgs
+from nudge_task import NudgingArenaTask
 
-AGENT_ARGS = [AGENT_4o_MINI]
-BENCHMARK = "nudgingarena_tiny"
 
-def main():
-    logging.getLogger().setLevel(logging.INFO)
+# Load all env vars
+dotenv.load_dotenv()
 
-    os.environ["AGENTLAB_EXP_ROOT"] = os.path.abspath("agent_lab_exp")
 
-    os.environ[
-        "WA_SHOPPING"
-    ] = "http://matlaber12.media.mit.edu:7770/"
+@hydra.main(config_path="conf", config_name="config", version_base="1.3")
+def main(cfg: DictConfig):
+    logging.basicConfig(level=cfg.experiment.logging_level_stdout, format='%(levelname)s:%(name)s:%(message)s')
+    log = logging.getLogger(__name__)
+
+    agent = hydra.utils.instantiate(cfg.agent)
+    benchmark = hydra.utils.instantiate(cfg.benchmark, _partial_=True)(
+        # Necessary workaround for now, to avoid Union instantiation OmegaConf issues
+        env_args_list=[
+            EnvArgs(**item) for item in cfg.benchmark.env_args_list
+        ]
+    )
+
+    # Register the env here, so we don't need to reach into BrowserGym
+    register_task(
+        id=f"nudgingarena.{cfg.task.name}",
+        task_class=NudgingArenaTask,
+        task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
+    )
 
     study = Study(
-        AGENT_ARGS,
-        BENCHMARK,
-        logging_level_stdout=logging.WARNING
+        agent_args=[agent],
+        benchmark=benchmark,
+        logging_level_stdout=cfg.experiment.logging_level_stdout
     )
 
+    log.info("Running experiment…")
     study.run(
-        n_jobs=1,
-        parallel_backend="ray",
-        n_relaunch=1
+        n_jobs=cfg.experiment.n_jobs,
+        parallel_backend=cfg.experiment.parallel_backend,
+        n_relaunch=cfg.experiment.n_relaunch
     )
+    log.info("Experiment finished.")
 
-if __name__ == '__main__':
-    # The code needs to be inside this to avoid issues with multiprocessing in macOS
+
+if __name__ == "__main__":
     main()

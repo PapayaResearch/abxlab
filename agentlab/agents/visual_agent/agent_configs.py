@@ -1,9 +1,9 @@
 from agentlab.llm.llm_configs import CHAT_MODEL_ARGS_DICT
 
+from browsergym.experiments.benchmark import HighLevelActionSetArgs
 from .visual_agent import VisualAgentArgs
 from .visual_agent_prompts import PromptFlags
 import agentlab.agents.dynamic_prompting as dp
-import bgym
 
 # the other flags are ignored for this agent.
 DEFAULT_OBS_FLAGS = dp.ObsFlags(
@@ -16,7 +16,7 @@ DEFAULT_OBS_FLAGS = dp.ObsFlags(
 )
 
 DEFAULT_ACTION_FLAGS = dp.ActionFlags(
-    action_set=bgym.HighLevelActionSetArgs(subsets=["coord"]),
+    action_set=HighLevelActionSetArgs(subsets=["coord"]),
     long_description=True,
     individual_examples=False,
 )

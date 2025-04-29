@@ -1,19 +1,24 @@
 import logging
 import dotenv
 import hydra
+import gymnasium as gym
 import typing
-import browsergym.experiments.benchmark.base
 
+# We need to patch BrowserGym's internals (since they hardcode things)
+import browsergym.experiments.benchmark.base
 browsergym.experiments.benchmark.base.BenchmarkBackend = typing.Literal[
     "miniwob", "webarena", "visualwebarena", "workarena",
     "assistantbench", "weblinx", "nudgingarena"
 ]
 
-from browsergym.core.registration import register_task
+from browsergym.core.registration import frozen_partial
+from browser import NudgingArenaBrowserEnv
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
-from nudge_task import NudgingArenaTask
+from task import NudgingArenaTask
+
+
 
 
 # Load all env vars
@@ -34,11 +39,15 @@ def main(cfg: DictConfig):
     )
 
     # Register the env here, so we don't need to reach into BrowserGym
-    register_task(
-        id=f"nudgingarena.{cfg.task.name}",
-        task_class=NudgingArenaTask,
-        task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
+    gym.register(
+        id=f"browsergym/nudgingarena.{cfg.task.name}",
+        entry_point=lambda *env_args, **env_kwargs: NudgingArenaBrowserEnv(
+            task_entrypoint=NudgingArenaTask,
+            task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
+        ),
+        nondeterministic=True
     )
+
 
     study = Study(
         agent_args=[agent],

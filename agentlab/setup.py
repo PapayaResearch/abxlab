@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'gymnasium',
+        'browsergym==0.13.3',
         'numpy',
         'torch',
         'transformers',

@@ -1,0 +1,41 @@
+name: BestsellerProduct-v0
+with_na_hint: false
+with_homepage_hint: false
+width: 1280
+height: 720
+slow_mo: 1000
+timeout: 10000
+config:
+  sites:
+    - shopping
+  task_id: 1
+  require_login: false
+  storage_state: ./.auth/shopping_state.json
+  start_urls:
+    - ${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html
+    - ${env.wa_shopping_url}photosmart-plus-b209-clr-inkjetfb-p-s-c-usb-wrls-1.html
+  geolocation: null
+  intent_template: Add the best product from my open tabs to the shopping cart
+  instantiation_dict: {}
+  intent: Add the best product from my open tabs to the shopping cart
+  require_reset: false
+  choices:
+    - url: "${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html"
+      functions:
+        - module: choices.shop.product
+          name: tag
+          args:
+            elem_id: page-title-wrapper product
+            value: This product is a best seller!
+  eval:
+    eval_types:
+      - program_html
+    reference_answers: null
+    reference_url: ""
+    program_html:
+      - url: "${env.wa_shopping_url}checkout/cart"
+        locator: ""
+        required_contents:
+          must_include:
+            - "Epson WorkForce WF-3620 WiFi Direct All-in-One Color Inkjet Printer, Copier, Scanner, Amazon Dash Replenishment Ready"
+  intent_template_id: 1

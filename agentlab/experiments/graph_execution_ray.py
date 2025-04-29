@@ -4,10 +4,9 @@
 # os.environ["RAY_DEDUP_LOGS"] = "0"
 import logging
 import time
-
-import bgym
 import ray
 from ray.util import state
+from browsergym.experiments.loop import ExpArgs
 
 from agentlab.experiments.exp_utils import _episode_timeout, run_exp
 
@@ -16,13 +15,13 @@ logger = logging.getLogger(__name__)
 run_exp = ray.remote(run_exp)
 
 
-def execute_task_graph(exp_args_list: list[bgym.ExpArgs], avg_step_timeout=60):
+def execute_task_graph(exp_args_list: list[ExpArgs], avg_step_timeout=60):
     """Execute a task graph in parallel while respecting dependencies using Ray."""
 
     exp_args_map = {exp_args.exp_id: exp_args for exp_args in exp_args_list}
     task_map = {}
 
-    def get_task(exp_arg: bgym.ExpArgs):
+    def get_task(exp_arg: ExpArgs):
         if exp_arg.exp_id not in task_map:
             # Get all dependency tasks first
             dependency_tasks = [get_task(exp_args_map[dep_key]) for dep_key in exp_arg.depends_on]

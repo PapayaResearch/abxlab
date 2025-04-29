@@ -2,11 +2,10 @@
 Basic flags and agent configurations for generic agents.
 """
 
-import bgym
-
 from agentlab.agents import dynamic_prompting as dp
 from agentlab.experiments import args
 from agentlab.llm.llm_configs import CHAT_MODEL_ARGS_DICT
+from browsergym.experiments.benchmark.base import HighLevelActionSetArgs
 
 from .generic_agent import GenericAgentArgs
 from .generic_agent_prompt import GenericPromptFlags
@@ -31,7 +30,7 @@ FLAGS_CUSTOM = GenericPromptFlags(
         filter_visible_elements_only=False,
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=["bid"],
             multiaction=False,
         ),
@@ -79,7 +78,7 @@ FLAGS_GPT_3_5 = GenericPromptFlags(
         filter_visible_elements_only=False,
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=["bid"],
             multiaction=False,
         ),
@@ -126,7 +125,7 @@ FLAGS_LLAMA3_70B = GenericPromptFlags(
         filter_visible_elements_only=False,
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=["bid"],
             multiaction=False,
         ),
@@ -176,7 +175,7 @@ FLAGS_8B = GenericPromptFlags(
         filter_visible_elements_only=False,
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=["bid"],
             multiaction=True,
         ),
@@ -220,7 +219,7 @@ FLAGS_GPT_4o = GenericPromptFlags(
         use_history=True,
         use_past_error_logs=False,
         use_action_history=True,
-        use_think_history=False,
+        use_think_history=True,
         use_diff=False,
         html_type="pruned_html",
         use_screenshot=False,
@@ -231,7 +230,7 @@ FLAGS_GPT_4o = GenericPromptFlags(
         filter_visible_elements_only=False,
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=["bid"],
             multiaction=False,
         ),
@@ -241,7 +240,7 @@ FLAGS_GPT_4o = GenericPromptFlags(
     use_plan=False,
     use_criticise=False,
     use_thinking=True,
-    use_memory=False,
+    use_memory=True,
     use_concrete_example=True,
     use_abstract_example=True,
     use_hints=True,
@@ -319,7 +318,7 @@ DEFAULT_RS_FLAGS = GenericPromptFlags(
         filter_visible_elements_only=args.Choice([True, False], p=[0.3, 0.7]),
     ),
     action=dp.ActionFlags(
-        action_set=bgym.HighLevelActionSetArgs(
+        action_set=HighLevelActionSetArgs(
             subsets=args.Choice([["bid"], ["bid", "coord"]]),
             multiaction=args.Choice([True, False], p=[0.7, 0.3]),
         ),

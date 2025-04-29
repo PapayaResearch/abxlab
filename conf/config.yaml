@@ -1,0 +1,28 @@
+# @package _global_
+
+defaults:
+  - agent: gpt4o-mini
+  - benchmark: nudgingarena_tiny
+  - task: bestseller_product
+  # - override hydra/job_logging: default # Optional: Load custom Hydra logging
+  - _self_
+
+
+experiment:
+  name: agentlab_study_${agent.name}_${benchmark.name}
+  root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
+  n_jobs: 1
+  parallel_backend: sequential
+  n_relaunch: 1
+  logging_level_stdout: WARNING
+
+# Environment vars
+env:
+  wa_shopping_url: ${oc.env:WA_SHOPPING,http://matlaber12.media.mit.edu:7770/}
+
+# Hydra-Specific settings
+hydra:
+  run:
+    dir: ${experiment.root_dir}
+  sweep:
+    dir: ${experiment.root_dir}

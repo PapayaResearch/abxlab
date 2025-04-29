@@ -18,9 +18,9 @@ from copy import copy
 from dataclasses import dataclass
 from pathlib import Path
 
-import bgym
 from browsergym.experiments.agent import AgentInfo
 from browsergym.experiments.loop import ExpArgs, ExpResult, yield_all_exp_results
+from browsergym.experiments.benchmark import HighLevelActionSetArgs
 from bs4 import BeautifulSoup
 from langchain.schema import AIMessage, BaseMessage
 from langchain_community.adapters.openai import convert_message_to_dict
@@ -150,7 +150,7 @@ def _make_backward_compatible(agent_args: GenericAgentArgs):
         if isinstance(action_set, str):
             action_set = action_set.split("+")
 
-        agent_args.flags.action.action_set = bgym.HighLevelActionSetArgs(
+        agent_args.flags.action.action_set = HighLevelActionSetArgs(
             subsets=action_set,
             multiaction=agent_args.flags.action.multi_actions,
         )

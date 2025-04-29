@@ -3,8 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import bgym
-
+from browsergym.experiments.agent import Agent, AgentInfo
 from agentlab.agents.agent_args import AgentArgs
 from agentlab.llm.chat_api import BaseModelArgs
 from agentlab.llm.tracking import cost_tracker_decorator
@@ -51,7 +50,7 @@ class TapeAgentArgs(AgentArgs):
     agent_name: str = "WorkarenaTapeAgent"
     chat_model_args: BaseModelArgs = None
 
-    def make_agent(self) -> bgym.Agent:
+    def make_agent(self) -> Agent:
         llm = LiteLLM(
             model_name=self.chat_model_args.model_name,
             use_cache=False,
@@ -70,7 +69,7 @@ class TapeAgentArgs(AgentArgs):
         return self.chat_model_args.close_server()
 
 
-class WorkarenaTapeAgent(bgym.Agent):
+class WorkarenaTapeAgent(Agent):
     tape: WorkArenaTape
 
     def __init__(self, llm: LiteLLM):
@@ -83,7 +82,7 @@ class WorkarenaTapeAgent(bgym.Agent):
         return obs
 
     @cost_tracker_decorator
-    def get_action(self, obs: Any) -> tuple[str, bgym.AgentInfo]:
+    def get_action(self, obs: Any) -> tuple[str, AgentInfo]:
         self.update_tape(obs)
         # run agent and collect thoughts and last action
         tape_segment = []
@@ -102,7 +101,7 @@ class WorkarenaTapeAgent(bgym.Agent):
         logger.info(f"Action string: {action}")
         return (
             action,
-            bgym.AgentInfo(
+            AgentInfo(
                 extra_info={"tape_segment": [step.model_dump() for step in tape_segment]},
                 stats={},
             ),

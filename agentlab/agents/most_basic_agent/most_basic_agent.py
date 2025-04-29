@@ -2,8 +2,9 @@ import logging
 from dataclasses import asdict, dataclass
 from typing import TYPE_CHECKING, Any
 
-import bgym
-
+from browsergym.experiments.agent import Agent, AgentInfo
+from browsergym.experiments.benchmark.base import HighLevelActionSet
+from browsergym.experiments.loop import EnvArgs, ExpArgs
 from agentlab.agents.agent_args import AgentArgs
 from agentlab.llm.chat_api import make_system_message, make_user_message
 from agentlab.llm.llm_configs import CHAT_MODEL_ARGS_DICT
@@ -28,7 +29,7 @@ class MostBasicAgentArgs(AgentArgs):
     use_chain_of_thought: bool = False
     chat_model_args: "BaseModelArgs" = None
 
-    def make_agent(self) -> bgym.Agent:
+    def make_agent(self) -> Agent:
         return MostBasicAgent(
             temperature=self.temperature,
             use_chain_of_thought=self.use_chain_of_thought,
@@ -45,7 +46,7 @@ class MostBasicAgentArgs(AgentArgs):
         return self.chat_model_args.close_server()
 
 
-class MostBasicAgent(bgym.Agent):
+class MostBasicAgent(Agent):
     def __init__(
         self, temperature: float, use_chain_of_thought: bool, chat_model_args: "BaseModelArgs"
     ):
@@ -54,7 +55,7 @@ class MostBasicAgent(bgym.Agent):
         self.chat = chat_model_args.make_model()
         self.chat_model_args = chat_model_args
 
-        self.action_set = bgym.HighLevelActionSet(["bid"], multiaction=False)
+        self.action_set = HighLevelActionSet(["bid"], multiaction=False)
 
     @cost_tracker_decorator
     def get_action(self, obs: Any) -> tuple[str, dict]:
@@ -83,7 +84,7 @@ Here is an example of how to use the bid action:
 click('a314')
 ```
 
-Please provide a single action at a time and wait for the next observation. Provide only a single action per step. 
+Please provide a single action at a time and wait for the next observation. Provide only a single action per step.
 Focus on the bid that are given in the html, and use them to perform the actions.
 """
             )
@@ -110,7 +111,7 @@ Provide a chain of thoughts reasoning to decompose the task into smaller steps. 
 
         return (
             action,
-            bgym.AgentInfo(
+            AgentInfo(
                 think=thought,
                 chat_messages=messages,
                 # put any stats that you care about as long as it is a number or a dict of numbers
@@ -122,7 +123,7 @@ Provide a chain of thoughts reasoning to decompose the task into smaller steps. 
 
 
 # example for a single task
-env_args = bgym.EnvArgs(
+env_args = EnvArgs(
     task_name="miniwob.click-button",
     task_seed=0,
     max_steps=10,
@@ -133,7 +134,7 @@ chat_model_args = CHAT_MODEL_ARGS_DICT["openai/gpt-4o-mini-2024-07-18"]
 
 # example for 2 experiments testing chain of thoughts on a miniwob task
 exp_args = [
-    bgym.ExpArgs(
+    ExpArgs(
         agent_args=MostBasicAgentArgs(
             temperature=0.1,
             use_chain_of_thought=True,
@@ -142,7 +143,7 @@ exp_args = [
         env_args=env_args,
         logging_level=logging.INFO,
     ),
-    bgym.ExpArgs(
+    ExpArgs(
         agent_args=MostBasicAgentArgs(
             temperature=0.1,
             use_chain_of_thought=False,

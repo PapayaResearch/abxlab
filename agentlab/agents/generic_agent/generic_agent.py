@@ -12,8 +12,8 @@ from copy import deepcopy
 from dataclasses import asdict, dataclass
 from warnings import warn
 
-import bgym
 from browsergym.experiments.agent import Agent, AgentInfo
+from browsergym.experiments.benchmark import Benchmark
 
 from agentlab.agents import dynamic_prompting as dp
 from agentlab.agents.agent_args import AgentArgs
@@ -37,7 +37,7 @@ class GenericAgentArgs(AgentArgs):
         except AttributeError:
             pass
 
-    def set_benchmark(self, benchmark: bgym.Benchmark, demo_mode):
+    def set_benchmark(self, benchmark: Benchmark, demo_mode):
         """Override Some flags based on the benchmark."""
         if benchmark.name.startswith("miniwob"):
             self.flags.obs.use_html = True

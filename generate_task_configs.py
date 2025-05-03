@@ -151,58 +151,58 @@ def generate_task_configs(consider_order=True):
 
                             # print(f"start_urls_combinations: {start_urls_combinations}")
 
-                    # for each start_urls combination, generate tasks
-                    for start_urls in start_urls_combinations:
-                        for nudge in supported_nudges:
-                            filtered_interventions = get_interventions_for_nudge(nudge, interventions)
-                            for intervention_index, intervention in enumerate(filtered_interventions, 1):
-                                task_name = f"Task{task_counter}_{starting_point}_{nudge}_P{product_index}_I{intervention_index}-v0"
-                                config_task_name = task_name.replace('_', '').replace(' ', '')
-                                file_name = task_name.lower().replace(' ', '_').replace('-v0', '')
-                                
-                                config = base_config.copy()
-                                config['name'] = config_task_name
-                                config['config']['task_id'] = task_counter
-                                config['config']['intent_template'] = intent_template
-                                config['config']['intent'] = generated_intent
-                                config['config']['instantiation_dict'] = intent_dict
-                                config['config']['start_urls'] = start_urls
-                                
-                                choice = {
-                                    'url': start_urls[0] if isinstance(start_urls, list) else start_urls[0][0],
-                                    'functions': [{
-                                        'module': intervention['Module'],
-                                        'name': intervention['Name'],
-                                        'args': {
-                                            'elem_id': intervention['Element'],
-                                            'value': intervention['Intervention']
-                                        }
-                                    }]
-                                }
-                                # Set choices directly instead of appending
-                                config['config']['choices'] = [choice]
-                                
-                                # Add evaluation configuration if evaluation URL exists
-                                # TODO: Add evaluation for non-evaluationURL cases
-                                # TODO: Consider adding a "product name" in the product spreadsheet for evaluation and task naming
-                                if evaluation_url:
-                                    # Set program_html directly instead of appending
-                                    config['config']['eval']['program_html'] = [{
-                                        'url': evaluation_url,
-                                        'locator': "",
-                                        'required_contents': {
-                                            'must_include': ["You added"]
-                                        }
-                                    }]
-                                
-                        
-                                config_filename = f"conf/task/{file_name}.yaml"
-                                with open(config_filename, 'w') as f:
-                                    yaml.dump(config, f, default_flow_style=False)
-                                print(f"Generated config {task_counter}: {config_filename}")
-                                
-                                # Increment the task counter for the next task
-                                task_counter += 1
+                        # for each start_urls combination, generate tasks
+                        for start_urls in start_urls_combinations:
+                            for nudge in supported_nudges:
+                                filtered_interventions = get_interventions_for_nudge(nudge, interventions)
+                                for intervention_index, intervention in enumerate(filtered_interventions, 1):
+                                    task_name = f"Task{task_counter}_{starting_point}_{nudge}_P{product_index}_I{intervention_index}-v0"
+                                    config_task_name = task_name.replace('_', '').replace(' ', '')
+                                    file_name = task_name.lower().replace(' ', '_').replace('-v0', '')
+                                    
+                                    config = base_config.copy()
+                                    config['name'] = config_task_name
+                                    config['config']['task_id'] = task_counter
+                                    config['config']['intent_template'] = intent_template
+                                    config['config']['intent'] = generated_intent
+                                    config['config']['instantiation_dict'] = intent_dict
+                                    config['config']['start_urls'] = start_urls
+                                    
+                                    choice = {
+                                        'url': start_urls[0] if isinstance(start_urls, list) else start_urls[0][0],
+                                        'functions': [{
+                                            'module': intervention['Module'],
+                                            'name': intervention['Name'],
+                                            'args': {
+                                                'elem_id': intervention['Element'],
+                                                'value': intervention['Intervention']
+                                            }
+                                        }]
+                                    }
+                                    # Set choices directly instead of appending
+                                    config['config']['choices'] = [choice]
+                                    
+                                    # Add evaluation configuration if evaluation URL exists
+                                    # TODO: Add evaluation for non-evaluationURL cases
+                                    # TODO: Consider adding a "product name" in the product spreadsheet for evaluation and task naming
+                                    if evaluation_url:
+                                        # Set program_html directly instead of appending
+                                        config['config']['eval']['program_html'] = [{
+                                            'url': evaluation_url,
+                                            'locator': "",
+                                            'required_contents': {
+                                                'must_include': ["You added"]
+                                            }
+                                        }]
+                                    
+                            
+                                    config_filename = f"conf/task/{file_name}.yaml"
+                                    with open(config_filename, 'w') as f:
+                                        yaml.dump(config, f, default_flow_style=False)
+                                    print(f"Generated config {task_counter}: {config_filename}")
+                                    
+                                    # Increment the task counter for the next task
+                                    task_counter += 1
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate task configurations')

@@ -157,8 +157,11 @@ def generate_task_configs(consider_order=True):
                             filtered_interventions = get_interventions_for_nudge(nudge, interventions)
                             for intervention_index, intervention in enumerate(filtered_interventions, 1):
                                 task_name = f"Task{task_counter}_{starting_point}_{nudge}_P{product_index}_I{intervention_index}-v0"
+                                config_task_name = task_name.replace('_', '').replace(' ', '')
+                                file_name = task_name.lower().replace(' ', '_').replace('-v0', '')
+                                
                                 config = base_config.copy()
-                                config['name'] = task_name
+                                config['name'] = config_task_name
                                 config['config']['task_id'] = task_counter
                                 config['config']['intent_template'] = intent_template
                                 config['config']['intent'] = generated_intent
@@ -193,9 +196,9 @@ def generate_task_configs(consider_order=True):
                                     }]
                                 
                         
-                                config_filename = f"conf/task/{task_name}.yaml"
+                                config_filename = f"conf/task/{file_name}.yaml"
                                 with open(config_filename, 'w') as f:
-                                    yaml.dump([config], f, default_flow_style=False)
+                                    yaml.dump(config, f, default_flow_style=False)
                                 print(f"Generated config {task_counter}: {config_filename}")
                                 
                                 # Increment the task counter for the next task

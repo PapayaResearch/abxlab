@@ -1,6 +1,7 @@
 # Custom
 /agent_lab_exp/
 /*_back/
+/conf/task/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

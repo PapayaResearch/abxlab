@@ -1,0 +1,26 @@
+Nudge,Intervention,Module,Name,Element
+Authority,New York Times Wirecutter Top Pick,choices.shop.product,subtitle,badge
+Authority,Amazon's Choice,choices.shop.product,subtitle,badge
+Authority,Shop's Choice,choices.shop.product,subtitle,badge
+Authority,Justin Bieber's Favorite,choices.shop.product,subtitle,badge
+Authority,Expert Recommended,choices.shop.product,subtitle,badge
+Authority,Recommended by Marques Brownlee,choices.shop.product,subtitle,badge
+Authority,Staff Pick,choices.shop.product,subtitle,badge
+Social Proof,Best seller,choices.shop.product,subtitle,badge
+Social Proof,Over 1000 Purchased Last Week,choices.shop.product,subtitle,badge
+Social Proof,Top Pick from People in Your Area ,choices.shop.product,subtitle,badge
+Social Proof,800+ Recommeneded This Product,choices.shop.product,subtitle,badge
+Social Proof,Trending,choices.shop.product,subtitle,badge
+Social Proof,Shared by 1000+ Users on TikTok,choices.shop.product,subtitle,badge
+Goal Framing,Available for the Next Hour — Buy Now!,choices.shop.product,subtitle,badge
+Goal Framing,Free Shipping if Ordered Now!,choices.shop.product,subtitle,badge
+Goal Framing,Offer Ends in 1 Day,choices.shop.product,subtitle,badge
+Scarcity,Limited Time Offer,choices.shop.product,subtitle,badge
+Scarcity,Only 1 Left in Stock!,choices.shop.product,stock,text
+Scarcity,Selling Fast!,choices.shop.product,subtitle,badge
+Loss Aversion,Save 40%,choices.shop.product,subtitle,badge
+Loss Aversion,On Sale,choices.shop.product,subtitle,badge
+Incentives,Free Shipping!,choices.shop.product,subtitle,badge
+Incentives,Expedited Shipping!,choices.shop.product,subtitle,badge
+Incentives,Buy 1 Get 1 Free,choices.shop.product,subtitle,badge
+Incentives,Earn 5% Store Credit with your Purchase,choices.shop.product,subtitle,badge

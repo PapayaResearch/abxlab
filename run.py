@@ -1,5 +1,6 @@
 import logging
 import dotenv
+dotenv.load_dotenv()
 import hydra
 import gymnasium as gym
 import typing
@@ -11,18 +12,11 @@ browsergym.experiments.benchmark.base.BenchmarkBackend = typing.Literal[
     "assistantbench", "weblinx", "nudgingarena"
 ]
 
-from browsergym.core.registration import frozen_partial
-from browser import NudgingArenaBrowserEnv
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
-from task import NudgingArenaTask
-
-
-
-
-# Load all env vars
-dotenv.load_dotenv()
+from nudgelab.browser import NudgingArenaBrowserEnv
+from nudgelab.task import NudgingArenaTask
 
 
 @hydra.main(config_path="conf", config_name="config", version_base="1.3")

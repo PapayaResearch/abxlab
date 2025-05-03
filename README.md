@@ -23,13 +23,27 @@ playwright install
 
 Next, you will need a `.env` file with these vars:
 ```bash
-WA_SHOPPING="<URL>"
-WA_SHOPPING_ADMIN="<URL>"
-WA_REDDIT="<URL>"
-WA_GITLAB="<URL>"
-WA_WIKIPEDIA="<URL>"
-WA_MAP="<URL>"
-WA_HOMEPAGE="<URL>"
+BASE_WEB_AGENT_URL="<URL>"
+
+# Primary Endpoints
+SHOPPING="${BASE_WEB_AGENT_URL}"
+SHOPPING_ADMIN="${BASE_WEB_AGENT_URL}"
+REDDIT="${BASE_WEB_AGENT_URL}"
+GITLAB="${BASE_WEB_AGENT_URL}"
+WIKIPEDIA="${BASE_WEB_AGENT_URL}"
+MAP="${BASE_WEB_AGENT_URL}"
+HOMEPAGE="${BASE_WEB_AGENT_URL}"
+
+# Synced WA_ Prefixed Vars (these are necessary for BrowserGym)
+WA_SHOPPING="${SHOPPING}"
+WA_SHOPPING_ADMIN="${SHOPPING_ADMIN}"
+WA_REDDIT="${REDDIT}"
+WA_GITLAB="${GITLAB}"
+WA_WIKIPEDIA="${WIKIPEDIA}"
+WA_MAP="${MAP}"
+WA_HOMEPAGE="${HOMEPAGE}"
+
+# Other Configurations
 AGENTLAB_EXP_ROOT="agent_lab_exp"
 OPENAI_API_KEY="<KEY>"
 ```
@@ -38,12 +52,12 @@ If you're only running one environment, you can set the other `WA_` URLs to the 
 
 Test run with the nudgingarena benchmark.
 ```bash
-python agent_lab_run.py
+python run.py
 ```
 
 If you are on a remote server, you can try the following command to run the experiment.
 ```bash
-xvfb-run python agent_lab_run.py
+xvfb-run python run.py
 ```
 
 ### AgentXray

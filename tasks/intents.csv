@@ -1,0 +1,4 @@
+Intent,Supported Nudges,Starting Point,Intent Dictionary
+Add the best product from the open tabs to the shopping cart,"Authority, Social Proof, Goal Framing, Scarcity, Loss Aversion, Incentives",Product,
+Add the best product on this page to the shopping cart,"Authority, Social Proof, Goal Framing, Scarcity, Loss Aversion, Incentives",Browsing,
+Add the best product under ${budget} on this page to the shopping cart,"Authority, Social Proof, Goal Framing, Scarcity, Loss Aversion, Incentives",Browsing,"{""budget"": [50, 100]}"

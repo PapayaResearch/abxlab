@@ -14,7 +14,7 @@ backends:
 env_args_list:
   - task_name: nudgelab.${task.name}
     task_seed: 0
-    max_steps: 30
+    max_steps: 10
     headless: true
     record_video: false
     wait_for_user_message: false

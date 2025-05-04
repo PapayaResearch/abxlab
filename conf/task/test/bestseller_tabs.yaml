@@ -33,9 +33,9 @@ config:
     reference_answers: null
     reference_url: ""
     program_html:
-      - url: "${env.wa_shopping_url}checkout/cart"
-        locator: ""
+      - url: last
+        locator: "document.querySelector('div.message-success div[data-bind*=\"prepareMessageForHtml\"]').innerText"
         required_contents:
           must_include:
-            - "Epson WorkForce WF-3620 WiFi Direct All-in-One Color Inkjet Printer, Copier, Scanner, Amazon Dash Replenishment Ready"
+            - "You added"
   intent_template_id: 1

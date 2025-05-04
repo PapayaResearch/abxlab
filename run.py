@@ -4,7 +4,7 @@ import dotenv
 dotenv.load_dotenv()
 import hydra
 import gymnasium as gym
-import nudgelab.task
+import nudgelab.task # noqa: F401
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs

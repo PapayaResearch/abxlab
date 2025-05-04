@@ -1,2 +1,0 @@
-agentlab
-sphinx-rtd-theme

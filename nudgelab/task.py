@@ -1,9 +1,13 @@
 import logging
 import urllib.parse
 import playwright.sync_api
+from bs4 import BeautifulSoup
 from nudgelab.evaluators import evaluator_router
 from browsergym.core.task import AbstractBrowserTask
 from browsergym.webarena.instance import WebArenaInstance
+from nudgelab.choices.shop.home import rating as home_rating
+from nudgelab.choices.shop.category import rating as category_rating
+from nudgelab.choices.shop.product import rating as product_rating
 
 
 logger = logging.getLogger(__name__)
@@ -145,3 +149,35 @@ If you believe the task is impossible to complete, provide the answer "N/A".
             return score, True, "", {}
         else:
             return score, False, "", {}
+
+    def process_html(self, html: str) -> str:
+        """
+        Do any task-specific processing of the page's underlying content here.
+
+        This will be called by nudgelab.browser.NudgeLabBrowserEnv in the route handler.
+        """
+        return html
+
+
+class NudgeLabShopTask(NudgeLabTask):
+    """
+    NudgeLabShopTask is a subclass of NudgeLabTask that implements some extra logic for the shop task.
+    """
+
+    def process_html(self, html: str) -> str:
+
+        soup = BeautifulSoup(html, "html.parser")
+
+        if soup.find("meta", property="og:type", content="product"):
+            # Page type is product
+            return product_rating(html)
+
+        if soup.select_one("div.sidebar-main div.filter"):
+            # Page type is category
+            return category_rating(html)
+
+        if soup.title and soup.title.string.strip() == "One Stop Market":
+            # Page type is home
+            return home_rating(html)
+
+        return html

@@ -252,11 +252,15 @@ document.addEventListener("visibilitychange", () => {
 
         # Enable response interception for all HTML documents
         def modify_html(route, request):
-            # print(request.url)
+
             response = route.fetch()
             if response.ok:
                 # Modify the HTML before passing it to the browser and agent
                 html = response.body()
+
+                # First we'll do any task-specific preprocessing
+                html = self.task.process_html(html)
+
                 # Find if there's a choice architecture for the current url
                 choice = next(
                     filter(

@@ -4,11 +4,11 @@ import dotenv
 dotenv.load_dotenv()
 import hydra
 import gymnasium as gym
+import nudgelab.task
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
 from nudgelab.browser import NudgeLabBrowserEnv
-from nudgelab.task import NudgeLabTask
 
 
 @hydra.main(config_path="conf", config_name="config", version_base="1.3")
@@ -29,7 +29,7 @@ def main(cfg: DictConfig):
     gym.register(
         id=f"browsergym/nudgelab.{cfg.task.name}",
         entry_point=lambda *env_args, **env_kwargs: NudgeLabBrowserEnv(
-            task_entrypoint=NudgeLabTask,
+            task_entrypoint=eval(cfg.task.entrypoint),
             task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
         ),
         nondeterministic=True

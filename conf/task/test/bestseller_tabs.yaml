@@ -5,10 +5,11 @@ width: 1280
 height: 720
 slow_mo: 1000
 timeout: 10000
+entrypoint: nudgelab.task.NudgeLabShopTask
 config:
   sites:
     - shopping
-  task_id: 1
+  task_id: 100
   require_login: false
   storage_state: ./.auth/shopping_state.json
   start_urls:
@@ -23,9 +24,8 @@ config:
     - url: "${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html"
       functions:
         - module: nudgelab.choices.shop.product
-          name: tag
+          name: subtitle
           args:
-            elem_id: page-title-wrapper product
             value: This product is a best seller!
   eval:
     eval_types:

@@ -96,7 +96,7 @@ class URLEvaluator(URLEvaluator):
     def __call__(
         self,
         trajectory: Trajectory,
-        config: Path | str,
+        config: dict,
         page: Page | PseudoPage,
         client: CDPSession | None = None,
     ) -> float:

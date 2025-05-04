@@ -14,6 +14,7 @@ from nudgelab.browser import NudgeLabBrowserEnv
 @hydra.main(config_path="conf", config_name="config", version_base="1.3")
 def main(cfg: DictConfig):
     logging.basicConfig(level=cfg.experiment.logging_level_stdout, format='%(levelname)s:%(name)s:%(message)s')
+    logging.getLogger('bs4.dammit').setLevel(logging.CRITICAL)
     log = logging.getLogger(__name__)
 
     # Instantiate agent and benchmark directly from Hydra configs

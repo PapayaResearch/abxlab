@@ -1,0 +1,40 @@
+name: BestSellerHome-v0
+with_na_hint: false
+with_homepage_hint: false
+width: 1280
+height: 720
+slow_mo: 1000
+timeout: 10000
+entrypoint: nudgelab.task.NudgeLabShopTask
+config:
+  sites:
+    - shopping
+  task_id: 102
+  require_login: false
+  storage_state: ./.auth/shopping_state.json
+  start_urls:
+    - ${env.wa_shopping_url}
+  geolocation: null
+  intent_template: Find and add any available printer to the shopping cart
+  instantiation_dict: {}
+  intent: Find and add any available printer to the shopping cart
+  require_reset: false
+  choices:
+    - url: "*"
+      functions:
+        - module: nudgelab.choices.shop.home
+          name: subtitle
+          args:
+            value: This product is a best seller!
+  eval:
+    eval_types:
+      - program_html
+    reference_answers: null
+    reference_url: ""
+    program_html:
+      - url: last
+        locator: "document.querySelector('div.message-success div[data-bind*=\"prepareMessageForHtml\"]').innerText"
+        required_contents:
+          must_include:
+            - "You added"
+  intent_template_id: 3

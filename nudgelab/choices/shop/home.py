@@ -42,6 +42,10 @@ def subtitle(
         if items:
             break
 
+    if not len(items):
+        # Since we match all pages, we need to handle the case where there are no items
+        return original_html
+
     item = random.choice(items)
 
     # Find the title of the product to append the nudge

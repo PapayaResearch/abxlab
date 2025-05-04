@@ -4,7 +4,7 @@ defaults:
   - _self_
   - agent: gpt4o-mini
   - benchmark: nudgelab
-  - task: test/bestseller
+  - task: test/bestseller_tabs
 
 experiment:
   root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}

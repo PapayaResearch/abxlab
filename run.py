@@ -16,13 +16,6 @@ def main(cfg: DictConfig):
     logging.basicConfig(level=cfg.experiment.logging_level_stdout, format='%(levelname)s:%(name)s:%(message)s')
     log = logging.getLogger(__name__)
 
-    # Store config in the experiment directory for analysis
-    OmegaConf.save(
-        cfg,
-        os.path.join(cfg.experiment.root_dir, "config.yaml"),
-        resolve=True
-    )
-
     # Instantiate agent and benchmark directly from Hydra configs
     agent = hydra.utils.instantiate(cfg.agent)
     benchmark = hydra.utils.instantiate(cfg.benchmark, _partial_=True)(
@@ -42,7 +35,6 @@ def main(cfg: DictConfig):
         nondeterministic=True
     )
 
-
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,
@@ -56,6 +48,13 @@ def main(cfg: DictConfig):
         n_relaunch=cfg.experiment.n_relaunch
     )
     log.info("Experiment finished.")
+
+    # Store config in the experiment directory for analysis
+    OmegaConf.save(
+        cfg,
+        os.path.join(study.dir, "config.yaml"),
+        resolve=True
+    )
 
 
 if __name__ == "__main__":

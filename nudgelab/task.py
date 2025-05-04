@@ -9,9 +9,9 @@ from browsergym.webarena.instance import WebArenaInstance
 logger = logging.getLogger(__name__)
 
 
-class NudgingArenaTask(AbstractBrowserTask):
+class NudgeLabTask(AbstractBrowserTask):
     """
-    Base class for all NudgingArena tasks.
+    Base class for all NudgeLab tasks.
     """
     def __init__(
         self,

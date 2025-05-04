@@ -1,6 +1,6 @@
-## Setup AgentLab+NudgingArena
+## Setup NudgeLab
 
-AgentLab requires python 3.11 or 3.12.
+NudgeLab requires python 3.11 or 3.12.
 
 ```bash
 git submodule update --init --recursive
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 ```bash
-pip install -e ./nudgingarena ./agentlab
+pip install -e ./agentlab
 ```
 
 Equivalently, you can use `uv pip …` for the above commands (preferred), if you first `pip install uv`.

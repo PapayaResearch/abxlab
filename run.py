@@ -1,22 +1,14 @@
+import os
 import logging
 import dotenv
 dotenv.load_dotenv()
 import hydra
 import gymnasium as gym
-import typing
-
-# We need to patch BrowserGym's internals (since they hardcode things)
-import browsergym.experiments.benchmark.base
-browsergym.experiments.benchmark.base.BenchmarkBackend = typing.Literal[
-    "miniwob", "webarena", "visualwebarena", "workarena",
-    "assistantbench", "weblinx", "nudgingarena"
-]
-
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
-from nudgelab.browser import NudgingArenaBrowserEnv
-from nudgelab.task import NudgingArenaTask
+from nudgelab.browser import NudgeLabBrowserEnv
+from nudgelab.task import NudgeLabTask
 
 
 @hydra.main(config_path="conf", config_name="config", version_base="1.3")
@@ -24,6 +16,14 @@ def main(cfg: DictConfig):
     logging.basicConfig(level=cfg.experiment.logging_level_stdout, format='%(levelname)s:%(name)s:%(message)s')
     log = logging.getLogger(__name__)
 
+    # Store config in the experiment directory for analysis
+    OmegaConf.save(
+        cfg,
+        os.path.join(cfg.experiment.root_dir, "config.yaml"),
+        resolve=True
+    )
+
+    # Instantiate agent and benchmark directly from Hydra configs
     agent = hydra.utils.instantiate(cfg.agent)
     benchmark = hydra.utils.instantiate(cfg.benchmark, _partial_=True)(
         # Necessary workaround for now, to avoid Union instantiation OmegaConf issues
@@ -34,9 +34,9 @@ def main(cfg: DictConfig):
 
     # Register the env here, so we don't need to reach into BrowserGym
     gym.register(
-        id=f"browsergym/nudgingarena.{cfg.task.name}",
-        entry_point=lambda *env_args, **env_kwargs: NudgingArenaBrowserEnv(
-            task_entrypoint=NudgingArenaTask,
+        id=f"browsergym/nudgelab.{cfg.task.name}",
+        entry_point=lambda *env_args, **env_kwargs: NudgeLabBrowserEnv(
+            task_entrypoint=NudgeLabTask,
             task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
         ),
         nondeterministic=True

@@ -17,7 +17,7 @@ from browsergym.core.env import BrowserEnv
 logger = logging.getLogger(__name__)
 
 
-class NudgingArenaBrowserEnv(BrowserEnv):
+class NudgeLabBrowserEnv(BrowserEnv):
     """Override for route handling."""
     def __init__(
         self,

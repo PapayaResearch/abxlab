@@ -3,15 +3,8 @@
 NudgeLab requires python 3.11 or 3.12.
 
 ```bash
-git submodule update --init --recursive
-```
-
-```bash
 pip install -r requirements.txt
-```
-
-```bash
-pip install -e ./agentlab
+cd ./agentlab && pip install -e . && cd ..
 ```
 
 Equivalently, you can use `uv pip …` for the above commands (preferred), if you first `pip install uv`.

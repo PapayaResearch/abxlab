@@ -20,7 +20,7 @@ config:
   intent: Add the best product from this page to the shopping cart
   require_reset: false
   choices:
-    - url: ${env.wa_shopping_url}electronics/camera-photo/digital-cameras.html
+    - url: ${task.config.start_urls[0]}
       functions:
         - module: nudgelab.choices.shop.category
           name: subtitle

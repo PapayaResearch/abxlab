@@ -37,7 +37,7 @@ WA_MAP="${MAP}"
 WA_HOMEPAGE="${HOMEPAGE}"
 
 # Other Configurations
-AGENTLAB_EXP_ROOT="agent_lab_exp"
+AGENTLAB_EXP_ROOT="results"
 OPENAI_API_KEY="<KEY>"
 ```
 
@@ -62,8 +62,15 @@ Make sure that you have 'agentlab-xray = analyze.agent_xray:main' in the agenlab
 
 In a terminal, execute:
 ```bash
-export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # Should likely be ./agent_lab_exp
+export AGENTLAB_EXP_ROOT=<root directory of experiment results>  # Should likely be ./results
 agentlab-xray
+```
+
+To avoid re-exporting `AGENTLAB_EXP_ROOT`, you can also do:
+```bash
+set -a && source .env
+agentlab-xray
+set +a # Optional, to turn off the allexport
 ```
 
 You can load previous or ongoing experiments in the directory `AGENTLAB_EXP_ROOT` and visualize the results in a gradio interface.

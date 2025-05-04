@@ -25,7 +25,7 @@ from typing import Optional
 
 
 def subtitle(
-    original_html: str,
+    original_html: bytes,
     value: str,
     elem_id: str = "product name product-item-name",
     product: Optional[str] = None
@@ -61,7 +61,7 @@ def subtitle(
 
 
 def rating(
-    original_html: str,
+    original_html: bytes,
     elem_id: str = "rating-result"
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")

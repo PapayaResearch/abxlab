@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup
 
 
 def subtitle(
-    original_html: str,
+    original_html: bytes,
     value: str,
     elem_id: str = "page-title-wrapper product"
 ) -> str:
@@ -49,7 +49,7 @@ def subtitle(
 
 
 def stock(
-    original_html: str,
+    original_html: bytes,
     value: str,
     elem_id: str = "product-info-stock-sku"
 ) -> str:
@@ -76,7 +76,7 @@ def stock(
 
 
 def rating(
-    original_html: str,
+    original_html: bytes,
     elem_id: str = "rating-summary"
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")

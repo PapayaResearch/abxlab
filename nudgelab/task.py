@@ -1,6 +1,7 @@
 import logging
 import urllib.parse
 import playwright.sync_api
+from nudgelab.evaluators import evaluator_router
 from browsergym.core.task import AbstractBrowserTask
 from browsergym.webarena.instance import WebArenaInstance
 
@@ -8,9 +9,9 @@ from browsergym.webarena.instance import WebArenaInstance
 logger = logging.getLogger(__name__)
 
 
-class NudgingArenaTask(AbstractBrowserTask):
+class NudgeLabTask(AbstractBrowserTask):
     """
-    Base class for all NudgingArena tasks.
+    Base class for all NudgeLab tasks.
     """
     def __init__(
         self,
@@ -26,10 +27,10 @@ class NudgingArenaTask(AbstractBrowserTask):
     ) -> None:
         super().__init__(seed)
 
-        # task properties, will be used to set up the browsergym environment
+        # Task properties, will be used to set up the browsergym environment
         self.viewport = {"width": width, "height": height}
-        self.slow_mo = slow_mo  # ms
-        self.timeout = timeout  # ms
+        self.slow_mo = slow_mo
+        self.timeout = timeout
 
         self.webarena_instance = WebArenaInstance()
         self.with_na_hint = with_na_hint
@@ -39,9 +40,6 @@ class NudgingArenaTask(AbstractBrowserTask):
         self.config = config
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
-        # import nudgingarena on instantiation
-        from nudgingarena.evaluation_harness.evaluators import evaluator_router
-
         # build the evaluator
         self.evaluator = evaluator_router(self.config)
 
@@ -113,7 +111,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
                 return 0, True, "", {"error": "Unauthorized url, terminating task"}
 
         # import webarena dynamically
-        from nudgingarena.browser_env.actions import ActionTypes
+        from webarena.browser_env.actions import ActionTypes
 
         # if any, use the last assistant message as the stop answer for webarena
         if chat_messages and chat_messages[-1]["role"] == "assistant":

@@ -1,15 +1,12 @@
 # @package _global_
 
 defaults:
-  - agent: gpt4o-mini
-  - benchmark: nudgingarena_tiny
-  - task: bestseller_product
-  # - override hydra/job_logging: default # Optional: Load custom Hydra logging
   - _self_
-
+  - agent: gpt4o-mini
+  - benchmark: nudgelab
+  - task: test/bestseller
 
 experiment:
-  name: agentlab_study_${agent.name}_${benchmark.name}
   root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
   n_jobs: 1
   parallel_backend: sequential

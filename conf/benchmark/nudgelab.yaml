@@ -1,5 +1,5 @@
 _target_: browsergym.experiments.benchmark.Benchmark
-name: nudgingarena_tiny
+name: nudgelab
 high_level_action_set_args:
   _target_: browsergym.experiments.benchmark.base.HighLevelActionSetArgs
   subsets: [webarena]
@@ -10,11 +10,11 @@ high_level_action_set_args:
 is_multi_tab: true
 supports_parallel_seeds: false
 backends:
-  - nudgingarena
+  - webarena
 env_args_list:
-  - task_name: nudgingarena.${task.name}
+  - task_name: nudgelab.${task.name}
     task_seed: 0
-    max_steps: 6
+    max_steps: 10
     headless: true
     record_video: false
     wait_for_user_message: false
@@ -25,6 +25,6 @@ env_args_list:
 task_metadata:
   _target_: pandas.DataFrame
   data:
-    - task_name: nudgingarena.${task.name}
+    - task_name: ${benchmark.env_args_list.0.task_name}
       task_category: shopping
       browsergym_split: train

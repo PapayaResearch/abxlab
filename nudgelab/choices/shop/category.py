@@ -19,17 +19,29 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import random
 from bs4 import BeautifulSoup
+from typing import Optional
 
 
 def subtitle(
     original_html: str,
     value: str,
-    elem_id: str = "page-title-wrapper product"
+    elem_id: str = "product name product-item-name",
+    product: Optional[str] = None
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 
-    element = soup.find("div", class_=elem_id)
+    items = soup.select("li.item.product.product-item")
+
+    if product is None:
+        item = random.choice(items)
+    else:
+        link = soup.find("a", class_="product-item-link", href=product)
+        item = link.find_parent("li", class_="product-item")
+
+    # Find the title of the product to append the nudge
+    element = item.find("strong", class_=elem_id)
 
     span_tag = soup.new_tag("span", attrs={"class":"product-title-details"})
     span_tag["style"] = (
@@ -48,52 +60,30 @@ def subtitle(
     return modified_html
 
 
-def stock(
-    original_html: str,
-    value: str,
-    elem_id: str = "product-info-stock-sku"
-) -> str:
-    soup = BeautifulSoup(original_html, "lxml")
-
-    element = soup.find("div", class_=elem_id)
-
-    span_tag = soup.new_tag("span", attrs={"class":"product-stock-details"})
-    span_tag["style"] = (
-        "display: inline-block; "
-        "padding: 4px 8px; "
-        "margin-top: 10px; "
-        "border: 1px solid rgb(30, 109, 182); "
-        "border-radius: 2px; "
-        "color: rgb(30, 109, 182); "
-        "font-size: 0.9em;"
-    )
-    span_tag.string = value
-
-    element.insert_after(span_tag)
-
-    modified_html = str(soup)
-    return modified_html
-
-
 def rating(
     original_html: str,
-    elem_id: str = "rating-summary"
+    elem_id: str = "rating-result"
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 
-    rating = soup.find("div", class_="rating-result")["title"]
-    element = soup.find("div", class_=elem_id)
+    items = soup.select("li.item.product.product-item")
 
-    span_tag = soup.new_tag("span", attrs={"class":"product-rating-details"})
-    span_tag["style"] = (
-        "display: inline-block; "
-        "margin-top: 4px; "
-        "margin-right: 10px; "
-        "color: rgb(251, 79, 31); "
-    )
-    span_tag.string = "(" + rating + ")"
+    for item in items:
+        rating = item.find("div", class_="rating-result")
 
-    element.insert_after(span_tag)
+        if rating:
+            element = item.find("div", class_=elem_id)
+
+            span_tag = soup.new_tag("span", attrs={"class":"product-rating-details"})
+            span_tag["style"] = (
+                "display: inline-block; "
+                "margin-top: 4px; "
+                "margin-right: 10px; "
+                "color: rgb(251, 79, 31); "
+            )
+            span_tag.string = "(" + rating["title"] + ")"
+
+            element.insert_after(span_tag)
 
     modified_html = str(soup)
     return modified_html

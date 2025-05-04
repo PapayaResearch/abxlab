@@ -1,16 +1,21 @@
 import logging
 import urllib.parse
 import playwright.sync_api
+from bs4 import BeautifulSoup
+from nudgelab.evaluators import evaluator_router
 from browsergym.core.task import AbstractBrowserTask
 from browsergym.webarena.instance import WebArenaInstance
+from nudgelab.choices.shop.home import rating as home_rating
+from nudgelab.choices.shop.category import rating as category_rating
+from nudgelab.choices.shop.product import rating as product_rating
 
 
 logger = logging.getLogger(__name__)
 
 
-class NudgingArenaTask(AbstractBrowserTask):
+class NudgeLabTask(AbstractBrowserTask):
     """
-    Base class for all NudgingArena tasks.
+    Base class for all NudgeLab tasks.
     """
     def __init__(
         self,
@@ -26,10 +31,10 @@ class NudgingArenaTask(AbstractBrowserTask):
     ) -> None:
         super().__init__(seed)
 
-        # task properties, will be used to set up the browsergym environment
+        # Task properties, will be used to set up the browsergym environment
         self.viewport = {"width": width, "height": height}
-        self.slow_mo = slow_mo  # ms
-        self.timeout = timeout  # ms
+        self.slow_mo = slow_mo
+        self.timeout = timeout
 
         self.webarena_instance = WebArenaInstance()
         self.with_na_hint = with_na_hint
@@ -39,9 +44,6 @@ class NudgingArenaTask(AbstractBrowserTask):
         self.config = config
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
-        # import nudgingarena on instantiation
-        from nudgingarena.evaluation_harness.evaluators import evaluator_router
-
         # build the evaluator
         self.evaluator = evaluator_router(self.config)
 
@@ -113,7 +115,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
                 return 0, True, "", {"error": "Unauthorized url, terminating task"}
 
         # import webarena dynamically
-        from nudgingarena.browser_env.actions import ActionTypes
+        from webarena.browser_env.actions import ActionTypes
 
         # if any, use the last assistant message as the stop answer for webarena
         if chat_messages and chat_messages[-1]["role"] == "assistant":
@@ -147,3 +149,35 @@ If you believe the task is impossible to complete, provide the answer "N/A".
             return score, True, "", {}
         else:
             return score, False, "", {}
+
+    def process_html(self, html: str) -> str:
+        """
+        Do any task-specific processing of the page's underlying content here.
+
+        This will be called by nudgelab.browser.NudgeLabBrowserEnv in the route handler.
+        """
+        return html
+
+
+class NudgeLabShopTask(NudgeLabTask):
+    """
+    NudgeLabShopTask is a subclass of NudgeLabTask that implements some extra logic for the shop task.
+    """
+
+    def process_html(self, html: str) -> str:
+
+        soup = BeautifulSoup(html, "html.parser")
+
+        if soup.find("meta", property="og:type", content="product"):
+            # Page type is product
+            return product_rating(html)
+
+        if soup.select_one("div.sidebar-main div.filter"):
+            # Page type is category
+            return category_rating(html)
+
+        if soup.title and soup.title.string.strip() == "One Stop Market":
+            # Page type is home
+            return home_rating(html)
+
+        return html

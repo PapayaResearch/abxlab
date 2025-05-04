@@ -264,7 +264,7 @@ document.addEventListener("visibilitychange", () => {
                 # Find if there's a choice architecture for the current url
                 choice = next(
                     filter(
-                        lambda choice: choice["url"] == request.url, self.env_config.get("choices")
+                        lambda choice: choice["url"] in [request.url, "*"], self.env_config.get("choices")
                     ),
                     None
                 )

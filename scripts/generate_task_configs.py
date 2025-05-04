@@ -66,37 +66,13 @@ def generate_task_configs(consider_order=True):
         intents = list(csv.DictReader(f1,quotechar='"', delimiter=',', skipinitialspace=True))
         interventions = list(csv.DictReader(f2,quotechar='"', delimiter=',', skipinitialspace=True))
         products = list(csv.DictReader(f3,quotechar='"', delimiter=',', skipinitialspace=True))
-    
-        os.makedirs('tasks/configs', exist_ok=True)
 
-        # Task counter for numbering each task
         task_counter = 1
+        intent_template_counter = 1
         
-        base_config = {
-            'name': '',  # Will be set based on intent and nudge
-            'ini'
-            'with_na_hint': False,
-            'with_homepage_hint': False,
-            'width': 1280,
-            'height': 720,
-            'slow_mo': 1000,
-            'timeout': 10000,
-            'config': {
-                'sites': ['shopping'],
-                'task_id': 1,  # Will be updated with task_counter
-                'require_login': False,
-                'storage_state': './.auth/shopping_state.json',
-                'geolocation': None,
-                'require_reset': False,
-                'choices': [],
-                'eval': {
-                    'eval_types': ['program_html'],
-                    'reference_answers': None,
-                    'reference_url': "",
-                    'program_html': []
-                }
-            }
-        }
+        # TODO: Can be replaced with a default config
+        with open('conf/task/test/bestseller_tabs.yaml', 'r') as config_file:
+            base_config = yaml.safe_load(config_file)
         
         for intent in intents:
             intent_template = intent['Intent']
@@ -116,7 +92,6 @@ def generate_task_configs(consider_order=True):
                 elif starting_point == 'Browsing':
                     for product_index, product in enumerate(products, 1):
                         all_urls = process_urls(product['Start URLS'])
-                        evaluation_url = product['Evaluation']
                         
                         # Only consider products with a single start URL
                         if len(all_urls) == 1:
@@ -127,7 +102,6 @@ def generate_task_configs(consider_order=True):
                     assert starting_point == 'Product', f"Starting point '{starting_point}' not supported"
                     for product_index, product in enumerate(products, 1):
                         all_urls = process_urls(product['Start URLS'])
-                        evaluation_url = product['Evaluation']
                         
                         if len(all_urls) > 1:
                             # Determine all possible start_urls combinations for this product
@@ -160,7 +134,7 @@ def generate_task_configs(consider_order=True):
                                     config['config']['intent'] = generated_intent
                                     config['config']['instantiation_dict'] = intent_dict
                                     config['config']['start_urls'] = start_urls
-                                    
+                                    config['config']['intent_template_id'] = intent_template_counter
                                     choice = {
                                         'url': start_urls[0] if isinstance(start_urls, list) else start_urls[0][0],
                                         'functions': [{
@@ -175,18 +149,14 @@ def generate_task_configs(consider_order=True):
                                     # Set choices directly instead of appending
                                     config['config']['choices'] = [choice]
                                     
-                                    # Add evaluation configuration if evaluation URL exists
-                                    # TODO: Add evaluation for non-evaluationURL cases
-                                    # TODO: Consider adding a "product name" in the product spreadsheet for evaluation and task naming
-                                    if evaluation_url:
-                                        # Set program_html directly instead of appending
-                                        config['config']['eval']['program_html'] = [{
-                                            'url': evaluation_url,
-                                            'locator': "",
-                                            'required_contents': {
-                                                'must_include': ["You added"]
-                                            }
-                                        }]
+                                    # TODO: Find better evaluation config to monitor "add to cart" action
+                                    config['config']['eval']['program_html'] = [{
+                                        'url': "",
+                                        'locator': "",
+                                        'required_contents': {
+                                            'must_include': ["You added"]
+                                        }
+                                    }]
                                     
                             
                                     config_filename = f"conf/task/{file_name}.yaml"
@@ -197,6 +167,8 @@ def generate_task_configs(consider_order=True):
                                     # Increment the task counter for the next task
                                     task_counter += 1
 
+            intent_template_counter += 1
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate task configurations')
     parser.add_argument('--consider-order', action='store_true', default=True,
@@ -205,4 +177,4 @@ if __name__ == '__main__':
                         help='Ignore order of URLs in combinations')
     args = parser.parse_args()
     
-    generate_task_configs(consider_order=args.consider_order) 
+    generate_task_configs(consider_order=args.ignore_order) 

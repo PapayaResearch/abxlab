@@ -136,10 +136,6 @@ def generate_task_configs(consider_order=True):
                                     config['config']['instantiation_dict'] = {} if not intent_dict else json.loads(intent_dict)
                                     config['config']['start_urls'] = start_urls
                                     config['config']['intent_template_id'] = intent_template_counter
-                                    print(start_urls)
-                                    print(type(start_urls))
-                                    print(config['config']['choices'][0]['url'])
-                                    print(type(config['config']['choices'][0]['url']))
                                     config['config']['choices'][0]['url'] = start_urls[0] if isinstance(start_urls, list) else start_urls[0][0]
                                     config['config']['choices'][0]['functions'] = [{
                                         'module': intervention['Module'],

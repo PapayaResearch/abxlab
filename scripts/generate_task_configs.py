@@ -171,10 +171,11 @@ def generate_task_configs(consider_order=True):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate task configurations')
-    parser.add_argument('--consider-order', action='store_true', default=True,
-                        help='Consider order of URLs in combinations (default: True)')
+    parser.add_argument('--consider-order', dest='consider_order', action='store_true',
+                        help='Consider order of URLs in combinations')
     parser.add_argument('--ignore-order', dest='consider_order', action='store_false',
-                        help='Ignore order of URLs in combinations')
+                        help='Ignore order of URLs in combinations (default)')
+    parser.set_defaults(consider_order=False)
     args = parser.parse_args()
     
-    generate_task_configs(consider_order=args.ignore_order) 
+    generate_task_configs(consider_order=args.consider_order) 

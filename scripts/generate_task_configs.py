@@ -149,15 +149,6 @@ def generate_task_configs(consider_order=True):
                                     # Set choices directly instead of appending
                                     config['config']['choices'] = [choice]
                                     
-                                    # TODO: Find better evaluation config to monitor "add to cart" action
-                                    config['config']['eval']['program_html'] = [{
-                                        'url': "",
-                                        'locator': "",
-                                        'required_contents': {
-                                            'must_include': ["You added"]
-                                        }
-                                    }]
-                                    
                             
                                     config_filename = f"conf/task/{file_name}.yaml"
                                     with open(config_filename, 'w') as f:

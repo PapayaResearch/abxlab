@@ -132,22 +132,22 @@ def generate_task_configs(consider_order=True):
                                     config['config']['task_id'] = task_counter
                                     config['config']['intent_template'] = intent_template
                                     config['config']['intent'] = generated_intent
-                                    config['config']['instantiation_dict'] = intent_dict
+                                    # Ensure instantiation_dict is an empty dict, not an empty string
+                                    config['config']['instantiation_dict'] = {} if not intent_dict else json.loads(intent_dict)
                                     config['config']['start_urls'] = start_urls
                                     config['config']['intent_template_id'] = intent_template_counter
-                                    choice = {
-                                        'url': start_urls[0] if isinstance(start_urls, list) else start_urls[0][0],
-                                        'functions': [{
-                                            'module': intervention['Module'],
-                                            'name': intervention['Name'],
-                                            'args': {
-                                                'elem_id': intervention['Element'],
-                                                'value': intervention['Intervention']
-                                            }
-                                        }]
-                                    }
-                                    # Set choices directly instead of appending
-                                    config['config']['choices'] = [choice]
+                                    print(start_urls)
+                                    print(type(start_urls))
+                                    print(config['config']['choices'][0]['url'])
+                                    print(type(config['config']['choices'][0]['url']))
+                                    config['config']['choices'][0]['url'] = start_urls[0] if isinstance(start_urls, list) else start_urls[0][0]
+                                    config['config']['choices'][0]['functions'] = [{
+                                        'module': intervention['Module'],
+                                        'name': intervention['Name'],
+                                        'args': {
+                                            'value': intervention['Intervention']
+                                        }
+                                    }]
                                     
                             
                                     config_filename = f"conf/task/{file_name}.yaml"

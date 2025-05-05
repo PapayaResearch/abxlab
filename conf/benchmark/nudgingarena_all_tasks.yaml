@@ -8,7 +8,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task44ProductScarcityP5I3-v0
+  task_name: nudgingarena.Task18ProductScarcityP1I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -18,7 +18,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task34ProductSocialProofP5I2-v0
+  task_name: nudgingarena.Task230ProductAuthorityP5I5-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -28,7 +28,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task38ProductSocialProofP5I6-v0
+  task_name: nudgingarena.Task240ProductGoalFramingP5I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -38,7 +38,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task18ProductScarcityP5I2-v0
+  task_name: nudgingarena.Task241ProductGoalFramingP5I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -48,7 +48,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task36ProductSocialProofP5I4-v0
+  task_name: nudgingarena.Task206ProductAuthorityP5I6-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -58,7 +58,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task47ProductIncentivesP5I1-v0
+  task_name: nudgingarena.Task21ProductLossAversionP1I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -68,7 +68,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task50ProductIncentivesP5I4-v0
+  task_name: nudgingarena.Task183ProductSocialProofP4I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -78,7 +78,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task30ProductAuthorityP5I5-v0
+  task_name: nudgingarena.Task250ProductIncentivesP5I4-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -88,7 +88,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task11ProductSocialProofP5I4-v0
+  task_name: nudgingarena.Task154ProductAuthorityP4I4-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -98,7 +98,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task29ProductAuthorityP5I4-v0
+  task_name: nudgingarena.Task19ProductScarcityP1I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -108,7 +108,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task27ProductAuthorityP5I2-v0
+  task_name: nudgingarena.Task220ProductLossAversionP5I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -118,7 +118,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task43ProductScarcityP5I2-v0
+  task_name: nudgingarena.Task58ProductSocialProofP2I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -128,7 +128,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task3ProductAuthorityP5I3-v0
+  task_name: nudgingarena.Task152ProductAuthorityP4I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -138,7 +138,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task17ProductScarcityP5I1-v0
+  task_name: nudgingarena.Task203ProductAuthorityP5I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -148,7 +148,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task20ProductLossAversionP5I1-v0
+  task_name: nudgingarena.Task237ProductSocialProofP5I5-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -158,7 +158,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task21ProductLossAversionP5I2-v0
+  task_name: nudgingarena.Task222ProductIncentivesP5I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -168,7 +168,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task22ProductIncentivesP5I1-v0
+  task_name: nudgingarena.Task246ProductLossAversionP5I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -178,7 +178,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task16ProductGoalFramingP5I3-v0
+  task_name: nudgingarena.Task145ProductLossAversionP3I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -188,7 +188,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task9ProductSocialProofP5I2-v0
+  task_name: nudgingarena.Task242ProductScarcityP5I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -198,7 +198,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task41ProductGoalFramingP5I3-v0
+  task_name: nudgingarena.Task89ProductGoalFramingP2I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -208,7 +208,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task25ProductIncentivesP5I4-v0
+  task_name: nudgingarena.Task160ProductSocialProofP4I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -218,7 +218,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task37ProductSocialProofP5I5-v0
+  task_name: nudgingarena.Task155ProductAuthorityP4I5-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -228,7 +228,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task46ProductLossAversionP5I2-v0
+  task_name: nudgingarena.Task51ProductAuthorityP2I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -238,7 +238,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task6ProductAuthorityP5I6-v0
+  task_name: nudgingarena.Task113ProductSocialProofP3I6-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -248,7 +248,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task35ProductSocialProofP5I3-v0
+  task_name: nudgingarena.Task88ProductSocialProofP2I6-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -258,7 +258,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task39ProductGoalFramingP5I1-v0
+  task_name: nudgingarena.Task223ProductIncentivesP5I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -268,7 +268,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task7ProductAuthorityP5I7-v0
+  task_name: nudgingarena.Task3ProductAuthorityP1I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -278,7 +278,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task1ProductAuthorityP5I1-v0
+  task_name: nudgingarena.Task24ProductIncentivesP1I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -288,7 +288,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task31ProductAuthorityP5I6-v0
+  task_name: nudgingarena.Task228ProductAuthorityP5I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -298,7 +298,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task14ProductGoalFramingP5I1-v0
+  task_name: nudgingarena.Task42ProductScarcityP1I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -308,7 +308,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task48ProductIncentivesP5I2-v0
+  task_name: nudgingarena.Task233ProductSocialProofP5I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -318,7 +318,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task32ProductAuthorityP5I7-v0
+  task_name: nudgingarena.Task205ProductAuthorityP5I5-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -328,7 +328,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task28ProductAuthorityP5I3-v0
+  task_name: nudgingarena.Task239ProductGoalFramingP5I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -338,7 +338,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task4ProductAuthorityP5I4-v0
+  task_name: nudgingarena.Task249ProductIncentivesP5I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -348,7 +348,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task42ProductScarcityP5I1-v0
+  task_name: nudgingarena.Task167ProductScarcityP4I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -358,7 +358,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task5ProductAuthorityP5I5-v0
+  task_name: nudgingarena.Task99ProductIncentivesP2I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -368,7 +368,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task19ProductScarcityP5I3-v0
+  task_name: nudgingarena.Task192ProductScarcityP4I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -378,7 +378,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task33ProductSocialProofP5I1-v0
+  task_name: nudgingarena.Task127ProductAuthorityP3I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -388,7 +388,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task8ProductSocialProofP5I1-v0
+  task_name: nudgingarena.Task121ProductLossAversionP3I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -398,7 +398,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task49ProductIncentivesP5I3-v0
+  task_name: nudgingarena.Task169ProductScarcityP4I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -408,7 +408,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task23ProductIncentivesP5I2-v0
+  task_name: nudgingarena.Task86ProductSocialProofP2I4-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -418,7 +418,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task24ProductIncentivesP5I3-v0
+  task_name: nudgingarena.Task171ProductLossAversionP4I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -428,7 +428,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task40ProductGoalFramingP5I2-v0
+  task_name: nudgingarena.Task117ProductScarcityP3I1-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -438,7 +438,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task26ProductAuthorityP5I1-v0
+  task_name: nudgingarena.Task199ProductIncentivesP4I3-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -448,7 +448,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task15ProductGoalFramingP5I2-v0
+  task_name: nudgingarena.Task177ProductAuthorityP4I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -458,7 +458,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task45ProductLossAversionP5I1-v0
+  task_name: nudgingarena.Task62ProductSocialProofP2I5-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -468,7 +468,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task12ProductSocialProofP5I5-v0
+  task_name: nudgingarena.Task9ProductSocialProofP1I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -478,7 +478,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task13ProductSocialProofP5I6-v0
+  task_name: nudgingarena.Task168ProductScarcityP4I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -488,7 +488,7 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task2ProductAuthorityP5I2-v0
+  task_name: nudgingarena.Task211ProductSocialProofP5I4-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -498,7 +498,2007 @@ env_args_list:
   slow_mo: null
   storage_state: null
   task_kwargs: null
-  task_name: nudgingarena.Task10ProductSocialProofP5I3-v0
+  task_name: nudgingarena.Task170ProductLossAversionP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task26ProductAuthorityP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task141ProductGoalFramingP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task231ProductAuthorityP5I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task142ProductScarcityP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task49ProductIncentivesP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task190ProductGoalFramingP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task17ProductScarcityP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task30ProductAuthorityP1I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task166ProductGoalFramingP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task179ProductAuthorityP4I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task224ProductIncentivesP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task243ProductScarcityP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task126ProductAuthorityP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task181ProductAuthorityP4I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task116ProductGoalFramingP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task38ProductSocialProofP1I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task108ProductSocialProofP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task102ProductAuthorityP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task48ProductIncentivesP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task229ProductAuthorityP5I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task197ProductIncentivesP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task134ProductSocialProofP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task52ProductAuthorityP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task112ProductSocialProofP3I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task61ProductSocialProofP2I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task87ProductSocialProofP2I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task208ProductSocialProofP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task110ProductSocialProofP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task100ProductIncentivesP2I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task46ProductLossAversionP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task136ProductSocialProofP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task22ProductIncentivesP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task182ProductAuthorityP4I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task25ProductIncentivesP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task180ProductAuthorityP4I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task31ProductAuthorityP1I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task50ProductIncentivesP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task193ProductScarcityP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task106ProductAuthorityP3I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task79ProductAuthorityP2I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task225ProductIncentivesP5I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task123ProductIncentivesP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task173ProductIncentivesP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task200ProductIncentivesP4I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task125ProductIncentivesP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task6ProductAuthorityP1I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task216ProductGoalFramingP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task85ProductSocialProofP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task143ProductScarcityP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task63ProductSocialProofP2I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task221ProductLossAversionP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task151ProductAuthorityP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task174ProductIncentivesP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task158ProductSocialProofP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task217ProductScarcityP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task97ProductIncentivesP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task144ProductScarcityP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task43ProductScarcityP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task53ProductAuthorityP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task129ProductAuthorityP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task54ProductAuthorityP2I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task232ProductAuthorityP5I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task247ProductIncentivesP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task176ProductAuthorityP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task156ProductAuthorityP4I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task109ProductSocialProofP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task153ProductAuthorityP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task69ProductScarcityP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task227ProductAuthorityP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task215ProductGoalFramingP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task71ProductLossAversionP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task23ProductIncentivesP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task119ProductScarcityP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task80ProductAuthorityP2I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task138ProductSocialProofP3I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task120ProductLossAversionP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task172ProductIncentivesP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task212ProductSocialProofP5I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task103ProductAuthorityP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task124ProductIncentivesP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task128ProductAuthorityP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task7ProductAuthorityP1I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task29ProductAuthorityP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task5ProductAuthorityP1I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task207ProductAuthorityP5I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task91ProductGoalFramingP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task72ProductIncentivesP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task185ProductSocialProofP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task60ProductSocialProofP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task16ProductGoalFramingP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task209ProductSocialProofP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task10ProductSocialProofP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task105ProductAuthorityP3I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task76ProductAuthorityP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task210ProductSocialProofP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task1ProductAuthorityP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task147ProductIncentivesP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task146ProductLossAversionP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task161ProductSocialProofP4I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task57ProductAuthorityP2I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task131ProductAuthorityP3I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task244ProductScarcityP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task186ProductSocialProofP4I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task234ProductSocialProofP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task35ProductSocialProofP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task44ProductScarcityP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task130ProductAuthorityP3I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task68ProductScarcityP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task34ProductSocialProofP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task66ProductGoalFramingP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task96ProductLossAversionP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task98ProductIncentivesP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task37ProductSocialProofP1I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task11ProductSocialProofP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task189ProductGoalFramingP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task81ProductAuthorityP2I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task175ProductIncentivesP4I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task114ProductGoalFramingP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task137ProductSocialProofP3I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task236ProductSocialProofP5I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task115ProductGoalFramingP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task36ProductSocialProofP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task73ProductIncentivesP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task70ProductLossAversionP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task104ProductAuthorityP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task218ProductScarcityP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task74ProductIncentivesP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task187ProductSocialProofP4I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task95ProductLossAversionP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task93ProductScarcityP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task12ProductSocialProofP1I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task214ProductGoalFramingP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task55ProductAuthorityP2I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task219ProductScarcityP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task4ProductAuthorityP1I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task2ProductAuthorityP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task8ProductSocialProofP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task83ProductSocialProofP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task213ProductSocialProofP5I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task159ProductSocialProofP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task139ProductGoalFramingP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task150ProductIncentivesP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task33ProductSocialProofP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task82ProductAuthorityP2I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task135ProductSocialProofP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task122ProductIncentivesP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task194ProductScarcityP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task47ProductIncentivesP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task15ProductGoalFramingP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task59ProductSocialProofP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task178ProductAuthorityP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task140ProductGoalFramingP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task78ProductAuthorityP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task201ProductAuthorityP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task28ProductAuthorityP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task39ProductGoalFramingP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task45ProductLossAversionP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task32ProductAuthorityP1I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task164ProductGoalFramingP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task27ProductAuthorityP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task198ProductIncentivesP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task101ProductAuthorityP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task202ProductAuthorityP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task111ProductSocialProofP3I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task75ProductIncentivesP2I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task84ProductSocialProofP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task195ProductLossAversionP4I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task20ProductLossAversionP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task94ProductScarcityP2I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task157ProductAuthorityP4I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task235ProductSocialProofP5I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task188ProductSocialProofP4I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task13ProductSocialProofP1I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task163ProductSocialProofP4I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task56ProductAuthorityP2I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task191ProductGoalFramingP4I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task149ProductIncentivesP3I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task196ProductLossAversionP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task41ProductGoalFramingP1I3-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task132ProductAuthorityP3I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task165ProductGoalFramingP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task92ProductScarcityP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task133ProductSocialProofP3I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task77ProductAuthorityP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task65ProductGoalFramingP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task226ProductAuthorityP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task40ProductGoalFramingP1I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task148ProductIncentivesP3I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task245ProductLossAversionP5I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task204ProductAuthorityP5I4-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task90ProductGoalFramingP2I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task67ProductScarcityP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task107ProductAuthorityP3I7-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task64ProductGoalFramingP2I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task248ProductIncentivesP5I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task184ProductSocialProofP4I2-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task162ProductSocialProofP4I5-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task238ProductSocialProofP5I6-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task14ProductGoalFramingP1I1-v0
+  task_seed: 0
+  viewport: null
+  wait_for_user_message: false
+- headless: true
+  max_steps: 6
+  record_video: false
+  slow_mo: null
+  storage_state: null
+  task_kwargs: null
+  task_name: nudgingarena.Task118ProductScarcityP3I2-v0
   task_seed: 0
   viewport: null
   wait_for_user_message: false
@@ -518,151 +2518,751 @@ task_metadata:
   data:
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task44ProductScarcityP5I3-v0
+    task_name: nudgingarena.Task18ProductScarcityP1I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task34ProductSocialProofP5I2-v0
+    task_name: nudgingarena.Task230ProductAuthorityP5I5-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task38ProductSocialProofP5I6-v0
+    task_name: nudgingarena.Task240ProductGoalFramingP5I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task18ProductScarcityP5I2-v0
+    task_name: nudgingarena.Task241ProductGoalFramingP5I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task36ProductSocialProofP5I4-v0
+    task_name: nudgingarena.Task206ProductAuthorityP5I6-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task47ProductIncentivesP5I1-v0
+    task_name: nudgingarena.Task21ProductLossAversionP1I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task50ProductIncentivesP5I4-v0
+    task_name: nudgingarena.Task183ProductSocialProofP4I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task30ProductAuthorityP5I5-v0
+    task_name: nudgingarena.Task250ProductIncentivesP5I4-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task11ProductSocialProofP5I4-v0
+    task_name: nudgingarena.Task154ProductAuthorityP4I4-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task29ProductAuthorityP5I4-v0
+    task_name: nudgingarena.Task19ProductScarcityP1I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task27ProductAuthorityP5I2-v0
+    task_name: nudgingarena.Task220ProductLossAversionP5I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task43ProductScarcityP5I2-v0
+    task_name: nudgingarena.Task58ProductSocialProofP2I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task3ProductAuthorityP5I3-v0
+    task_name: nudgingarena.Task152ProductAuthorityP4I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task17ProductScarcityP5I1-v0
+    task_name: nudgingarena.Task203ProductAuthorityP5I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task20ProductLossAversionP5I1-v0
+    task_name: nudgingarena.Task237ProductSocialProofP5I5-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task21ProductLossAversionP5I2-v0
+    task_name: nudgingarena.Task222ProductIncentivesP5I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task22ProductIncentivesP5I1-v0
+    task_name: nudgingarena.Task246ProductLossAversionP5I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task16ProductGoalFramingP5I3-v0
+    task_name: nudgingarena.Task145ProductLossAversionP3I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task9ProductSocialProofP5I2-v0
+    task_name: nudgingarena.Task242ProductScarcityP5I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task41ProductGoalFramingP5I3-v0
+    task_name: nudgingarena.Task89ProductGoalFramingP2I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task25ProductIncentivesP5I4-v0
+    task_name: nudgingarena.Task160ProductSocialProofP4I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task37ProductSocialProofP5I5-v0
+    task_name: nudgingarena.Task155ProductAuthorityP4I5-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task46ProductLossAversionP5I2-v0
+    task_name: nudgingarena.Task51ProductAuthorityP2I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task6ProductAuthorityP5I6-v0
+    task_name: nudgingarena.Task113ProductSocialProofP3I6-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task35ProductSocialProofP5I3-v0
+    task_name: nudgingarena.Task88ProductSocialProofP2I6-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task39ProductGoalFramingP5I1-v0
+    task_name: nudgingarena.Task223ProductIncentivesP5I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task7ProductAuthorityP5I7-v0
+    task_name: nudgingarena.Task3ProductAuthorityP1I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task1ProductAuthorityP5I1-v0
+    task_name: nudgingarena.Task24ProductIncentivesP1I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task31ProductAuthorityP5I6-v0
+    task_name: nudgingarena.Task228ProductAuthorityP5I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task14ProductGoalFramingP5I1-v0
+    task_name: nudgingarena.Task42ProductScarcityP1I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task48ProductIncentivesP5I2-v0
+    task_name: nudgingarena.Task233ProductSocialProofP5I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task32ProductAuthorityP5I7-v0
+    task_name: nudgingarena.Task205ProductAuthorityP5I5-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task28ProductAuthorityP5I3-v0
+    task_name: nudgingarena.Task239ProductGoalFramingP5I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task4ProductAuthorityP5I4-v0
+    task_name: nudgingarena.Task249ProductIncentivesP5I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task42ProductScarcityP5I1-v0
+    task_name: nudgingarena.Task167ProductScarcityP4I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task5ProductAuthorityP5I5-v0
+    task_name: nudgingarena.Task99ProductIncentivesP2I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task19ProductScarcityP5I3-v0
+    task_name: nudgingarena.Task192ProductScarcityP4I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task33ProductSocialProofP5I1-v0
+    task_name: nudgingarena.Task127ProductAuthorityP3I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task8ProductSocialProofP5I1-v0
+    task_name: nudgingarena.Task121ProductLossAversionP3I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task49ProductIncentivesP5I3-v0
+    task_name: nudgingarena.Task169ProductScarcityP4I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task23ProductIncentivesP5I2-v0
+    task_name: nudgingarena.Task86ProductSocialProofP2I4-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task24ProductIncentivesP5I3-v0
+    task_name: nudgingarena.Task171ProductLossAversionP4I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task40ProductGoalFramingP5I2-v0
+    task_name: nudgingarena.Task117ProductScarcityP3I1-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task26ProductAuthorityP5I1-v0
+    task_name: nudgingarena.Task199ProductIncentivesP4I3-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task15ProductGoalFramingP5I2-v0
+    task_name: nudgingarena.Task177ProductAuthorityP4I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task45ProductLossAversionP5I1-v0
+    task_name: nudgingarena.Task62ProductSocialProofP2I5-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task12ProductSocialProofP5I5-v0
+    task_name: nudgingarena.Task9ProductSocialProofP1I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task13ProductSocialProofP5I6-v0
+    task_name: nudgingarena.Task168ProductScarcityP4I2-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task2ProductAuthorityP5I2-v0
+    task_name: nudgingarena.Task211ProductSocialProofP5I4-v0
   - browsergym_split: train
     task_category: shopping
-    task_name: nudgingarena.Task10ProductSocialProofP5I3-v0
+    task_name: nudgingarena.Task170ProductLossAversionP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task26ProductAuthorityP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task141ProductGoalFramingP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task231ProductAuthorityP5I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task142ProductScarcityP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task49ProductIncentivesP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task190ProductGoalFramingP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task17ProductScarcityP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task30ProductAuthorityP1I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task166ProductGoalFramingP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task179ProductAuthorityP4I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task224ProductIncentivesP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task243ProductScarcityP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task126ProductAuthorityP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task181ProductAuthorityP4I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task116ProductGoalFramingP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task38ProductSocialProofP1I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task108ProductSocialProofP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task102ProductAuthorityP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task48ProductIncentivesP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task229ProductAuthorityP5I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task197ProductIncentivesP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task134ProductSocialProofP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task52ProductAuthorityP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task112ProductSocialProofP3I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task61ProductSocialProofP2I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task87ProductSocialProofP2I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task208ProductSocialProofP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task110ProductSocialProofP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task100ProductIncentivesP2I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task46ProductLossAversionP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task136ProductSocialProofP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task22ProductIncentivesP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task182ProductAuthorityP4I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task25ProductIncentivesP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task180ProductAuthorityP4I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task31ProductAuthorityP1I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task50ProductIncentivesP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task193ProductScarcityP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task106ProductAuthorityP3I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task79ProductAuthorityP2I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task225ProductIncentivesP5I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task123ProductIncentivesP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task173ProductIncentivesP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task200ProductIncentivesP4I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task125ProductIncentivesP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task6ProductAuthorityP1I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task216ProductGoalFramingP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task85ProductSocialProofP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task143ProductScarcityP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task63ProductSocialProofP2I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task221ProductLossAversionP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task151ProductAuthorityP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task174ProductIncentivesP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task158ProductSocialProofP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task217ProductScarcityP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task97ProductIncentivesP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task144ProductScarcityP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task43ProductScarcityP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task53ProductAuthorityP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task129ProductAuthorityP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task54ProductAuthorityP2I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task232ProductAuthorityP5I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task247ProductIncentivesP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task176ProductAuthorityP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task156ProductAuthorityP4I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task109ProductSocialProofP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task153ProductAuthorityP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task69ProductScarcityP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task227ProductAuthorityP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task215ProductGoalFramingP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task71ProductLossAversionP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task23ProductIncentivesP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task119ProductScarcityP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task80ProductAuthorityP2I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task138ProductSocialProofP3I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task120ProductLossAversionP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task172ProductIncentivesP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task212ProductSocialProofP5I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task103ProductAuthorityP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task124ProductIncentivesP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task128ProductAuthorityP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task7ProductAuthorityP1I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task29ProductAuthorityP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task5ProductAuthorityP1I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task207ProductAuthorityP5I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task91ProductGoalFramingP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task72ProductIncentivesP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task185ProductSocialProofP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task60ProductSocialProofP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task16ProductGoalFramingP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task209ProductSocialProofP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task10ProductSocialProofP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task105ProductAuthorityP3I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task76ProductAuthorityP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task210ProductSocialProofP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task1ProductAuthorityP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task147ProductIncentivesP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task146ProductLossAversionP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task161ProductSocialProofP4I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task57ProductAuthorityP2I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task131ProductAuthorityP3I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task244ProductScarcityP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task186ProductSocialProofP4I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task234ProductSocialProofP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task35ProductSocialProofP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task44ProductScarcityP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task130ProductAuthorityP3I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task68ProductScarcityP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task34ProductSocialProofP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task66ProductGoalFramingP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task96ProductLossAversionP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task98ProductIncentivesP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task37ProductSocialProofP1I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task11ProductSocialProofP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task189ProductGoalFramingP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task81ProductAuthorityP2I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task175ProductIncentivesP4I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task114ProductGoalFramingP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task137ProductSocialProofP3I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task236ProductSocialProofP5I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task115ProductGoalFramingP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task36ProductSocialProofP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task73ProductIncentivesP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task70ProductLossAversionP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task104ProductAuthorityP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task218ProductScarcityP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task74ProductIncentivesP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task187ProductSocialProofP4I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task95ProductLossAversionP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task93ProductScarcityP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task12ProductSocialProofP1I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task214ProductGoalFramingP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task55ProductAuthorityP2I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task219ProductScarcityP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task4ProductAuthorityP1I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task2ProductAuthorityP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task8ProductSocialProofP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task83ProductSocialProofP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task213ProductSocialProofP5I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task159ProductSocialProofP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task139ProductGoalFramingP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task150ProductIncentivesP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task33ProductSocialProofP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task82ProductAuthorityP2I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task135ProductSocialProofP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task122ProductIncentivesP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task194ProductScarcityP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task47ProductIncentivesP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task15ProductGoalFramingP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task59ProductSocialProofP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task178ProductAuthorityP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task140ProductGoalFramingP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task78ProductAuthorityP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task201ProductAuthorityP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task28ProductAuthorityP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task39ProductGoalFramingP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task45ProductLossAversionP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task32ProductAuthorityP1I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task164ProductGoalFramingP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task27ProductAuthorityP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task198ProductIncentivesP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task101ProductAuthorityP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task202ProductAuthorityP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task111ProductSocialProofP3I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task75ProductIncentivesP2I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task84ProductSocialProofP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task195ProductLossAversionP4I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task20ProductLossAversionP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task94ProductScarcityP2I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task157ProductAuthorityP4I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task235ProductSocialProofP5I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task188ProductSocialProofP4I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task13ProductSocialProofP1I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task163ProductSocialProofP4I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task56ProductAuthorityP2I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task191ProductGoalFramingP4I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task149ProductIncentivesP3I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task196ProductLossAversionP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task41ProductGoalFramingP1I3-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task132ProductAuthorityP3I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task165ProductGoalFramingP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task92ProductScarcityP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task133ProductSocialProofP3I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task77ProductAuthorityP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task65ProductGoalFramingP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task226ProductAuthorityP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task40ProductGoalFramingP1I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task148ProductIncentivesP3I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task245ProductLossAversionP5I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task204ProductAuthorityP5I4-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task90ProductGoalFramingP2I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task67ProductScarcityP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task107ProductAuthorityP3I7-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task64ProductGoalFramingP2I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task248ProductIncentivesP5I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task184ProductSocialProofP4I2-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task162ProductSocialProofP4I5-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task238ProductSocialProofP5I6-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task14ProductGoalFramingP1I1-v0
+  - browsergym_split: train
+    task_category: shopping
+    task_name: nudgingarena.Task118ProductScarcityP3I2-v0

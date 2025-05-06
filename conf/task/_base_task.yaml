@@ -37,6 +37,7 @@ config:
     # These can be configured via command line arguments
     choices:
         - url: ??? # Example URL
+          nudge: ??? # Type of nudge
           functions:
             - module: nudgelab.choices.shop.?
               name: ???

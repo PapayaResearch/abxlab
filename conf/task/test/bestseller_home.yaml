@@ -21,6 +21,7 @@ config:
   require_reset: false
   choices:
     - url: "*"
+      nudge: Social Proof
       functions:
         - module: nudgelab.choices.shop.home
           name: subtitle

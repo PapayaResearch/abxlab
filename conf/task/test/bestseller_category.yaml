@@ -21,6 +21,7 @@ config:
   require_reset: false
   choices:
     - url: ${task.config.start_urls[0]}
+      nudge: Social Proof
       functions:
         - module: nudgelab.choices.shop.category
           name: subtitle

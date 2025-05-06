@@ -1,0 +1,49 @@
+# ================================================================================
+# Configurable Nudge Task Generator
+#
+# This is a base task configuration for the shopping site (do not use directly).
+# ================================================================================
+
+# Browser configuration
+width: 1280
+height: 720
+slow_mo: 1000 # ms
+timeout: 10000 # ms
+
+entrypoint: nudgelab.task.NudgeLabShopTask
+
+config:
+  # Site configuration
+  sites:
+    - shopping
+  task_id: ???  # Override with e.g. task.config.task_id=1
+  require_login: false
+  storage_state: ${hydra:runtime.cwd}/.auth/shopping_state.json
+
+  # URLs to study (MUST be specified)
+  start_urls: []  # Override with task.config.start_urls=[url1,url2] for tab choice tasks, or task.config.start_urls=url for single URL tasks
+
+  # Task specification
+  intent_template: ???  # Override with e.g. task.config.intent_template="..."
+  intent: ${task.config.intent_template}  # Override with e.g. task.config.intent="..." if the intent template has placeholders
+  intent_template_id: ??? # Override with e.g. task.config.intent_template_id=0
+  require_reset: ${task.config.require_login} # By default, require reset if login is required
+
+  # Evaluation setup
+  eval:
+    eval_types:
+      - ???
+    # Each tab choice task MUST include some choices
+    # These can be configured via command line arguments
+    choices:
+        - url: ??? # Example URL
+          functions:
+            - module: nudgelab.choices.shop.?
+              name: ???
+              args:
+                value: ???
+    program_html:
+      - url: ???  # Override with task.config.eval.program_html[0].url="..."
+        locator: "" # Override, if needed, with task.config.eval.program_html[0].locator="..."
+        required_contents:
+          must_include: []  # Override with task.config.eval.program_html[0].required_contents.must_include=[content1]

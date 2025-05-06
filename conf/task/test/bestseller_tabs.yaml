@@ -21,7 +21,7 @@ config:
   intent: Add the best product from my open tabs to the shopping cart
   require_reset: false
   choices:
-    - url: "${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html"
+    - url: ${task.config.start_urls[0]}
       functions:
         - module: nudgelab.choices.shop.product
           name: subtitle

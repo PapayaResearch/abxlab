@@ -1,5 +1,7 @@
+import os
 import logging
 import urllib.parse
+import yaml
 import playwright.sync_api
 from bs4 import BeautifulSoup
 from nudgelab.evaluators import evaluator_router
@@ -42,6 +44,9 @@ class NudgeLabTask(AbstractBrowserTask):
 
         # Load config directly from a dict
         self.config = config
+
+        # Store for nudge metadata
+        self.nudge_metadata = []
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
         # build the evaluator
@@ -98,7 +103,15 @@ If you believe the task is impossible to complete, provide the answer "N/A".
     def teardown(self) -> None:
         # Nothing to be done here
         # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/browser_env/envs.py#L227
-        pass
+        os.makedirs(self.config["metadata_dir"], exist_ok=True)
+        with open(
+            os.path.join(
+                self.config["metadata_dir"],
+                "nudge_metadata.yaml"
+            ),
+            "w"
+        ) as yaml_file:
+            yaml.dump(self.nudge_metadata, yaml_file)
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]
@@ -166,7 +179,7 @@ class NudgeLabShopTask(NudgeLabTask):
 
     def process_html(self, html: str) -> str:
 
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "lxml")
 
         if soup.find("meta", property="og:type", content="product"):
             # Page type is product

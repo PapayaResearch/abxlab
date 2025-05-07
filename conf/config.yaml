@@ -4,14 +4,18 @@ defaults:
   - _self_
   - agent: gpt4o-mini
   - benchmark: nudgelab
-  - task: test/bestseller_tabs
+  - task: shopping
+  - override hydra/launcher: ray
 
 experiment:
-  root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
   n_jobs: 1
   parallel_backend: sequential
   n_relaunch: 1
   logging_level_stdout: WARNING
+  name: ${now:%Y-%m-%d_%H-%M-%S}_shopping
+  root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
+  # Directory to write metadata (here we reverse-engineer the browsergym format, since we can't directly use it for now)
+  exp_dir: ${experiment.root_dir}/${now:%Y-%m-%d_%H-%M-%S}_GenericAgent-${agent.chat_model_args.model_name}_on_${benchmark.name}.${task.name}_0
 
 # Environment vars
 env:
@@ -19,7 +23,11 @@ env:
 
 # Hydra-Specific settings
 hydra:
-  run:
-    dir: ${experiment.root_dir}
-  sweep:
-    dir: ${experiment.root_dir}
+  launcher:
+    ray:
+      init:
+        include_dashboard: true
+        dashboard_port: 8265
+      remote:
+        num_cpus: 1
+        num_gpus: 0

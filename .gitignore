@@ -1,6 +1,8 @@
 # Custom
 /agent_lab_exp/
 /*_back/
+/multirun/
+/data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -29,13 +29,13 @@ def subtitle(
     value: str,
     elem_id: str = "product name product-item-name",
     product: Optional[str] = None
-) -> str:
+) -> tuple[str, dict]:
     soup = BeautifulSoup(original_html, "lxml")
 
     items = soup.select("li.item.product.product-item")
 
     if product is None:
-        item = random.choice(items)
+        item_index, item = random.choice(enumerate(items))
     else:
         link = soup.find("a", class_="product-item-link", href=product)
         item = link.find_parent("li", class_="product-item")
@@ -57,7 +57,12 @@ def subtitle(
     element.insert_after(span_tag)
 
     modified_html = str(soup)
-    return modified_html
+    return modified_html, {
+        "item_index": item_index,
+        "item": item,
+        "product": product,
+        "value": value
+    }
 
 
 def stock(
@@ -65,8 +70,9 @@ def stock(
     value: str,
     elem_id: str = "product name product-item-name",
     product: Optional[str] = None
-) -> str:
-    subtitle(original_html, value, elem_id, product)
+) -> tuple[str, dict]:
+    return subtitle(original_html, value, elem_id, product)
+
 
 def rating(
     original_html: bytes,

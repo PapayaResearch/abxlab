@@ -26,7 +26,7 @@ def subtitle(
     original_html: bytes,
     value: str,
     elem_id: str = "page-title-wrapper product"
-) -> str:
+) -> tuple[str, dict]:
     soup = BeautifulSoup(original_html, "lxml")
 
     element = soup.find("div", class_=elem_id)
@@ -45,14 +45,14 @@ def subtitle(
     element.insert_after(span_tag)
 
     modified_html = str(soup)
-    return modified_html
+    return modified_html, {}
 
 
 def stock(
     original_html: bytes,
     value: str,
     elem_id: str = "product-info-stock-sku"
-) -> str:
+) -> tuple[str, dict]:
     soup = BeautifulSoup(original_html, "lxml")
 
     element = soup.find("div", class_=elem_id)
@@ -72,7 +72,7 @@ def stock(
     element.insert_after(span_tag)
 
     modified_html = str(soup)
-    return modified_html
+    return modified_html, {}
 
 
 def rating(

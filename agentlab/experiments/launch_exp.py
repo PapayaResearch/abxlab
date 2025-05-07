@@ -40,7 +40,7 @@ def run_experiments(
         logging.warning("No experiments to run.")
         return
 
-    study_dir = Path(study_dir)
+    study_dir = Path(study_dir).absolute()
     study_dir.mkdir(parents=True, exist_ok=True)
 
     # if n_jobs == 1 and parallel_backend != "sequential":

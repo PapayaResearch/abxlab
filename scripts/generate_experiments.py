@@ -31,7 +31,7 @@ from tqdm import tqdm
 N_REPEATS = 6
 N_SUBSAMPLE = 1000
 SEED = 42
-EXP_DIR = "conf/experiments"
+EXP_DIR = "conf/experiment"
 
 def main():
     parser = argparse.ArgumentParser(description="Generates all experiment configs.")
@@ -221,12 +221,14 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed):
 
             }]
         intent = string.Template(row["Intent"]).substitute(eval(row["Intent Dictionary"]))
+
+        name = "exp" + str(idx)
         data = {
             "task": {
-                "name": str(idx),
+                "name": name,
                 "config": {
                     "task_id": idx,
-                    "start_urls": list(row["Start URLs"]),
+                    "start_urls": list(row["Start URLs"] if isinstance(row["Start URLs"], tuple) else [row["Start URLs"]]),
                     "intent_template": row["Intent"],
                     "instantiation_dict": eval(row["Intent Dictionary"]),
                     "intent": intent,
@@ -237,7 +239,7 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed):
         }
 
         # Save to a YAML file
-        with open(f"{exp_dir}/{idx}.yaml", "w") as f:
+        with open(f"{exp_dir}/{name}.yaml", "w") as f:
             f.write("# @package _global_\n\n")
             yaml.dump(
                 data,

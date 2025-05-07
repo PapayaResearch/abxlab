@@ -70,8 +70,9 @@ def stock(
     value: str,
     elem_id: str = "product name product-item-name",
     product: Optional[str] = None
-) -> str:
-    subtitle(original_html, value, elem_id, product)
+) -> tuple[str, dict]:
+    return subtitle(original_html, value, elem_id, product)
+
 
 def rating(
     original_html: bytes,

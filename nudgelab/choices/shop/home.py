@@ -71,12 +71,14 @@ def subtitle(
         "value": value
     }
 
+
 def stock(
     original_html: bytes,
     value: str,
     elem_ids: list[str] = ["product name product-item-name", "product-item-name"]
-) -> str:
-    subtitle(original_html, value, elem_ids)
+) -> tuple[str, dict]:
+    return subtitle(original_html, value, elem_ids)
+
 
 def rating(
     original_html: bytes,

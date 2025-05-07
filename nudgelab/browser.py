@@ -278,7 +278,14 @@ document.addEventListener("visibilitychange", () => {
                         module = importlib.import_module(module_name)
                         func = getattr(module, func_name)
 
-                        html = func(html, **args)
+                        html, metadata = func(html, **args)
+
+                        metadata["url"] = request.url
+                        metadata["timestamp"] = time.time()
+                        metadata["function"] = f
+
+                        self.task.nudge_metadata.append(metadata)
+
 
                 route.fulfill(
                     status=response.status,

@@ -5,6 +5,7 @@ dotenv.load_dotenv()
 import hydra
 import gymnasium as gym
 import nudgelab.task
+from pathlib import Path
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
@@ -42,7 +43,8 @@ def main(cfg: DictConfig):
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,
-        logging_level_stdout=cfg.experiment.logging_level_stdout
+        logging_level_stdout=cfg.experiment.logging_level_stdout,
+        dir=Path(cfg.experiment.root_dir).absolute()
     )
 
     log.info("Running experiment…")

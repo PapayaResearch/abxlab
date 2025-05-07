@@ -4,16 +4,16 @@ defaults:
   - _self_
   - agent: gpt4o-mini
   - benchmark: nudgelab
-  - task: test/bestseller_tabs
+  - task: shopping
   - override hydra/launcher: ray
 
 experiment:
-  root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
   n_jobs: 1
   parallel_backend: sequential
   n_relaunch: 1
   logging_level_stdout: WARNING
-  name: ???
+  name: ${now:%Y-%m-%d_%H-%M-%S}_shopping
+  root_dir: ${hydra:runtime.cwd}/results
 
 # Environment vars
 env:
@@ -21,21 +21,11 @@ env:
 
 # Hydra-Specific settings
 hydra:
-  run:
-    dir: ${experiment.root_dir}/${experiment.name}
-  sweep:
-    subdir: ${experiment.root_dir}/sweeps/${hydra.job.num}
-  job:
-    chdir: true
   launcher:
     ray:
       init:
         include_dashboard: true
         dashboard_port: 8265
-        job_config:
-          _target_: ray.job_config.JobConfig
-          runtime_env:
-            working_dir: "."
       remote:
         num_cpus: 1
         num_gpus: 0

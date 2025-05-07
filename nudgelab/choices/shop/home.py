@@ -27,7 +27,7 @@ def subtitle(
     original_html: bytes,
     value: str,
     elem_ids: list[str] = ["product name product-item-name", "product-item-name"]
-) -> str:
+) -> tuple[str, dict]:
     soup = BeautifulSoup(original_html, "lxml")
 
     # Home and category pages have different li names for the products
@@ -46,7 +46,7 @@ def subtitle(
         # Since we match all pages, we need to handle the case where there are no items
         return original_html
 
-    item = random.choice(items)
+    item_index, item = random.choice(enumerate(items))
 
     # Find the title of the product to append the nudge
     element = item.find("strong", class_=elem_id)
@@ -65,7 +65,11 @@ def subtitle(
     element.insert_after(span_tag)
 
     modified_html = str(soup)
-    return modified_html
+    return modified_html, {
+        "item_index": item_index,
+        "item": item,
+        "value": value
+    }
 
 def stock(
     original_html: bytes,

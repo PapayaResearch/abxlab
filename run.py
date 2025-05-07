@@ -1,7 +1,9 @@
 import os
+import datetime
 import logging
 import dotenv
 dotenv.load_dotenv()
+os.environ["AGENTLAB_EXP_ROOT"] = os.path.join(os.environ["AGENTLAB_EXP_ROOT"], datetime.datetime.now().strftime("run-%Y-%m-%d_%H-%M-%S"))
 import hydra
 import gymnasium as gym
 import nudgelab.task

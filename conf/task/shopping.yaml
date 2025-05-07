@@ -29,8 +29,7 @@ config:
   intent_template_id: ??? # Override with e.g. task.config.intent_template_id=0
   require_reset: ${task.config.require_login} # By default, require reset if login is required
 
-  # Directory to write metadata (here we reverse-engineer the browsergym format, since we can't directly use it for now)
-  metadata_dir: ${experiment.root_dir}/${now:%Y-%m-%d_%H-%M-%S}_GenericAgent-${agent.chat_model_args.model_name}_on_${benchmark.name}.${task.name}_0
+  metadata_dir: ${experiment.exp_dir}
 
   # Evaluation setup
   eval:

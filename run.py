@@ -58,7 +58,7 @@ def main(cfg: DictConfig):
     # Store config in the experiment directory for analysis
     OmegaConf.save(
         cfg,
-        os.path.join(study.dir, "config.yaml"),
+        os.path.join(cfg.experiment.exp_dir, "config.yaml"),
         resolve=True
     )
 

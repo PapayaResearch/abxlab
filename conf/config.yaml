@@ -14,6 +14,8 @@ experiment:
   logging_level_stdout: WARNING
   name: ${now:%Y-%m-%d_%H-%M-%S}_shopping
   root_dir: ${hydra:runtime.cwd}/results
+  # Directory to write metadata (here we reverse-engineer the browsergym format, since we can't directly use it for now)
+  exp_dir: ${experiment.root_dir}/${now:%Y-%m-%d_%H-%M-%S}_GenericAgent-${agent.chat_model_args.model_name}_on_${benchmark.name}.${task.name}_0
 
 # Environment vars
 env:

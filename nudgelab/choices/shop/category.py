@@ -60,6 +60,14 @@ def subtitle(
     return modified_html
 
 
+def stock(
+    original_html: bytes,
+    value: str,
+    elem_id: str = "product name product-item-name",
+    product: Optional[str] = None
+) -> str:
+    subtitle(original_html, value, elem_id, product)
+
 def rating(
     original_html: bytes,
     elem_id: str = "rating-result"

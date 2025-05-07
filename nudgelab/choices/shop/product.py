@@ -81,19 +81,21 @@ def rating(
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 
-    rating = soup.find("div", class_="rating-result")["title"]
-    element = soup.find("div", class_=elem_id)
+    rating = soup.find("div", class_="rating-result")
 
-    span_tag = soup.new_tag("span", attrs={"class":"product-rating-details"})
-    span_tag["style"] = (
-        "display: inline-block; "
-        "margin-top: 4px; "
-        "margin-right: 10px; "
-        "color: rgb(251, 79, 31); "
-    )
-    span_tag.string = "(" + rating + ")"
+    if rating:
+        element = soup.find("div", class_=elem_id)
 
-    element.insert_after(span_tag)
+        span_tag = soup.new_tag("span", attrs={"class":"product-rating-details"})
+        span_tag["style"] = (
+            "display: inline-block; "
+            "margin-top: 4px; "
+            "margin-right: 10px; "
+            "color: rgb(251, 79, 31); "
+        )
+        span_tag.string = "(" + rating["title"] + ")"
+
+        element.insert_after(span_tag)
 
     modified_html = str(soup)
     return modified_html

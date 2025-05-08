@@ -20,6 +20,9 @@ def main(cfg: DictConfig):
     logging.getLogger("bs4.dammit").setLevel(logging.CRITICAL)
     log = logging.getLogger(__name__)
 
+    # Avoid LiteLLM extremely long logs
+    os.environ["LITELLM_LOG"] = "INFO"
+
     # Instantiate agent and benchmark directly from Hydra configs
     agent = hydra.utils.instantiate(cfg.agent)
     benchmark = hydra.utils.instantiate(cfg.benchmark, _partial_=True)(

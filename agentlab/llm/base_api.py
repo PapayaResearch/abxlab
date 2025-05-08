@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 class AbstractChatModel(ABC):
@@ -22,6 +22,7 @@ class BaseModelArgs(ABC):
     temperature: float = 0.1
     vision_support: bool = False
     log_probs: bool = False
+    additional_drop_params: list = field(default_factory=list)
 
     @abstractmethod
     def make_model(self) -> AbstractChatModel:

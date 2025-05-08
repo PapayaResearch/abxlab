@@ -39,6 +39,8 @@ WA_HOMEPAGE="${HOMEPAGE}"
 # Other Configurations
 AGENTLAB_EXP_ROOT="results"
 OPENAI_API_KEY="<KEY>"
+ANTHROPIC_API_KEY="<KEY>"
+GEMINI_API_KEY="<KEY>"
 ```
 
 If you're only running one environment, you can set the other `WA_` URLs to the same one to avoid errors at runtime.

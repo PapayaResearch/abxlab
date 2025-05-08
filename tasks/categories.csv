@@ -1,6 +1,6 @@
 Start URLs,Notes
 ${env.wa_shopping_url}beauty-personal-care/hair-care/shampoo-conditioner.html?p=53,
-${env.wa_shopping_url}beauty-personal-care/oral-care/mouthwash.html?p=5,
+${env.wa_shopping_url}beauty-personal-care/oral-care/mouthwash.html?p=5,"One title mentions bulk savings, other mention packs"
 ${env.wa_shopping_url}cell-phones-accessories/cases-holsters-sleeves/basic-cases.html?p=24,
 ${env.wa_shopping_url}cell-phones-accessories/cell-phones.html?p=0,
 ${env.wa_shopping_url}electronics/accessories-supplies/power-strips-surge-protectors.html?p=6,
@@ -22,5 +22,5 @@ ${env.wa_shopping_url}grocery-gourmet-food/dairy-cheese-eggs/yogurt.html?p=4,
 ${env.wa_shopping_url}grocery-gourmet-food/frozen/ice-cream-novelties.html?p=4,
 ${env.wa_shopping_url}grocery-gourmet-food/snacks-sweets/chocolate.html?p=17,
 ${env.wa_shopping_url}home-kitchen/home-decor-products/mirrors.html?p=38,
-${env.wa_shopping_url}home-kitchen/home-decor-products/rugs-pads-protectors.html?p=9,
 ${env.wa_shopping_url}tools-home-improvement/lighting-ceiling-fans/lamps-shades.html?p=8,
+${env.wa_shopping_url}electronics/camera-photo/tripods-monopods.html?p=25,

@@ -1,0 +1,18 @@
+_target_: agentlab.agents.generic_agent.generic_agent.GenericAgentArgs
+
+defaults:
+  - flags: default
+  - _self_
+
+chat_model_args:
+  _target_: agentlab.llm.chat_api.LiteLLMModelArgs
+  model_name: o4-mini-2025-04-16
+  max_total_tokens: 200000
+  max_input_tokens: 200000
+  max_new_tokens: 100000
+  vision_support: true
+  temperature: 0.1
+  additional_drop_params:
+    - temperature
+    - max_tokens
+    - logprobs

@@ -1,15 +1,14 @@
 _target_: agentlab.agents.generic_agent.generic_agent.GenericAgentArgs
 
 defaults:
-  - flags: gpt4o_default
+  - flags: default
   - _self_
 
 chat_model_args:
-  _target_: agentlab.llm.chat_api.OpenAIModelArgs
-  model_name: gpt-4o
+  _target_: agentlab.llm.chat_api.LiteLLMModelArgs
+  model_name: gpt-4o-mini-2024-07-18
   max_total_tokens: 128000
   max_input_tokens: 128000
-  max_new_tokens: 4096
-  temperature: 0.1
+  max_new_tokens: 16384
   vision_support: true
-  log_probs: false
+  temperature: 0.1

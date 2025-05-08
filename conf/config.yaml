@@ -2,7 +2,7 @@
 
 defaults:
   - _self_
-  - agent: gpt4o-mini
+  - agent: gpt-4o-mini
   - benchmark: nudgelab
   - task: shopping
   - override hydra/launcher: ray

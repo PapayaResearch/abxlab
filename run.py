@@ -61,11 +61,13 @@ def main(cfg: DictConfig):
     log.info("Experiment finished.")
 
     # Store config in the experiment directory for analysis
-    OmegaConf.save(
-        cfg,
-        os.path.join(cfg.experiment.exp_dir, "config.yaml"),
-        resolve=True
-    )
+    for exp_args in study.exp_args_list:
+        exp_dir = exp_args.exp_dir
+        OmegaConf.save(
+            cfg,
+            os.path.join(exp_dir, "config.yaml"),
+            resolve=True
+        )
 
 
 if __name__ == "__main__":

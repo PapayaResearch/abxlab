@@ -42,12 +42,21 @@ def main(cfg: DictConfig):
         nondeterministic=True
     )
 
+    study_dir = Path(cfg.experiment.root_dir).absolute()
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,
         logging_level_stdout=cfg.experiment.logging_level_stdout,
-        dir=Path(cfg.experiment.root_dir).absolute()
+        dir=study_dir
     )
+
+    # Get the experiment directories in an indirect way since BrowserGym doesn't give us access
+    for exp_args in study.exp_args_list:
+        exp_args.prepare(study_dir)
+        exp_dir = exp_args.exp_dir
+        nudgelab.task.add_metadata({
+            "exp_dir": exp_dir
+        })
 
     log.info("Running experiment…")
     study.run(
@@ -57,12 +66,15 @@ def main(cfg: DictConfig):
     )
     log.info("Experiment finished.")
 
-    # Store config in the experiment directory for analysis
-    OmegaConf.save(
-        cfg,
-        os.path.join(cfg.experiment.exp_dir, "config.yaml"),
-        resolve=True
-    )
+
+    # Store config in the experiment directories for analysis
+    for metadata in nudgelab.task.get_metadata():
+        metadata_dir = metadata["exp_dir"]
+        OmegaConf.save(
+            cfg,
+            os.path.join(metadata_dir, "config.yaml"),
+            resolve=True
+        )
 
 
 if __name__ == "__main__":

@@ -57,11 +57,7 @@ xvfb-run python run.py
 
 ### Download Data
 
-In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh` and need to set a Google token (which you can generate [here](https://developers.google.com/oauthplayground/))
-
-```bash
-export GOOGLE_TOKEN=<YOUR TOKEN>
-```
+In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh`
 
 ### AgentXray
 

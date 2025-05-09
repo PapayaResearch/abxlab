@@ -35,7 +35,7 @@ def subtitle(
     items = soup.select("li.item.product.product-item")
 
     if product is None:
-        item_index, item = random.choice(enumerate(items))
+        item_index, item = random.choice(list(enumerate(items)))
     else:
         link = soup.find("a", class_="product-item-link", href=product)
         item = link.find_parent("li", class_="product-item")

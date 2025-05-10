@@ -297,3 +297,28 @@ document.addEventListener("visibilitychange", () => {
 
         # Apply the interception to the entire browser context
         context.route("**/*", modify_html)
+
+    def capture_page_content(self, output_dir: Path, url: str) -> None:
+      
+        # Create a unique directory for this URL
+        url_dir = output_dir / url.replace("://", "_").replace("/", "_").replace(".", "_")
+        url_dir.mkdir(parents=True, exist_ok=True)
+
+        # Save original content (captured before route handler setup)
+        original_screenshot_path = url_dir / "original_screenshot.png"
+        original_html_path = url_dir / "original_page.html"
+        
+        with open(original_screenshot_path, "wb") as f:
+            f.write(self._original_screenshot)
+        with open(original_html_path, "w", encoding="utf-8") as f:
+            f.write(self._original_content)
+
+        # Save modified content (current state after route handler)
+        modified_screenshot_path = url_dir / "modified_screenshot.png"
+        modified_html_path = url_dir / "modified_page.html"
+        
+        self.page.screenshot(path=str(modified_screenshot_path), full_page=True, scale="device")
+        with open(modified_html_path, "w", encoding="utf-8") as f:
+            f.write(self.page.content())
+
+

@@ -3,6 +3,8 @@
 /*_back/
 /multirun/
 /data/
+conf/experiment/
+human_observation/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

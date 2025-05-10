@@ -8,6 +8,7 @@ from typing import Optional
 
 import litellm
 import openai
+from litellm import Timeout, RateLimitError, APIConnectionError, APIError, ServiceUnavailableError, InternalServerError
 from huggingface_hub import InferenceClient
 from openai import AzureOpenAI, OpenAI
 
@@ -16,6 +17,14 @@ from agentlab.llm.base_api import AbstractChatModel, BaseModelArgs
 from agentlab.llm.huggingface_utils import HFBaseChatModel
 from agentlab.llm.llm_utils import AIMessage, Discussion
 
+RETRYABLE_LITELLM_EXCEPTIONS = (
+    Timeout,
+    RateLimitError,
+    APIConnectionError,
+    APIError,
+    ServiceUnavailableError,
+    InternalServerError
+)
 
 def make_system_message(content: str) -> dict:
     return dict(role="system", content=content)
@@ -234,7 +243,8 @@ def handle_error(error, itr, min_retry_wait_time, max_retry):
     return error_type
 
 def handle_litellm_error(error, itr, min_retry_wait_time, max_retry):
-    # TODO: Very similar to handle_error -> refactor
+    if not isinstance(error, RETRYABLE_LITELLM_EXCEPTIONS):
+        raise error
     logging.warning(
         f"Failed to get a response from the API: \n{error}\n" f"Retrying... ({itr+1}/{max_retry})"
     )
@@ -365,7 +375,7 @@ class ChatModel(AbstractChatModel):
 
 
 class LiteLLMChatModel(AbstractChatModel):
-    # Deliberately not refactored into ChatModel
+    # TODO: Deliberately not refactored into ChatModel for now
     def __init__(
         self,
         model_name,
@@ -459,7 +469,6 @@ class LiteLLMChatModel(AbstractChatModel):
             tracking.TRACKER.instance(input_tokens, output_tokens, cost)
 
         if n_samples == 1:
-            print(completion.choices[0].message)
             res = AIMessage(completion.choices[0].message.content)
             if self.log_probs:
                 res["log_probs"] = completion.choices[0].log_probs

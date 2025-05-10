@@ -365,7 +365,7 @@ class ChatModel(AbstractChatModel):
 
 
 class LiteLLMChatModel(AbstractChatModel):
-    # TODO: Very similar to ChatModel -> refactor
+    # Deliberately not refactored into ChatModel
     def __init__(
         self,
         model_name,
@@ -424,6 +424,14 @@ class LiteLLMChatModel(AbstractChatModel):
                     additional_drop_params=list(self.additional_drop_params)
                 )
 
+                # LiteLLM parses <think></think> and creates a "reasoning_content" field separately.
+                # This behavior is undesirable, so we need to reconstruct the original LLM output.
+                # https://github.com/BerriAI/litellm/issues/10702
+                message = completion.choices[0].message
+                reasoning = getattr(message, "reasoning_content", None)
+                if reasoning:
+                    message.content = f"<think>{reasoning}</think>{message.content}"
+
                 if completion.usage is None:
                     raise OpenRouterError(
                         "The completion object does not contain usage information. This is likely a bug in the OpenRouter API."
@@ -451,6 +459,7 @@ class LiteLLMChatModel(AbstractChatModel):
             tracking.TRACKER.instance(input_tokens, output_tokens, cost)
 
         if n_samples == 1:
+            print(completion.choices[0].message)
             res = AIMessage(completion.choices[0].message.content)
             if self.log_probs:
                 res["log_probs"] = completion.choices[0].log_probs

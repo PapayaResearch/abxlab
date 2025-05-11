@@ -67,7 +67,7 @@ def subtitle(
     modified_html = str(soup)
     return modified_html, {
         "item_index": item_index,
-        "item": item,
+        "item": item.decode(),
         "value": value
     }
 

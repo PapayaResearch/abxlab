@@ -41,7 +41,10 @@ def main(cfg: DictConfig):
                 nudgelab.task,
                 cfg.task.entrypoint.replace("nudgelab.task.", "")
             ),
-            task_kwargs=OmegaConf.to_container(cfg.task, resolve=True)
+            task_kwargs={
+                **OmegaConf.to_container(cfg.task, resolve=True),
+                "study_dir": study_dir
+            }
         ),
         nondeterministic=True
     )

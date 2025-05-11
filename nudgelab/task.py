@@ -15,35 +15,6 @@ from nudgelab.choices.shop.product import rating as product_rating
 logger = logging.getLogger(__name__)
 
 
-class NudgeLabTaskMetadata:
-    _instance = None
-
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-            cls._instance.metadata = []
-        return cls._instance
-
-
-_ = NudgeLabTaskMetadata()
-
-
-def get_instance() -> NudgeLabTaskMetadata:
-    # Get the singleton instance
-    return NudgeLabTaskMetadata._instance
-
-
-def add_metadata(metadata: dict):
-    # Add metadata to the singleton instance
-    NudgeLabTaskMetadata._instance.metadata.append(metadata)
-
-
-def get_metadata() -> list[dict]:
-    # Get metadata from the singleton instance
-    return NudgeLabTaskMetadata._instance.metadata
-
-
-
 class NudgeLabTask(AbstractBrowserTask):
     """
     Base class for all NudgeLab tasks.
@@ -58,6 +29,7 @@ class NudgeLabTask(AbstractBrowserTask):
         height: int = 720,
         slow_mo: int = 1000, # ms
         timeout: int = 10000, # ms
+        study_dir: str = "",
         **kwargs
     ) -> None:
         super().__init__(seed)
@@ -74,8 +46,7 @@ class NudgeLabTask(AbstractBrowserTask):
         # Load config directly from a dict
         self.config = config
 
-        # Store for nudge metadata
-        self.nudge_metadata = []
+        self.study_dir = study_dir
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
         # build the evaluator
@@ -133,19 +104,14 @@ If you believe the task is impossible to complete, provide the answer "N/A".
         # Nothing to be done here
         # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/browser_env/envs.py#L227
 
-        metadata_dirs = [
-            d["exp_dir"] for d in get_metadata()
-        ]
-        for metadata_dir in metadata_dirs:
-            os.makedirs(metadata_dir, exist_ok=True)
-            with open(
-                os.path.join(
-                    metadata_dir,
-                    "nudge_metadata.yaml"
-                ),
-                "w"
-            ) as yaml_file:
-                yaml.dump(self.nudge_metadata, yaml_file)
+        with open(
+            os.path.join(
+                self.study_dir,
+                "nudge_metadata.yaml"
+            ),
+            "w"
+        ) as yaml_file:
+            yaml.dump(self.nudge_metadata, yaml_file)
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]

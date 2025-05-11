@@ -57,6 +57,12 @@ def main():
     )
 
     parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Just check experiment count without actually writing configs"
+    )
+
+    parser.add_argument(
         "--seed",
         type=str,
         default=SEED,
@@ -64,9 +70,9 @@ def main():
     )
 
     args = parser.parse_args()
-    generate_experiments(args.n_repeats, args.n_subsample, args.exp_dir, args.seed)
+    generate_experiments(args.n_repeats, args.n_subsample, args.exp_dir, args.seed, args.dry_run)
 
-def generate_experiments(n_repeats, n_subsample, exp_dir, seed):
+def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
     # Load CSV files
     df_intents = pd.read_csv("tasks/intents.csv")
     df_interventions = pd.read_csv("tasks/interventions.csv")
@@ -196,6 +202,10 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed):
         [df_tasks_products_all, df_tasks_categories_all, df_tasks_home_all],
         ignore_index=True
     )
+
+    if dry_run:
+        print("Will generate %d experiments" % len(df_tasks_all))
+        exit()
 
     # Generate config YAMLs
     if not os.path.exists(exp_dir):

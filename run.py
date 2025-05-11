@@ -3,7 +3,10 @@ import datetime
 import logging
 import dotenv
 dotenv.load_dotenv()
-os.environ["AGENTLAB_EXP_ROOT"] = os.path.join(os.environ["AGENTLAB_EXP_ROOT"], datetime.datetime.now().strftime("run-%Y-%m-%d_%H-%M-%S"))
+os.environ["AGENTLAB_EXP_ROOT"] = os.path.join( # Make unique run directory (mainly for gathering multiruns)
+    os.environ["AGENTLAB_EXP_ROOT"],
+    datetime.datetime.now().strftime("run-%Y-%m-%d_%H-%M-%S")
+)
 import hydra
 import gymnasium as gym
 import nudgelab.task
@@ -33,6 +36,7 @@ def main(cfg: DictConfig):
     )
 
     # Register the env here, so we don't need to reach into BrowserGym
+    study_dir = (Path(cfg.experiment.root_dir) / cfg.task.name).absolute()
     gym.register(
         id=f"browsergym/nudgelab.{cfg.task.name}",
         entry_point=lambda *env_args, **env_kwargs: NudgeLabBrowserEnv(
@@ -45,21 +49,12 @@ def main(cfg: DictConfig):
         nondeterministic=True
     )
 
-    study_dir = Path(cfg.experiment.root_dir).absolute()
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,
         logging_level_stdout=cfg.experiment.logging_level_stdout,
         dir=study_dir
     )
-
-    # Get the experiment directories in an indirect way since BrowserGym doesn't give us access
-    for exp_args in study.exp_args_list:
-        exp_args.prepare(study_dir)
-        exp_dir = exp_args.exp_dir
-        nudgelab.task.add_metadata({
-            "exp_dir": exp_dir
-        })
 
     log.info("Running experiment…")
     study.run(
@@ -69,15 +64,11 @@ def main(cfg: DictConfig):
     )
     log.info("Experiment finished.")
 
-
-    # Store config in the experiment directories for analysis
-    for metadata in nudgelab.task.get_metadata():
-        metadata_dir = metadata["exp_dir"]
-        OmegaConf.save(
-            cfg,
-            os.path.join(metadata_dir, "config.yaml"),
-            resolve=True
-        )
+    OmegaConf.save(
+        cfg,
+        os.path.join(study_dir, "config.yaml"),
+        resolve=True
+    )
 
 
 if __name__ == "__main__":

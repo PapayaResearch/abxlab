@@ -282,7 +282,11 @@ document.addEventListener("visibilitychange", () => {
 
                         metadata["url"] = request.url
                         metadata["timestamp"] = time.time()
-                        metadata["function"] = f
+                        metadata["function"] = {
+                            "name": func_name,
+                            "args": args,
+                            "module": module_name
+                        }
 
                         self.task.nudge_metadata.append(metadata)
 

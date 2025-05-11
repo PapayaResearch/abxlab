@@ -4,9 +4,9 @@ import urllib.parse
 import yaml
 import playwright.sync_api
 from bs4 import BeautifulSoup
-from nudgelab.evaluators import evaluator_router
 from browsergym.core.task import AbstractBrowserTask
 from browsergym.webarena.instance import WebArenaInstance
+from nudgelab.evaluators import evaluator_router
 from nudgelab.choices.shop.home import rating as home_rating
 from nudgelab.choices.shop.category import rating as category_rating
 from nudgelab.choices.shop.product import rating as product_rating
@@ -47,6 +47,8 @@ class NudgeLabTask(AbstractBrowserTask):
         self.config = config
 
         self.study_dir = study_dir
+
+        self.nudge_metadata = []
 
     def setup(self, page: playwright.sync_api.Page) -> tuple[str, dict]:
         # build the evaluator
@@ -111,7 +113,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
             ),
             "w"
         ) as yaml_file:
-            yaml.dump(self.nudge_metadata, yaml_file)
+            yaml.safe_dump(self.nudge_metadata, yaml_file)
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]

@@ -113,7 +113,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
             ),
             "w"
         ) as yaml_file:
-            yaml.safe_dump(self.nudge_metadata, yaml_file)
+            yaml.dump(self.nudge_metadata, yaml_file)
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]

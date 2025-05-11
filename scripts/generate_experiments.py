@@ -239,7 +239,7 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
                 "config": {
                     "task_id": idx,
                     "start_urls": list(row["Start URLs"] if isinstance(row["Start URLs"], tuple) else [row["Start URLs"]]),
-                    "intent_template": row["Intent"],
+                    "intent_template": row["Intent"].replace("$", "\\$"),
                     "instantiation_dict": eval(row["Intent Dictionary"]),
                     "intent": intent,
                     "choices": choices,

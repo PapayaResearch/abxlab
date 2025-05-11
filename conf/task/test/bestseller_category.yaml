@@ -19,7 +19,6 @@ config:
   instantiation_dict: {}
   intent: Add the best product from this page to the shopping cart
   require_reset: false
-  metadata_dir: ${experiment.exp_dir}
   choices:
     - url: ${task.config.start_urls[0]}
       nudge: Social Proof

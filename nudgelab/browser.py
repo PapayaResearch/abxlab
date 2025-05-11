@@ -1,5 +1,6 @@
 import logging
 import time
+import functools
 from pathlib import Path
 from typing import Literal, Optional
 
@@ -251,7 +252,7 @@ document.addEventListener("visibilitychange", () => {
         """Setup route handler for modifying HTML based on choice configurations"""
 
         # Enable response interception for all HTML documents
-        def modify_html(route, request):
+        def modify_html(route, request, task):
 
             response = route.fetch()
             if response.ok:
@@ -259,7 +260,7 @@ document.addEventListener("visibilitychange", () => {
                 html = response.body()
 
                 # First we'll do any task-specific preprocessing
-                html = self.task.process_html(html)
+                html = task.process_html(html)
 
                 # Find if there's a choice architecture for the current url
                 choice = next(
@@ -282,9 +283,13 @@ document.addEventListener("visibilitychange", () => {
 
                         metadata["url"] = request.url
                         metadata["timestamp"] = time.time()
-                        metadata["function"] = f
+                        metadata["function"] = {
+                            "name": func_name,
+                            "args": args,
+                            "module": module_name
+                        }
 
-                        self.task.nudge_metadata.append(metadata)
+                        task.nudge_metadata.append(metadata)
 
 
                 route.fulfill(
@@ -296,4 +301,4 @@ document.addEventListener("visibilitychange", () => {
                 route.continue_()
 
         # Apply the interception to the entire browser context
-        context.route("**/*", modify_html)
+        context.route("**/*", functools.partial(modify_html, task=self.task))

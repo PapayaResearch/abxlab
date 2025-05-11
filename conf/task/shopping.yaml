@@ -29,8 +29,6 @@ config:
   intent_template_id: ??? # Override with e.g. task.config.intent_template_id=0
   require_reset: ${task.config.require_login} # By default, require reset if login is required
 
-  metadata_dir: ${experiment.exp_dir}
-
   # Evaluation setup
   eval:
     eval_types:

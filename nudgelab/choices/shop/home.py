@@ -46,7 +46,7 @@ def subtitle(
         # Since we match all pages, we need to handle the case where there are no items
         return original_html
 
-    item_index, item = random.choice(enumerate(items))
+    item_index, item = random.choice(list(enumerate(items)))
 
     # Find the title of the product to append the nudge
     element = item.find("strong", class_=elem_id)
@@ -67,7 +67,7 @@ def subtitle(
     modified_html = str(soup)
     return modified_html, {
         "item_index": item_index,
-        "item": item,
+        "item": item.decode(),
         "value": value
     }
 

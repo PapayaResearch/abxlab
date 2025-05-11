@@ -1,7 +1,7 @@
 mkdir -p tasks
 
 # Download products.csv
-wget --header "Authorization: Bearer $GOOGLE_TOKEN" -O tasks/products.csv "https://docs.google.com/spreadsheets/d/15LA25I-z8uz6UaF6tXZ9MEMkgbFvanUYTJqlbKdPnhI/export?gid=745135561&format=csv"
+wget --header "Authorization: Bearer $GOOGLE_TOKEN" -O tasks/products.csv "https://docs.google.com/spreadsheets/d/15LA25I-z8uz6UaF6tXZ9MEMkgbFvanUYTJqlbKdPnhI/export?gid=1737865517&format=csv"
 
 # Download categories.csv
 wget --header "Authorization: Bearer $GOOGLE_TOKEN" -O tasks/categories.csv "https://docs.google.com/spreadsheets/d/15LA25I-z8uz6UaF6tXZ9MEMkgbFvanUYTJqlbKdPnhI/export?gid=1365867936&format=csv"

@@ -259,6 +259,10 @@ document.addEventListener("visibilitychange", () => {
                 html = response.body()
 
                 # First we'll do any task-specific preprocessing
+                if self.task is None:
+                    # For some reason, the task is sometimes None when the route handler is called
+                    self.task = self.task_entrypoint(seed=self.seed, **self.task_kwargs)
+
                 html = self.task.process_html(html)
 
                 # Find if there's a choice architecture for the current url
@@ -282,7 +286,11 @@ document.addEventListener("visibilitychange", () => {
 
                         metadata["url"] = request.url
                         metadata["timestamp"] = time.time()
-                        metadata["function"] = f
+                        metadata["function"] = {
+                            "name": func_name,
+                            "args": args,
+                            "module": module_name
+                        }
 
                         self.task.nudge_metadata.append(metadata)
 

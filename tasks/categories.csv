@@ -1,6 +1,6 @@
 Start URLs,Notes
 ${env.wa_shopping_url}beauty-personal-care/hair-care/shampoo-conditioner.html?p=53,
-${env.wa_shopping_url}beauty-personal-care/oral-care/mouthwash.html?p=5,
+${env.wa_shopping_url}beauty-personal-care/oral-care/mouthwash.html?p=5,"One title mentions bulk savings, other mention packs"
 ${env.wa_shopping_url}cell-phones-accessories/cases-holsters-sleeves/basic-cases.html?p=24,
 ${env.wa_shopping_url}cell-phones-accessories/cell-phones.html?p=0,
 ${env.wa_shopping_url}electronics/accessories-supplies/power-strips-surge-protectors.html?p=6,
@@ -15,12 +15,13 @@ ${env.wa_shopping_url}electronics/portable-audio-video/radios.html?p=3,
 ${env.wa_shopping_url}electronics/video-projectors.html?p=26,
 ${env.wa_shopping_url}electronics/wearable-technology/smartwatches.html?p=4,
 ${env.wa_shopping_url}grocery-gourmet-food/breads-bakery/breads.html?p=3,
-${env.wa_shopping_url}grocery-gourmet-food/breads-bakery/cookies.html?p=19,
+${env.wa_shopping_url}grocery-gourmet-food/breads-bakery/cookies.html?p=19,Most are in packs of X (with X varying)
 ${env.wa_shopping_url}grocery-gourmet-food/breakfast-foods/cereals.html?p=7,
 ${env.wa_shopping_url}grocery-gourmet-food/dairy-cheese-eggs/cheese.html?p=18,
 ${env.wa_shopping_url}grocery-gourmet-food/dairy-cheese-eggs/yogurt.html?p=4,
 ${env.wa_shopping_url}grocery-gourmet-food/frozen/ice-cream-novelties.html?p=4,
 ${env.wa_shopping_url}grocery-gourmet-food/snacks-sweets/chocolate.html?p=17,
 ${env.wa_shopping_url}home-kitchen/home-decor-products/mirrors.html?p=38,
-${env.wa_shopping_url}home-kitchen/home-decor-products/rugs-pads-protectors.html?p=9,
 ${env.wa_shopping_url}tools-home-improvement/lighting-ceiling-fans/lamps-shades.html?p=8,
+${env.wa_shopping_url}electronics/camera-photo/tripods-monopods.html?p=25,
+${env.wa_shopping_url}patio-lawn-garden/gardening-lawn-care/plants-seeds-bulbs.html?p=3,

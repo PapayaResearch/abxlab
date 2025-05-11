@@ -55,7 +55,6 @@ def main(cfg: DictConfig):
     )
 
     # Register the env here, so we don't need to reach into BrowserGym
-    study_dir = (Path(cfg.experiment.root_dir) / cfg.task.name).absolute()
     gym.register(
         id=f"browsergym/nudgelab.{cfg.task.name}",
         entry_point=lambda *env_args, **env_kwargs: NudgeLabBrowserEnv(

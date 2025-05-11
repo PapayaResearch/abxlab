@@ -46,6 +46,7 @@ def main(cfg: DictConfig):
         nondeterministic=True
     )
 
+    study_dir = (Path(cfg.experiment.root_dir) / cfg.task.name).absolute()
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,
@@ -66,6 +67,8 @@ def main(cfg: DictConfig):
         os.path.join(study_dir, "config.yaml"),
         resolve=True
     )
+
+    return 0
 
 
 if __name__ == "__main__":

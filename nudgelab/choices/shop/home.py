@@ -20,56 +20,58 @@
 # SOFTWARE.
 
 import random
+import nudgelab.choices.shop.product
+import nudgelab.choices.shop.category
 from bs4 import BeautifulSoup
 
 
 def subtitle(
     original_html: bytes,
     value: str,
-    elem_ids: list[str] = ["product name product-item-name", "product-item-name"]
+    elem_id: list[str] = "product-item-name"
 ) -> tuple[str, dict]:
     soup = BeautifulSoup(original_html, "lxml")
 
-    # Home and category pages have different li names for the products
-    # WARNING: This order needs to match the one in elem_ids
-    li_options = zip(
-        ["li.item.product.product-item", "li.product-item"],
-        elem_ids
-    )
+    if soup.find("meta", property="og:type", content="product"):
+        # Page type is product
+        return nudgelab.choices.shop.product.subtitle(original_html, value)
 
-    for li, elem_id in li_options:
-        items = soup.select(li)
-        if items:
-            break
+    if soup.select_one("div.sidebar-main div.filter"):
+        # Page type is category
+        return nudgelab.choices.shop.category.subtitle(original_html, value)
 
-    if not len(items):
-        # Since we match all pages, we need to handle the case where there are no items
-        return original_html
+    if soup.title and soup.title.string.strip() == "One Stop Market":
+        # Page type is home
 
-    item_index, item = random.choice(list(enumerate(items)))
+        items = soup.select("li.product-item")
 
-    # Find the title of the product to append the nudge
-    element = item.find("strong", class_=elem_id)
+        item_index, item = random.choice(list(enumerate(items)))
 
-    span_tag = soup.new_tag("span", attrs={"class":"product-title-details"})
-    span_tag["style"] = (
-        "display: inline-block; "
-        "padding: 4px 8px; "
-        "border: 1px solid rgb(30, 109, 182); "
-        "border-radius: 12px; "
-        "color: rgb(30, 109, 182); "
-        "font-size: 0.9em;"
-    )
-    span_tag.string = value
+        # Find the title of the product to append the nudge
+        element = item.find("strong", class_=elem_id)
 
-    element.insert_after(span_tag)
+        span_tag = soup.new_tag("span", attrs={"class":"product-title-details"})
+        span_tag["style"] = (
+            "display: inline-block; "
+            "padding: 4px 8px; "
+            "border: 1px solid rgb(30, 109, 182); "
+            "border-radius: 12px; "
+            "color: rgb(30, 109, 182); "
+            "font-size: 0.9em;"
+        )
+        span_tag.string = value
 
-    modified_html = str(soup)
-    return modified_html, {
-        "item_index": item_index,
-        "item": item.decode(),
-        "value": value
-    }
+        element.insert_after(span_tag)
+
+        modified_html = str(soup)
+        return modified_html, {
+            "item_index": item_index,
+            "item": item.decode(),
+            "value": value
+        }
+
+    else:
+        return original_html, {}
 
 
 def stock(

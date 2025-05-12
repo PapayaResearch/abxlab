@@ -218,7 +218,10 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
             if isinstance(row["Start URLs"], tuple):
                 url = row["Start URLs"][int(row["Nudge Index"])]
             else:
-                url = row["Start URLs"]
+                if row["Starting Point"] == "Home":
+                    url = "*"
+                else:
+                    url = row["Start URLs"]
 
             choices = [{
                 "url": url,

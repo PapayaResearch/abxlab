@@ -4,8 +4,10 @@ import functools
 from pathlib import Path
 from typing import Literal, Optional
 
-import playwright.sync_api
 import importlib
+import playwright
+import playwright.sync_api
+import gymnasium as gym
 
 from browsergym.core import _get_global_playwright
 from browsergym.core.action.highlevel import HighLevelActionSet
@@ -64,7 +66,10 @@ class NudgeLabBrowserEnv(BrowserEnv):
         self.reset()
 
     def reset(self, seed=None, *args, **kwargs):
-        super().reset(seed=seed, *args, **kwargs)
+        gym.Env.reset(self, seed=seed, *args, **kwargs)
+        if hasattr(self, "context") and self.context:
+            self.context.unroute("**/*")
+
         self.np_random = None  # make sure all randomness is handled by the task
 
         if self.task:
@@ -253,6 +258,9 @@ document.addEventListener("visibilitychange", () => {
 
         # Enable response interception for all HTML documents
         def modify_html(route, request, task):
+            if not request.is_navigation_request():
+                route.continue_()
+                return
 
             response = route.fetch()
             if response.ok:

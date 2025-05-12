@@ -68,7 +68,7 @@ class NudgeLabTask(AbstractBrowserTask):
         if self.config["start_urls"]:
             start_urls = self.config["start_urls"]
             for i, url in enumerate(start_urls):
-                page.goto(url)
+                page.goto(url, timeout=self.timeout)
                 if i < len(start_urls) - 1:
                     page = page.context.new_page()
 
@@ -113,7 +113,7 @@ If you believe the task is impossible to complete, provide the answer "N/A".
             ),
             "w"
         ) as yaml_file:
-            yaml.dump(self.nudge_metadata, yaml_file)
+            yaml.safe_dump(self.nudge_metadata, yaml_file)
 
     def validate(
         self, page: playwright.sync_api.Page, chat_messages: list[str]

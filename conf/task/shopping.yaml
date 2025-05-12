@@ -49,4 +49,14 @@ config:
         locator: "document.querySelector('div.message-success div[data-bind*=\"prepareMessageForHtml\"]').innerText"
         required_contents:
           must_include:
-            - "You added"
+            - "You added "
+      - url: last
+        locator: "document.querySelector('div.message-notice').innerText"
+        required_contents:
+          must_include:
+            - "Make sure the options are entered"
+      - url: last
+        locator: "document.querySelector('div.mage-error').innerText"
+        required_contents:
+          must_include:
+            - "This is a required field"

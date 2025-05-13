@@ -1,10 +1,13 @@
 import logging
 import time
+import functools
 from pathlib import Path
 from typing import Literal, Optional
 
-import playwright.sync_api
 import importlib
+import playwright
+import playwright.sync_api
+import gymnasium as gym
 
 from browsergym.core import _get_global_playwright
 from browsergym.core.action.highlevel import HighLevelActionSet
@@ -63,7 +66,10 @@ class NudgeLabBrowserEnv(BrowserEnv):
         self.reset()
 
     def reset(self, seed=None, *args, **kwargs):
-        super().reset(seed=seed, *args, **kwargs)
+        gym.Env.reset(self, seed=seed, *args, **kwargs)
+        if hasattr(self, "context") and self.context:
+            self.context.unroute("**/*")
+
         self.np_random = None  # make sure all randomness is handled by the task
 
         if self.task:
@@ -251,7 +257,10 @@ document.addEventListener("visibilitychange", () => {
         """Setup route handler for modifying HTML based on choice configurations"""
 
         # Enable response interception for all HTML documents
-        def modify_html(route, request):
+        def modify_html(route, request, task):
+            if not request.is_navigation_request():
+                route.continue_()
+                return
 
             response = route.fetch()
             if response.ok:
@@ -259,11 +268,7 @@ document.addEventListener("visibilitychange", () => {
                 html = response.body()
 
                 # First we'll do any task-specific preprocessing
-                if self.task is None:
-                    # For some reason, the task is sometimes None when the route handler is called
-                    self.task = self.task_entrypoint(seed=self.seed, **self.task_kwargs)
-
-                html = self.task.process_html(html)
+                html = task.process_html(html)
 
                 # Find if there's a choice architecture for the current url
                 choice = next(
@@ -292,7 +297,7 @@ document.addEventListener("visibilitychange", () => {
                             "module": module_name
                         }
 
-                        self.task.nudge_metadata.append(metadata)
+                        task.nudge_metadata.append(metadata)
 
 
                 route.fulfill(
@@ -304,29 +309,5 @@ document.addEventListener("visibilitychange", () => {
                 route.continue_()
 
         # Apply the interception to the entire browser context
-        context.route("**/*", modify_html)
-
-    def capture_page_content(self, output_dir: Path, url: str) -> None:
-      
-        # Create a unique directory for this URL
-        url_dir = output_dir / url.replace("://", "_").replace("/", "_").replace(".", "_")
-        url_dir.mkdir(parents=True, exist_ok=True)
-
-        # Save original content (captured before route handler setup)
-        original_screenshot_path = url_dir / "original_screenshot.png"
-        original_html_path = url_dir / "original_page.html"
-        
-        with open(original_screenshot_path, "wb") as f:
-            f.write(self._original_screenshot)
-        with open(original_html_path, "w", encoding="utf-8") as f:
-            f.write(self._original_content)
-
-        # Save modified content (current state after route handler)
-        modified_screenshot_path = url_dir / "modified_screenshot.png"
-        modified_html_path = url_dir / "modified_page.html"
-        
-        self.page.screenshot(path=str(modified_screenshot_path), full_page=True, scale="device")
-        with open(modified_html_path, "w", encoding="utf-8") as f:
-            f.write(self.page.content())
-
+        context.route("**/*", functools.partial(modify_html, task=self.task))
 

@@ -29,7 +29,14 @@ config:
   intent_template_id: ??? # Override with e.g. task.config.intent_template_id=0
   require_reset: ${task.config.require_login} # By default, require reset if login is required
 
-  metadata_dir: ${experiment.exp_dir}
+  choices:
+    - url: ??? # Example URL
+      nudge: ??? # Type of nudge
+      functions:
+        - module: nudgelab.choices.shop
+          name: ???
+          args:
+            value: ???
 
   # Evaluation setup
   eval:
@@ -37,17 +44,19 @@ config:
       - program_html
     # Each tab choice task MUST include some choices
     # These can be configured via command line arguments
-    choices:
-        - url: ??? # Example URL
-          nudge: ??? # Type of nudge
-          functions:
-            - module: nudgelab.choices.shop
-              name: ???
-              args:
-                value: ???
     program_html:
       - url: last
         locator: "document.querySelector('div.message-success div[data-bind*=\"prepareMessageForHtml\"]').innerText"
         required_contents:
           must_include:
-            - "You added"
+            - "You added "
+      - url: last
+        locator: "document.querySelector('div.message-notice').innerText"
+        required_contents:
+          must_include:
+            - "Make sure the options are entered"
+      - url: last
+        locator: "document.querySelector('div.mage-error').innerText"
+        required_contents:
+          must_include:
+            - "This is a required field"

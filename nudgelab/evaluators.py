@@ -1,3 +1,4 @@
+import logging
 import collections
 import html
 import time
@@ -7,6 +8,9 @@ from beartype import beartype
 from playwright.sync_api import CDPSession, Page
 from webarena.evaluation_harness.helper_functions import PseudoPage
 from webarena.evaluation_harness.evaluators import Trajectory, EvaluatorComb, Evaluator, StringEvaluator, URLEvaluator, HTMLContentEvaluator
+
+
+logger = logging.getLogger(__name__)
 
 
 class EvaluatorComb(EvaluatorComb):
@@ -170,7 +174,7 @@ class HTMLContentEvaluator(HTMLContentEvaluator):
     ) -> float:
         targets = config["eval"]["program_html"]
 
-        score = 1.0
+        score = False
         for target in targets:
             target_url: str = target["url"]  # which url to check
             if target_url.startswith("func"):
@@ -223,7 +227,7 @@ class HTMLContentEvaluator(HTMLContentEvaluator):
                 cur_score = StringEvaluator.exact_match(
                     ref=required_contents, pred=selected_element
                 )
-                score *= float(cur_score)
+                score = score or cur_score
             elif "must_include" in target["required_contents"]:
                 required_contents = target["required_contents"]["must_include"]
                 assert isinstance(required_contents, list)
@@ -239,7 +243,7 @@ class HTMLContentEvaluator(HTMLContentEvaluator):
                             for content in content_or
                         ]
                     )
-                    score *= float(cur_score)
+                    score = score or cur_score
             else:
                 raise ValueError(
                     f"Unknown required_contents: {target['required_contents'].keys()}"
@@ -250,7 +254,7 @@ class HTMLContentEvaluator(HTMLContentEvaluator):
                 page = prev_page
                 prev_page = None
 
-        return score
+        return float(score)
 
 
 @beartype

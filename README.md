@@ -53,12 +53,20 @@ If you are on a remote server, you can try the following command to run the expe
 xvfb-run python run.py
 ```
 
-### Download Data
+### Generate Experiments
 
-In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh` and need to set a Google token (which you can generate [here](https://developers.google.com/oauthplayground/))
+In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh`. After that, you run the following script with flags `--n-subsample` and `--n-repeats`, if necessary.
 
 ```bash
-export GOOGLE_TOKEN=<YOUR TOKEN>
+python scripts/generate_experiments.py
+```
+
+### Generate Human Study
+
+The script will generate a directory with the images for the human study based on all your `conf/experiment` YAML files.
+
+```bash
+python -m scripts.study
 ```
 
 ### AgentXray

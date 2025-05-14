@@ -21,94 +21,42 @@
 
 import os
 import argparse
-import dotenv
-dotenv.load_dotenv()
 import pandas as pd
-import requests
+import random
+from tqdm import tqdm
 
-API_TOKEN = os.getenv("QUALTRICS_API_KEY")
-DATA_CENTER = "mit"
-BASE_URL = f"https://{DATA_CENTER}.qualtrics.com/API/v3"
-HEADERS = {
-    "x-api-token": API_TOKEN,
-    "content-type": "application/json"
-}
+SEED = 42
+OUTPUT_DIR = "study"
 
-
-def create_survey(name):
-    url = f"{BASE_URL}/surveys"
-    response = requests.post(url, headers=HEADERS, json={"name": name})
-    return response.json()["result"]["id"]
-
-def create_block(survey_id):
-    url = f"{BASE_URL}/survey-definitions/{survey_id}/blocks"
-    response = requests.post(url, headers=HEADERS, json={"Type": "Standard"})
-    return response.json()["result"]["id"]
-
-def create_question_payload(exp, image_0, image_1):
-    html = f"""
-    <p>Select the best product from the images</p>
-    <table><tr>
-      <td><img src="{image_0}" width="300"><br>Left</td>
-      <td><img src="{image_1}" width="300"><br>Right</td>
-    </tr></table>
-    """
-    return {
-        "QuestionText": html,
-        "DataExportTag": f"{exp}",
-        "QuestionType": "MC",
-        "Selector": "SAVR",  # Single answer vertical
-        "Configuration": {
-            "QuestionDescriptionOption": "UseText"
-        },
-        "Choices": {
-            "1": {"Display": "Left"},
-            "2": {"Display": "Right"}
-        },
-        "Validation": {
-            "Settings": {
-                "ForceResponse": "ON"
-            }
-        }
-    }
-
-def add_question_to_block(survey_id, block_id, question_payload):
-    url = f"{BASE_URL}/survey-definitions/{survey_id}/questions"
-    q_response = requests.post(url, headers=HEADERS, json={"Question": question_payload})
-    question_id = q_response.json()["result"]["QuestionID"]
-
-    # Add question to block
-    url_block = f"{BASE_URL}/survey-definitions/{survey_id}/blocks/{block_id}"
-    response = requests.get(url_block, headers=HEADERS)
-    block = response.json()["result"]
-    block["BlockElements"].append({
-        "Type": "Question",
-        "QuestionID": question_id
-    })
-
-    requests.put(url_block, headers=HEADERS, json=block)
-
-def build_survey(df, survey_name="NudgeLab"):
-    survey_id = create_survey(survey_name)
+def generate_survey_data(df, seed, output_dir):
     df_grouped = df.groupby(["url_0", "url_1"])
 
-    for group_key, df_group in df_grouped:
-        block_id = create_block(survey_id)
+    g1 = []
+    g2 = []
+    g3 = []
+    for _, df_group in tqdm(df_grouped):
+        # Shuffle rows
+        shuffled_rows = df_group.sample(frac=1, random_state=seed).reset_index(drop=True)
 
-        for _, row in df_group.iterrows():
-            payload = create_question_payload(row["exp"], row["image_0"], row["image_1"])
-            add_question_to_block(survey_id, block_id, payload)
+        # Assign one row to each group
+        g1.append(shuffled_rows.iloc[0].to_dict())
+        g2.append(shuffled_rows.iloc[1].to_dict())
+        g3.append(shuffled_rows.iloc[2].to_dict())
 
-    print(f"Survey created: {survey_id}")
+    # Save to CSV
+    pd.DataFrame(g1).to_csv(os.path.join(output_dir, "study_1.csv"), index=False)
+    pd.DataFrame(g2).to_csv(os.path.join(output_dir, "study_2.csv"), index=False)
+    pd.DataFrame(g3).to_csv(os.path.join(output_dir, "study_3.csv"), index=False)
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Qualtrics survey.")
-    parser.add_argument("--csv", type=str)
+    parser = argparse.ArgumentParser(description="Generate CSVs for Qualtrics survey.")
+    parser.add_argument("--csv", type=str, required=True, help="Path to the CSV file.")
+    parser.add_argument("--seed", type=int, help="Seed.", default=SEED)
+    parser.add_argument("--output-dir", type=str, help="Output directory.", default=OUTPUT_DIR)
     args = parser.parse_args()
 
     df = pd.read_csv(args.csv)
-
-    build_survey(df)
+    generate_survey_data(df, args.seed, args.output_dir)
 
 if __name__ == "__main__":
     main()

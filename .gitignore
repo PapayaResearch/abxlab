@@ -4,9 +4,8 @@
 /multirun/
 /data/
 conf/experiment/
-human_observation/
+study
 outputs/
-*.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

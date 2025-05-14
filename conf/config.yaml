@@ -15,6 +15,11 @@ experiment:
   root_dir: ${hydra:runtime.cwd}/${oc.env:AGENTLAB_EXP_ROOT}
   continue_from: null
 
+study:
+  host: https://web.media.mit.edu/~mcherep/files/nudgelab/
+  output_dir: ${hydra:runtime.cwd}/study
+  experiment_path: experiment-study
+
 # Environment vars
 env:
   wa_shopping_url: ${oc.env:WA_SHOPPING,http://matlaber12.media.mit.edu:7770/}

@@ -114,7 +114,7 @@ def main(cfg: DictConfig):
     args = [(fname, cfg_dict, base_conf_path, base_url, output_dir, host_path) for fname in fnames]
 
     # Use multiprocessing to process experiments
-    with multiprocessing.Pool() as pool:
+    with multiprocessing.Pool(processes=cfg.study.n_workers) as pool:
         results = list(tqdm(pool.imap_unordered(process_experiment, args), total=len(args)))
 
     # Filter out None results

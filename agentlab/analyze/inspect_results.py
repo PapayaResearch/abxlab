@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from browsergym.experiments.loop import ExpResult, get_exp_result, yield_all_exp_results
-from IPython.display import display
+# from IPython.display import display
 from tqdm import tqdm
 
 # TODO find a more portable way to code set_task_category_as_index at least
@@ -507,7 +507,7 @@ def display_report(
 
     styled_report = set_wrap_style(report)
 
-    display(styled_report)
+    print(styled_report)
 
 
 def shrink_columns(df, also_wrap_index=True):

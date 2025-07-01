@@ -1,5 +1,7 @@
 import functools
 import requests
+import lzma
+import base64
 from bs4 import BeautifulSoup
 from enum import Enum
 
@@ -137,3 +139,19 @@ def get_all_category_metadata(soup: BeautifulSoup) -> list:
         metadata.append(get_all_product_metadata(link))
 
     return metadata
+
+# ============================================
+# Functions for HTML Compression & Decompression
+# ============================================
+
+def compress_html(html_content: str) -> str:
+    """Compress HTML content and return base64 encoded string."""
+    html_bytes = html_content.encode("utf-8")
+    compressed = lzma.compress(html_bytes, preset=9)
+    return base64.b64encode(compressed).decode("ascii")
+
+def decompress_html(compressed_data: str) -> str:
+    """Decompress base64 encoded compressed HTML."""
+    compressed_bytes = base64.b64decode(compressed_data.encode("ascii"))
+    html_bytes = lzma.decompress(compressed_bytes)
+    return html_bytes.decode("utf-8")

@@ -17,9 +17,10 @@ import pickle
 import hashlib
 import browsergym
 import agentlab
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, TimeoutError, as_completed
 from tqdm.auto import tqdm
 from bs4 import BeautifulSoup
+from page_utils import compress_html
 from typing import Optional, Any
 
 
@@ -91,7 +92,8 @@ def process_with_threading(
     experiment_dirs: list[str],
     cache_dir: str,
     num_workers: int,
-    skip_cache: bool
+    skip_cache: bool,
+    timeout: float = 10
 ) -> list[pandas.DataFrame]:
     all_normalized_dfs = []
 
@@ -117,20 +119,22 @@ def process_with_threading(
         }
 
         # Use as_completed with explicit timeout handling
-        for future in as_completed(future_to_dir, timeout=None):  # No global timeout
+        for future in as_completed(future_to_dir, timeout=timeout):
             exp_dir = future_to_dir[future]
             completed_count += 1
 
             try:
                 # Individual task timeout
-                df_part = future.result(timeout=120)  # 2 minutes per task
+                df_part = future.result(timeout=timeout)
                 if not df_part.empty:
                     all_normalized_dfs.append(df_part)
 
                 # Manual progress update since tqdm can hang
                 if completed_count % 10 == 0 or completed_count == total_count:
                     logging.info(f"Completed {completed_count}/{total_count} experiments")
-
+            except TimeoutError:
+                logging.error(f"Processing {exp_dir} timed out after {timeout} seconds")
+                future.cancel()
             except Exception as error:
                 logging.error(f"Error processing {exp_dir}: {error}")
 
@@ -142,7 +146,8 @@ def process_with_multiprocessing(
     experiment_dirs: list,
     cache_dir: str,
     num_workers: int,
-    skip_cache: bool
+    skip_cache: bool,
+    timeout: float = 10
 ) -> list[pandas.DataFrame]:
     all_normalized_dfs = []
 
@@ -153,8 +158,8 @@ def process_with_multiprocessing(
         skip_cache=skip_cache
     )
 
-    completed_count = 0
     total_count = len(experiment_dirs)
+    pbar = tqdm(total=total_count, desc="Processing experiments")
 
     # Force spawn to avoid pickle issues
     ctx = multiprocessing.get_context("spawn")
@@ -166,41 +171,22 @@ def process_with_multiprocessing(
             for exp_dir in experiment_dirs
         }
 
-        # Process results
-        remaining_futures = set(future_to_dir.keys())
+        # Process results with per-task timeout
+        for future in as_completed(future_to_dir.keys()):
+            exp_dir = future_to_dir[future]
+            try:
+                # Apply timeout per individual task
+                df_part = future.result(timeout=timeout)
+                if not df_part.empty:
+                    all_normalized_dfs.append(df_part)
+            except TimeoutError:
+                logging.error(f"Task for {exp_dir} timed out after {timeout} seconds")
+            except Exception as error:
+                logging.error(f"Error processing {exp_dir}: {error}")
 
-        while remaining_futures:
-            # Check for completed futures
-            completed_futures = []
-            for future in list(remaining_futures):
-                if future.done():
-                    completed_futures.append(future)
+            pbar.update(1)
 
-            if not completed_futures:
-                # Wait a bit and check again
-                # TODO: Might need a better way to handle the wait
-                time.sleep(0.1)
-                continue
-
-            for future in completed_futures:
-                remaining_futures.remove(future)
-                exp_dir = future_to_dir[future]
-                completed_count += 1
-
-                try:
-                    df_part = future.result(timeout=1)  # Should be immediate here since done()
-                    if not df_part.empty:
-                        all_normalized_dfs.append(df_part)
-                except Exception as e:
-                    logging.error(f"Error processing {exp_dir}: {e}")
-
-                # Progress logging
-                if completed_count % 10 == 0 or completed_count == total_count:
-                    logging.info(f"Completed {completed_count}/{total_count} experiments")
-
-        # Explicitly shutdown and wait
-        executor.shutdown(wait=True, cancel_futures=True)
-
+    pbar.close()
     logging.info(f"Multiprocessing completed: {len(all_normalized_dfs)}/{total_count} successful")
     return all_normalized_dfs
 
@@ -212,17 +198,14 @@ def process_sequentially(
 ) -> list[pandas.DataFrame]:
     all_normalized_dfs = []
 
-    for i, exp_dir in enumerate(experiment_dirs):
+    for i, exp_dir in tqdm(enumerate(experiment_dirs), desc="Processing experiments", total=len(experiment_dirs)):
         try:
             df_part = process_experiment_dir_to_df_cached(exp_dir, cache_dir, skip_cache)
             if not df_part.empty:
                 all_normalized_dfs.append(df_part)
 
-            if (i + 1) % 10 == 0:
-                logging.info(f"Sequential: completed {i + 1}/{len(experiment_dirs)}")
-
-        except Exception as e:
-            logging.error(f"Sequential error processing {exp_dir}: {e}")
+        except Exception as error:
+            logging.error(f"Sequential error processing {exp_dir}: {error}")
 
     return all_normalized_dfs
 
@@ -363,7 +346,14 @@ def parse_action(call_string: Optional[str]) -> Optional[dict]:
         return None
 
     parsed_ast = ast.parse(call_string)
-    call_node = parsed_ast.body[0].value
+    try:
+        call_node = parsed_ast.body[0].value
+    except:
+        logging.error("Failed to parse action call string: %s" % call_string)
+        return {
+            "name": call_string,
+            "args": None
+        }
 
     function_name = call_node.func.id
 
@@ -408,7 +398,8 @@ def get_info_for_step(step: Any) -> dict:
         "url": url,
         "focused_bid": focused_bid,
         "action": action,
-        "elem_info": elem_info
+        "elem_info": elem_info,
+        "pruned_html": compress_html(pruned_html)
     }
 
 

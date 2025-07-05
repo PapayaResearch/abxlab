@@ -31,7 +31,13 @@ def get_constants_and_variables(df: pd.DataFrame, drop_constants: bool = False):
 
     constants = {}
     variable_keys = []
+
     for col in df.columns:
+        # Skip the uniqueness check if the column contains lists or other unhashable types
+        if df[col].apply(lambda x: isinstance(x, list)).any():
+            variable_keys.append(col)
+            continue
+
         if df[col].nunique(dropna=False) == 1:
             if isinstance(df[col].iloc[0], np.generic):
                 val = df[col].iloc[0].item()
@@ -92,6 +98,12 @@ def set_index_from_variables(
                 f"Variable {var} contains NaN or None values. This will be replaced by the string 'None' to avoid some pandas bug."
             )
             df[var] = df[var].fillna("None")
+
+    # Skip columns with lists (or other unhashable types)
+    index_variables = [
+        var for var in index_variables
+        if not df[var].apply(lambda x: isinstance(x, list)).any()  # Skip list columns
+    ]
 
     # agent_variables = [var for var in variables if var.startswith("agent.")]
     df.set_index([task_key] + index_variables, inplace=True)

@@ -5,6 +5,7 @@ from functools import cache
 
 import requests
 from langchain_community.callbacks.openai_info import MODEL_COST_PER_1K_TOKENS
+from litellm import model_cost
 
 TRACKER = threading.local()
 
@@ -97,5 +98,20 @@ def get_pricing_openai():
             res[k] = {
                 "prompt": cost_dict[prompt_key],
                 "completion": cost_dict[completion_key],
+            }
+    return res
+
+def get_pricing_litellm():
+    """
+    Retrieves a dictionary mapping each model to its input and output token costs.
+    """
+    res = {}
+    for model_name, info in model_cost.items():
+        input_cost = info.get("input_cost_per_token")
+        output_cost = info.get("output_cost_per_token")
+        if input_cost is not None and output_cost is not None:
+            res[model_name] = {
+                "prompt": input_cost,
+                "completion": output_cost,
             }
     return res

@@ -6,7 +6,9 @@ from dataclasses import dataclass
 from functools import partial
 from typing import Optional
 
+import litellm
 import openai
+from litellm import Timeout, RateLimitError, APIConnectionError, APIError, ServiceUnavailableError, InternalServerError
 from huggingface_hub import InferenceClient
 from openai import AzureOpenAI, OpenAI
 
@@ -15,6 +17,14 @@ from agentlab.llm.base_api import AbstractChatModel, BaseModelArgs
 from agentlab.llm.huggingface_utils import HFBaseChatModel
 from agentlab.llm.llm_utils import AIMessage, Discussion
 
+RETRYABLE_LITELLM_EXCEPTIONS = (
+    Timeout,
+    RateLimitError,
+    APIConnectionError,
+    APIError,
+    ServiceUnavailableError,
+    InternalServerError
+)
 
 def make_system_message(content: str) -> dict:
     return dict(role="system", content=content)
@@ -104,6 +114,20 @@ class OpenAIModelArgs(BaseModelArgs):
             log_probs=self.log_probs,
         )
 
+
+@dataclass
+class LiteLLMModelArgs(BaseModelArgs):
+    """Serializable object for instantiating a generic chat model with LiteLLM."""
+
+    def make_model(self):
+        return LiteLLMChatModel(
+            model_name=self.model_name,
+            temperature=self.temperature,
+            max_tokens=self.max_new_tokens,
+            log_probs=self.log_probs,
+            pricing_func=tracking.get_pricing_litellm,
+            additional_drop_params=self.additional_drop_params,
+        )
 
 @dataclass
 class AzureModelArgs(BaseModelArgs):
@@ -218,6 +242,20 @@ def handle_error(error, itr, min_retry_wait_time, max_retry):
     error_type = error.args[0]
     return error_type
 
+def handle_litellm_error(error, itr, min_retry_wait_time, max_retry):
+    if not isinstance(error, RETRYABLE_LITELLM_EXCEPTIONS):
+        raise error
+    logging.warning(
+        f"Failed to get a response from the API: \n{error}\n" f"Retrying... ({itr+1}/{max_retry})"
+    )
+    wait_time = _extract_wait_time(
+        str(error),
+        min_retry_wait_time=min_retry_wait_time,
+    )
+    logging.info(f"Waiting for {wait_time} seconds")
+    time.sleep(wait_time)
+    error_type = str(error)
+    return error_type
 
 class OpenRouterError(openai.OpenAIError):
     pass
@@ -304,6 +342,115 @@ class ChatModel(AbstractChatModel):
                 break
             except openai.OpenAIError as e:
                 error_type = handle_error(e, itr, self.min_retry_wait_time, self.max_retry)
+                self.error_types.append(error_type)
+
+        if not completion:
+            raise RetryError(
+                f"Failed to get a response from the API after {self.max_retry} retries\n"
+                f"Last error: {error_type}"
+            )
+
+        input_tokens = completion.usage.prompt_tokens
+        output_tokens = completion.usage.completion_tokens
+        cost = input_tokens * self.input_cost + output_tokens * self.output_cost
+
+        if hasattr(tracking.TRACKER, "instance") and isinstance(
+            tracking.TRACKER.instance, tracking.LLMTracker
+        ):
+            tracking.TRACKER.instance(input_tokens, output_tokens, cost)
+
+        if n_samples == 1:
+            res = AIMessage(completion.choices[0].message.content)
+            if self.log_probs:
+                res["log_probs"] = completion.choices[0].log_probs
+            return res
+        else:
+            return [AIMessage(c.message.content) for c in completion.choices]
+
+    def get_stats(self):
+        return {
+            "n_retry_llm": self.retries,
+            # "busted_retry_llm": int(not self.success), # not logged if it occurs anyways
+        }
+
+
+class LiteLLMChatModel(AbstractChatModel):
+    # TODO: Deliberately not refactored into ChatModel for now
+    def __init__(
+        self,
+        model_name,
+        temperature=0.5,
+        max_tokens=100,
+        max_retry=4,
+        min_retry_wait_time=60,
+        pricing_func=None,
+        log_probs=False,
+        additional_drop_params=[]
+    ):
+        assert max_retry > 0, "max_retry should be greater than 0"
+
+        self.model_name = model_name
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.max_retry = max_retry
+        self.min_retry_wait_time = min_retry_wait_time
+        self.log_probs = log_probs
+        self.additional_drop_params = additional_drop_params
+
+        # Get pricing information
+        if pricing_func:
+            pricings = pricing_func()
+            try:
+                self.input_cost = float(pricings[model_name]["prompt"])
+                self.output_cost = float(pricings[model_name]["completion"])
+            except KeyError:
+                logging.warning(
+                    f"Model {model_name} not found in the pricing information, prices are set to 0. Maybe try upgrading langchain_community."
+                )
+                self.input_cost = 0.0
+                self.output_cost = 0.0
+        else:
+            self.input_cost = 0.0
+            self.output_cost = 0.0
+
+    def __call__(self, messages: list[dict], n_samples: int = 1, temperature: float = None) -> dict:
+        # Initialize retry tracking attributes
+        self.retries = 0
+        self.success = False
+        self.error_types = []
+
+        completion = None
+        e = None
+        for itr in range(self.max_retry):
+            self.retries += 1
+            temperature = temperature if temperature is not None else self.temperature
+            try:
+                completion = litellm.completion(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=self.max_tokens,
+                    logprobs=self.log_probs,
+                    additional_drop_params=list(self.additional_drop_params)
+                )
+
+                # LiteLLM parses <think></think> and creates a "reasoning_content" field separately.
+                # This behavior is undesirable, so we need to reconstruct the original LLM output.
+                # https://github.com/BerriAI/litellm/issues/10702
+                message = completion.choices[0].message
+                reasoning = getattr(message, "reasoning_content", None)
+                if reasoning:
+                    message.content = f"<think>{reasoning}</think>{message.content}"
+
+                if completion.usage is None:
+                    raise OpenRouterError(
+                        "The completion object does not contain usage information. This is likely a bug in the OpenRouter API."
+                    )
+
+                self.success = True
+                break
+            except Exception as e:
+                error_type = handle_litellm_error(e, itr, self.min_retry_wait_time, self.max_retry)
                 self.error_types.append(error_type)
 
         if not completion:

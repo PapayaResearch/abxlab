@@ -39,6 +39,8 @@ WA_HOMEPAGE="${HOMEPAGE}"
 # Other Configurations
 AGENTLAB_EXP_ROOT="results"
 OPENAI_API_KEY="<KEY>"
+ANTHROPIC_API_KEY="<KEY>"
+GEMINI_API_KEY="<KEY>"
 ```
 
 If you're only running one environment, you can set the other `WA_` URLs to the same one to avoid errors at runtime.
@@ -55,11 +57,7 @@ xvfb-run python run.py
 
 ### Download Data
 
-In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh` and need to set a Google token (which you can generate [here](https://developers.google.com/oauthplayground/))
-
-```bash
-export GOOGLE_TOKEN=<YOUR TOKEN>
-```
+In order to generate the experiment configs, you need to download our data. To do so, you can run `scripts/download_data.sh`
 
 ### AgentXray
 

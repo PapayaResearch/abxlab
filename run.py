@@ -25,6 +25,9 @@ def main(cfg: DictConfig):
     logging.getLogger("bs4.dammit").setLevel(logging.CRITICAL)
     log = logging.getLogger(__name__)
 
+    # Avoid LiteLLM extremely long logs
+    os.environ["LITELLM_LOG"] = "INFO"
+
     # Check if we want to continue a previous experiment set
     study_dir = (Path(cfg.experiment.root_dir) / cfg.task.name).absolute()
     if cfg.experiment.continue_from:
@@ -68,6 +71,7 @@ def main(cfg: DictConfig):
     )
 
     study_dir = (Path(cfg.experiment.root_dir) / cfg.task.name).absolute()
+
     study = Study(
         agent_args=[agent],
         benchmark=benchmark,

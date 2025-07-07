@@ -7,7 +7,7 @@ use_plan: false
 use_criticise: false
 use_thinking: true
 use_memory: true # Important!
-use_concrete_example: true
+use_concrete_example: false
 use_abstract_example: true
 use_hints: true
 enable_chat: false

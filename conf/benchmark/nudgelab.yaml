@@ -1,8 +1,8 @@
 _target_: browsergym.experiments.benchmark.Benchmark
 name: nudgelab
 high_level_action_set_args:
-  _target_: browsergym.experiments.benchmark.base.HighLevelActionSetArgs
-  subsets: [webarena]
+  _target_: nudgelab.actions.NudgeLabHighLevelActionSetArgs
+  subsets: [custom]
   multiaction: false
   strict: false
   retry_with_force: false

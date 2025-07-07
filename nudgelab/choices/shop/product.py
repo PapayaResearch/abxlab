@@ -31,7 +31,8 @@ def subtitle(
 
     element = soup.find("div", class_=elem_id)
 
-    span_tag = soup.new_tag("span", attrs={"class":"product-title-details"})
+    span_tag = soup.new_tag("h2", attrs={"class":"product-title-details",
+                                         "visible":""})
     span_tag["style"] = (
         "display: inline-block; "
         "padding: 4px 8px; "
@@ -96,6 +97,23 @@ def rating(
         span_tag.string = "(" + rating["title"] + ")"
 
         element.insert_after(span_tag)
+
+    modified_html = str(soup)
+    return modified_html
+
+
+def preprocessing(
+    original_html: bytes
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    rating = soup.find("div", class_="product-reviews-summary")
+    if rating:
+        rating.decompose()
+
+    price = soup.find("div", class_="price-box price-final_price")
+    if price:
+        price.decompose()
 
     modified_html = str(soup)
     return modified_html

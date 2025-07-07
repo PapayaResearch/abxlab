@@ -2,10 +2,13 @@ from dataclasses import dataclass
 from browsergym.experiments.benchmark.base import HighLevelActionSetArgs, HighLevelActionSet
 from browsergym.core.action.functions import (
     click,
+    fill,
     go_back,
     go_forward,
     goto,
     scroll,
+    select_option,
+    keyboard_press,
     tab_focus
 )
 
@@ -27,10 +30,13 @@ class NudgeLabHighLevelActionSetArgs(HighLevelActionSetArgs):
             subsets=self.subsets,
             custom_actions=[
                 click,
+                fill,
                 go_back,
                 go_forward,
                 goto,
                 scroll,
+                select_option,
+                keyboard_press,
                 tab_focus
             ],
             multiaction=self.multiaction,

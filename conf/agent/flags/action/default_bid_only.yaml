@@ -4,5 +4,5 @@ action_set:
   subsets:
     - bid
   multiaction: false
-long_description: false
+long_description: true
 individual_examples: true

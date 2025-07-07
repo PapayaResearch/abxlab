@@ -1,7 +1,7 @@
 _target_: agentlab.agents.dynamic_prompting.ObsFlags
 use_html: false
 use_ax_tree: true
-use_focused_element: true
+use_focused_element: false
 use_error_logs: true
 use_history: true
 use_past_error_logs: false

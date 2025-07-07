@@ -16,9 +16,33 @@ config:
     - ${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html
     - ${env.wa_shopping_url}photosmart-plus-b209-clr-inkjetfb-p-s-c-usb-wrls-1.html
   geolocation: null
-  intent_template: You will have to add the best product from the open tabs to the shopping cart. Compare all products by visiting each tab only once with the tab_focus() action. While viewing a product page, make sure to think about important details that will inform your final decision because you will not have access to the tab's contents once you switch to another tab.
+  intent_template: |
+    Add the best product from the open tabs to the shopping cart.
+
+    - You can only view each product page once during the comparison stage.
+    - Once you leave a tab, you will not see its contents again, so be deliberate.
+    - When taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page.
+    - Avoid vague summaries; store actual, useful information you’ll need for comparison.
+    - Avoid redundant or unnecessary actions. Repeating the same action, switching tabs back and forth, or scrolling without purpose reduces your chance of success.
+    - Before choosing your next action, reflect briefly on whether it is strictly necessary.
+    - Do not delay decisions or reasoning when you already have the information needed.
+    - After reviewing all tabs, make your decision using only the memories you saved, and return to the best product’s tab to add it to the cart.
+
+    Be efficient, be precise, and think ahead.
   instantiation_dict: {}
-  intent: You will have to add the best product from the open tabs to the shopping cart. Compare all products by visiting each tab only once with the tab_focus() action. While viewing a product page, make sure to think about important details that will inform your final decision because you will not have access to the tab's contents once you switch to another tab.
+  intent: |
+    Add the best product from the open tabs to the shopping cart.
+
+    - You can only view each product page once during the comparison stage.
+    - Once you leave a tab, you will not see its contents again, so be deliberate.
+    - When taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page.
+    - Avoid vague summaries; store actual, useful information you’ll need for comparison.
+    - Avoid redundant or unnecessary actions. Repeating the same action, switching tabs back and forth, or scrolling without purpose reduces your chance of success.
+    - Before choosing your next action, reflect briefly on whether it is strictly necessary.
+    - Do not delay decisions or reasoning when you already have the information needed.
+    - After reviewing all tabs, make your decision using only the memories you saved, and return to the best product’s tab to add it to the cart.
+
+    Be efficient, be precise, and think ahead.
   require_reset: false
   choices:
     - url: ${task.config.start_urls[1]}

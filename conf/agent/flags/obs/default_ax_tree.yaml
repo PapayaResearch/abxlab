@@ -14,4 +14,4 @@ use_som: false
 extract_visible_tag: true
 extract_clickable_tag: false
 extract_coords: "False"
-filter_visible_elements_only: true
+filter_visible_elements_only: false

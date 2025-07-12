@@ -94,7 +94,7 @@ def rating(
             "margin-right: 10px; "
             "color: rgb(251, 79, 31); "
         )
-        span_tag.string = "(" + rating["title"] + ")"
+        span_tag.string = "Rating: " + rating["title"]
 
         element.insert_after(span_tag)
 

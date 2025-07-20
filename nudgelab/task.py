@@ -9,6 +9,7 @@ from browsergym.webarena.instance import WebArenaInstance
 from nudgelab.evaluators import evaluator_router
 from nudgelab.choices.shop.home import rating as home_rating
 from nudgelab.choices.shop.category import rating as category_rating
+from nudgelab.choices.shop.product import rating as product_rating
 from nudgelab.choices.shop.product import preprocessing as product_preprocessing
 
 
@@ -185,7 +186,7 @@ class NudgeLabShopTask(NudgeLabTask):
 
         if soup.find("meta", property="og:type", content="product"):
             # Page type is product
-            return product_preprocessing(html)
+            return product_rating(html)
 
         if soup.select_one("div.sidebar-main div.filter"):
             # Page type is category

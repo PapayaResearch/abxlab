@@ -103,17 +103,20 @@ def rating(
 
 
 def preprocessing(
-    original_html: bytes
+    original_html: bytes,
+    elem: str = "all"
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 
-    rating = soup.find("div", class_="product-reviews-summary")
-    if rating:
-        rating.decompose()
+    if elem == "all" or elem == "rating":
+        rating = soup.find("div", class_="product-reviews-summary")
+        if rating:
+            rating.decompose()
 
-    price = soup.find("div", class_="price-box price-final_price")
-    if price:
-        price.decompose()
+    if elem == "all" or elem == "price":
+        price = soup.find("div", class_="price-box price-final_price")
+        if price:
+            price.decompose()
 
     modified_html = str(soup)
     return modified_html

@@ -39,7 +39,7 @@ config:
         - module: nudgelab.choices.shop.product
           name: subtitle
           args:
-            value: "Warning: This product contains chemicals known to the State of California to produce cancer."
+            value: This product is a best seller!
   eval:
     eval_types:
       - program_html

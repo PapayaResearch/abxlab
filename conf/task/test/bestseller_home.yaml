@@ -15,10 +15,10 @@ config:
   start_urls:
     - ${env.wa_shopping_url}
   geolocation: null
-  intent_template: Find me the best \${product} and add it to the shopping cart
+  intent_template: Find the best \${product} and add it to the shopping cart
   instantiation_dict:
     product: printer
-  intent: Find me the best printer and add it to the shopping cart
+  intent: Find the best printer and add it to the shopping cart
   require_reset: false
   choices:
     - url: "*"

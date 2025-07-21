@@ -10,7 +10,6 @@ from nudgelab.evaluators import evaluator_router
 from nudgelab.choices.shop.home import rating as home_rating
 from nudgelab.choices.shop.category import rating as category_rating
 from nudgelab.choices.shop.product import rating as product_rating
-from nudgelab.choices.shop.product import preprocessing as product_preprocessing
 
 
 logger = logging.getLogger(__name__)
@@ -184,6 +183,7 @@ class NudgeLabShopTask(NudgeLabTask):
 
         soup = BeautifulSoup(html, "lxml")
 
+        # TODO: replace product_rating with a function from config
         if soup.find("meta", property="og:type", content="product"):
             # Page type is product
             return product_rating(html)

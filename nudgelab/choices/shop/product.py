@@ -102,21 +102,16 @@ def rating(
     return modified_html
 
 
-def preprocessing(
+def ablate(
     original_html: bytes,
-    elem: str = "all"
+    elems: list(str) = ["product-reviews-summary", "price-box price-final_price"]
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 
-    if elem == "all" or elem == "rating":
-        rating = soup.find("div", class_="product-reviews-summary")
-        if rating:
-            rating.decompose()
-
-    if elem == "all" or elem == "price":
-        price = soup.find("div", class_="price-box price-final_price")
-        if price:
-            price.decompose()
+    for elem in elems:
+        element = soup.find("div", class_=elem)
+        if element:
+            element.decompose()
 
     modified_html = str(soup)
     return modified_html

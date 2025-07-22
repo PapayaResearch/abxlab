@@ -104,7 +104,7 @@ def rating(
 
 def ablate(
     original_html: bytes,
-    elems: list(str) = ["product-reviews-summary", "price-box price-final_price"]
+    elems: list[str] = ["product-reviews-summary", "price-box price-final_price"]
 ) -> str:
     soup = BeautifulSoup(original_html, "lxml")
 

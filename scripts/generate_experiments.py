@@ -26,6 +26,7 @@ import yaml
 import pandas as pd
 import numpy as np
 import itertools
+import random
 from tqdm import tqdm
 
 N_REPEATS = 6
@@ -69,14 +70,61 @@ def main():
         help="Seed for the random subsampling"
     )
 
-    args = parser.parse_args()
-    generate_experiments(args.n_repeats, args.n_subsample, args.exp_dir, args.seed, args.dry_run)
+    parser.add_argument(
+        "--products",
+        action="store_true",
+        help="Flag to generate product configs"
+    )
 
-def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
+    parser.add_argument(
+        "--categories",
+        action="store_true",
+        help="Flag to generate category configs"
+    )
+
+    parser.add_argument(
+        "--home",
+        action="store_true",
+        help="Flag to generate home configs"
+    )
+
+    args = parser.parse_args()
+    generate_experiments(
+        args.n_repeats,
+        args.n_subsample,
+        args.exp_dir,
+        args.products,
+        args.categories,
+        args.home,
+        args.seed,
+        args.dry_run
+    )
+
+def generate_experiments(
+        n_repeats,
+        n_subsample,
+        exp_dir,
+        products_flag,
+        categories_flag,
+        home_flag,
+        seed,
+        dry_run=False
+):
+    # Apply the seed for reproducibility
+    random.seed(42)
+
     # Load CSV files
     df_intents = pd.read_csv("tasks/intents.csv")
     df_interventions = pd.read_csv("tasks/interventions.csv")
-    df_products = pd.read_csv("tasks/products.csv").drop(columns=["Notes"])
+    df_products = pd.read_csv("tasks/product_pairs.csv").drop(columns=[
+        "category",
+        "product1_name",
+        "product1_price",
+        "product1_rating",
+        "product2_name",
+        "product2_price",
+        "product2_rating"
+    ])
     df_categories = pd.read_csv("tasks/categories.csv").drop(columns=["Notes"])
     df_home = pd.read_csv("tasks/home.csv").drop(columns=["Notes"])
 
@@ -107,21 +155,17 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
         how="left"
     )
 
-    # Convert Start URLs from a list within a string, to a list of strings
-    df_products["Start URLs"] = df_products["Start URLs"].str.strip('[]').str.split(',')
+    # Create pairs of Start URLs
+    df_products["Start URLs"] = list(zip(df_products["product1_url"], df_products["product2_url"]))
     df_products["Start URLs"] = df_products["Start URLs"].apply(
-        lambda lst: [item.strip() for item in lst]
+        lambda t: tuple(random.sample(t, len(t)))
     )
+    df_products.drop(inplace=True, columns=["product1_url", "product2_url"])
 
-    # Get all possible combinations of 2 elements (ignores order, but can be done with permutations instead)
-    df_products["Start URLs"] = df_products["Start URLs"].apply(
-        lambda lst: list(itertools.combinations(lst, 2))
-    )
+    print(f"Loaded {len(df_products)} product pairs")
+    print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Product'])} interventions")
 
-    # Explode the combinations to automatically get all tests
-    df_products = df_products[["Start URLs"]].explode("Start URLs", ignore_index=True)
-
-    # Subslect by type
+    # Subselect by type
     df_tasks_products = df_tasks[df_tasks["Starting Point"] == "Product"].copy()
     df_tasks_categories = df_tasks[df_tasks["Starting Point"] == "Category"].copy()
     df_tasks_home = df_tasks[df_tasks["Starting Point"] == "Home"].copy()
@@ -131,6 +175,7 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
     df_tasks_categories_all = df_tasks_categories.merge(df_categories, how="cross")
 
     # Subsample product tasks
+    print(f"Subsampling {n_subsample} from {len(df_tasks_products_all)} product configs")
     df_tasks_products_all = df_tasks_products_all.sample(
         n=n_subsample,
         random_state=seed
@@ -197,21 +242,31 @@ def generate_experiments(n_repeats, n_subsample, exp_dir, seed, dry_run=False):
         ignore_index=True
     ).reset_index(drop=True)
 
-    # Create final dataframe with all task details
-    df_tasks_all = pd.concat(
-        [df_tasks_products_all, df_tasks_categories_all, df_tasks_home_all],
-        ignore_index=True
-    )
-
     if dry_run:
-        print("Will generate %d experiments" % len(df_tasks_all))
+        print("Will generate %d product configs" % len(df_tasks_products_all))
+        print("Will generate %d category configs" % len(df_tasks_categories_all))
+        print("Will generate %d home configs" % len(df_tasks_home_all))
         exit()
 
     # Generate config YAMLs
     if not os.path.exists(exp_dir):
         os.makedirs(exp_dir)
 
-    for idx, row in tqdm(df_tasks_all.iterrows(), total=len(df_tasks_all)):
+    if products_flag:
+        print(f"Generating {len(df_tasks_products_all)} product configs...")
+        save_configs(df_tasks_products_all, exp_dir)
+
+    if categories_flag:
+        print(f"Generating {len(df_tasks_categories_all)} category configs...")
+        save_configs(df_tasks_categories_all, exp_dir)
+
+    if home_flag:
+        print(f"Generating {len(df_tasks_home_all)} home configs...")
+        save_configs(df_tasks_home_all, exp_dir)
+
+
+def save_configs(df, exp_dir):
+    for idx, row in tqdm(df.iterrows(), total=len(df)):
         if np.isnan(row["Nudge Index"]):
             choices = []
         else:

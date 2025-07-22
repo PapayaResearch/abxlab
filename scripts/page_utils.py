@@ -104,10 +104,19 @@ def get_all_product_metadata(soup: BeautifulSoup) -> dict:
     metadata = {
         "name": get_name_for_product(soup),
         "price": get_price_for_product(soup),
-        "rating": get_rating_for_product(soup)
+        "rating": get_rating_for_product(soup),
+        "has_options": has_multiple_options(soup),
     }
 
     return metadata
+
+
+@with_soup
+def has_multiple_options(soup: BeautifulSoup) -> bool:
+    """
+    Check if a product has multiple options.
+    """
+    return soup.select_one("div.product-options-wrapper") is not None
 
 
 @with_soup

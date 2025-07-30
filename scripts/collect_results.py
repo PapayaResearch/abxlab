@@ -399,8 +399,12 @@ def get_info_for_step(step: Any) -> dict:
     agent_info = step.agent_info
     if agent_info:
         LLM_response = agent_info.chat_messages.messages[-1]["content"]
-        think = re.search(r'<think>(.*?)</think>', LLM_response, re.DOTALL).group(1).strip()
-        memory = re.search(r'<memory>(.*?)</memory>', LLM_response, re.DOTALL).group(1).strip()
+
+        think_match = re.search(r'<think>(.*?)</think>', LLM_response, re.DOTALL)
+        think = think_match.group(1).strip() if think_match else None
+
+        memory_match = re.search(r'<memory>(.*?)</memory>', LLM_response, re.DOTALL)
+        memory = memory_match.group(1).strip() if memory_match else None
     else:
         think = None
         memory = None

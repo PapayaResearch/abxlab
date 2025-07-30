@@ -76,6 +76,25 @@ def stock(
     return modified_html, {}
 
 
+def price(
+    original_html: bytes,
+    value: float
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    # Change price in span
+    price = soup.find("span", class_="price")
+    price.string = "$" + f"{value:.2f}"
+
+    # Change data-price-amount in price-wrapper
+    price_wrapper = soup.find("span", class_="price-wrapper")
+    if price_wrapper:
+        price_wrapper["data-price-amount"] = f"{value:.2f}"
+
+    modified_html = str(soup)
+    return modified_html, {}
+
+
 def rating(
     original_html: bytes,
     elem_id: str = "rating-summary"

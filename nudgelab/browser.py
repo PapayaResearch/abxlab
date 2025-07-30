@@ -270,15 +270,15 @@ document.addEventListener("visibilitychange", () => {
                 # First we'll do any task-specific preprocessing
                 html = task.process_html(html)
 
-                # Find if there's a choice architecture for the current url
-                choice = next(
-                    filter(
-                        lambda choice: choice["url"] in [request.url, "*"], self.env_config.get("choices")
-                    ),
-                    None
-                )
+                # Find if choice architectures for the current url
+                choices = [
+                    choice
+                    for choice in self.env_config.get("choices")
+                    if choice["url"] in [request.url, "*"]
+                ]
 
-                if choice is not None:
+                # Apply all interventions
+                for choice in choices:
                     for f in choice["functions"]:
                         module_name = f["module"]
                         func_name = f["name"]
@@ -298,7 +298,6 @@ document.addEventListener("visibilitychange", () => {
                         }
 
                         task.nudge_metadata.append(metadata)
-
 
                 route.fulfill(
                     status=response.status,

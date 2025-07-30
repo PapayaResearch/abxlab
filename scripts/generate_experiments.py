@@ -88,6 +88,12 @@ def main():
         help="Flag to generate home configs"
     )
 
+    parser.add_argument(
+        "--match-price",
+        action="store_true",
+        help="Flag to generate configs with price matching to average"
+    )
+
     args = parser.parse_args()
     generate_experiments(
         args.n_repeats,
@@ -97,6 +103,7 @@ def main():
         args.categories,
         args.home,
         args.seed,
+        args.match_price,
         args.dry_run
     )
 
@@ -108,6 +115,7 @@ def generate_experiments(
         categories_flag,
         home_flag,
         seed,
+        match_price,
         dry_run=False
 ):
     # Apply the seed for reproducibility
@@ -116,15 +124,7 @@ def generate_experiments(
     # Load CSV files
     df_intents = pd.read_csv("tasks/intents.csv")
     df_interventions = pd.read_csv("tasks/interventions.csv")
-    df_products = pd.read_csv("tasks/product_pairs.csv").drop(columns=[
-        "category",
-        "product1_name",
-        "product1_price",
-        "product1_rating",
-        "product2_name",
-        "product2_price",
-        "product2_rating"
-    ])
+    df_products = pd.read_csv("tasks/product_pairs.csv")
     df_categories = pd.read_csv("tasks/categories.csv").drop(columns=["Notes"])
     df_home = pd.read_csv("tasks/home.csv").drop(columns=["Notes"])
 
@@ -160,7 +160,23 @@ def generate_experiments(
     df_products["Start URLs"] = df_products["Start URLs"].apply(
         lambda t: tuple(random.sample(t, len(t)))
     )
-    df_products.drop(inplace=True, columns=["product1_url", "product2_url"])
+
+    # Calculate average price for product pairs
+    df_products["Average Price"] = (df_products["product1_price"] + df_products["product2_price"]) / 2
+    df_products.drop(
+        inplace=True,
+        columns=[
+            "category",
+            "product1_name",
+            "product1_price",
+            "product1_rating",
+            "product2_name",
+            "product2_price",
+            "product2_rating",
+            "product1_url",
+            "product2_url"
+        ]
+    )
 
     print(f"Loaded {len(df_products)} product pairs")
     print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Product'])} interventions")
@@ -254,18 +270,18 @@ def generate_experiments(
 
     if products_flag:
         print(f"Generating {len(df_tasks_products_all)} product configs...")
-        save_configs(df_tasks_products_all, exp_dir)
+        save_configs(df_tasks_products_all, exp_dir, match_price)
 
     if categories_flag:
         print(f"Generating {len(df_tasks_categories_all)} category configs...")
-        save_configs(df_tasks_categories_all, exp_dir)
+        save_configs(df_tasks_categories_all, exp_dir, match_price)
 
     if home_flag:
         print(f"Generating {len(df_tasks_home_all)} home configs...")
-        save_configs(df_tasks_home_all, exp_dir)
+        save_configs(df_tasks_home_all, exp_dir, match_price)
 
 
-def save_configs(df, exp_dir):
+def save_configs(df, exp_dir, match_price):
     for idx, row in tqdm(df.iterrows(), total=len(df)):
         if np.isnan(row["Nudge Index"]):
             choices = []
@@ -278,16 +294,38 @@ def save_configs(df, exp_dir):
                 else:
                     url = row["Start URLs"]
 
-            choices = [{
-                "url": url,
-                "nudge": row["Nudge"],
-                "functions": [{
-                    "module": row["Module"],
-                    "name": row["Name"],
-                    "args": {"value": row["Intervention"]}
-                }]
+            choices = [
+                {
+                    "url": url,
+                    "nudge": row["Nudge"],
+                    "functions": [
+                        {
+                            "module": row["Module"],
+                            "name": row["Name"],
+                            "args": {"value": row["Intervention"]}
+                        }
+                    ]
+                }
+            ]
 
-            }]
+        # If matching price, then always create the intervention
+        # Note: For now only available for products
+        if match_price and isinstance(row["Start URLs"], tuple):
+            for url in row["Start URLs"]:
+                choices.append(
+                    {
+                        "url": url,
+                        "nudge": "Matching Price",
+                        "functions": [
+                            {
+                                "module": row["Module"],
+                                "name": "price",
+                                "args": {"value": row["Average Price"]}
+                            }
+                        ]
+                    }
+                )
+
         intent = string.Template(row["Intent"]).substitute(eval(row["Intent Dictionary"]))
 
         name = "exp" + str(idx)

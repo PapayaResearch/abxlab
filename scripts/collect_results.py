@@ -17,6 +17,7 @@ import pickle
 import hashlib
 import browsergym
 import agentlab
+import re
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, TimeoutError, as_completed
 from tqdm.auto import tqdm
 from bs4 import BeautifulSoup
@@ -394,12 +395,24 @@ def get_info_for_step(step: Any) -> dict:
     url = step.obs["url"]
     focused_bid = step.obs["focused_element_bid"]
 
+    # Extract think and memory from the last LLM response
+    agent_info = step.agent_info
+    if agent_info:
+        LLM_response = agent_info.chat_messages.messages[-1]["content"]
+        think = re.search(r'<think>(.*?)</think>', LLM_response, re.DOTALL).group(1).strip()
+        memory = re.search(r'<memory>(.*?)</memory>', LLM_response, re.DOTALL).group(1).strip()
+    else:
+        think = None
+        memory = None
+
     return {
         "url": url,
         "focused_bid": focused_bid,
         "action": action,
         "elem_info": elem_info,
-        "pruned_html": compress_html(pruned_html)
+        "pruned_html": compress_html(pruned_html),
+        "think": think,
+        "memory": memory
     }
 
 

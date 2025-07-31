@@ -1,11 +1,33 @@
+# Copyright (c) 2025
+# Manuel Cherep <mcherep@mit.edu>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 import pandas as pd
 import argparse
 import os
 import dotenv
-from tqdm import tqdm
 import dspy
 import concurrent.futures
 import json
+import ast
+from tqdm import tqdm
 from collections import Counter
 
 def combine_columns(df, suffix):
@@ -97,17 +119,27 @@ def main():
     df["all_memory"] = combine_columns(df, "memory")
 
     def process_mentions(row):
+        choices = ast.literal_eval(row["cfg.task.config.choices"])
+        if len(choices) > 0 and choices[0]["nudge"] != "Matching Price":
+            nudge = choices[0]["functions"][0]["args"]
+        else:
+            nudge = None
         return analyze_mentions(
             row["all_think"],
             row["all_memory"],
-            row["nudge.function.args.value"]
+            nudge
         )
 
     def process_deciding_factor(row):
+        choices = ast.literal_eval(row["cfg.task.config.choices"])
+        if len(choices) > 0 and choices[0]["nudge"] != "Matching Price":
+            nudge = choices[0]["functions"][0]["args"]
+        else:
+            nudge = None
         return analyze_deciding_factor(
             row["all_think"],
             row["all_memory"],
-            row["nudge.function.args.value"]
+            nudge
         )
 
     rows = df.to_dict("records")

@@ -33,100 +33,32 @@ N_REPEATS = 6
 N_SUBSAMPLE = 1000
 SEED = 42
 EXP_DIR = "conf/experiment"
-
-def main():
-    parser = argparse.ArgumentParser(description="Generates all experiment configs.")
-    parser.add_argument(
-        "--n-repeats",
-        type=int,
-        default=N_REPEATS,
-        help="Number of repetitions for category and home tasks"
-    )
-
-    parser.add_argument(
-        "--n-subsample",
-        type=int,
-        default=N_SUBSAMPLE,
-        help="Number of tasks to subsample for products"
-    )
-
-    parser.add_argument(
-        "--exp-dir",
-        type=str,
-        default=EXP_DIR,
-        help="Directory to store experiment configs"
-    )
-
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Just check experiment count without actually writing configs"
-    )
-
-    parser.add_argument(
-        "--seed",
-        type=str,
-        default=SEED,
-        help="Seed for the random subsampling"
-    )
-
-    parser.add_argument(
-        "--products",
-        action="store_true",
-        help="Flag to generate product configs"
-    )
-
-    parser.add_argument(
-        "--categories",
-        action="store_true",
-        help="Flag to generate category configs"
-    )
-
-    parser.add_argument(
-        "--home",
-        action="store_true",
-        help="Flag to generate home configs"
-    )
-
-    parser.add_argument(
-        "--match-price",
-        action="store_true",
-        help="Flag to generate configs with price matching to average"
-    )
-
-    args = parser.parse_args()
-    generate_experiments(
-        args.n_repeats,
-        args.n_subsample,
-        args.exp_dir,
-        args.products,
-        args.categories,
-        args.home,
-        args.seed,
-        args.match_price,
-        args.dry_run
-    )
+PRODUCTS = "tasks/product_pairs.csv"
+CATEGORIES = "tasks/categories.csv"
+HOME = "tasks/home.csv"
 
 def generate_experiments(
         n_repeats,
         n_subsample,
         exp_dir,
-        products_flag,
-        categories_flag,
-        home_flag,
-        seed,
+        products,
+        categories,
+        home,
         match_price,
-        dry_run=False
+        match_review_count,
+        dry_run,
+        seed
 ):
     # Apply the seed for reproducibility
-    random.seed(42)
+    random.seed(seed)
+
+    # Generate config YAMLs
+    if not os.path.exists(exp_dir):
+        os.makedirs(exp_dir)
 
     # Load CSV files
     df_intents = pd.read_csv("tasks/intents.csv")
     df_interventions = pd.read_csv("tasks/interventions.csv")
-    df_products = pd.read_csv("tasks/product_pairs.csv")
-    df_categories = pd.read_csv("tasks/categories.csv").drop(columns=["Notes"])
-    df_home = pd.read_csv("tasks/home.csv").drop(columns=["Notes"])
 
     # Include the intent template ID
     df_intents = df_intents.reset_index().rename(columns={"index": "Intent Template ID"})
@@ -155,133 +87,146 @@ def generate_experiments(
         how="left"
     )
 
-    # Create pairs of Start URLs
-    df_products["Start URLs"] = list(zip(df_products["product1_url"], df_products["product2_url"]))
-    df_products["Start URLs"] = df_products["Start URLs"].apply(
-        lambda t: tuple(random.sample(t, len(t)))
-    )
+    if products:
+        df_products = pd.read_csv(products)
 
-    # Calculate average price for product pairs
-    df_products["Average Price"] = (df_products["product1_price"] + df_products["product2_price"]) / 2
-    df_products.drop(
-        inplace=True,
-        columns=[
-            "category",
-            "product1_name",
-            "product1_price",
-            "product1_rating",
-            "product2_name",
-            "product2_price",
-            "product2_rating",
-            "product1_url",
-            "product2_url"
-        ]
-    )
+        print("=" * 50)
+        print(f"Loaded {len(df_products)} product pairs")
+        print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Product'])} interventions")
 
-    print(f"Loaded {len(df_products)} product pairs")
-    print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Product'])} interventions")
-
-    # Subselect by type
-    df_tasks_products = df_tasks[df_tasks["Starting Point"] == "Product"].copy()
-    df_tasks_categories = df_tasks[df_tasks["Starting Point"] == "Category"].copy()
-    df_tasks_home = df_tasks[df_tasks["Starting Point"] == "Home"].copy()
-
-    # Combine with start urls in other dataframe
-    df_tasks_products_all = df_tasks_products.merge(df_products, how="cross")
-    df_tasks_categories_all = df_tasks_categories.merge(df_categories, how="cross")
-
-    # Subsample product tasks
-    print(f"Subsampling {n_subsample} from {len(df_tasks_products_all)} product configs")
-    df_tasks_products_all = df_tasks_products_all.sample(
-        n=n_subsample,
-        random_state=seed
-    )
-
-    # Set home url and create the intent dictionary
-    df_tasks_home.loc[:, "Start URLs"] = "${env.wa_shopping_url}"
-    df_tasks_home_all = df_tasks_home.merge(df_home, on="Intent Variables")
-    df_tasks_home_all["Intent Dictionary"] = df_tasks_home_all.apply(
-        lambda row: str({row["Intent Variables"]: row["Intent Value"]}),
-        axis=1
-    )
-
-    # Clean up a few columns
-    df_tasks_products_all.drop(inplace=True, columns=["Intent Variables"])
-    df_tasks_categories_all.drop(inplace=True, columns=["Intent Variables"])
-    df_tasks_home_all.drop(inplace=True, columns=["Intent Variables", "Intent Value"])
-
-    # Empty intent dictionary for products and categories
-    df_tasks_products_all["Intent Dictionary"] = "{}"
-    df_tasks_categories_all["Intent Dictionary"] = "{}"
-
-    # Set Nudge Index to NaN
-    df_tasks_products_all["Nudge Index"] = np.nan
-    df_tasks_categories_all["Nudge Index"] = np.nan
-    df_tasks_home_all["Nudge Index"] = np.nan
-
-    # We need to duplicate the product tasks to nudge different tabs and none at all
-    # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
-    duplicates = df_tasks_products_all.loc[
-        df_tasks_products_all.index.repeat(
-            df_tasks_products_all["Start URLs"].str.len()
+        # Create pairs of Start URLs
+        df_products["Start URLs"] = list(zip(df_products["product1_url"], df_products["product2_url"]))
+        df_products["Start URLs"] = df_products["Start URLs"].apply(
+            lambda t: tuple(random.sample(t, len(t)))
         )
-    ].copy()
-    duplicates["Nudge Index"] = df_tasks_products_all.groupby(
-        df_tasks_products_all.index
-    ).apply(
-        lambda x: list(range(len(x.iloc[0]["Start URLs"])))
-    ).explode().astype(int).values
 
-    # Combine original + duplicated
-    df_tasks_products_all = pd.concat(
-        [df_tasks_products_all, duplicates],
-        ignore_index=True
-    ).reset_index(drop=True)
+        # Calculate average price for product pairs
+        df_products["Average Price"] = (df_products["product1_price"] + df_products["product2_price"]) / 2
+        df_products["Average Review Count"] = (df_products["product1_reviews"] + df_products["product2_reviews"]) // 2
 
-    # We need to duplicate the category tasks to nudge different (random) products and none at all
-    # Repeat each row N times
-    repeats = df_tasks_categories_all.loc[
-        df_tasks_categories_all.index.repeat(n_repeats)
-    ].copy()
-    repeats["Nudge Index"] = 0
-    df_tasks_categories_all = pd.concat(
-        [df_tasks_categories_all, repeats],
-        ignore_index=True
-    ).reset_index(drop=True)
+        # Subselect by type
+        df_tasks_products = df_tasks[df_tasks["Starting Point"] == "Product"].copy()
 
-    # We need to duplicate the category tasks to nudge different (random) products and none at all
-    # Repeat each row N times
-    repeats = df_tasks_home_all.loc[df_tasks_home_all.index.repeat(n_repeats)].copy()
-    repeats["Nudge Index"] = 0
-    df_tasks_home_all = pd.concat(
-        [df_tasks_home_all, repeats],
-        ignore_index=True
-    ).reset_index(drop=True)
+        # Combine with start urls in other dataframe
+        df_tasks_products_all = df_tasks_products.merge(df_products, how="cross")
 
-    if dry_run:
-        print("Will generate %d product configs" % len(df_tasks_products_all))
-        print("Will generate %d category configs" % len(df_tasks_categories_all))
-        print("Will generate %d home configs" % len(df_tasks_home_all))
-        exit()
+        # Subsample product tasks
+        print(f"Subsampling {n_subsample * 3} from {len(df_tasks_products_all)} product configs")
+        print("=" * 50 + "\n")
 
-    # Generate config YAMLs
-    if not os.path.exists(exp_dir):
-        os.makedirs(exp_dir)
+        df_tasks_products_all = df_tasks_products_all.sample(
+            n=n_subsample,
+            random_state=seed
+        )
 
-    if products_flag:
-        print(f"Generating {len(df_tasks_products_all)} product configs...")
-        save_configs(df_tasks_products_all, exp_dir, match_price)
+        # Empty intent dictionary
+        df_tasks_products_all["Intent Dictionary"] = "{}"
 
-    if categories_flag:
-        print(f"Generating {len(df_tasks_categories_all)} category configs...")
-        save_configs(df_tasks_categories_all, exp_dir, match_price)
+        # Set Nudge Index to NaN
+        df_tasks_products_all["Nudge Index"] = np.nan
 
-    if home_flag:
-        print(f"Generating {len(df_tasks_home_all)} home configs...")
-        save_configs(df_tasks_home_all, exp_dir, match_price)
+        # We need to duplicate the product tasks to nudge different tabs and none at all
+        # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
+        duplicates = df_tasks_products_all.loc[
+            df_tasks_products_all.index.repeat(
+                df_tasks_products_all["Start URLs"].str.len()
+            )
+        ].copy()
+        duplicates["Nudge Index"] = df_tasks_products_all.groupby(
+            df_tasks_products_all.index
+        ).apply(
+            lambda x: list(range(len(x.iloc[0]["Start URLs"])))
+        ).explode().astype(int).values
+
+        # Combine original + duplicated
+        df_tasks_products_all = pd.concat(
+            [df_tasks_products_all, duplicates],
+            ignore_index=True
+        ).reset_index(drop=True)
+
+    if categories:
+        # Load categories CSV
+        df_categories = pd.read_csv("tasks/categories.csv")
+
+        print("=" * 50)
+        print(f"Loaded {len(df_categories)} categories")
+        print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Category'])} interventions")
+
+        # Subselect category tasks
+        df_tasks_categories = df_tasks[df_tasks["Starting Point"] == "Category"].copy()
+
+        # Combine with start urls in other dataframe
+        df_tasks_categories_all = df_tasks_categories.merge(df_categories, how="cross")
+
+        # Empty intent dictionary
+        df_tasks_categories_all["Intent Dictionary"] = "{}"
+
+        # Set Nudge Index to NaN
+        df_tasks_categories_all["Nudge Index"] = np.nan
+
+        # We need to duplicate the category tasks to nudge different (random) products and none at all
+        # Repeat each row N times
+        repeats = df_tasks_categories_all.loc[
+            df_tasks_categories_all.index.repeat(n_repeats)
+        ].copy()
+        repeats["Nudge Index"] = 0
+        df_tasks_categories_all = pd.concat(
+            [df_tasks_categories_all, repeats],
+            ignore_index=True
+        ).reset_index(drop=True)
+
+        print(f"Generating {len(df_tasks_categories_all)} category configs")
+        print("=" * 50 + "\n")
+
+    if home:
+        # Load home CSV
+        df_home = pd.read_csv(home)
+
+        print("=" * 50)
+        print(f"Loaded {len(df_home)} home")
+        print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Home'])} interventions")
+        print(f"Generating {len(df_home) * n_repeats} home configs")
+
+        # Subselect home tasks
+        df_tasks_home = df_tasks[df_tasks["Starting Point"] == "Home"].copy()
+
+        # Set home url and create the intent dictionary
+        df_tasks_home.loc[:, "Start URLs"] = "${env.wa_shopping_url}"
+        df_tasks_home_all = df_tasks_home.merge(df_home, on="Intent Variables")
+        df_tasks_home_all["Intent Dictionary"] = df_tasks_home_all.apply(
+            lambda row: str({row["Intent Variables"]: row["Intent Value"]}),
+            axis=1
+        )
+
+        # Set Nudge Index to NaN
+        df_tasks_home_all["Nudge Index"] = np.nan
+
+        # We need to duplicate the category tasks to nudge different (random) products and none at all
+        # Repeat each row N times
+        repeats = df_tasks_home_all.loc[df_tasks_home_all.index.repeat(n_repeats)].copy()
+        repeats["Nudge Index"] = 0
+        df_tasks_home_all = pd.concat(
+            [df_tasks_home_all, repeats],
+            ignore_index=True
+        ).reset_index(drop=True)
+
+        print(f"Generating {len(df_tasks_home_all)} home configs")
+        print("=" * 50)
+
+    if not dry_run:
+        # Save configs
+        if products:
+            print(f"Generating {len(df_tasks_products_all)} product configs...")
+            save_configs(df_tasks_products_all, exp_dir, match_price, match_review_count)
+        if categories:
+            print(f"Generating {len(df_tasks_categories_all)} category configs...")
+            save_configs(df_tasks_categories_all, exp_dir, match_price, match_review_count)
+        if home:
+            print(f"Generating {len(df_tasks_home_all)} home configs...")
+            save_configs(df_tasks_home_all, exp_dir, match_price, match_review_count)
 
 
-def save_configs(df, exp_dir, match_price):
+def save_configs(df, exp_dir, match_price, match_review_count):
     for idx, row in tqdm(df.iterrows(), total=len(df)):
         if np.isnan(row["Nudge Index"]):
             choices = []
@@ -326,6 +271,24 @@ def save_configs(df, exp_dir, match_price):
                     }
                 )
 
+        # If matching review count, then always create the intervention
+        # Note: For now only available for products
+        if match_review_count and isinstance(row["Start URLs"], tuple):
+            for url in row["Start URLs"]:
+                choices.append(
+                    {
+                        "url": url,
+                        "nudge": "Matching Review Count",
+                        "functions": [
+                            {
+                                "module": row["Module"],
+                                "name": "review_count",
+                                "args": {"value": row["Average Review Count"]}
+                            }
+                        ]
+                    }
+                )
+
         intent = string.Template(row["Intent"]).substitute(eval(row["Intent Dictionary"]))
 
         name = "exp" + str(idx)
@@ -355,6 +318,86 @@ def save_configs(df, exp_dir, match_price):
                 sort_keys=False,
                 indent=2
             )
+
+def main():
+    parser = argparse.ArgumentParser(description="Generates all experiment configs.")
+    parser.add_argument(
+        "--n-repeats",
+        type=int,
+        default=N_REPEATS,
+        help="Number of repetitions for category and home tasks"
+    )
+
+    parser.add_argument(
+        "--n-subsample",
+        type=int,
+        default=N_SUBSAMPLE,
+        help="Number of tasks to subsample for products"
+    )
+
+    parser.add_argument(
+        "--exp-dir",
+        type=str,
+        default=EXP_DIR,
+        help="Directory to store experiment configs"
+    )
+
+    parser.add_argument(
+        "--products",
+        type=str,
+        help="Path to product pairs CSV (e.g. tasks/product_pairs.csv)"
+    )
+
+    parser.add_argument(
+        "--categories",
+        type=str,
+        help="Path to categories CSV (e.g. tasks/categories.csv)"
+    )
+
+    parser.add_argument(
+        "--home",
+        type=str,
+        help="Path to home CSV (e.g. tasks/home.csv)"
+    )
+
+    parser.add_argument(
+        "--match-price",
+        action="store_true",
+        help="Flag to generate configs with price matching to average"
+    )
+
+    parser.add_argument(
+        "--match-review-count",
+        action="store_true",
+        help="Flag to generate configs with review count matching to average"
+    )
+
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Just check experiment count without actually writing configs"
+    )
+
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=SEED,
+        help="Seed for the random subsampling"
+    )
+
+    args = parser.parse_args()
+    generate_experiments(
+        args.n_repeats,
+        args.n_subsample,
+        args.exp_dir,
+        args.products,
+        args.categories,
+        args.home,
+        args.match_price,
+        args.match_review_count,
+        args.dry_run,
+        args.seed
+    )
 
 if __name__ == "__main__":
     main()

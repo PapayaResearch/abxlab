@@ -95,6 +95,26 @@ def price(
     return modified_html, {}
 
 
+def review_count(
+    original_html: bytes,
+    value: int
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    # Change review count on the right next to rating
+    review_count_ratings = soup.find("span", itemprop="reviewCount")
+    if review_count_ratings:
+        review_count_ratings.string = str(value)
+
+    # Change review count in the tab at the bottom
+    review_count_tab = soup.find("span", class_="counter")
+    if review_count_tab:
+        review_count_tab.string = str(value)
+
+    modified_html = str(soup)
+    return modified_html, {}
+
+
 def rating(
     original_html: bytes,
     elem_id: str = "rating-summary"

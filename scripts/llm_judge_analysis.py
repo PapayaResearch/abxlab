@@ -121,7 +121,9 @@ def main():
     def process_row_with_analysis(row, analysis_fn):
         """Generic function to process a row with any analysis function."""
         nudge = extract_nudge_from_row(row)
-        return analysis_fn(row["all_think"], row["all_memory"], nudge)
+        result = analysis_fn(row["all_think"], row["all_memory"], nudge)
+        result["experiment_id"] = row.get("experiment_id")
+        return result
 
     def run_parallel_analysis(rows, analysis_fn, description, max_workers):
         """Run analysis in parallel and return results."""

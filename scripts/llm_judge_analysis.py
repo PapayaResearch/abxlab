@@ -123,6 +123,7 @@ def main():
         nudge = extract_nudge_from_row(row)
         result = analysis_fn(row["all_think"], row["all_memory"], nudge)
         result["experiment_id"] = row.get("experiment_id")
+        result["intervention"] = nudge
         return result
 
     def run_parallel_analysis(rows, analysis_fn, description, max_workers):

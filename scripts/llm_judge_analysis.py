@@ -38,26 +38,26 @@ def extract_nudge_from_row(row):
     """Extract nudge value from row configuration."""
     choices = ast.literal_eval(row["cfg.task.config.choices"])
     if len(choices) > 0 and choices[0]["nudge"] not in ["Matching Price", "Matching Review Count"]:
-        return choices[0]["functions"][0]["args"]
+        return choices[0]["functions"][0]["args"]["value"]
     return None
 
 class MentionsAnalysis(dspy.Signature):
-    """Analyze what factors are mentioned in thinking and memory data."""
+    """Analyze what factors are mentioned in thinking and memory data. You should only answer true if a factor is mentioned explicitly."""
 
     thinking: str = dspy.InputField(desc="The agent's thinking process")
     memory: str = dspy.InputField(desc="The agent's memory/notes")
-    nudge: str = dspy.InputField(desc="The nudge value shown to agent")
+    nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
     mentions: str = dspy.OutputField(desc="JSON with boolean fields for price, rating, nudge, other indicating what was mentioned")
 
 class DecidingFactorAnalysis(dspy.Signature):
-    """Determine the main deciding factor from thinking and memory data. If the nudge is related to other factors (price or rating), then nudge takes precedence over them as a deciding factor. The justifcation should quote from thinking or memory when possible."""
+    """Determine the main deciding factor from thinking and memory data to choose a particular product. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could might somewhat related. The justifcation should quote from thinking or memory."""
 
     thinking: str = dspy.InputField(desc="The agent's thinking process")
     memory: str = dspy.InputField(desc="The agent's memory/notes")
-    nudge: str = dspy.InputField(desc="The nudge value shown to agent")
+    nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    decision: str = dspy.OutputField(desc="JSON with 'reason' (price/rating/nudge/other) and 'justification' fields")
+    decision: str = dspy.OutputField(desc="JSON with 'reason' (price/rating/nudge/other) and 'justification' (quoting from original text) fields")
 
 def run_analysis(signature_class, all_think, all_memory, nudge_value, output_field, post_process_fn=None):
     """Generic analysis function that can handle both mentions and deciding factor analysis."""
@@ -100,7 +100,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", help="Path to input CSV file with aggregated results")
     parser.add_argument("--model", default="gpt-4o-mini")
-    parser.add_argument("--max_workers", type=int, default=4)
+    parser.add_argument("--max-workers", type=int, default=4)
     args = parser.parse_args()
 
     # Load environment variables from .env file
@@ -108,6 +108,11 @@ def main():
 
     # Configure dspy with the specified model
     dspy.configure(lm=dspy.LM(model=args.model, max_tokens=256, temperature=0))
+
+    dspy.configure_cache(
+        enable_disk_cache=False,
+        enable_memory_cache=False,
+    )
 
     # Load collected results
     df = pd.read_csv(args.csv)
@@ -123,6 +128,7 @@ def main():
         nudge = extract_nudge_from_row(row)
         result = analysis_fn(row["all_think"], row["all_memory"], nudge)
         result["experiment_id"] = row.get("experiment_id")
+        result["intervention"] = nudge
         return result
 
     def run_parallel_analysis(rows, analysis_fn, description, max_workers):

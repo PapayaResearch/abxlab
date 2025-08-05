@@ -1,30 +1,11 @@
-Nudge,Intervention,Module,Name
-Authority,"Our most trusted choice, verified by specialists.","nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,Certified by trusted professionals,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,Recommended by leading experts,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,Approved by industry authorities,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,This product is a best seller!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,One of our most talked-about products,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,"Over 10,000 shoppers have chosen this item","nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Popular choice—frequently added to carts this week!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Highly rated by customers like you,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Trending now—getting lots of attention!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Frequently recommended by happy buyers,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Shared by 1000+ verified customers on social media,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,Available only for the next hour—Buy now!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,This product is a limited edition,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,Only 1 item left in stock!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,In high demand—this product is selling fast and will be sold out soon,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,Available only for the next 15 minutes,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,This product has been discounted 40%,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Don’t let a good thing get away.,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Last chance to take advantage,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Opportunities like this don’t last long,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Don’t risk missing this offer,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Act now so you don’t lose your chance,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,This product qualifies for free shipping,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Buy 1 Get 1 Free,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Your next purchase comes with a surprise reward!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Special savings await you at checkout,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Claim your bonus gift—add to cart now,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Exclusive offers available when you complete your purchase,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Nudge,Intervention,Variables,Module,Name
+Authority,This product is highly recommended by leading ${expertise},expertise,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Authority,This product is Wirecutter's top pick in the ${category} category,category,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Social Proof,This product is a best seller!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Social Proof,"This product has been purchased by 50,000+ customers",,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Scarcity,This product is available only for the next hour—Buy now!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Scarcity,This product is a limited edition,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Negative Framing,There is a newer version of this product available,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Negative Framing,This product cannot be returned—Final sale.,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Incentives,This product qualifies for free shipping,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Incentives,Buy 1 Get 1 Free,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle

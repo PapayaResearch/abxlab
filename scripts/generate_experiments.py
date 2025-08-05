@@ -27,19 +27,29 @@ import pandas as pd
 import numpy as np
 import itertools
 import random
+import dspy
+import dotenv
 from tqdm import tqdm
 
 N_REPEATS = 6
-N_SUBSAMPLE = 1000
 SEED = 42
 EXP_DIR = "conf/experiment"
+MODEL = "gpt-4.1-mini"
 PRODUCTS = "tasks/product_pairs.csv"
 CATEGORIES = "tasks/categories.csv"
 HOME = "tasks/home.csv"
 
+class VariableSubstitution(dspy.Signature):
+    """Given an intervention with a variable placeholder, a variable name, and a product category, generate an appropriate replacement value for that variable. The intervention must be coherent when replacing the variable with a value. The category name must be simplified to ensure the intervention sounds as natural as possible. Pay attention to the category context, some categories are ambigious."""
+
+    intervention: str = dspy.InputField(desc="Intervention text containing the variable to replace")
+    variable: str = dspy.InputField(desc="Variable name to replace (appears as ${} in intervention)")
+    category: str = dspy.InputField(desc="Product category context")
+    category_context: str = dspy.InputField(desc="Additional context about the categories")
+    value: str = dspy.OutputField(desc="Replacement value for the variable")
+
 def generate_experiments(
         n_repeats,
-        n_subsample,
         exp_dir,
         products,
         categories,
@@ -55,6 +65,10 @@ def generate_experiments(
     # Generate config YAMLs
     if not os.path.exists(exp_dir):
         os.makedirs(exp_dir)
+
+    # Load category context
+    with open("tasks/categories.yaml", "r") as f:
+        category_context = f.read()
 
     # Load CSV files
     df_intents = pd.read_csv("tasks/intents.csv")
@@ -97,7 +111,7 @@ def generate_experiments(
         # Create pairs of Start URLs
         df_products["Start URLs"] = list(zip(df_products["product1_url"], df_products["product2_url"]))
         df_products["Start URLs"] = df_products["Start URLs"].apply(
-            lambda t: tuple(random.sample(t, len(t)))
+            lambda t: tuple(random.sample(t, len(t))) # Shuffle
         )
 
         # Calculate average price for product pairs
@@ -110,20 +124,46 @@ def generate_experiments(
         # Combine with start urls in other dataframe
         df_tasks_products_all = df_tasks_products.merge(df_products, how="cross")
 
-        # Subsample product tasks
-        print(f"Subsampling {n_subsample * 3} from {len(df_tasks_products_all)} product configs")
-        print("=" * 50 + "\n")
-
-        df_tasks_products_all = df_tasks_products_all.sample(
-            n=n_subsample,
-            random_state=seed
-        )
-
         # Empty intent dictionary
         df_tasks_products_all["Intent Dictionary"] = "{}"
 
         # Set Nudge Index to NaN
         df_tasks_products_all["Nudge Index"] = np.nan
+
+        # Process variable substitutions with an LLM
+        print(f"Generating interventions with LLM calls...")
+        llm_call = dspy.ChainOfThought(VariableSubstitution)
+
+        unique_intervention_category = df_tasks_products_all[
+            ~df_tasks_products_all["Variables"].isna()
+        ][["category", "Intervention", "Variables"]].drop_duplicates()
+
+        substitution_map = {}
+        for _, row in tqdm(unique_intervention_category.iterrows(),
+                           total=len(unique_intervention_category)):
+            # Generate substituted intervention
+            new_intervention = string.Template(row["Intervention"]).substitute(
+                {
+                    row["Variables"]: llm_call(
+                        intervention=row["Intervention"],
+                        variable=row["Variables"],
+                        category=row["category"],
+                        category_context=category_context
+                    ).value
+                }
+            )
+
+            # Store mapping from original to substituted intervention
+            substitution_map[(row["category"], row["Intervention"])] = new_intervention
+
+        # Apply substitutions to original dataframe
+        df_tasks_products_all["Intervention"] = df_tasks_products_all.apply(
+            lambda row: substitution_map.get(
+                (row["category"], row["Intervention"]),
+                row["Intervention"]
+            ),
+            axis=1
+        )
 
         # We need to duplicate the product tasks to nudge different tabs and none at all
         # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
@@ -143,6 +183,9 @@ def generate_experiments(
             [df_tasks_products_all, duplicates],
             ignore_index=True
         ).reset_index(drop=True)
+
+        print(f"Generating {len(df_tasks_products_all)} product configs")
+        print("=" * 50 + "\n")
 
     if categories:
         # Load categories CSV
@@ -183,9 +226,8 @@ def generate_experiments(
         df_home = pd.read_csv(home)
 
         print("=" * 50)
-        print(f"Loaded {len(df_home)} home")
+        print(f"Loaded {len(df_home)} categories (home)")
         print(f"Loaded {len(df_tasks[df_tasks['Starting Point'] == 'Home'])} interventions")
-        print(f"Generating {len(df_home) * n_repeats} home configs")
 
         # Subselect home tasks
         df_tasks_home = df_tasks[df_tasks["Starting Point"] == "Home"].copy()
@@ -329,17 +371,17 @@ def main():
     )
 
     parser.add_argument(
-        "--n-subsample",
-        type=int,
-        default=N_SUBSAMPLE,
-        help="Number of tasks to subsample for products"
-    )
-
-    parser.add_argument(
         "--exp-dir",
         type=str,
         default=EXP_DIR,
         help="Directory to store experiment configs"
+    )
+
+    parser.add_argument(
+        "--model",
+        type=str,
+        default=MODEL,
+        help="LLM model to generate variable interventions"
     )
 
     parser.add_argument(
@@ -386,9 +428,11 @@ def main():
     )
 
     args = parser.parse_args()
+    dotenv.load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.env"))
+    dspy.configure(lm=dspy.LM(args.model, temperature=0.1))
+
     generate_experiments(
         args.n_repeats,
-        args.n_subsample,
         args.exp_dir,
         args.products,
         args.categories,

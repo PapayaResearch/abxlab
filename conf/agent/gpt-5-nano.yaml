@@ -12,3 +12,6 @@ chat_model_args:
   max_new_tokens: 128000
   vision_support: true
   temperature: 0.1
+  additional_drop_params:
+    - temperature
+    - max_tokens

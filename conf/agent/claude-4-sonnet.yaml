@@ -1,0 +1,16 @@
+_target_: agentlab.agents.generic_agent.generic_agent.GenericAgentArgs
+
+defaults:
+  - flags: default
+  - _self_
+
+chat_model_args:
+  _target_: agentlab.llm.chat_api.LiteLLMModelArgs
+  model_name: claude-sonnet-4-20250514
+  max_total_tokens: 200000
+  max_input_tokens: 200000
+  max_new_tokens: 64000
+  vision_support: true
+  temperature: 0.1
+  additional_drop_params:
+    - logprobs

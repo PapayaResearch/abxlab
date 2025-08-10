@@ -99,7 +99,7 @@ def analyze_deciding_factor(all_think, all_memory, nudge_value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", help="Path to input CSV file with aggregated results")
-    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--model", default="gpt-5-nano")
     parser.add_argument("--max-workers", type=int, default=4)
     args = parser.parse_args()
 

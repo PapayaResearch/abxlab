@@ -107,7 +107,10 @@ def main():
     dotenv.load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../.env"))
 
     # Configure dspy with the specified model
-    dspy.configure(lm=dspy.LM(model=args.model, max_tokens=256, temperature=0))
+    dspy.configure(lm=dspy.LM(
+        model=args.model,
+        additional_drop_params=["max_tokens", "temperature"]
+    ))
 
     dspy.configure_cache(
         enable_disk_cache=False,

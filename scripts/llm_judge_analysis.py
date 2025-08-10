@@ -48,7 +48,7 @@ class MentionsAnalysis(dspy.Signature):
     memory: str = dspy.InputField(desc="The agent's memory/notes")
     nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    mentions: str = dspy.OutputField(desc="JSON with boolean fields for price, rating, nudge, other indicating what was mentioned")
+    mentions: dict = dspy.OutputField(desc="An object with boolean fields for price, rating, nudge, other indicating what was mentioned")
 
 class DecidingFactorAnalysis(dspy.Signature):
     """Determine the main deciding factor from thinking and memory data to choose a particular product. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could might somewhat related. The justifcation should quote from thinking or memory."""
@@ -57,7 +57,7 @@ class DecidingFactorAnalysis(dspy.Signature):
     memory: str = dspy.InputField(desc="The agent's memory/notes")
     nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    decision: str = dspy.OutputField(desc="JSON with 'reason' (price/rating/nudge/other) and 'justification' (quoting from original text) fields")
+    decision: dict = dspy.OutputField(desc="An object with reason (price/rating/nudge/other) and justification (quoting from original text) fields")
 
 def run_analysis(signature_class, all_think, all_memory, nudge_value, output_field, post_process_fn=None):
     """Generic analysis function that can handle both mentions and deciding factor analysis."""
@@ -67,8 +67,7 @@ def run_analysis(signature_class, all_think, all_memory, nudge_value, output_fie
         memory=all_memory,
         nudge=str(nudge_value)
     )
-    content = getattr(result, output_field).strip()
-    parsed_result = json.loads(content)
+    parsed_result = getattr(result, output_field)
 
     if post_process_fn:
         parsed_result = post_process_fn(parsed_result)
@@ -99,7 +98,7 @@ def analyze_deciding_factor(all_think, all_memory, nudge_value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", help="Path to input CSV file with aggregated results")
-    parser.add_argument("--model", default="gpt-5-nano")
+    parser.add_argument("--model", default="gpt-5-mini")
     parser.add_argument("--max-workers", type=int, default=4)
     args = parser.parse_args()
 

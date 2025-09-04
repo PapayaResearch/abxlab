@@ -35,9 +35,6 @@ N_REPEATS = 6
 SEED = 42
 EXP_DIR = "conf/experiment"
 MODEL = "gpt-4.1-mini"
-PRODUCTS = "tasks/product_pairs.csv"
-CATEGORIES = "tasks/categories.csv"
-HOME = "tasks/home.csv"
 
 class VariableSubstitution(dspy.Signature):
     """Given an intervention with a variable placeholder, a variable name, and a product category, generate an appropriate replacement value for that variable. The intervention must be coherent when replacing the variable with a value. The category name must be simplified to ensure the intervention sounds as natural as possible. Pay attention to the category context, some categories are ambigious."""
@@ -56,6 +53,7 @@ def generate_experiments(
         home,
         match_price,
         match_review_count,
+        no_nudges,
         dry_run,
         seed
 ):
@@ -78,9 +76,10 @@ def generate_experiments(
     df_intents = df_intents.reset_index().rename(columns={"index": "Intent Template ID"})
 
     # Expand the supported nudges into multiple rows
-    df_intents["Supported Nudges"] = df_intents["Supported Nudges"].str.split(", ")
-    df_intents = df_intents.explode("Supported Nudges")
-    df_intents = df_intents.reset_index(drop=True).rename(columns={"Supported Nudges": "Nudge"})
+    if not no_nudges:
+        df_intents["Supported Nudges"] = df_intents["Supported Nudges"].str.split(", ")
+        df_intents = df_intents.explode("Supported Nudges")
+        df_intents = df_intents.reset_index(drop=True).rename(columns={"Supported Nudges": "Nudge"})
 
     # Expand the modules into multiple rows
     df_interventions["Module"] = df_interventions["Module"].str.split(",")
@@ -94,12 +93,15 @@ def generate_experiments(
     df_interventions["Starting Point"] = df_interventions["Module"].map(mapping)
 
     # Combine intents and interventions
-    df_tasks = df_intents.merge(
-        df_interventions,
-        left_on=("Nudge", "Starting Point"),
-        right_on=("Nudge", "Starting Point"),
-        how="left"
-    )
+    if no_nudges:
+        df_tasks = df_intents.copy()
+    else:
+        df_tasks = df_intents.merge(
+            df_interventions,
+            left_on=("Nudge", "Starting Point"),
+            right_on=("Nudge", "Starting Point"),
+            how="left"
+        )
 
     if products:
         df_products = pd.read_csv(products)
@@ -134,55 +136,56 @@ def generate_experiments(
         print(f"Generating interventions with LLM calls...")
         llm_call = dspy.ChainOfThought(VariableSubstitution)
 
-        unique_intervention_category = df_tasks_products_all[
-            ~df_tasks_products_all["Variables"].isna()
-        ][["category", "Intervention", "Variables"]].drop_duplicates()
+        if not no_nudges:
+            unique_intervention_category = df_tasks_products_all[
+                ~df_tasks_products_all["Variables"].isna()
+            ][["category", "Intervention", "Variables"]].drop_duplicates()
 
-        substitution_map = {}
-        for _, row in tqdm(unique_intervention_category.iterrows(),
-                           total=len(unique_intervention_category)):
-            # Generate substituted intervention
-            new_intervention = string.Template(row["Intervention"]).substitute(
-                {
-                    row["Variables"]: llm_call(
-                        intervention=row["Intervention"],
-                        variable=row["Variables"],
-                        category=row["category"],
-                        category_context=category_context
-                    ).value
-                }
+            substitution_map = {}
+            for _, row in tqdm(unique_intervention_category.iterrows(),
+                               total=len(unique_intervention_category)):
+                # Generate substituted intervention
+                new_intervention = string.Template(row["Intervention"]).substitute(
+                    {
+                        row["Variables"]: llm_call(
+                            intervention=row["Intervention"],
+                            variable=row["Variables"],
+                            category=row["category"],
+                            category_context=category_context
+                        ).value
+                    }
+                )
+
+                # Store mapping from original to substituted intervention
+                substitution_map[(row["category"], row["Intervention"])] = new_intervention
+
+            # Apply substitutions to original dataframe
+            df_tasks_products_all["Intervention"] = df_tasks_products_all.apply(
+                lambda row: substitution_map.get(
+                    (row["category"], row["Intervention"]),
+                    row["Intervention"]
+                ),
+                axis=1
             )
 
-            # Store mapping from original to substituted intervention
-            substitution_map[(row["category"], row["Intervention"])] = new_intervention
+            # We need to duplicate the product tasks to nudge different tabs and none at all
+            # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
+            duplicates = df_tasks_products_all.loc[
+                df_tasks_products_all.index.repeat(
+                    df_tasks_products_all["Start URLs"].str.len()
+                )
+            ].copy()
+            duplicates["Nudge Index"] = df_tasks_products_all.groupby(
+                df_tasks_products_all.index
+            ).apply(
+                lambda x: list(range(len(x.iloc[0]["Start URLs"])))
+            ).explode().astype(int).values
 
-        # Apply substitutions to original dataframe
-        df_tasks_products_all["Intervention"] = df_tasks_products_all.apply(
-            lambda row: substitution_map.get(
-                (row["category"], row["Intervention"]),
-                row["Intervention"]
-            ),
-            axis=1
-        )
-
-        # We need to duplicate the product tasks to nudge different tabs and none at all
-        # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
-        duplicates = df_tasks_products_all.loc[
-            df_tasks_products_all.index.repeat(
-                df_tasks_products_all["Start URLs"].str.len()
-            )
-        ].copy()
-        duplicates["Nudge Index"] = df_tasks_products_all.groupby(
-            df_tasks_products_all.index
-        ).apply(
-            lambda x: list(range(len(x.iloc[0]["Start URLs"])))
-        ).explode().astype(int).values
-
-        # Combine original + duplicated
-        df_tasks_products_all = pd.concat(
-            [df_tasks_products_all, duplicates],
-            ignore_index=True
-        ).reset_index(drop=True)
+            # Combine original + duplicated
+            df_tasks_products_all = pd.concat(
+                [df_tasks_products_all, duplicates],
+                ignore_index=True
+            ).reset_index(drop=True)
 
         print(f"Generating {len(df_tasks_products_all)} product configs")
         print("=" * 50 + "\n")
@@ -268,7 +271,7 @@ def generate_experiments(
             save_configs(df_tasks_home_all, exp_dir, match_price, match_review_count)
 
 
-def save_configs(df, exp_dir, match_price, match_review_count):
+def save_configs(df, exp_dir, match_price=False, match_review_count=False):
     for idx, row in tqdm(df.iterrows(), total=len(df)):
         if np.isnan(row["Nudge Index"]):
             choices = []
@@ -349,6 +352,11 @@ def save_configs(df, exp_dir, match_price, match_review_count):
             }
         }
 
+        if "coverage_type" in row:
+            data["task"]["config"]["metadata"] = {"coveragy_type": row["coverage_type"]}
+        if "user_preference" in row:
+            data["task"]["config"]["metadata"] = {"user_preference": row["user_preference"]}
+
         # Save to a YAML file
         with open(f"{exp_dir}/{name}.yaml", "w") as f:
             f.write("# @package _global_\n\n")
@@ -415,6 +423,12 @@ def main():
     )
 
     parser.add_argument(
+        "--no-nudges",
+        action="store_true",
+        help="Flag to generate configs without nudges"
+    )
+
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Just check experiment count without actually writing configs"
@@ -439,6 +453,7 @@ def main():
         args.home,
         args.match_price,
         args.match_review_count,
+        args.no_nudges,
         args.dry_run,
         args.seed
     )

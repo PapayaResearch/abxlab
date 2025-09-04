@@ -1,0 +1,2 @@
+Nudge,Intervention,Variables,Module,Name
+Authority,This product is Wirecutter's top pick in the ${category} category,category,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle

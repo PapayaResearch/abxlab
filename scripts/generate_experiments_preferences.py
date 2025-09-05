@@ -45,12 +45,11 @@ NO_NUDGE_PREFERENCES = [
     "The user values highly-rated products.",
     "The user doesn’t put much stock in what other customers think."
 ]
-ALL_DECREASING_PREFERENCES = "The user is willing to pay more for a better product, and doesn’t put much stock in what other customers think."
 
 def generate_experiments(
         exp_dir,
         products,
-        all_decreasing,
+        combine,
         dry_run,
         seed
 ):
@@ -145,7 +144,7 @@ def generate_experiments(
         axis=1
     )
 
-    if not all_decreasing:
+    if not combine:
         ### NUDGE PREFERENCES
 
         # We need to duplicate the product tasks to nudge both L/R tabs
@@ -171,8 +170,8 @@ def generate_experiments(
 
     # Duplicate task configs with the NO_NUDGE_PREFERENCES personas
     df_tasks_no_nudge = df_tasks_all.copy()
-    if all_decreasing:
-        df_tasks_no_nudge = df_tasks_no_nudge.assign(user_preference=ALL_DECREASING_PREFERENCES)
+    if combine is not None:
+        df_tasks_no_nudge = df_tasks_no_nudge.assign(user_preference=combine)
     else:
         df_tasks_no_nudge = pd.concat([
             df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[0]),
@@ -182,7 +181,7 @@ def generate_experiments(
         ], ignore_index=True)
 
     # Combine all configs
-    if all_decreasing:
+    if combine is not None:
         df_tasks_all = df_tasks_no_nudge
     else:
         df_tasks_all = pd.concat(
@@ -228,9 +227,9 @@ def main():
     )
 
     parser.add_argument(
-        "--all-decreasing",
-        action="store_true",
-        help="Use a single user preference combining all decreasing ones"
+        "--combine",
+        type=str,
+        help="Use a single user preference combining personas"
     )
 
     parser.add_argument(
@@ -253,7 +252,7 @@ def main():
     generate_experiments(
         args.exp_dir,
         args.products,
-        args.all_decreasing,
+        args.combine,
         args.dry_run,
         args.seed
     )

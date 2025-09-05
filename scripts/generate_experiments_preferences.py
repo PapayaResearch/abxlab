@@ -45,10 +45,12 @@ NO_NUDGE_PREFERENCES = [
     "The user values highly-rated products.",
     "The user doesn’t put much stock in what other customers think."
 ]
+ALL_DECREASING_PREFERENCES = "The user is willing to pay more for a better product, and doesn’t put much stock in what other customers think."
 
 def generate_experiments(
         exp_dir,
         products,
+        all_decreasing,
         dry_run,
         seed
 ):
@@ -143,43 +145,50 @@ def generate_experiments(
         axis=1
     )
 
-    ### NUDGE PREFERENCES
+    if not all_decreasing:
+        ### NUDGE PREFERENCES
 
-    # We need to duplicate the product tasks to nudge both L/R tabs
-    # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
-    df_tasks_nudge = df_tasks_all.loc[
-        df_tasks_all.index.repeat(
-            df_tasks_all["Start URLs"].str.len()
-        )
-    ].copy()
-    df_tasks_nudge["Nudge Index"] = df_tasks_all.groupby(
-        df_tasks_all.index
-    ).apply(
-        lambda x: list(range(len(x.iloc[0]["Start URLs"])))
-    ).explode().astype(int).values
+        # We need to duplicate the product tasks to nudge both L/R tabs
+        # Create duplicated rows with Nudge Index 0..N (number of elements in Start URLs - 1)
+        df_tasks_nudge = df_tasks_all.loc[
+            df_tasks_all.index.repeat(
+                df_tasks_all["Start URLs"].str.len()
+            )
+        ].copy()
+        df_tasks_nudge["Nudge Index"] = df_tasks_all.groupby(
+            df_tasks_all.index
+        ).apply(
+            lambda x: list(range(len(x.iloc[0]["Start URLs"])))
+        ).explode().astype(int).values
 
-    # Duplicate task configs with the NUDGE_PREFERENCES personas
-    df_tasks_nudge = pd.concat([
-        df_tasks_nudge.assign(user_preference=NUDGE_PREFERENCES[0]),
-        df_tasks_nudge.assign(user_preference=NUDGE_PREFERENCES[1])
-    ], ignore_index=True)
+        # Duplicate task configs with the NUDGE_PREFERENCES personas
+        df_tasks_nudge = pd.concat([
+            df_tasks_nudge.assign(user_preference=NUDGE_PREFERENCES[0]),
+            df_tasks_nudge.assign(user_preference=NUDGE_PREFERENCES[1])
+        ], ignore_index=True)
 
     ### NO NUDGE PREFERENCES
 
     # Duplicate task configs with the NO_NUDGE_PREFERENCES personas
     df_tasks_no_nudge = df_tasks_all.copy()
-    df_tasks_no_nudge = pd.concat([
-        df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[0]),
-        df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[1]),
-        df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[2]),
-        df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[3])
-    ], ignore_index=True)
+    if all_decreasing:
+        df_tasks_no_nudge = df_tasks_no_nudge.assign(user_preference=ALL_DECREASING_PREFERENCES)
+    else:
+        df_tasks_no_nudge = pd.concat([
+            df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[0]),
+            df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[1]),
+            df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[2]),
+            df_tasks_no_nudge.assign(user_preference=NO_NUDGE_PREFERENCES[3])
+        ], ignore_index=True)
 
     # Combine all configs
-    df_tasks_all = pd.concat(
-        [df_tasks_nudge, df_tasks_no_nudge],
-        ignore_index=True
-    ).reset_index(drop=True)
+    if all_decreasing:
+        df_tasks_all = df_tasks_no_nudge
+    else:
+        df_tasks_all = pd.concat(
+            [df_tasks_nudge, df_tasks_no_nudge],
+            ignore_index=True
+        ).reset_index(drop=True)
 
     df_tasks_all["Intent"] = df_tasks_all.apply(
         lambda row: row["Intent"] + "\n" + row["user_preference"],
@@ -219,6 +228,12 @@ def main():
     )
 
     parser.add_argument(
+        "--all-decreasing",
+        action="store_true",
+        help="Use a single user preference combining all decreasing ones"
+    )
+
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Just check experiment count without actually writing configs"
@@ -238,6 +253,7 @@ def main():
     generate_experiments(
         args.exp_dir,
         args.products,
+        args.all_decreasing,
         args.dry_run,
         args.seed
     )

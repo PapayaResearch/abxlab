@@ -353,7 +353,7 @@ def save_configs(df, exp_dir, match_price=False, match_review_count=False):
         }
 
         if "coverage_type" in row:
-            data["task"]["config"]["metadata"] = {"coveragy_type": row["coverage_type"]}
+            data["task"]["config"]["metadata"] = {"coverage_type": row["coverage_type"]}
         if "user_preference" in row:
             data["task"]["config"]["metadata"] = {"user_preference": row["user_preference"]}
 

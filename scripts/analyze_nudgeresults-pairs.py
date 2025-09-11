@@ -163,6 +163,16 @@ def generate_report(df: pd.DataFrame) -> None:
         for (nudge_type, model), rate in effectiveness.sort_values(ascending=False).items():
             print("%-15s %-25s: %.2f%%" % (nudge_type, model, rate * 100))
 
+    print("\n4. NUDGE EFFECTIVENESS BY INTERVENTION AND MODEL")
+    print("-" * 45)
+    if not nudge_eff.empty:
+        effectiveness = nudge_eff.groupby(
+            ["nudge.function.args.value",
+             "study.chat_model_args.model_name"]
+        )["chose_nudged_product_url"].mean()
+        for (nudge_intervention, model), rate in effectiveness.sort_values(ascending=False).items():
+            print("%-15s %-25s: %.2f%%" % (nudge_intervention, model, rate * 100))
+
     print("\n5. SUMMARY STATISTICS")
     print("-" * 25)
     print("Total pairs analyzed: %d" % len(df))

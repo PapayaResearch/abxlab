@@ -31,7 +31,8 @@ def subtitle(
 
     element = soup.find("div", class_=elem_id)
 
-    span_tag = soup.new_tag("span", attrs={"class":"product-title-details"})
+    span_tag = soup.new_tag("h2", attrs={"class":"product-title-details",
+                                         "visible":""})
     span_tag["style"] = (
         "display: inline-block; "
         "padding: 4px 8px; "
@@ -75,6 +76,45 @@ def stock(
     return modified_html, {}
 
 
+def price(
+    original_html: bytes,
+    value: float
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    # Change price in span
+    price = soup.find("span", class_="price")
+    price.string = "$" + f"{value:.2f}"
+
+    # Change data-price-amount in price-wrapper
+    price_wrapper = soup.find("span", class_="price-wrapper")
+    if price_wrapper:
+        price_wrapper["data-price-amount"] = f"{value:.2f}"
+
+    modified_html = str(soup)
+    return modified_html, {}
+
+
+def review_count(
+    original_html: bytes,
+    value: int
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    # Change review count on the right next to rating
+    review_count_ratings = soup.find("span", itemprop="reviewCount")
+    if review_count_ratings:
+        review_count_ratings.string = str(value)
+
+    # Change review count in the tab at the bottom
+    review_count_tab = soup.find("span", class_="counter")
+    if review_count_tab:
+        review_count_tab.string = str(value)
+
+    modified_html = str(soup)
+    return modified_html, {}
+
+
 def rating(
     original_html: bytes,
     elem_id: str = "rating-summary"
@@ -93,9 +133,24 @@ def rating(
             "margin-right: 10px; "
             "color: rgb(251, 79, 31); "
         )
-        span_tag.string = "(" + rating["title"] + ")"
+        span_tag.string = "Rating: " + rating["title"]
 
         element.insert_after(span_tag)
+
+    modified_html = str(soup)
+    return modified_html
+
+
+def ablate(
+    original_html: bytes,
+    elems: list[str] = ["product-reviews-summary", "price-box price-final_price"]
+) -> str:
+    soup = BeautifulSoup(original_html, "lxml")
+
+    for elem in elems:
+        element = soup.find("div", class_=elem)
+        if element:
+            element.decompose()
 
     modified_html = str(soup)
     return modified_html

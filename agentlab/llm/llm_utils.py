@@ -188,7 +188,7 @@ def get_tokenizer(model_name="gpt-4"):
         logging.info(f"Could not find a tokenizer for model {model_name}. Trying HuggingFace.")
     try:
         return AutoTokenizer.from_pretrained(model_name)
-    except OSError:
+    except Exception:
         logging.info(f"Could not find a tokenizer for model {model_name}. Defaulting to gpt-4.")
     return tiktoken.encoding_for_model("gpt-4")
 

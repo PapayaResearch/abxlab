@@ -6,7 +6,7 @@ defaults:
 
 chat_model_args:
   _target_: agentlab.llm.chat_api.LiteLLMModelArgs
-  model_name: gemini/gemini-2.5-flash-preview-04-17
+  model_name: gemini/gemini-2.5-flash
   max_total_tokens: 1048576
   max_input_tokens: 1048576
   max_new_tokens: 65536

@@ -183,6 +183,7 @@ class NudgeLabShopTask(NudgeLabTask):
 
         soup = BeautifulSoup(html, "lxml")
 
+        # TODO: replace product_rating with a function from config
         if soup.find("meta", property="og:type", content="product"):
             # Page type is product
             return product_rating(html)

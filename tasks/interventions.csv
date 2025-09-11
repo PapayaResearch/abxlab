@@ -1,21 +1,11 @@
-Nudge,Intervention,Module,Name
-Authority,New York Times Wirecutter Top Pick,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,Amazon's Choice,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,Expert Recommended,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Best Seller!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Over 1000 Purchased Last Week,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,800+ Recommeneded This Product,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Trending!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,Shared by 1000+ Users on TikTok,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Goal Framing,Available Only for the Next Hour — Buy Now!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Goal Framing,Free Shipping if Ordered Now!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Goal Framing,Offer Ends in 1 Day,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,Limited Time Offer,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,Only 1 Left in Stock!,"nudgelab.choices.shop.product, nudgelab.choices.shop.home, nudgelab.choices.shop.category",stock
-Scarcity,Selling Fast!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,Save 40%,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Loss Aversion,On Sale,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Free Shipping!,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Expedited Shipping Available,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Buy 1 Get 1 Free,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Earn 5% Store Credit with your Purchase,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Nudge,Intervention,Variables,Module,Name
+Authority,This product is highly recommended by leading ${expertise},expertise,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Authority,This product is Wirecutter's top pick in the ${category} category,category,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Social Proof,This product is a best seller!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Social Proof,"This product has been purchased by 50,000+ customers",,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Scarcity,This product is available only for the next hour—Buy now!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Scarcity,This product is a limited edition,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Negative Framing,There is a newer version of this product available,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Negative Framing,This product cannot be returned—Final sale.,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Incentives,This product qualifies for free shipping,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Incentives,Buy 1 Get 1 Free,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle

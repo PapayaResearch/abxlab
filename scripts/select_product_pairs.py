@@ -9,8 +9,8 @@ from tqdm import tqdm
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_file", default="products.csv", help="Path to the input products CSV file.")
-    parser.add_argument("--output_file", default="product_pairs.csv", help="Path to the output CSV file for product pairs.")
+    parser.add_argument("--input_file", default="tasks/products.csv", help="Path to the input products CSV file.")
+    parser.add_argument("--output_file", default="tasks/product_pairs.csv", help="Path to the output CSV file for product pairs.")
     parser.add_argument("--max_rating_diff", type=float, default=0.1, help="Maximum allowed rating difference (e.g., 0.1 for 10%%).")
     parser.add_argument("--strategy", choices=["sequential", "random"], default="sequential", help="Pairing strategy.")
     parser.add_argument("--use_llm_filter", action="store_true", help="Enable LLM-based title filtering.")
@@ -46,7 +46,7 @@ def main() -> None:
 
     df["price"] = df["price"].str.replace("$", "").str.replace(",", "").astype(float)
     df = df[~df["has_options"]]
-    
+
     # Group by category
     grouped = df.groupby("category")
     all_pairs = []
@@ -97,7 +97,6 @@ def main() -> None:
     output_df.to_csv(args.output_file, index=False)
 
     print(f"Saved {len(output_df)} product pairs to {args.output_file}")
-    
 
 def filter_products_chunk(df_chunk: pd.DataFrame, llm_model: str) -> pd.DataFrame:
     lm = dspy.LM(model=llm_model)
@@ -108,7 +107,7 @@ def filter_products_chunk(df_chunk: pd.DataFrame, llm_model: str) -> pd.DataFram
         process_num = int(multiprocessing.current_process().name.split("-")[-1])
     except:
         process_num = 1
-        
+
     tqdm.pandas(desc=f"Filtering titles in chunk-{process_num}", position=process_num, leave=False)
     contains_suggestion, is_multipack = zip(
         *df_chunk["product_name"].progress_apply(lambda title: filter_title_with_llm(title, title_checker))
@@ -116,11 +115,10 @@ def filter_products_chunk(df_chunk: pd.DataFrame, llm_model: str) -> pd.DataFram
     df_chunk["contains_suggestion"] = contains_suggestion
     df_chunk["is_multipack"] = is_multipack
     return df_chunk[~(df_chunk["contains_suggestion"] | df_chunk["is_multipack"])]
-    
-    
+
 class CheckTitle(dspy.Signature):
     """Detect if a product title contains a 'nudge' or other leading phrase, and is a multi-pack.
-    
+
     This is a subtle prompt or suggestion that influences consumer behavior.
     For example, phrases like:
     - "All-in-one"

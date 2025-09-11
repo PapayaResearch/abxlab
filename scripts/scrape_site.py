@@ -25,7 +25,7 @@ def main():
     parser.add_argument("--base_url", default=os.environ.get("BASE_WEB_AGENT_URL", "http://matlaber12.media.mit.edu:7770/"), help="The base URL of the shopping website.")
     parser.add_argument("--output_file", default=os.environ.get("OUTPUT_FILE", "products.csv"), help="The path to the output CSV file.")
     parser.add_argument("--max_workers", type=int, default=os.environ.get("MAX_WORKERS", 20), help="The maximum number of concurrent workers for scraping.")
-    parser.add_argument("--category_file", default="categories.yaml", help="The YAML file with the list of categories to scrape.")
+    parser.add_argument("--category_file", default="tasks/categories.yaml", help="The YAML file with the list of categories to scrape.")
     args = parser.parse_args()
 
     with open(args.category_file) as yaml_file:
@@ -118,7 +118,7 @@ def get_all_category_links(soup: BeautifulSoup) -> list[str]:
 def get_existing_product_urls(file_path: str) -> set[str]:
     if not os.path.exists(file_path):
         return set()
-    
+
     urls = set()
     with open(file_path, "r", newline="", encoding="utf-8") as f:
         reader = csv.reader(f)

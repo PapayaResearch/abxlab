@@ -24,7 +24,7 @@ hydra:
   launcher:
     ray:
       init:
-        include_dashboard: true
+        include_dashboard: false
         dashboard_port: 8265
       remote:
         num_cpus: 1

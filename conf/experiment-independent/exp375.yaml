@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp375
+  config:
+    task_id: 375
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
+    - http://matlaber12.media.mit.edu:7770/edifier-s1000mkii-audiophile-active-bookshelf-2-0-speakers-120w-speakers-bluetooth-5-0-with-aptx-hd-optical-input-s1000mk2-powered-near-field-monitor-speaker-with-class-d-amp.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

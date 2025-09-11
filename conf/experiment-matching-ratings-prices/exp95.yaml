@@ -1,0 +1,52 @@
+# @package _global_
+
+task:
+  name: exp95
+  config:
+    task_id: 95
+    start_urls:
+    - ${env.wa_shopping_url}google-pixel-4a-with-5g-6-2-128gb-6gb-ram-unlocked-cellular-just-black-renewed.html
+    - ${env.wa_shopping_url}google-pixel-4-just-black-64gb-unlocked.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.wa_shopping_url}google-pixel-4a-with-5g-6-2-128gb-6gb-ram-unlocked-cellular-just-black-renewed.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 321.245
+    - url: ${env.wa_shopping_url}google-pixel-4-just-black-64gb-unlocked.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 321.245
+    - url: ${env.wa_shopping_url}google-pixel-4a-with-5g-6-2-128gb-6gb-ram-unlocked-cellular-just-black-renewed.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    - url: ${env.wa_shopping_url}google-pixel-4-just-black-64gb-unlocked.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    intent_template_id: 0

@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp244
+  config:
+    task_id: 244
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/razer-opus-active-noise-cancelling-anc-wireless-headphones-thx-audio-tuning-25-hr-battery-bluetooth-3-5mm-jack-compatible-auto-play-auto-pause-carrying-case-included-classic-black.html
+    - http://matlaber12.media.mit.edu:7770/tapvos-e7-pro-active-noise-cancelling-headphones-over-ear-bluetooth-headphones-deep-bass-built-in-microphone-comfortable-fit-30-hours-wireless-headphones-for-cellphone-pc-tablet-dull-black.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

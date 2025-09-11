@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp73
+  config:
+    task_id: 73
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/emaison-gold-hanging-mirror-with-chain-12-x-16-inch-rustic-wall-decor-for-bathroom-entry-dining-room-and-living-room-metal-circle-mirror-for-wall-vanity-mirror-large-decorative-mirror.html
+    - http://matlaber12.media.mit.edu:7770/maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: price_coverage

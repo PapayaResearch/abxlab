@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp245
+  config:
+    task_id: 245
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/harphonic-e7-active-noise-cancelling-headphones-bluetooth-headphones-wireless-headphones-over-ear-with-microphone-deep-bass-comfortable-protein-earpads-30-hours-playtime-for-travel-work-black.html
+    - http://matlaber12.media.mit.edu:7770/altec-lansing-mzx668-blk-evolution-2-bluetooth-headphones-just-ask-siri-and-google-voice-assistant-30-foot-wireless-range-8-hours-of-battery-life-dynamic-bass-convenient-controls-black.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

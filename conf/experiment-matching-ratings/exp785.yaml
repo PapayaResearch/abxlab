@@ -1,0 +1,45 @@
+# @package _global_
+
+task:
+  name: exp785
+  config:
+    task_id: 785
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/canon-rf24-105mm-f4-7-1-is-stm-4111c002-renewed.html
+    - http://matlaber12.media.mit.edu:7770/nikon-auto-focus-s-fx-tc-20e-iii-teleconverter-lens-with-auto-focus-for-nikon-dslr-cameras.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/nikon-auto-focus-s-fx-tc-20e-iii-teleconverter-lens-with-auto-focus-for-nikon-dslr-cameras.html
+      nudge: Social Proof
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is a best seller!
+    - url: http://matlaber12.media.mit.edu:7770/canon-rf24-105mm-f4-7-1-is-stm-4111c002-renewed.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 10
+    - url: http://matlaber12.media.mit.edu:7770/nikon-auto-focus-s-fx-tc-20e-iii-teleconverter-lens-with-auto-focus-for-nikon-dslr-cameras.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 10
+    intent_template_id: 0

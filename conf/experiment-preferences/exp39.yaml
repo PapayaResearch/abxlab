@@ -1,0 +1,37 @@
+# @package _global_
+
+task:
+  name: exp39
+  config:
+    task_id: 39
+    start_urls:
+    - ${env.wa_shopping_url}usb-type-c-earbud-headphones-hi-res-in-ear-earphone-with-mic-compatible-with-ipad-pro-macbook-pro-air-google-pixel-3a-xl-3-2-oneplus-8-7-motorola-htc-sony-xperia-xiaomi-essential-usb-c-phone.html
+    - ${env.wa_shopping_url}superx-bluetooth-5-0-wireless-earbuds-with-charging-case-ipx5-sweatproof-headset-headphones-in-ear-built-in-mic-industrial-leading-tws-sound-with-sport-pumping-bass-platinum-silver.html
+    intent_template: 'Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+
+      The user highly values recommendations from experts.'
+    instantiation_dict: {}
+    intent: 'Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+
+      The user highly values recommendations from experts.'
+    choices:
+    - url: ${env.wa_shopping_url}superx-bluetooth-5-0-wireless-earbuds-with-charging-case-ipx5-sweatproof-headset-headphones-in-ear-built-in-mic-industrial-leading-tws-sound-with-sport-pumping-bass-platinum-silver.html
+      nudge: Authority
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is Wirecutter's top pick in the earbuds category
+    intent_template_id: 0
+    metadata:
+      user_preference: The user highly values recommendations from experts.

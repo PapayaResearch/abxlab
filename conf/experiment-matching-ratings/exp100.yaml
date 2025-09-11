@@ -1,0 +1,38 @@
+# @package _global_
+
+task:
+  name: exp100
+  config:
+    task_id: 100
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/epson-powerlite-990u-wuxga-3lcd-projector-with-1-6x-optical-zoom-and-enhanced-wireless-display-technology.html
+    - http://matlaber12.media.mit.edu:7770/casematix-projector-travel-case-with-customizable-foam-compatible-with-epson-powerlite-1781w-v11h79602-and-other-lcd-portable-projectors-and-accessories-includes-case-only-for-home-theater-devices.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/epson-powerlite-990u-wuxga-3lcd-projector-with-1-6x-optical-zoom-and-enhanced-wireless-display-technology.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 4
+    - url: http://matlaber12.media.mit.edu:7770/casematix-projector-travel-case-with-customizable-foam-compatible-with-epson-powerlite-1781w-v11h79602-and-other-lcd-portable-projectors-and-accessories-includes-case-only-for-home-theater-devices.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 4
+    intent_template_id: 0

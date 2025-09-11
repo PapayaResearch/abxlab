@@ -1,0 +1,45 @@
+# @package _global_
+
+task:
+  name: exp1168
+  config:
+    task_id: 1168
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
+    - http://matlaber12.media.mit.edu:7770/meike-12mm-f2-8-ultra-wide-angle-manual-focus-lens-for-sony-e-mount-aps-c-mirrorless-cameras-nex-3-5t-nex-6-7-a6400-a6600-a6000-a6100-a6300-a6500-etc.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
+      nudge: Incentives
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product qualifies for free shipping
+    - url: http://matlaber12.media.mit.edu:7770/canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    - url: http://matlaber12.media.mit.edu:7770/meike-12mm-f2-8-ultra-wide-angle-manual-focus-lens-for-sony-e-mount-aps-c-mirrorless-cameras-nex-3-5t-nex-6-7-a6400-a6600-a6000-a6100-a6300-a6500-etc.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    intent_template_id: 0

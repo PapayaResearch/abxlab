@@ -1,0 +1,31 @@
+# @package _global_
+
+task:
+  name: exp1321
+  config:
+    task_id: 1321
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/nissin-air-r-wireless-radio-receiver-compatible-with-fits-sony-flashes.html
+    - http://matlaber12.media.mit.edu:7770/godox-tt350s-2-4g-hss-1-8000s-ttl-gn36-camera-speedlite-compatible-for-sony-mirrorless-digital-camera.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/godox-tt350s-2-4g-hss-1-8000s-ttl-gn36-camera-speedlite-compatible-for-sony-mirrorless-digital-camera.html
+      nudge: Negative Framing
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: There is a newer version of this product available
+    intent_template_id: 0

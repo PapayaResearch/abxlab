@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp382
+  config:
+    task_id: 382
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/jbl-control-28-8-inch-2-way-system-black-speaker-pair.html
+    - http://matlaber12.media.mit.edu:7770/polk-reserve-series-r200-large-bookshelf-speaker-for-dynamic-audio-new-1-pinnacle-ring-tweeter-6-5-turbine-cone-woofer-hi-res-certified-dolby-atmos-imax-enhanced-wall-mountable-pair.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

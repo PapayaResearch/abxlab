@@ -1,0 +1,31 @@
+# @package _global_
+
+task:
+  name: exp660
+  config:
+    task_id: 660
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/mocohanar-hanging-round-mirror-with-macrame-fringe-tassels-art-boho-decorative-mirror-wall-decor-for-apartment-living-room-bedroom-baby-nursery-dorm-entryways-small.html
+    - http://matlaber12.media.mit.edu:7770/evil-eye-wall-mirrors-decorative-metal-mirrors-gold-mirror-with-tassels-great-wall-art-for-bathroom-bedroom-living-room-large-1.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/mocohanar-hanging-round-mirror-with-macrame-fringe-tassels-art-boho-decorative-mirror-wall-decor-for-apartment-living-room-bedroom-baby-nursery-dorm-entryways-small.html
+      nudge: Authority
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is Wirecutter's top pick in the mirrors category
+    intent_template_id: 0

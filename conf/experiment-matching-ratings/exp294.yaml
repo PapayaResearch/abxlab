@@ -1,0 +1,38 @@
+# @package _global_
+
+task:
+  name: exp294
+  config:
+    task_id: 294
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/dayton-audio-iosub-10-ip66-indoor-outdoor-subwoofer-150w-black.html
+    - http://matlaber12.media.mit.edu:7770/klipsch-rb-51-ii-pr-2-way-bookshelf-speakers-black-dimensions-11-4-h-x-6-5-w-x-10-75-d.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/dayton-audio-iosub-10-ip66-indoor-outdoor-subwoofer-150w-black.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    - url: http://matlaber12.media.mit.edu:7770/klipsch-rb-51-ii-pr-2-way-bookshelf-speakers-black-dimensions-11-4-h-x-6-5-w-x-10-75-d.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    intent_template_id: 0

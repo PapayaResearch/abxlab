@@ -1,0 +1,52 @@
+# @package _global_
+
+task:
+  name: exp223
+  config:
+    task_id: 223
+    start_urls:
+    - ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+    - ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 121.13499999999999
+    - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 121.13499999999999
+    - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 2
+    - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 2
+    intent_template_id: 0

@@ -1,0 +1,59 @@
+# @package _global_
+
+task:
+  name: exp1260
+  config:
+    task_id: 1260
+    start_urls:
+    - ${env.wa_shopping_url}nec-np410w-2600-lumens-lcd-projector.html
+    - ${env.wa_shopping_url}mitsubishi-dlp-projector-xd90u.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.wa_shopping_url}nec-np410w-2600-lumens-lcd-projector.html
+      nudge: Incentives
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: Buy 1 Get 1 Free
+    - url: ${env.wa_shopping_url}nec-np410w-2600-lumens-lcd-projector.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 599.475
+    - url: ${env.wa_shopping_url}mitsubishi-dlp-projector-xd90u.html
+      nudge: Matching Price
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: price
+        args:
+          value: 599.475
+    - url: ${env.wa_shopping_url}nec-np410w-2600-lumens-lcd-projector.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 1
+    - url: ${env.wa_shopping_url}mitsubishi-dlp-projector-xd90u.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 1
+    intent_template_id: 0

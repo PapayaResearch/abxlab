@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp181
+  config:
+    task_id: 181
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/bluetooth-headset-wireless-bluetooth-earpiece-v4-1-bluetooth-earbuds-headphones-lightweight-in-ear-earphones-noise-cancelling-with-mic-and-handsfree-for-business-office-driving.html
+    - http://matlaber12.media.mit.edu:7770/f9-true-wireless-earbuds-bluetooth-5-1-ibuukie-in-ear-tws-stereo-9d-noise-reduction-headphones-built-in-mic-fingerprint-touch-with-1500mah-smart-led-display-charging-case.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

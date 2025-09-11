@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp192
+  config:
+    task_id: 192
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/tcl-s150-true-wireless-earbuds-deep-bass-with-13mm-drivers-bluetooth-5-0-headphones-type-c-charging-case-noise-isolation-waterproof-touch-control-wireless-earphones-with-mic-for-work-home-office.html
+    - http://matlaber12.media.mit.edu:7770/wireless-earbud-bluetooth-headphones-5-1-sport-unique-earhooks-wireless-earphones-in-ear-noise-cancelling-mic-stereo-bass-35h-playtime-ipx7-waterproof-headset-for-workout-running-gym-android-ios.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

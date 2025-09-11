@@ -1,0 +1,24 @@
+# @package _global_
+
+task:
+  name: exp344
+  config:
+    task_id: 344
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/kids-digital-camera-heegomn-2-8-inch-lcd-20mp-compact-digital-camera-for-boys-and-girls-gift-portable-point-and-shoot-digital-camera-with-8x-digital-zoom-and-rechargeable-battery.html
+    - http://matlaber12.media.mit.edu:7770/sony-cybershot-dsc-s650-7-2-mp-3x-optical-zoom-digital-camera-silver.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0

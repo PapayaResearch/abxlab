@@ -1,0 +1,45 @@
+# @package _global_
+
+task:
+  name: exp898
+  config:
+    task_id: 898
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+    - http://matlaber12.media.mit.edu:7770/koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+      nudge: Social Proof
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product has been purchased by 50,000+ customers
+    - url: http://matlaber12.media.mit.edu:7770/jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    - url: http://matlaber12.media.mit.edu:7770/koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 12
+    intent_template_id: 0

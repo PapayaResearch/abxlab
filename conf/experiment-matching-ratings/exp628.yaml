@@ -1,0 +1,45 @@
+# @package _global_
+
+task:
+  name: exp628
+  config:
+    task_id: 628
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
+    - http://matlaber12.media.mit.edu:7770/designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
+      nudge: Authority
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is Wirecutter's top pick in the mirrors category
+    - url: http://matlaber12.media.mit.edu:7770/safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 2
+    - url: http://matlaber12.media.mit.edu:7770/designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 2
+    intent_template_id: 0

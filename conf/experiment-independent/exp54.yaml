@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp54
+  config:
+    task_id: 54
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/kohros-rectangular-decorative-wall-mirror-solid-silver-stone-accented-large-antique-venetian-wall-mirror-for-entryways-living-room-bathroom-23-6-x-35-4.html
+    - http://matlaber12.media.mit.edu:7770/full-length-floor-mirror-with-lights-betamore-65-x22-free-standing-tall-mirror-wall-mounted-hanging-mirror-vanity-makeup-mirror-full-body-mirror-dressing-mirror-with-dimming-3-color-modes.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: price_coverage

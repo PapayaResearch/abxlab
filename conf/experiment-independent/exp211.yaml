@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp211
+  config:
+    task_id: 211
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/58mm-28-pc-accessory-kit-for-canon-eos-rebel-t7-t6-t5-t3-1300d-1200d-1100d-dslrs-with-0-43x-wide-angle-lens-2-2x-telephoto-lens-32gb-sandisk-sd-filter-macro-kits-backpack-case-and-more.html
+    - http://matlaber12.media.mit.edu:7770/jintu-420-800mm-f-8-3-hd-manual-focus-telephoto-zoom-lens-for-nikon-slr-digital-camera-lenses-d5600-d5500-d5300-d5200-d5100-d3500-d3400-d3300-d3100-d3200-d7500-d7200-d7000-d7100-d750-d90-d850-bag.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

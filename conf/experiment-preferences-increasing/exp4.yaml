@@ -1,0 +1,30 @@
+# @package _global_
+
+task:
+  name: exp4
+  config:
+    task_id: 4
+    start_urls:
+    - ${env.wa_shopping_url}kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
+    - ${env.wa_shopping_url}the-hillman-group-122200-mirror-rosettes-clear.html
+    intent_template: 'Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+
+      The user is on a tight budget, and values highly-rated products.'
+    instantiation_dict: {}
+    intent: 'Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+
+      The user is on a tight budget, and values highly-rated products.'
+    choices: []
+    intent_template_id: 0
+    metadata:
+      user_preference: The user is on a tight budget, and values highly-rated products.

@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp102
+  config:
+    task_id: 102
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/nikon-1-j3-14-2-mp-hd-digital-camera-body-only-white-certified-refurbished.html
+    - http://matlaber12.media.mit.edu:7770/canon-eos-6d-mark-ii-wi-fi-digital-slr-camera-body-with-bg-e21-battery-grip.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: price_coverage

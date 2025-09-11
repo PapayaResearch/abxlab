@@ -1,0 +1,30 @@
+# @package _global_
+
+task:
+  name: exp382
+  config:
+    task_id: 382
+    start_urls:
+    - ${env.wa_shopping_url}anchor-new-zealand-cheddar.html
+    - ${env.wa_shopping_url}bond-ost-whole-round-with-caraway-seed.html
+    intent_template: 'Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+
+      The user doesn’t put much stock in what other customers think.'
+    instantiation_dict: {}
+    intent: 'Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+
+      The user doesn’t put much stock in what other customers think.'
+    choices: []
+    intent_template_id: 0
+    metadata:
+      user_preference: The user doesn’t put much stock in what other customers think.

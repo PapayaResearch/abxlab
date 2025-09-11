@@ -1,0 +1,24 @@
+# @package _global_
+
+task:
+  name: exp346
+  config:
+    task_id: 346
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/meke-35mm-t2-2-large-aperture-manual-focus-low-distortion-4k-mini-cine-lens-for-micro-four-thirds-m43-mft-olympus-panasonic-lumix-bmpcc-4k-zcam-e2-gh5-gh6-om-1.html
+    - http://matlaber12.media.mit.edu:7770/nikon-af-s-dx-nikkor-16-80mm-f-2-8-4e-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0

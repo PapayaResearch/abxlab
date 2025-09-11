@@ -1,0 +1,31 @@
+# @package _global_
+
+task:
+  name: exp1366
+  config:
+    task_id: 1366
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/7artisans-7-5mm-f2-8-ii-manual-fisheye-lens-compatible-with-mft-m4-3-mount-cameras-gm1-gm5-gm7-gx1-gx7-gx8-epm1-epm2-e-p1-e-p2-e-p3-e-p5-e-m1-e-m1ii-e-m5-e-m5ii.html
+    - http://matlaber12.media.mit.edu:7770/panasonic-lumix-g-h-h020-20mm-f-1-7-aspherical-pancake-lens-for-micro-four-thirds-interchangeable-digital-slr-cameras.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/7artisans-7-5mm-f2-8-ii-manual-fisheye-lens-compatible-with-mft-m4-3-mount-cameras-gm1-gm5-gm7-gx1-gx7-gx8-epm1-epm2-e-p1-e-p2-e-p3-e-p5-e-m1-e-m1ii-e-m5-e-m5ii.html
+      nudge: Negative Framing
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: There is a newer version of this product available
+    intent_template_id: 0

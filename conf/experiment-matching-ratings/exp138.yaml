@@ -1,0 +1,38 @@
+# @package _global_
+
+task:
+  name: exp138
+  config:
+    task_id: 138
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/nikon-af-s-fx-nikkor-80-400mm-f-4-5-5-6g-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras-renewed.html
+    - http://matlaber12.media.mit.edu:7770/tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/nikon-af-s-fx-nikkor-80-400mm-f-4-5-5-6g-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras-renewed.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 1
+    - url: http://matlaber12.media.mit.edu:7770/tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 1
+    intent_template_id: 0

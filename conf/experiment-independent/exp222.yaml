@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp222
+  config:
+    task_id: 222
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/aaxa-hp2-halloween-projector-for-haunted-windows-pumpkins-holographic-projections-dlp-led-portable-projector-with-5-onboard-spectral-illusions-ghosts-and-wraiths-built-in-speaker-bt-audio-out.html
+    - http://matlaber12.media.mit.edu:7770/mini-projector-portable-1080p-led-projector-pocket-pico-video-projector-for-home-theater-movie-projector-outdoor-movie-projector-cartoon-kids-gift-hdmi-usb-tv-av-interfaces-and-remote-control.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

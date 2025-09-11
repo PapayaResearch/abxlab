@@ -1,0 +1,31 @@
+# @package _global_
+
+task:
+  name: exp1323
+  config:
+    task_id: 1323
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/nikon-af-s-fx-nikkor-80-400mm-f-4-5-5-6g-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras-renewed.html
+    - http://matlaber12.media.mit.edu:7770/canon-rf14-35mm-f4-l-is-usm-lens.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/canon-rf14-35mm-f4-l-is-usm-lens.html
+      nudge: Negative Framing
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: There is a newer version of this product available
+    intent_template_id: 0

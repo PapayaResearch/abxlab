@@ -1,0 +1,26 @@
+# @package _global_
+
+task:
+  name: exp361
+  config:
+    task_id: 361
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/sylvania-curtis-5-1-channel-progressive-scan-dvd-mini-bookshelf-home-theater-speaker-system-w-subwoofer-remote-control.html
+    - http://matlaber12.media.mit.edu:7770/gogroove-bluetooth-2-1-sound-bar-home-theater-speaker-with-internal-subwoofer-wall-mounting-kit-compatible-with-samsung-vizio-sony-and-more-hd-4k-smart-tvs.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0
+    metadata:
+      coverage_type: rating_coverage

@@ -1,0 +1,45 @@
+# @package _global_
+
+task:
+  name: exp506
+  config:
+    task_id: 506
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+    - http://matlaber12.media.mit.edu:7770/samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+      nudge: Authority
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is highly recommended by leading audio experts
+    - url: http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 10
+    - url: http://matlaber12.media.mit.edu:7770/samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 10
+    intent_template_id: 0

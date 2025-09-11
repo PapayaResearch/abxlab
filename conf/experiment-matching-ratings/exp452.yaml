@@ -1,0 +1,38 @@
+# @package _global_
+
+task:
+  name: exp452
+  config:
+    task_id: 452
+    start_urls:
+    - http://matlaber12.media.mit.edu:7770/ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
+    - http://matlaber12.media.mit.edu:7770/national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: http://matlaber12.media.mit.edu:7770/ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 7
+    - url: http://matlaber12.media.mit.edu:7770/national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
+      nudge: Matching Review Count
+      functions:
+      - module: nudgelab.choices.shop.product
+        name: review_count
+        args:
+          value: 7
+    intent_template_id: 0

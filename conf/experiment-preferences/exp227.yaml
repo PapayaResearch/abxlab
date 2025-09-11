@@ -1,0 +1,30 @@
+# @package _global_
+
+task:
+  name: exp227
+  config:
+    task_id: 227
+    start_urls:
+    - ${env.wa_shopping_url}sonos-playbar-tv-sound-bar-wireless-streaming-music-speaker-certified-refurbished-works-with-alexa.html
+    - ${env.wa_shopping_url}polk-reserve-series-r200-large-bookshelf-speaker-for-dynamic-audio-new-1-pinnacle-ring-tweeter-6-5-turbine-cone-woofer-hi-res-certified-dolby-atmos-imax-enhanced-wall-mountable-pair.html
+    intent_template: 'Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+
+      The user is on a tight budget.'
+    instantiation_dict: {}
+    intent: 'Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+
+      The user is on a tight budget.'
+    choices: []
+    intent_template_id: 0
+    metadata:
+      user_preference: The user is on a tight budget.

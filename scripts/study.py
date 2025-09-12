@@ -34,11 +34,17 @@ from tqdm import tqdm
 import pandas as pd
 import multiprocessing
 import random
+import glob
 from scripts.page_utils import get_rating_for_product, get_price_for_product
 
 def process_experiment(args):
     fname, cfg_dict, base_conf_path, base_url, output_dir, host_path = args
     exp_name = os.path.splitext(fname)[0]
+
+    # Skip if already processed (check for existing images)
+    pattern = os.path.join(output_dir, f"{exp_name}_*.png")
+    if glob.glob(pattern):
+        return None
 
     # Get cfg information
     GlobalHydra.instance().clear()
@@ -154,6 +160,9 @@ def main(cfg: DictConfig):
     output_dir = cfg.study.output_dir
     os.makedirs(output_dir, exist_ok=True)
 
+    # Setup CSV file
+    csv_path = os.path.join(output_dir, "study_data_all.csv")
+
     # Prepare arguments for multiprocessing
     cfg_dict = OmegaConf.to_container(cfg, resolve=False)
     fnames = [f for f in os.listdir(experiment_path) if f.endswith(".yaml")]
@@ -161,14 +170,14 @@ def main(cfg: DictConfig):
 
     # Use multiprocessing to process experiments
     with multiprocessing.Pool(processes=cfg.study.n_workers) as pool:
-        results = list(tqdm(pool.imap_unordered(process_experiment, args), total=len(args)))
-
-    # Filter out None results
-    study = [r for r in results if r is not None]
+        for result in tqdm(pool.imap_unordered(process_experiment, args), total=len(args)):
+            if result is not None:
+                pd.DataFrame([result]).to_csv(csv_path, mode='a', header=not os.path.exists(csv_path), index=False)
 
     # Include extra metadata info and save it
-    df = add_extra_metadata(pd.DataFrame(study))
-    df.to_csv(os.path.join(output_dir, "study_data_all.csv"), index=False)
+    df = pd.read_csv(csv_path)
+    df = add_extra_metadata(df)
+    df.to_csv(csv_path, index=False)
 
     # Generate survey data
     generate_survey_data(df, cfg.study.seed, output_dir)

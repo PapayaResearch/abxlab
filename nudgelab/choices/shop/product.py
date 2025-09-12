@@ -39,7 +39,7 @@ def subtitle(
         "border: 1px solid rgb(30, 109, 182); "
         "border-radius: 12px; "
         "color: rgb(30, 109, 182); "
-        "font-size: 0.9em;"
+        "font-size: 2em;"
     )
     span_tag.string = value
 

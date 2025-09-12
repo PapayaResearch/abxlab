@@ -197,3 +197,58 @@ class NudgeLabShopTask(NudgeLabTask):
             return home_rating(html)
 
         return html
+
+
+class StaticPageTask(AbstractBrowserTask):
+    """
+    A simple task that loads a static webpage and captures its content.
+    This task is useful for getting data for the human study.
+    """
+    def __init__(
+        self,
+        url: str,
+        seed: int = None,
+        width: int = 1280,
+        height: int = 720,
+        slow_mo: int = 1000,
+        timeout: int = 10000,
+        **kwargs
+    ):
+        super().__init__(seed)
+        self.url = url
+        self.nudge_metadata = []
+        self.viewport = {"width": width, "height": height}
+        self.slow_mo = slow_mo
+        self.timeout = timeout
+
+    def setup(self, page):
+        """Load the page and wait for it to be fully loaded."""
+        page.goto(self.url)
+        # ensure all resources are loaded to avoid timing issues (which happended on my side)
+        page.wait_for_load_state("networkidle")
+        return None, {"url": self.url}
+
+    def validate(self, page, chat_messages) -> tuple[float, bool, str, dict]:
+        """Validate that the page is loaded correctly."""
+        if page.content() is not None:
+            return 0.0, False, "", {"status": "page_loaded"}
+
+        return 0.0, False, "", {"status": "page_not_loaded"}
+
+    def process_html(self, html: str) -> str:
+
+        soup = BeautifulSoup(html, "lxml")
+
+        if soup.find("meta", property="og:type", content="product"):
+            # Page type is product
+            return product_rating(html)
+
+        if soup.select_one("div.sidebar-main div.filter"):
+            # Page type is category
+            return category_rating(html)
+
+        if soup.title and soup.title.string.strip() == "One Stop Market":
+            # Page type is home
+            return home_rating(html)
+
+        return html

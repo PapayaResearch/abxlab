@@ -41,10 +41,12 @@ def process_experiment(args):
     fname, cfg_dict, base_conf_path, base_url, output_dir, host_path = args
     exp_name = os.path.splitext(fname)[0]
 
-    # Skip if already processed (check for existing images)
-    pattern = os.path.join(output_dir, f"{exp_name}_*.png")
-    if glob.glob(pattern):
-        return None
+    # Skip if already processed (check CSV instead of images)
+    csv_path = os.path.join(output_dir, "study_data_all.csv")
+    if os.path.exists(csv_path):
+        existing_df = pd.read_csv(csv_path)
+        if exp_name in existing_df["exp"].values:
+            return None
 
     # Get cfg information
     GlobalHydra.instance().clear()

@@ -106,6 +106,8 @@ def process_experiment(args):
         elif choice_url == task["url_1"]:
             task["nudge_index"] = 1
     else:
+        task["nudge"] = None
+        task["intervention"] = None
         task["nudge_index"] = -1
 
     return task

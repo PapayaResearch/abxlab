@@ -127,10 +127,11 @@ def add_extra_metadata(df):
     # Get prices
     df["price_0"] = df["url_0"].progress_apply(
         get_price_for_product
-    ).str.replace("$", "").astype(float)
+    ).replace(r"[\$,]", "", regex=True).astype(float)
+
     df["price_1"] = df["url_1"].progress_apply(
         get_price_for_product
-    ).str.replace("$", "").astype(float)
+    ).replace(r"[\$,]", "", regex=True).astype(float)
 
     return df
 

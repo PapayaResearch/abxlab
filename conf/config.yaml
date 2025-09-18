@@ -19,8 +19,9 @@ study:
   host: https://web.media.mit.edu/~mcherep/files/abxlab/
   output_dir: ${hydra:runtime.cwd}/study
   experiment_path: experiment-regular
+  products_csv: ${hydra:runtime.cwd}/tasks/products.csv
   seed: 42
-  n_workers: 16
+  n_workers: 32
 
 # Environment vars
 env:

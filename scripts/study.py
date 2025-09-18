@@ -78,14 +78,13 @@ def process_experiment(args):
         env.reset()
 
         # Save screenshot
-        width = env.page.evaluate("() => document.documentElement.scrollWidth")
         env.page.screenshot(
             path=os.path.join(output_dir, f"{name}.png"),
             full_page=True,
             clip={
                 "x": 0,
                 "y": 250,
-                "width": width,
+                "width": 1280,
                 "height": 900
             },
             scale="device"
@@ -114,26 +113,24 @@ def process_experiment(args):
 
     return task
 
-def add_extra_metadata(df):
-    """Add rating and price information to the dataframe"""
-    tqdm.pandas()
+def add_extra_metadata(df, products_csv_path):
+    """Add rating, price, and category information from products.csv"""
+    # Load products data
+    products_df = pd.read_csv(products_csv_path)
 
-    # Get ratings
-    df["rating_0"] = df["url_0"].progress_apply(
-        get_rating_for_product
-    ).str.replace("%", "").astype(int)
-    df["rating_1"] = df["url_1"].progress_apply(
-        get_rating_for_product
-    ).str.replace("%", "").astype(int)
+    # Create lookup dictionaries for faster matching
+    product_lookup = products_df.set_index('product_url').to_dict('index')
 
-    # Get prices
-    df["price_0"] = df["url_0"].progress_apply(
-        get_price_for_product
-    ).replace(r"[\$,]", "", regex=True).astype(float)
+    # Add metadata for url_0
+    df["rating_0"] = df["url_0"].map(lambda url: product_lookup.get(url, {}).get('rating', None))
+    df["price_0"] = df["url_0"].map(lambda url: product_lookup.get(url, {}).get('price', None))
 
-    df["price_1"] = df["url_1"].progress_apply(
-        get_price_for_product
-    ).replace(r"[\$,]", "", regex=True).astype(float)
+    # Add metadata for url_1
+    df["rating_1"] = df["url_1"].map(lambda url: product_lookup.get(url, {}).get('rating', None))
+    df["price_1"] = df["url_1"].map(lambda url: product_lookup.get(url, {}).get('price', None))
+
+    # Add category (same for both URLs in a pair, so use url_0)
+    df["category"] = df["url_0"].map(lambda url: product_lookup.get(url, {}).get('category', None))
 
     return df
 
@@ -190,6 +187,7 @@ def main(cfg: DictConfig):
     experiment_path = os.path.join(base_conf_path, cfg.study.experiment_path)
     base_url = os.getenv("SHOPPING")
     output_dir = cfg.study.output_dir
+    products_csv_path = cfg.study.products_csv
     os.makedirs(output_dir, exist_ok=True)
 
     # Setup CSV file
@@ -208,7 +206,7 @@ def main(cfg: DictConfig):
 
     # Include extra metadata info and save it
     df = pd.read_csv(csv_path)
-    df = add_extra_metadata(df)
+    df = add_extra_metadata(df, products_csv_path)
     df.to_csv(csv_path, index=False)
 
     # Generate survey data

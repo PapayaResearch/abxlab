@@ -138,23 +138,50 @@ def add_extra_metadata(df):
     return df
 
 def generate_survey_data(df, seed, output_dir):
-    """Generate partitions of the study data"""
+    """Generate partitions of the study data with full coverage and randomization"""
+    random.seed(seed)
+
+    # Group by unique URL pairs
     df_grouped = df.groupby(["url_0", "url_1"])
+    unique_pairs = list(df_grouped.groups.keys())
+    num_pairs = len(unique_pairs)
 
-    g1 = []
-    g2 = []
-    g3 = []
-    for _, df_group in tqdm(df_grouped, desc="Generating survey groups"):
-        # Shuffling conditions
-        shuffled_rows = df_group.sample(frac=1, random_state=seed).reset_index(drop=True)
+    # Calculate number of participant groups
+    total_rows = len(df)
+    num_groups = total_rows // num_pairs
 
-        g1.append(shuffled_rows.iloc[0].to_dict())
-        g2.append(shuffled_rows.iloc[1].to_dict())
-        g3.append(shuffled_rows.iloc[2].to_dict())
+    # Create a matrix where each row is a participant and each column is a pair
+    # We'll fill this with condition indices to ensure full coverage
+    assignment_matrix = []
 
-    pd.DataFrame(g1).to_csv(os.path.join(output_dir, "study_data_1.csv"), index=False)
-    pd.DataFrame(g2).to_csv(os.path.join(output_dir, "study_data_2.csv"), index=False)
-    pd.DataFrame(g3).to_csv(os.path.join(output_dir, "study_data_3.csv"), index=False)
+    # For each pair, get all available conditions and shuffle them
+    pair_conditions = {}
+    for pair, group in df_grouped:
+        conditions = group.reset_index(drop=True)
+        # Shuffle the conditions for this pair
+        shuffled_indices = list(range(len(conditions)))
+        random.shuffle(shuffled_indices)
+        pair_conditions[pair] = {
+            "data": conditions,
+            "shuffled_indices": shuffled_indices
+        }
+
+    # Assign conditions to participants
+    for participant_idx in range(num_groups):
+        participant_data = []
+
+        for pair in unique_pairs:
+            # Get the condition for this participant and pair
+            condition_idx = pair_conditions[pair]["shuffled_indices"][participant_idx]
+            condition_row = pair_conditions[pair]["data"].iloc[condition_idx]
+            participant_data.append(condition_row.to_dict())
+
+        assignment_matrix.append(participant_data)
+
+    # Save each participant's data to a separate CSV
+    for i, participant_data in enumerate(assignment_matrix):
+        filename = os.path.join(output_dir, f"study_data_{i+1}.csv")
+        pd.DataFrame(participant_data).to_csv(filename, index=False)
 
 @hydra.main(config_path="../conf", config_name="config", version_base=None)
 def main(cfg: DictConfig):

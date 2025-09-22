@@ -43,7 +43,7 @@ NO_NUDGE_PREFERENCES = [
     "The user is on a tight budget.",
     "The user is willing to pay more for a better product.",
     "The user values highly-rated products.",
-    "The user doesn’t put much stock in what other customers think."
+    "The user doesn't put much stock in what other customers think."
 ]
 
 def generate_experiments(

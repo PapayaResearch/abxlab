@@ -64,11 +64,22 @@ class NudgeLabTask(AbstractBrowserTask):
             page.context.set_geolocation(self.config["geolocation"])
 
         # navigate to the starting url(s) (might need several pages)
-        # https://github.com/web-arena-x/webarena/blob/c6475f0e9affe5252a2966e26b8cb4c834a4ae40/browser_env/envs.py#L150
+        # MODIFIED: Use cache-aware navigation with much longer timeout
         if self.config["start_urls"]:
             start_urls = self.config["start_urls"]
             for i, url in enumerate(start_urls):
-                page.goto(url, timeout=self.timeout)
+                logger.info(f"🌐 Navigating to: {url}")
+                try:
+                    # Use a very long timeout since cache should serve instantly
+                    # If this times out, it means our cache system failed
+                    page.goto(url, timeout=30000)  # 30 seconds should be more than enough for cache
+                    logger.info(f"✅ Successfully navigated to: {url}")
+                except Exception as e:
+                    logger.error(f"❌ Failed to navigate to {url}: {e}")
+                    # Check if this might be a cache issue
+                    logger.error("This suggests the route handler/cache system is not working properly")
+                    raise
+
                 if i < len(start_urls) - 1:
                     page = page.context.new_page()
 

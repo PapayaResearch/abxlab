@@ -22,10 +22,11 @@ csv_writer_lock = threading.Lock()
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base_url", default=os.environ.get("BASE_WEB_AGENT_URL", "http://matlaber12.media.mit.edu:7770/"), help="The base URL of the shopping website.")
+    parser.add_argument("--base_url", default=os.environ.get("BASE_WEB_AGENT_URL"), help="The base URL of the shopping website.")
     parser.add_argument("--output_file", default=os.environ.get("OUTPUT_FILE", "products.csv"), help="The path to the output CSV file.")
     parser.add_argument("--max_workers", type=int, default=os.environ.get("MAX_WORKERS", 20), help="The maximum number of concurrent workers for scraping.")
-    parser.add_argument("--category_file", default="tasks/categories.yaml", help="The YAML file with the list of categories to scrape.")
+    parser.add_argument("--category_file", default="categories.yaml", help="The YAML file with the list of categories to scrape.")
+    parser.add_argument("--replace_base_url_with", default="${env.wa_shopping_url}", help="String to replace the base URL in product links for portability.")
     args = parser.parse_args()
 
     with open(args.category_file) as yaml_file:
@@ -55,7 +56,8 @@ def main():
                     category_url,
                     existing_urls,
                     writer,
-                    csv_file
+                    csv_file,
+                    args.replace_base_url_with
                 )
                 page_futures[future] = category_url
 
@@ -77,7 +79,8 @@ def process_category(
     category_url: str,
     existing_urls: set[str],
     writer: csv.DictWriter,
-    csv_file: io.TextIOWrapper
+    csv_file: io.TextIOWrapper,
+    replace_base_url_with: str | None = None
 ) -> None:
     current_page_url = urljoin(base_url, category_url)
     while current_page_url:
@@ -93,6 +96,8 @@ def process_category(
                 if product_full_url not in existing_urls:
                     product_data = scrape_product(product_full_url, category_name)
                     if product_data:
+                        if replace_base_url_with:
+                            product_data["product_url"] = product_data["product_url"].replace(base_url, replace_base_url_with)
                         with csv_writer_lock:
                             writer.writerow(product_data)
                             csv_file.flush()
@@ -153,7 +158,7 @@ def scrape_product(product_url: str, category_name: str) -> dict | None:
             "price": price,
             "rating": rating,
             "reviews": reviews,
-            "has_options": has_options,
+            "has_options": has_options
         }
     except Exception as error:
         logging.error(f"Failed to scrape product at {product_url}: {error}")

@@ -1,13 +1,14 @@
 import logging
 import time
 import functools
+from pathlib import Path
+from typing import Literal, Optional
+
 import importlib
 import playwright
 import playwright.sync_api
 import gymnasium as gym
-from pathlib import Path
-from typing import Literal, Optional
-from urllib.parse import quote_plus
+
 from browsergym.core import _get_global_playwright
 from browsergym.core.action.highlevel import HighLevelActionSet
 from browsergym.core.chat import Chat
@@ -20,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 class NudgeLabBrowserEnv(BrowserEnv):
-    """Override for route handling with improved caching."""
+    """Override for route handling."""
     def __init__(
         self,
         task_entrypoint: type[AbstractBrowserTask],
@@ -62,57 +63,7 @@ class NudgeLabBrowserEnv(BrowserEnv):
         # Load config file if specified in task_kwargs
         self.env_config = task_kwargs["config"]
 
-        # Define cache directory
-        self.cache_dir = Path(".cache")
-        self.cache_dir.mkdir(exist_ok=True)
-
         self.reset()
-
-    def sanitize_url(self, url):
-        """Sanitize a URL to be used as a filename."""
-        return quote_plus(url)
-
-    def debug_cache_status(self, url=None):
-        """Debug method to check cache status."""
-        cache_files = list(self.cache_dir.glob("*.html"))
-        logger.info(f"Cache directory: {self.cache_dir}")
-        logger.info(f"Total cached files: {len(cache_files)}")
-
-        if url:
-            sanitized = self.sanitize_url(url)
-            cache_path = self.cache_dir / f"{sanitized}.html"
-            logger.info(f"Looking for URL: {url}")
-            logger.info(f"Sanitized: {sanitized}")
-            logger.info(f"Cache path: {cache_path}")
-            logger.info(f"Cache exists: {cache_path.exists()}")
-
-        if cache_files:
-            logger.info("Sample cache files:")
-            for f in cache_files[:10]:
-                logger.info(f"  - {f.name}")
-
-    def get_cached_content(self, url):
-        """Get cached content for a URL if it exists."""
-        sanitized = self.sanitize_url(url)
-        cache_path = self.cache_dir / f"{sanitized}.html"
-        if cache_path.exists():
-            try:
-                with open(cache_path, "r", encoding="utf-8") as f:
-                    return f.read()
-            except Exception as e:
-                logger.warning(f"Failed to read cached content for {url}: {e}")
-        return None
-
-    def cache_content(self, url, content):
-        """Cache content for a URL."""
-        try:
-            sanitized = self.sanitize_url(url)
-            cache_path = self.cache_dir / f"{sanitized}.html"
-            with open(cache_path, "w", encoding="utf-8") as f:
-                f.write(content)
-            logger.debug(f"Cached content for {url}")
-        except Exception as e:
-            logger.warning(f"Failed to cache content for {url}: {e}")
 
     def reset(self, seed=None, *args, **kwargs):
         gym.Env.reset(self, seed=seed, *args, **kwargs)
@@ -129,12 +80,6 @@ class NudgeLabBrowserEnv(BrowserEnv):
 
         # create a new task
         self.task = self.task_entrypoint(seed=seed, **self.task_kwargs)
-
-        # IMPORTANT: Debug cache status before task setup
-        if self.task.config.get("start_urls"):
-            logger.info("🔍 Debugging cache status before task setup:")
-            for url in self.task.config["start_urls"]:
-                self.debug_cache_status(url)
 
         def override_property(task, env, property):
             """Extract property value from env if not None, otherwise from task."""
@@ -191,9 +136,9 @@ class NudgeLabBrowserEnv(BrowserEnv):
         # set default timeout
         self.context.set_default_timeout(timeout)
 
-        # CRITICAL: Setup route handler BEFORE creating the task
-        # We'll set up a route that can handle requests even before task exists
-        self.setup_route_handler(self.context)
+        # Route calls to complete interventions
+        if self.env_config and "choices" in self.env_config:
+            self.setup_route_handler(self.context)
 
         # hack: keep track of the active page with a javascript callback
         # there is no concept of active page in playwright
@@ -311,23 +256,26 @@ document.addEventListener("visibilitychange", () => {
     def setup_route_handler(self, context):
         """Setup route handler for modifying HTML based on choice configurations"""
 
-        def process_html_content(html_content, request_url, task):
-            """Common HTML processing logic for both cached and fetched content"""
-            # Ensure html_content is a string
-            if isinstance(html_content, bytes):
-                html_content = html_content.decode('utf-8')
+        # Enable response interception for all HTML documents
+        def modify_html(route, request, task):
+            if not request.is_navigation_request():
+                route.continue_()
+                return
 
-            # First we'll do any task-specific preprocessing
-            html_content = task.process_html(html_content)
+            response = route.fetch()
+            if response.ok:
+                # Modify the HTML before passing it to the browser and agent
+                html = response.body()
 
-            # Find if there's a choice architecture for the current url (only if config exists)
-            if self.env_config and "choices" in self.env_config:
-                choice = next(
-                    filter(
-                        lambda choice: choice["url"] in [request_url, "*"], self.env_config.get("choices")
-                    ),
-                    None
-                )
+                # First we'll do any task-specific preprocessing
+                html = task.process_html(html)
+
+                # Find if choice architectures for the current url
+                choices = [
+                    choice
+                    for choice in self.env_config.get("choices")
+                    if choice["url"] in [request.url, "*"]
+                ]
 
                 # Apply all interventions
                 for choice in choices:
@@ -339,9 +287,9 @@ document.addEventListener("visibilitychange", () => {
                         module = importlib.import_module(module_name)
                         func = getattr(module, func_name)
 
-                        html_content, metadata = func(html_content, **args)
+                        html, metadata = func(html, **args)
 
-                        metadata["url"] = request_url
+                        metadata["url"] = request.url
                         metadata["timestamp"] = time.time()
                         metadata["function"] = {
                             "name": func_name,
@@ -351,78 +299,13 @@ document.addEventListener("visibilitychange", () => {
 
                         task.nudge_metadata.append(metadata)
 
-            return html_content
-
-        # Enable response interception for all requests
-        def modify_html(route, request):
-            request_url = request.url
-            logger.info(f"🔄 Intercepting: {request_url}")
-            logger.info(f"   Method: {request.method}, Type: {request.resource_type}")
-
-            # For non-HTML requests, continue normally
-            if request.resource_type not in ["document"]:
-                logger.info(f"   ➡️  Continuing non-document request")
-                route.continue_()
-                return
-
-            # Check if we have cached content for this URL
-            cached_content = self.get_cached_content(request_url)
-            if cached_content is not None:
-                logger.info(f"   ✅ Serving from cache")
-
-                # Process the content if we have a task, otherwise serve raw content
-                if hasattr(self, 'task') and self.task:
-                    try:
-                        processed_html = process_html_content(cached_content, request_url, self.task)
-                    except Exception as e:
-                        logger.warning(f"   ⚠️  Task processing failed: {e}, serving raw content")
-                        processed_html = cached_content
-                else:
-                    logger.info(f"   📝 No task yet, serving raw content")
-                    processed_html = cached_content
-
                 route.fulfill(
-                    status=200,
-                    headers={
-                        "content-type": "text/html; charset=utf-8",
-                        "cache-control": "no-cache"
-                    },
-                    body=processed_html,
+                    status=response.status,
+                    headers=response.headers,
+                    body=html,
                 )
-                return
+            else:
+                route.continue_()
 
-            # If no cached content, this should NOT happen if pre-caching worked
-            logger.error(f"   ❌ CACHE MISS for {request_url}")
-
-            # Debug: show what we have in cache
-            sanitized = self.sanitize_url(request_url)
-            expected_file = self.cache_dir / f"{sanitized}.html"
-            logger.error(f"   Expected file: {expected_file}")
-            logger.error(f"   File exists: {expected_file.exists()}")
-
-            cache_files = list(self.cache_dir.glob("*.html"))
-            logger.error(f"   Available cache files: {len(cache_files)}")
-            if cache_files:
-                logger.error(f"   Sample: {cache_files[0].name}")
-
-            # Since we should never hit the network, return an error page instead of timing out
-            error_html = f"""
-            <html>
-                <head><title>Cache Miss Error</title></head>
-                <body>
-                    <h1>Cache Miss Error</h1>
-                    <p>URL: {request_url}</p>
-                    <p>Expected cache file: {expected_file}</p>
-                    <p>This should not happen if pre-caching worked correctly.</p>
-                </body>
-            </html>
-            """
-            route.fulfill(
-                status=500,
-                headers={"content-type": "text/html; charset=utf-8"},
-                body=error_html,
-            )
-
-        # Apply the interception to ALL requests
-        context.route("**", modify_html)
-        logger.info("🔧 Route handler installed")
+        # Apply the interception to the entire browser context
+        context.route("**/*", functools.partial(modify_html, task=self.task))

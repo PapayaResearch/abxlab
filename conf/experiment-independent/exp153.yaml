@@ -5,8 +5,8 @@ task:
   config:
     task_id: 153
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/skywin-portable-travel-hard-case-for-oculus-quest-vr-headset-and-quest-controllers-compatible-with-oculus-quest.html
-    - http://matlaber12.media.mit.edu:7770/table-tennis-paddle-grip-handle-compatible-for-oculus-quest-2-ping-pong-paddle-accessories-restore-realistic-play-table-tennis-feeling-1-pack-right-hand-white.html
+    - ${env.wa_shopping_url}skywin-portable-travel-hard-case-for-oculus-quest-vr-headset-and-quest-controllers-compatible-with-oculus-quest.html
+    - ${env.wa_shopping_url}table-tennis-paddle-grip-handle-compatible-for-oculus-quest-2-ping-pong-paddle-accessories-restore-realistic-play-table-tennis-feeling-1-pack-right-hand-white.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

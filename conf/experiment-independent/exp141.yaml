@@ -5,8 +5,8 @@ task:
   config:
     task_id: 141
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
-    - http://matlaber12.media.mit.edu:7770/rolling-stones-x-v-moda-crossfade-2-wireless-over-ear-headphone-in-black-classic-licks-rstones-classic.html
+    - ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
+    - ${env.wa_shopping_url}rolling-stones-x-v-moda-crossfade-2-wireless-over-ear-headphone-in-black-classic-licks-rstones-classic.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 176
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/wireless-earbuds-easy-touch-control-sport-earbuds-workout-headphones-bluetooth-earbuds-noise-cancelling-with-built-in-mic-stereo-sound-ideal-in-ear-headphones-for-jogging-workouts.html
-    - http://matlaber12.media.mit.edu:7770/apple-earpods-in-ear-earbuds-with-mic-and-remote-earbud-headphones-white-with-lightning-to-3-5-mm-headphone-jack-adapter-renewed.html
+    - ${env.wa_shopping_url}wireless-earbuds-easy-touch-control-sport-earbuds-workout-headphones-bluetooth-earbuds-noise-cancelling-with-built-in-mic-stereo-sound-ideal-in-ear-headphones-for-jogging-workouts.html
+    - ${env.wa_shopping_url}apple-earpods-in-ear-earbuds-with-mic-and-remote-earbud-headphones-white-with-lightning-to-3-5-mm-headphone-jack-adapter-renewed.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

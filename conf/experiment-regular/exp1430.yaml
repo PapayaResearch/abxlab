@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1430
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/nikon-coolpix-b500-16mp-digital-camera-with-3-inch-tft-lcd-screen-nikkor-lens-with-40x-optical-zoom-wifi-64gb-memory-card-black.html
-    - http://matlaber12.media.mit.edu:7770/panasonic-lumix-dmc-fz70-digital-camera-60x-optical-zoom-16mp-black-4gb-sdhc-card.html
+    - ${env.wa_shopping_url}nikon-coolpix-b500-16mp-digital-camera-with-3-inch-tft-lcd-screen-nikkor-lens-with-40x-optical-zoom-wifi-64gb-memory-card-black.html
+    - ${env.wa_shopping_url}panasonic-lumix-dmc-fz70-digital-camera-60x-optical-zoom-16mp-black-4gb-sdhc-card.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/nikon-coolpix-b500-16mp-digital-camera-with-3-inch-tft-lcd-screen-nikkor-lens-with-40x-optical-zoom-wifi-64gb-memory-card-black.html
+    - url: ${env.wa_shopping_url}nikon-coolpix-b500-16mp-digital-camera-with-3-inch-tft-lcd-screen-nikkor-lens-with-40x-optical-zoom-wifi-64gb-memory-card-black.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 313
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
-    - http://matlaber12.media.mit.edu:7770/full-length-floor-mirror-with-lights-betamore-65-x22-free-standing-tall-mirror-wall-mounted-hanging-mirror-vanity-makeup-mirror-full-body-mirror-dressing-mirror-with-dimming-3-color-modes.html
+    - ${env.wa_shopping_url}decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
+    - ${env.wa_shopping_url}full-length-floor-mirror-with-lights-betamore-65-x22-free-standing-tall-mirror-wall-mounted-hanging-mirror-vanity-makeup-mirror-full-body-mirror-dressing-mirror-with-dimming-3-color-modes.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

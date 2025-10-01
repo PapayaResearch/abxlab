@@ -5,8 +5,8 @@ task:
   config:
     task_id: 158
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/oqlink-oculus-quest-2-link-cable-16ft-5m-usb-type-c-to-c-usb-3-2-gen1-5gbps-3a-bonus-lens-cover-and-microfiber-cloth-oculus-link-cable-with-high-speed-data-transfer-fast-charging.html
-    - http://matlaber12.media.mit.edu:7770/samsung-gear-vr-2016-gs7s-note-5-gs6s-us-version-w-warranty-discontinued-by-manufacturer-by-manufacturer.html
+    - ${env.wa_shopping_url}oqlink-oculus-quest-2-link-cable-16ft-5m-usb-type-c-to-c-usb-3-2-gen1-5gbps-3a-bonus-lens-cover-and-microfiber-cloth-oculus-link-cable-with-high-speed-data-transfer-fast-charging.html
+    - ${env.wa_shopping_url}samsung-gear-vr-2016-gs7s-note-5-gs6s-us-version-w-warranty-discontinued-by-manufacturer-by-manufacturer.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

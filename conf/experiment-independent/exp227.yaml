@@ -5,8 +5,8 @@ task:
   config:
     task_id: 227
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
-    - http://matlaber12.media.mit.edu:7770/mini-projector-iolieo-supported-hd-1080p-home-projectors-200-display-50000-hours-led-life-dual-speakers-portable-projector-compatible-with-usb-hdmi-vga-tf-ps4-laptop-dvd.html
+    - ${env.wa_shopping_url}reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
+    - ${env.wa_shopping_url}mini-projector-iolieo-supported-hd-1080p-home-projectors-200-display-50000-hours-led-life-dual-speakers-portable-projector-compatible-with-usb-hdmi-vga-tf-ps4-laptop-dvd.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

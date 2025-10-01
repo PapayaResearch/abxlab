@@ -5,8 +5,8 @@ task:
   config:
     task_id: 353
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/basswood-hunters-23-x-15-oval-vintage-decorative-wall-mirror-white-wooden-crown-frame-antique-princess-decor-for-bedroom-playroom-dressers-living-room.html
-    - http://matlaber12.media.mit.edu:7770/patton-wall-decor-36-silver-round-geometric-sunburst-wall-accent-mirror-1805-3784.html
+    - ${env.wa_shopping_url}basswood-hunters-23-x-15-oval-vintage-decorative-wall-mirror-white-wooden-crown-frame-antique-princess-decor-for-bedroom-playroom-dressers-living-room.html
+    - ${env.wa_shopping_url}patton-wall-decor-36-silver-round-geometric-sunburst-wall-accent-mirror-1805-3784.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

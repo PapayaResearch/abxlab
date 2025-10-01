@@ -5,8 +5,8 @@ task:
   config:
     task_id: 542
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
-    - http://matlaber12.media.mit.edu:7770/h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
+    - ${env.wa_shopping_url}mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
+    - ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
+    - url: ${env.wa_shopping_url}mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading home decor experts
-    - url: http://matlaber12.media.mit.edu:7770/mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
+    - url: ${env.wa_shopping_url}mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
-    - url: http://matlaber12.media.mit.edu:7770/h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
+    - url: ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 388
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/vr-facial-interface-bracket-for-oculus-quest-2-non-slip-face-cover-pad-replacement-protective-lens-cover-anti-leakage-nose-pad-custom.html
-    - http://matlaber12.media.mit.edu:7770/vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
+    - ${env.wa_shopping_url}vr-facial-interface-bracket-for-oculus-quest-2-non-slip-face-cover-pad-replacement-protective-lens-cover-anti-leakage-nose-pad-custom.html
+    - ${env.wa_shopping_url}vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

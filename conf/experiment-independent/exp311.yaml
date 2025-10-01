@@ -5,8 +5,8 @@ task:
   config:
     task_id: 311
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/247shopathome-wall-mirror-black.html
-    - http://matlaber12.media.mit.edu:7770/arched-window-finished-metal-mirror-32-45-wall-mirror-windowpane-decoration-for-living-room-entryway-off-white.html
+    - ${env.wa_shopping_url}247shopathome-wall-mirror-black.html
+    - ${env.wa_shopping_url}arched-window-finished-metal-mirror-32-45-wall-mirror-windowpane-decoration-for-living-room-entryway-off-white.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

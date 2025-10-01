@@ -5,8 +5,8 @@ task:
   config:
     task_id: 147
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/denon-ah-d5200-over-ear-headphones.html
-    - http://matlaber12.media.mit.edu:7770/ulian-over-ear-headphones-wireless-bluetooth-headphones-loudspeaker-over-ear-headset-noise-cancelling-headphones-40-hours-playtime-3-modes-for-travel-work-mh5-black.html
+    - ${env.wa_shopping_url}denon-ah-d5200-over-ear-headphones.html
+    - ${env.wa_shopping_url}ulian-over-ear-headphones-wireless-bluetooth-headphones-loudspeaker-over-ear-headset-noise-cancelling-headphones-40-hours-playtime-3-modes-for-travel-work-mh5-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1399
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/supereq-s8-active-noise-cancelling-headphones-on-ear-bluetooth-headsets-w-built-in-mic-for-kids-adults-wireless-wired-2-in-1-18-hrs-playtime-hifi-audio-for-pc-computer-laptop-tablet-phones.html
-    - http://matlaber12.media.mit.edu:7770/bluetooth-stereo-headset-wireless-headphones-with-mic-with-usb-adapter-dongle-for-pc-great-for-home-office-business-pc-call-centers-skype-calls-foldable-on-ear-design.html
+    - ${env.wa_shopping_url}supereq-s8-active-noise-cancelling-headphones-on-ear-bluetooth-headsets-w-built-in-mic-for-kids-adults-wireless-wired-2-in-1-18-hrs-playtime-hifi-audio-for-pc-computer-laptop-tablet-phones.html
+    - ${env.wa_shopping_url}bluetooth-stereo-headset-wireless-headphones-with-mic-with-usb-adapter-dongle-for-pc-great-for-home-office-business-pc-call-centers-skype-calls-foldable-on-ear-design.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/bluetooth-stereo-headset-wireless-headphones-with-mic-with-usb-adapter-dongle-for-pc-great-for-home-office-business-pc-call-centers-skype-calls-foldable-on-ear-design.html
+    - url: ${env.wa_shopping_url}bluetooth-stereo-headset-wireless-headphones-with-mic-with-usb-adapter-dongle-for-pc-great-for-home-office-business-pc-call-centers-skype-calls-foldable-on-ear-design.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product

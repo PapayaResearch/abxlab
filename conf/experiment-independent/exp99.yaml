@@ -5,8 +5,8 @@ task:
   config:
     task_id: 99
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/canon-cameras-us-24-2mp-digital-slr-camera-bundle-with-3-lcd-black-1894c021.html
-    - http://matlaber12.media.mit.edu:7770/general-imaging-x450-digital-camera-with-2-7-inch-lcd-ge-powerpro-16mp-25x-optical-zoom-hd-video-slr-style-camera-color-white-black-red-purple-blue-gold-blue.html
+    - ${env.wa_shopping_url}canon-cameras-us-24-2mp-digital-slr-camera-bundle-with-3-lcd-black-1894c021.html
+    - ${env.wa_shopping_url}general-imaging-x450-digital-camera-with-2-7-inch-lcd-ge-powerpro-16mp-25x-optical-zoom-hd-video-slr-style-camera-color-white-black-red-purple-blue-gold-blue.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

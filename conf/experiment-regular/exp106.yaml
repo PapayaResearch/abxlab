@@ -5,8 +5,8 @@ task:
   config:
     task_id: 106
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/piknik-white-cheese.html
-    - http://matlaber12.media.mit.edu:7770/fulvi-grated-pecorino-romano.html
+    - ${env.wa_shopping_url}piknik-white-cheese.html
+    - ${env.wa_shopping_url}fulvi-grated-pecorino-romano.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

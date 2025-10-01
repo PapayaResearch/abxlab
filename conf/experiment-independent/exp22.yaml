@@ -5,8 +5,8 @@ task:
   config:
     task_id: 22
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/panasonic-h-fsa100300-interchangeable-lens-lumix-g-vario-100-300mm-f4-0-5-6-ii-power-o-i-s-micro-four-thirds-mount-international-model.html
-    - http://matlaber12.media.mit.edu:7770/nikon-300mm-f-4e-pf-vr-af-s-ed-if-telephoto-nikkor-lens.html
+    - ${env.wa_shopping_url}panasonic-h-fsa100300-interchangeable-lens-lumix-g-vario-100-300mm-f4-0-5-6-ii-power-o-i-s-micro-four-thirds-mount-international-model.html
+    - ${env.wa_shopping_url}nikon-300mm-f-4e-pf-vr-af-s-ed-if-telephoto-nikkor-lens.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

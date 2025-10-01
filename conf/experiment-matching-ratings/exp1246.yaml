@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1246
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
-    - http://matlaber12.media.mit.edu:7770/bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
+    - ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+    - ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+    - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Incentives
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
-    - url: http://matlaber12.media.mit.edu:7770/theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
+    - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
-    - url: http://matlaber12.media.mit.edu:7770/bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
+    - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

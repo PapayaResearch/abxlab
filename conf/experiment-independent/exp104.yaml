@@ -5,8 +5,8 @@ task:
   config:
     task_id: 104
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
-    - http://matlaber12.media.mit.edu:7770/sony-alpha-a7-ii-digital-camera-28-70mm-fe-oss-lens-with-64gb-card-case-battery-charger-tripod-tele-wide-lens-kit.html
+    - ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - ${env.wa_shopping_url}sony-alpha-a7-ii-digital-camera-28-70mm-fe-oss-lens-with-64gb-card-case-battery-charger-tripod-tele-wide-lens-kit.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 340
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/jhy-design-home-collection-14-5-golden-flower-decorative-metal-mirror-classic-metal-decorative-wall-mirror-flower.html
-    - http://matlaber12.media.mit.edu:7770/emaison-gold-hanging-mirror-with-chain-12-x-16-inch-rustic-wall-decor-for-bathroom-entry-dining-room-and-living-room-metal-circle-mirror-for-wall-vanity-mirror-large-decorative-mirror.html
+    - ${env.wa_shopping_url}jhy-design-home-collection-14-5-golden-flower-decorative-metal-mirror-classic-metal-decorative-wall-mirror-flower.html
+    - ${env.wa_shopping_url}emaison-gold-hanging-mirror-with-chain-12-x-16-inch-rustic-wall-decor-for-bathroom-entry-dining-room-and-living-room-metal-circle-mirror-for-wall-vanity-mirror-large-decorative-mirror.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

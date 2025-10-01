@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1452
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/cadbury-mini-eggs-milk-chocolate-with-crisp-shell-candy-easter-1-5-oz-bag.html
-    - http://matlaber12.media.mit.edu:7770/baileys-original-irish-cream-chocolate-truffles-milk-chocolate-non-alcoholic-chocolate-candy.html
+    - ${env.wa_shopping_url}cadbury-mini-eggs-milk-chocolate-with-crisp-shell-candy-easter-1-5-oz-bag.html
+    - ${env.wa_shopping_url}baileys-original-irish-cream-chocolate-truffles-milk-chocolate-non-alcoholic-chocolate-candy.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/cadbury-mini-eggs-milk-chocolate-with-crisp-shell-candy-easter-1-5-oz-bag.html
+    - url: ${env.wa_shopping_url}cadbury-mini-eggs-milk-chocolate-with-crisp-shell-candy-easter-1-5-oz-bag.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product

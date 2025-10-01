@@ -5,8 +5,8 @@ task:
   config:
     task_id: 167
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/true-wireless-earbuds-bluetooth-premium-35h-stereo-earphones-in-ear-built-in-mic-headset-wireless-charging-case-ipx5-waterproof-headphones-for-sport-white.html
-    - http://matlaber12.media.mit.edu:7770/wireless-headphones-bluetooth-headphones-sports-earbuds-ipx7-waterproof-stereo-earphones-for-gym-running-9-hours-playtime-noise-cancelling-headsets.html
+    - ${env.wa_shopping_url}true-wireless-earbuds-bluetooth-premium-35h-stereo-earphones-in-ear-built-in-mic-headset-wireless-charging-case-ipx5-waterproof-headphones-for-sport-white.html
+    - ${env.wa_shopping_url}wireless-headphones-bluetooth-headphones-sports-earbuds-ipx7-waterproof-stereo-earphones-for-gym-running-9-hours-playtime-noise-cancelling-headsets.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

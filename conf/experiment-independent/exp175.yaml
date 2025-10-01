@@ -5,8 +5,8 @@ task:
   config:
     task_id: 175
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/apple-earpods-in-ear-earbuds-with-mic-and-remote-earbud-headphones-white-with-lightning-to-3-5-mm-headphone-jack-adapter-renewed.html
-    - http://matlaber12.media.mit.edu:7770/bone-conduction-headphones-open-ear-headphones-with-mic-waterproof-ipx5-bluetooth-5-1-headset-wireless-lightweight-design-earbuds-running-jogging-driving-cycling-black.html
+    - ${env.wa_shopping_url}apple-earpods-in-ear-earbuds-with-mic-and-remote-earbud-headphones-white-with-lightning-to-3-5-mm-headphone-jack-adapter-renewed.html
+    - ${env.wa_shopping_url}bone-conduction-headphones-open-ear-headphones-with-mic-waterproof-ipx5-bluetooth-5-1-headset-wireless-lightweight-design-earbuds-running-jogging-driving-cycling-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

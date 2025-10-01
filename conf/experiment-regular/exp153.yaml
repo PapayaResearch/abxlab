@@ -5,8 +5,8 @@ task:
   config:
     task_id: 153
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/new-oem-dell-multimedia-soundbar-speaker-sound-bar-ax510-black-ax510pa-c730c-dw711-lcd-468-7411-313-6412-313-6219-313-6413-313-6412-monitor-flat-panel-screen-black-home-theater-ultrasharp.html
-    - http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+    - ${env.wa_shopping_url}new-oem-dell-multimedia-soundbar-speaker-sound-bar-ax510-black-ax510pa-c730c-dw711-lcd-468-7411-313-6412-313-6219-313-6413-313-6412-monitor-flat-panel-screen-black-home-theater-ultrasharp.html
+    - ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

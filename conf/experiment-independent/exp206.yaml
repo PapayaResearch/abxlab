@@ -5,8 +5,8 @@ task:
   config:
     task_id: 206
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/canon-psevemsh001lp-85mm-f-1-2-ef-l-ii-telephoto-lens-usm.html
-    - http://matlaber12.media.mit.edu:7770/nikon-af-fx-nikkor-14mm-f-2-8d-ed-ultra-wide-angle-fixed-zoom-lens-with-auto-focus-for-nikon-dslr-cameras.html
+    - ${env.wa_shopping_url}canon-psevemsh001lp-85mm-f-1-2-ef-l-ii-telephoto-lens-usm.html
+    - ${env.wa_shopping_url}nikon-af-fx-nikkor-14mm-f-2-8d-ed-ultra-wide-angle-fixed-zoom-lens-with-auto-focus-for-nikon-dslr-cameras.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

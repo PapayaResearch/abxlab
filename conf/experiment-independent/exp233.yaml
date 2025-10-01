@@ -5,8 +5,8 @@ task:
   config:
     task_id: 233
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/toperson-5g-wifi-portable-projector-native-1080p-full-hd-4k-supported-outdoor-projector-380-ansi-9800-lm-movie-projector-4p-keystone-zoom-focus-200-display-c-with-fire-tv-stick-ps5-phone-laptop.html
-    - http://matlaber12.media.mit.edu:7770/optoma-tx7156-dlp-multimedia-projector-black.html
+    - ${env.wa_shopping_url}toperson-5g-wifi-portable-projector-native-1080p-full-hd-4k-supported-outdoor-projector-380-ansi-9800-lm-movie-projector-4p-keystone-zoom-focus-200-display-c-with-fire-tv-stick-ps5-phone-laptop.html
+    - ${env.wa_shopping_url}optoma-tx7156-dlp-multimedia-projector-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

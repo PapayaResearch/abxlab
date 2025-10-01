@@ -5,8 +5,8 @@ task:
   config:
     task_id: 85
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/skyreat-wide-angle-lens-18mm-compatible-with-dji-pocket-2-1-osmo-pocket-lens-filter-magnetic-perfect-vlogging-accessories.html
-    - http://matlaber12.media.mit.edu:7770/fujifilm-wlfxe01-e-series-wide-angle-conversion-lens-for-e500-e510-e550-digital-cameras.html
+    - ${env.wa_shopping_url}skyreat-wide-angle-lens-18mm-compatible-with-dji-pocket-2-1-osmo-pocket-lens-filter-magnetic-perfect-vlogging-accessories.html
+    - ${env.wa_shopping_url}fujifilm-wlfxe01-e-series-wide-angle-conversion-lens-for-e500-e510-e550-digital-cameras.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/skyreat-wide-angle-lens-18mm-compatible-with-dji-pocket-2-1-osmo-pocket-lens-filter-magnetic-perfect-vlogging-accessories.html
+    - url: ${env.wa_shopping_url}skyreat-wide-angle-lens-18mm-compatible-with-dji-pocket-2-1-osmo-pocket-lens-filter-magnetic-perfect-vlogging-accessories.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
-    - url: http://matlaber12.media.mit.edu:7770/fujifilm-wlfxe01-e-series-wide-angle-conversion-lens-for-e500-e510-e550-digital-cameras.html
+    - url: ${env.wa_shopping_url}fujifilm-wlfxe01-e-series-wide-angle-conversion-lens-for-e500-e510-e550-digital-cameras.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

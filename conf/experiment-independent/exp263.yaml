@@ -5,8 +5,8 @@ task:
   config:
     task_id: 263
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/5-45-inch-smartphone-hd-full-screen-unlocked-cell-phones-for-android-6-0-face-fingerprint-smart-phone-1gb-8gb-hd-camera-mobil-phone-2200mah-battery-128gb-extension-blue.html
-    - http://matlaber12.media.mit.edu:7770/alcatel-1-2019-5033e-4g-lte-5-inch-16gb-8mp-flash-quad-core-android-oreo-worldwide-unlocked-bluish-black.html
+    - ${env.wa_shopping_url}5-45-inch-smartphone-hd-full-screen-unlocked-cell-phones-for-android-6-0-face-fingerprint-smart-phone-1gb-8gb-hd-camera-mobil-phone-2200mah-battery-128gb-extension-blue.html
+    - ${env.wa_shopping_url}alcatel-1-2019-5033e-4g-lte-5-inch-16gb-8mp-flash-quad-core-android-oreo-worldwide-unlocked-bluish-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

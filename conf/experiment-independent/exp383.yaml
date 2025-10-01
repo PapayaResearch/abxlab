@@ -5,8 +5,8 @@ task:
   config:
     task_id: 383
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/virtual-reality-headset-for-phones-vr-headset-with-remote-control-3d-glasses-for-movies-games-bluetooth-vr-glasses-with-wireless-headset-for-iphone-samsung-compatible-for-ios-android-white.html
-    - http://matlaber12.media.mit.edu:7770/virtual-reality-headset-3d-vr-glasses-with-3d-headphones-gift-remote-for-android-ios-vr-headset-for-samsung-galaxy-s8-s7-s6-edge-note-8-5-iphone-x-8-7-6-6s-plus-other-4-0-6-4-cellphones.html
+    - ${env.wa_shopping_url}virtual-reality-headset-for-phones-vr-headset-with-remote-control-3d-glasses-for-movies-games-bluetooth-vr-glasses-with-wireless-headset-for-iphone-samsung-compatible-for-ios-android-white.html
+    - ${env.wa_shopping_url}virtual-reality-headset-3d-vr-glasses-with-3d-headphones-gift-remote-for-android-ios-vr-headset-for-samsung-galaxy-s8-s7-s6-edge-note-8-5-iphone-x-8-7-6-6s-plus-other-4-0-6-4-cellphones.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

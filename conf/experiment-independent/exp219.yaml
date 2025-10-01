@@ -5,8 +5,8 @@ task:
   config:
     task_id: 219
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
-    - http://matlaber12.media.mit.edu:7770/nikon-nikkor-z-dx-16-50mm-f-3-5-6-3-vr-ultra-compact-zoom-lens-with-image-stabilization-for-nikon-z-mirrorless-cameras.html
+    - ${env.wa_shopping_url}panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
+    - ${env.wa_shopping_url}nikon-nikkor-z-dx-16-50mm-f-3-5-6-3-vr-ultra-compact-zoom-lens-with-image-stabilization-for-nikon-z-mirrorless-cameras.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

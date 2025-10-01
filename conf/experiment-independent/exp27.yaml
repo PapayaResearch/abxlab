@@ -5,8 +5,8 @@ task:
   config:
     task_id: 27
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
-    - http://matlaber12.media.mit.edu:7770/nikon-300mm-f-4e-pf-vr-af-s-ed-if-telephoto-nikkor-lens.html
+    - ${env.wa_shopping_url}tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
+    - ${env.wa_shopping_url}nikon-300mm-f-4e-pf-vr-af-s-ed-if-telephoto-nikkor-lens.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

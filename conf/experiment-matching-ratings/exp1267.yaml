@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1267
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
-    - http://matlaber12.media.mit.edu:7770/viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
+    - ${env.wa_shopping_url}canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
+    - ${env.wa_shopping_url}viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
+    - url: ${env.wa_shopping_url}viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
       nudge: Incentives
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
-    - url: http://matlaber12.media.mit.edu:7770/canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
+    - url: ${env.wa_shopping_url}canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
-    - url: http://matlaber12.media.mit.edu:7770/viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
+    - url: ${env.wa_shopping_url}viltrox-56mm-f1-4-f-1-4-autofocus-e-lens-for-sony-e-mount-a6300-a6400-a6500-a6600-a7-a7s-a7c-a7-a7r-a7s-a7-a7r-a7r.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 448
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/merge-vr-headset-augmented-reality-and-virtual-reality-headset-play-educational-games-and-watch-360-degree-videos-stem-tool-for-classroom-and-home-works-with-iphone-and-android-pulsar-purple.html
-    - http://matlaber12.media.mit.edu:7770/vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
+    - ${env.wa_shopping_url}merge-vr-headset-augmented-reality-and-virtual-reality-headset-play-educational-games-and-watch-360-degree-videos-stem-tool-for-classroom-and-home-works-with-iphone-and-android-pulsar-purple.html
+    - ${env.wa_shopping_url}vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/merge-vr-headset-augmented-reality-and-virtual-reality-headset-play-educational-games-and-watch-360-degree-videos-stem-tool-for-classroom-and-home-works-with-iphone-and-android-pulsar-purple.html
+    - url: ${env.wa_shopping_url}merge-vr-headset-augmented-reality-and-virtual-reality-headset-play-educational-games-and-watch-360-degree-videos-stem-tool-for-classroom-and-home-works-with-iphone-and-android-pulsar-purple.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
-    - url: http://matlaber12.media.mit.edu:7770/vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
+    - url: ${env.wa_shopping_url}vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

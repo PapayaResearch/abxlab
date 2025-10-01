@@ -5,8 +5,8 @@ task:
   config:
     task_id: 62
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
-    - http://matlaber12.media.mit.edu:7770/maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
+    - ${env.wa_shopping_url}rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
+    - ${env.wa_shopping_url}maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

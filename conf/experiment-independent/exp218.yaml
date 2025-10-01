@@ -5,8 +5,8 @@ task:
   config:
     task_id: 218
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/voigtlander-heliar-classic-50mm-f-1-5-vm-lens.html
-    - http://matlaber12.media.mit.edu:7770/tamron-100-400mm-f-4-5-6-3-vc-usd-telephoto-zoom-lens-for-nikon-digital-slr-cameras-6-year-limited-usa-warranty.html
+    - ${env.wa_shopping_url}voigtlander-heliar-classic-50mm-f-1-5-vm-lens.html
+    - ${env.wa_shopping_url}tamron-100-400mm-f-4-5-6-3-vc-usd-telephoto-zoom-lens-for-nikon-digital-slr-cameras-6-year-limited-usa-warranty.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

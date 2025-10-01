@@ -5,8 +5,8 @@ task:
   config:
     task_id: 208
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/yongnuo-yn50mm-f1-8-lens-large-aperture-auto-focus-lens-compatible-with-canon-ef-mount-eos-camera.html
-    - http://matlaber12.media.mit.edu:7770/58mm-28-pc-accessory-kit-for-canon-eos-rebel-t7-t6-t5-t3-1300d-1200d-1100d-dslrs-with-0-43x-wide-angle-lens-2-2x-telephoto-lens-32gb-sandisk-sd-filter-macro-kits-backpack-case-and-more.html
+    - ${env.wa_shopping_url}yongnuo-yn50mm-f1-8-lens-large-aperture-auto-focus-lens-compatible-with-canon-ef-mount-eos-camera.html
+    - ${env.wa_shopping_url}58mm-28-pc-accessory-kit-for-canon-eos-rebel-t7-t6-t5-t3-1300d-1200d-1100d-dslrs-with-0-43x-wide-angle-lens-2-2x-telephoto-lens-32gb-sandisk-sd-filter-macro-kits-backpack-case-and-more.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

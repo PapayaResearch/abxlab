@@ -5,8 +5,8 @@ task:
   config:
     task_id: 41
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/deco-79-metal-mirror-wall-dcr-s-3-18-22-27-w-56884-18-22-27.html
-    - http://matlaber12.media.mit.edu:7770/geloo-galvanized-accent-mirror-industrial-24-inch-round-circle-bathroom-mirror-rustic-farmhouse-metal-wall-mirror-decor-round-rustic-mirror-gray-vanity-mirror-for-farmhouse-antique-entryway-street.html
+    - ${env.wa_shopping_url}deco-79-metal-mirror-wall-dcr-s-3-18-22-27-w-56884-18-22-27.html
+    - ${env.wa_shopping_url}geloo-galvanized-accent-mirror-industrial-24-inch-round-circle-bathroom-mirror-rustic-farmhouse-metal-wall-mirror-decor-round-rustic-mirror-gray-vanity-mirror-for-farmhouse-antique-entryway-street.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 172
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/bluetooth-headset-wireless-bluetooth-earpiece-v4-1-bluetooth-earbuds-headphones-lightweight-in-ear-earphones-noise-cancelling-with-mic-and-handsfree-for-business-office-driving.html
-    - http://matlaber12.media.mit.edu:7770/appinessey-bluetooth-foldable-headphones-wireless-neckband-headset-with-retractable-earbuds-noise-cancelling-with-mic-sports-earphones-for-running-workout-gym-black.html
+    - ${env.wa_shopping_url}bluetooth-headset-wireless-bluetooth-earpiece-v4-1-bluetooth-earbuds-headphones-lightweight-in-ear-earphones-noise-cancelling-with-mic-and-handsfree-for-business-office-driving.html
+    - ${env.wa_shopping_url}appinessey-bluetooth-foldable-headphones-wireless-neckband-headset-with-retractable-earbuds-noise-cancelling-with-mic-sports-earphones-for-running-workout-gym-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 343
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/hamilton-hills-contemporary-brushed-metal-wall-mirror-glass-panel-gold-framed-rounded-corner-deep-set-design-mirrored-rectangle-hangs-horizontal-or-vertical-24-x-36.html
-    - http://matlaber12.media.mit.edu:7770/decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
+    - ${env.wa_shopping_url}hamilton-hills-contemporary-brushed-metal-wall-mirror-glass-panel-gold-framed-rounded-corner-deep-set-design-mirrored-rectangle-hangs-horizontal-or-vertical-24-x-36.html
+    - ${env.wa_shopping_url}decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

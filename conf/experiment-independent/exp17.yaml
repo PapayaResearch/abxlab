@@ -5,8 +5,8 @@ task:
   config:
     task_id: 17
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/voigtlander-nokton-40mm-f-1-2-aspherical-lens-for-sony-e-mount.html
-    - http://matlaber12.media.mit.edu:7770/canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
+    - ${env.wa_shopping_url}voigtlander-nokton-40mm-f-1-2-aspherical-lens-for-sony-e-mount.html
+    - ${env.wa_shopping_url}canon-cameras-us-6310b002-ef-40mm-f-2-8-stm-lens-fixed-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

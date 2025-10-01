@@ -5,8 +5,8 @@ task:
   config:
     task_id: 197
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/ceramic-wired-headphones-with-microphone-noise-reducing-heavy-bass-in-ear-3-5mm-plug-earbuds-high-fidelity-stereo-sports-headset-sleep-earplugs-comes-with-leather-earphone-bag.html
-    - http://matlaber12.media.mit.edu:7770/bluetooth-headphones-wireless-neckband-headset-retractable-with-sweatproof-stereo-earbuds-call-vibrate-alert-earphones-with-mic-by-nvoperang-rose-gold.html
+    - ${env.wa_shopping_url}ceramic-wired-headphones-with-microphone-noise-reducing-heavy-bass-in-ear-3-5mm-plug-earbuds-high-fidelity-stereo-sports-headset-sleep-earplugs-comes-with-leather-earphone-bag.html
+    - ${env.wa_shopping_url}bluetooth-headphones-wireless-neckband-headset-retractable-with-sweatproof-stereo-earbuds-call-vibrate-alert-earphones-with-mic-by-nvoperang-rose-gold.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -25,7 +25,7 @@ study:
 
 # Environment vars
 env:
-  wa_shopping_url: ${oc.env:WA_SHOPPING,http://matlaber12.media.mit.edu:7770/}
+  wa_shopping_url: ${oc.env:WA_SHOPPING,${env.wa_shopping_url}}
 
 # Hydra-Specific settings
 hydra:

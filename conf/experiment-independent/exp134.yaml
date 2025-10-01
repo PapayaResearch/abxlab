@@ -5,8 +5,8 @@ task:
   config:
     task_id: 134
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/helm-true-wireless-bluetooth-5-0-headphones-earbuds-audiophile-hifi-sound-qualcomm-aptx-comfort-secure-fit-sport-sweatproof-6-hrs-play-time-30-hrs-w-charging-case-dual-mics-auto-pairing.html
-    - http://matlaber12.media.mit.edu:7770/true-wireless-earbuds-bluetooth-5-0-headphones-in-ear-bluetooth-earbuds-ipx7-waterproof-clear-call-headset-usb-c-charging-case-40h-playtime-sports-office-earphones.html
+    - ${env.wa_shopping_url}helm-true-wireless-bluetooth-5-0-headphones-earbuds-audiophile-hifi-sound-qualcomm-aptx-comfort-secure-fit-sport-sweatproof-6-hrs-play-time-30-hrs-w-charging-case-dual-mics-auto-pairing.html
+    - ${env.wa_shopping_url}true-wireless-earbuds-bluetooth-5-0-headphones-in-ear-bluetooth-earbuds-ipx7-waterproof-clear-call-headset-usb-c-charging-case-40h-playtime-sports-office-earphones.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

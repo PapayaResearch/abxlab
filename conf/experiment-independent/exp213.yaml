@@ -5,8 +5,8 @@ task:
   config:
     task_id: 213
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/yongnuo-yn50mm-f1-8s-lens-50mm-f1-8-larege-aperture-aps-c-standard-prime-e-mount-auto-manual-focus-af-mf-usb-for-sony-cameras.html
-    - http://matlaber12.media.mit.edu:7770/7artisans-55mm-f1-4-ii-large-aperture-portrait-manual-focus-micro-camera-lens-fit-for-fuji-cameras-x-a1-x-a2-x-at-x-m1-xm2-x-t1-x-t2-x-t10-x-pro1-x-e1-x-e2-and-tuyung-cloth.html
+    - ${env.wa_shopping_url}yongnuo-yn50mm-f1-8s-lens-50mm-f1-8-larege-aperture-aps-c-standard-prime-e-mount-auto-manual-focus-af-mf-usb-for-sony-cameras.html
+    - ${env.wa_shopping_url}7artisans-55mm-f1-4-ii-large-aperture-portrait-manual-focus-micro-camera-lens-fit-for-fuji-cameras-x-a1-x-a2-x-at-x-m1-xm2-x-t1-x-t2-x-t10-x-pro1-x-e1-x-e2-and-tuyung-cloth.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 293
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/canon-powershot-sx620-hs-wi-fi-digital-camera-silver-with-2x-sandisk-16-gb-sd-memory-cards-tripod-canon-case-card-reader-cleaning-kit.html
-    - http://matlaber12.media.mit.edu:7770/canon-powershot-sx530-hs-wi-fi-enabled-digital-camera-with-32gb-sdhc-memory-card.html
+    - ${env.wa_shopping_url}canon-powershot-sx620-hs-wi-fi-digital-camera-silver-with-2x-sandisk-16-gb-sd-memory-cards-tripod-canon-case-card-reader-cleaning-kit.html
+    - ${env.wa_shopping_url}canon-powershot-sx530-hs-wi-fi-enabled-digital-camera-with-32gb-sdhc-memory-card.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

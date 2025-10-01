@@ -5,8 +5,8 @@ task:
   config:
     task_id: 105
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/lg-hu70la-4k-uhd-smart-home-theater-cinebeam-projector-with-alexa-built-in-lg-thinq-ai-google-assistant-and-lg-webos-lite-smart-tv-netflix-and-vudu-renewed.html
-    - http://matlaber12.media.mit.edu:7770/kaya-projector-xiaomi-1s-4k-projector-mjjgtyds04fm-ultra-short-throw-alpd-3-0-android-3d-home-cinema-projector-updated-version.html
+    - ${env.wa_shopping_url}lg-hu70la-4k-uhd-smart-home-theater-cinebeam-projector-with-alexa-built-in-lg-thinq-ai-google-assistant-and-lg-webos-lite-smart-tv-netflix-and-vudu-renewed.html
+    - ${env.wa_shopping_url}kaya-projector-xiaomi-1s-4k-projector-mjjgtyds04fm-ultra-short-throw-alpd-3-0-android-3d-home-cinema-projector-updated-version.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 404
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/table-tennis-paddle-grip-handle-compatible-for-oculus-quest-2-ping-pong-paddle-accessories-restore-realistic-play-table-tennis-feeling-1-pack-right-hand-white.html
-    - http://matlaber12.media.mit.edu:7770/amvr-lens-anti-scratch-ring-protecting-myopia-glasses-from-scratching-vr-headset-lens-compatible-for-oculus-quest-quest-2-rift-s-or-oculus-go.html
+    - ${env.wa_shopping_url}table-tennis-paddle-grip-handle-compatible-for-oculus-quest-2-ping-pong-paddle-accessories-restore-realistic-play-table-tennis-feeling-1-pack-right-hand-white.html
+    - ${env.wa_shopping_url}amvr-lens-anti-scratch-ring-protecting-myopia-glasses-from-scratching-vr-headset-lens-compatible-for-oculus-quest-quest-2-rift-s-or-oculus-go.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

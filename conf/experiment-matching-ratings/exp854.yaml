@@ -5,8 +5,8 @@ task:
   config:
     task_id: 854
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
-    - http://matlaber12.media.mit.edu:7770/reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
+    - ${env.wa_shopping_url}productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
+    - ${env.wa_shopping_url}reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
+    - url: ${env.wa_shopping_url}productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
       nudge: Social Proof
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
-    - url: http://matlaber12.media.mit.edu:7770/productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
+    - url: ${env.wa_shopping_url}productworks-project-total-homefx-800-series-seasonal-projector-plus-kit-assorted.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
-    - url: http://matlaber12.media.mit.edu:7770/reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
+    - url: ${env.wa_shopping_url}reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

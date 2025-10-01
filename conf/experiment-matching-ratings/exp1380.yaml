@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1380
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
-    - http://matlaber12.media.mit.edu:7770/jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
+    - ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
+    - ${env.wa_shopping_url}jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: http://matlaber12.media.mit.edu:7770/lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
+    - url: ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available
-    - url: http://matlaber12.media.mit.edu:7770/lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
+    - url: ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
-    - url: http://matlaber12.media.mit.edu:7770/jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
+    - url: ${env.wa_shopping_url}jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

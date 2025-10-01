@@ -5,8 +5,8 @@ task:
   config:
     task_id: 4
     start_urls:
-    - http://matlaber12.media.mit.edu:7770/samsung-galaxy-a50-us-version-factory-unlocked-cell-phone-with-64gb-memory-6-4-screen-black-sm-a505uzknxaa-renewed.html
-    - http://matlaber12.media.mit.edu:7770/alcatel-1-2019-5033e-4g-lte-5-inch-16gb-8mp-flash-quad-core-android-oreo-worldwide-unlocked-bluish-black.html
+    - ${env.wa_shopping_url}samsung-galaxy-a50-us-version-factory-unlocked-cell-phone-with-64gb-memory-6-4-screen-black-sm-a505uzknxaa-renewed.html
+    - ${env.wa_shopping_url}alcatel-1-2019-5033e-4g-lte-5-inch-16gb-8mp-flash-quad-core-android-oreo-worldwide-unlocked-bluish-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

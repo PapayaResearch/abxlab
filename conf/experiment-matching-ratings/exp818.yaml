@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/optoma-uhl55-portable-led-uhd-4k-smart-projector-compatible-with-alexa-renewed.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: http://matlaber12.media.mit.edu:7770/optoma-uhl55-portable-led-uhd-4k-smart-projector-compatible-with-alexa-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: http://matlaber12.media.mit.edu:7770/benq-sx920-dlp-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

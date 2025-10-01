@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}zeriyu-bluetooth-soundbar-16-inch-wireless-tv-speaker-home-stereo-theater-surround-sound-bar-colorful-ring-led-light-music-player-support-rca-aux-usb-tf-bs-20a.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category

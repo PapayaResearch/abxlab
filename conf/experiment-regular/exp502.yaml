@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/denon-ah-d5200-over-ear-headphones.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading audio experts

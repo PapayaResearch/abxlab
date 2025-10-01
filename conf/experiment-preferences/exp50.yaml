@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}basswood-hunters-23-x-15-oval-vintage-decorative-wall-mirror-white-wooden-crown-frame-antique-princess-decor-for-bedroom-playroom-dressers-living-room.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the mirrors category

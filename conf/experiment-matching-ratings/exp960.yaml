@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nec-np410w-2600-lumens-lcd-projector.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!
     - url: http://matlaber12.media.mit.edu:7770/nec-np410w-2600-lumens-lcd-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1
     - url: http://matlaber12.media.mit.edu:7770/mitsubishi-dlp-projector-xd90u.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1

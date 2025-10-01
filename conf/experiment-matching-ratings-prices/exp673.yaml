@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}valcom-s-504-interior-metal-speaker-with-25-70-volt-transformer-with-black-cloth-grille-gray.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category
     - url: ${env.wa_shopping_url}herdio-in-wall-speakers-5-25-inch-2-way-ceiling-bluetooth-audio-system-perfect-for-home-theater-living-room-office-shop.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 67.315
     - url: ${env.wa_shopping_url}valcom-s-504-interior-metal-speaker-with-25-70-volt-transformer-with-black-cloth-grille-gray.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 67.315
     - url: ${env.wa_shopping_url}herdio-in-wall-speakers-5-25-inch-2-way-ceiling-bluetooth-audio-system-perfect-for-home-theater-living-room-office-shop.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1
     - url: ${env.wa_shopping_url}valcom-s-504-interior-metal-speaker-with-25-70-volt-transformer-with-black-cloth-grille-gray.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1

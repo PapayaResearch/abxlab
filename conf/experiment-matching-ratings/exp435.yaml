@@ -24,14 +24,14 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/skyreat-wide-angle-lens-18mm-compatible-with-dji-pocket-2-1-osmo-pocket-lens-filter-magnetic-perfect-vlogging-accessories.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: http://matlaber12.media.mit.edu:7770/fujifilm-wlfxe01-e-series-wide-angle-conversion-lens-for-e500-e510-e550-digital-cameras.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

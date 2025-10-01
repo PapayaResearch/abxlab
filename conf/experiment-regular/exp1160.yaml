@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/mocohanar-hanging-round-mirror-with-macrame-fringe-tassels-art-boho-decorative-mirror-wall-decor-for-apartment-living-room-bedroom-baby-nursery-dorm-entryways-small.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping

@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}tracfone-samsung-s150g-double-minutes-tracfone.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the cell phones category

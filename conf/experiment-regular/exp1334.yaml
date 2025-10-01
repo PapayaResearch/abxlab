@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/wireless-headphones-10-hours-playtime-picun-hifi-stereo-bluetooth-headphones-ipx7-waterproof-sports-earbuds-with-hd-mic-magnetic-anti-fall-off-painless-fit-for-running-gym-workout-gift-black.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available

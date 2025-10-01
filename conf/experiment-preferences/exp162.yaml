@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}enuosuma-mini-projector-portable-video-projector-for-outdoor-home-theater-movie-projector-compatible-with-full-hd-1080p-hdmi-usb-av-laptop-smartphone.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the video projectors category

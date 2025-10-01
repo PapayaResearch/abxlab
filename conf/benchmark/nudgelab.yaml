@@ -1,7 +1,7 @@
 _target_: browsergym.experiments.benchmark.Benchmark
-name: nudgelab
+name: abxlab
 high_level_action_set_args:
-  _target_: nudgelab.actions.NudgeLabHighLevelActionSetArgs
+  _target_: abxlab.actions.ABxLabHighLevelActionSetArgs
   subsets: [custom]
   multiaction: false
   strict: false
@@ -12,7 +12,7 @@ supports_parallel_seeds: false
 backends:
   - webarena
 env_args_list:
-  - task_name: nudgelab.${task.name}
+  - task_name: abxlab.${task.name}
     task_seed: 0
     max_steps: 10
     headless: true

@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/fujinon-xf18mmf1-4-r-lm-wr.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition
     - url: http://matlaber12.media.mit.edu:7770/fujinon-xf18mmf1-4-r-lm-wr.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5
     - url: http://matlaber12.media.mit.edu:7770/voigtlander-heliar-classic-50mm-f-1-5-vm-lens.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5

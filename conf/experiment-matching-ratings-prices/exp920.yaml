@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}nec-np64-3000-lumens-xga-dlp-projector.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!
     - url: ${env.wa_shopping_url}nec-np64-3000-lumens-xga-dlp-projector.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 187.5
     - url: ${env.wa_shopping_url}infocus-in38-work-big-dlp-xga-projector-3500-lumens.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 187.5
     - url: ${env.wa_shopping_url}nec-np64-3000-lumens-xga-dlp-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: ${env.wa_shopping_url}infocus-in38-work-big-dlp-xga-projector-3500-lumens.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

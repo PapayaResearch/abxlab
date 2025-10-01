@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}amazrock-high-definition-headphone-wireless-bluetooth-super-bass-ab18-hd-bluetooth-over-the-ear-headphones-with-microphone-noise-isolation-high-end-driver-42-hour-playtime-50mm-driver.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the over-ear headphones

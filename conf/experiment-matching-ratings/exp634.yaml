@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-bluetooth-5-0-headphones-with-immersive-bass-sound-mini-charging-case-waterproof-earphones-for-sport-work-headsets-compatible-with-iphone-android-pc-white.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the earbuds category
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-bluetooth-5-0-headphones-with-immersive-bass-sound-mini-charging-case-waterproof-earphones-for-sport-work-headsets-compatible-with-iphone-android-pc-white.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-easy-touch-control-sport-earbuds-workout-headphones-bluetooth-earbuds-noise-cancelling-with-built-in-mic-stereo-sound-ideal-in-ear-headphones-for-jogging-workouts.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition
     - url: http://matlaber12.media.mit.edu:7770/mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: http://matlaber12.media.mit.edu:7770/h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

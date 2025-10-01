@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!
     - url: ${env.wa_shopping_url}canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 153.445
     - url: ${env.wa_shopping_url}meike-12mm-f2-8-ultra-wide-angle-manual-focus-lens-for-sony-e-mount-aps-c-mirrorless-cameras-nex-3-5t-nex-6-7-a6400-a6600-a6000-a6100-a6300-a6500-etc.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 153.445
     - url: ${env.wa_shopping_url}canon-ef-75-300mm-f-4-5-6-iii-usm-telephoto-zoom-lens-for-canon-slr-cameras.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}meike-12mm-f2-8-ultra-wide-angle-manual-focus-lens-for-sony-e-mount-aps-c-mirrorless-cameras-nex-3-5t-nex-6-7-a6400-a6600-a6000-a6100-a6300-a6500-etc.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

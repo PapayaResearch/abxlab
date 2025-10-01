@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/sony-cybershot-dsc-s650-7-2-mp-3x-optical-zoom-digital-camera-silver.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: http://matlaber12.media.mit.edu:7770/kids-digital-camera-heegomn-2-8-inch-lcd-20mp-compact-digital-camera-for-boys-and-girls-gift-portable-point-and-shoot-digital-camera-with-8x-digital-zoom-and-rechargeable-battery.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 3
     - url: http://matlaber12.media.mit.edu:7770/sony-cybershot-dsc-s650-7-2-mp-3x-optical-zoom-digital-camera-silver.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 3

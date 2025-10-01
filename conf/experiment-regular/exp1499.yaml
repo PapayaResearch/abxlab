@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/bluetooth-stereo-headset-wireless-headphones-with-mic-with-usb-adapter-dongle-for-pc-great-for-home-office-business-pc-call-centers-skype-calls-foldable-on-ear-design.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.

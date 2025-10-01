@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/supereq-s8-active-noise-cancelling-headphones-on-ear-bluetooth-headsets-w-built-in-mic-for-kids-adults-wireless-wired-2-in-1-18-hrs-playtime-hifi-audio-for-pc-computer-laptop-tablet-phones.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading audio experts

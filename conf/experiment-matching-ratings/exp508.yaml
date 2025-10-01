@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/assorted-deodorants-for-men.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading dermatologists
     - url: http://matlaber12.media.mit.edu:7770/assorted-deodorants-for-men.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
     - url: http://matlaber12.media.mit.edu:7770/right-guard-xtreme-fresh-invisible-solid-antiperspirant-deodorant-recharge.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6

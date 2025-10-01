@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition
     - url: ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 43.144999999999996
     - url: ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 43.144999999999996
     - url: ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

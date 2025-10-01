@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}superx-bluetooth-5-0-wireless-earbuds-with-charging-case-ipx5-sweatproof-headset-headphones-in-ear-built-in-mic-industrial-leading-tws-sound-with-sport-pumping-bass-platinum-silver.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the earbuds category

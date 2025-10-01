@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/panasonic-lumix-dmc-fz70-digital-camera-60x-optical-zoom-16mp-black-4gb-sdhc-card.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category

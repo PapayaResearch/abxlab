@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the mirrors category
     - url: http://matlaber12.media.mit.edu:7770/safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: http://matlaber12.media.mit.edu:7770/designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

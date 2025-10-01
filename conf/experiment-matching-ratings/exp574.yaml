@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading professional photographers
     - url: http://matlaber12.media.mit.edu:7770/sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: http://matlaber12.media.mit.edu:7770/ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

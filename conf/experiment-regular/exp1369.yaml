@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/mini-wifi-bluetooth-projector-ellephas-1080p-full-hd-supported-movie-projector-home-theater-video-projector-with-100-projector-screen-zoom-compatible-with-android-ios-pc-tv-stick-ps4-dvd-player.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available

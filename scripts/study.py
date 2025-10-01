@@ -28,8 +28,8 @@ from hydra import compose, initialize_config_dir
 from hydra.utils import get_original_cwd
 from hydra.core.global_hydra import GlobalHydra
 from omegaconf import OmegaConf, DictConfig
-from nudgelab.browser import NudgeLabBrowserEnv
-from nudgelab.task import StaticPageTask
+from abxlab.browser import ABxLabBrowserEnv
+from abxlab.task import StaticPageTask
 from tqdm import tqdm
 import pandas as pd
 import multiprocessing
@@ -67,7 +67,7 @@ def process_experiment(args):
         name = f"{exp_name}_{idx}"
 
         # Simulate environment
-        env = NudgeLabBrowserEnv(
+        env = ABxLabBrowserEnv(
             task_entrypoint=StaticPageTask,
             task_kwargs={
                 "url": url,

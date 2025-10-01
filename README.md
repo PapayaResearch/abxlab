@@ -1,6 +1,6 @@
-## Setup NudgeLab
+## Setup ABxLab
 
-NudgeLab requires python 3.11 or 3.12.
+ABxLab requires python 3.11 or 3.12.
 
 ```bash
 pip install -r requirements.txt

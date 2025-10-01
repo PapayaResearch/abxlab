@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/sony-cybershot-dsc-s650-7-2-mp-3x-optical-zoom-digital-camera-silver.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category

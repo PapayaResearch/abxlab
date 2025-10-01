@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/google-pixel-4a-with-5g-6-2-128gb-6gb-ram-unlocked-cellular-just-black-renewed.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available
     - url: http://matlaber12.media.mit.edu:7770/google-pixel-4a-with-5g-6-2-128gb-6gb-ram-unlocked-cellular-just-black-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: http://matlaber12.media.mit.edu:7770/google-pixel-4-just-black-64gb-unlocked.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

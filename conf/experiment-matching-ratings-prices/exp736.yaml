@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!
     - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 339.0
     - url: ${env.wa_shopping_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 339.0
     - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: ${env.wa_shopping_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

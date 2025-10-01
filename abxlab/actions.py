@@ -18,9 +18,9 @@ from browsergym.core.action.functions import (
 )
 
 
-class NudgeLabHighLevelActionSet(HighLevelActionSet):
+class ABxLabHighLevelActionSet(HighLevelActionSet):
     """
-    Custom HighLevelActionSet for NudgeLab.
+    Custom HighLevelActionSet for ABxLab.
     """
 
     # static class variables
@@ -158,9 +158,9 @@ if demo_mode is None:
 
 
 @dataclass
-class NudgeLabHighLevelActionSetArgs(HighLevelActionSetArgs):
+class ABxLabHighLevelActionSetArgs(HighLevelActionSetArgs):
     """
-    Custom HighLevelActionSetArgs for NudgeLab.
+    Custom HighLevelActionSetArgs for ABxLab.
     """
     subsets = ["custom"]  # Override the subsets to include 'custom'
 
@@ -170,7 +170,7 @@ class NudgeLabHighLevelActionSetArgs(HighLevelActionSetArgs):
             self.subsets = tuple(self.subsets)
 
     def make_action_set(self):
-        return NudgeLabHighLevelActionSet(
+        return ABxLabHighLevelActionSet(
             subsets=self.subsets,
             custom_actions=[
                 click,

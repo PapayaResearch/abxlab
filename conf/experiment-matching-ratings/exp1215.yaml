@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: http://matlaber12.media.mit.edu:7770/canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5
     - url: http://matlaber12.media.mit.edu:7770/canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5

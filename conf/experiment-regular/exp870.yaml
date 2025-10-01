@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/t-mobile-revvl-4-6-2-al-5007w-4g-lte-32gb-t-mobile-13mp-android-smartphone-graphite-renewed.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers

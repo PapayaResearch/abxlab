@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/mitsubishi-dlp-projector-xd90u.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading home theater experts

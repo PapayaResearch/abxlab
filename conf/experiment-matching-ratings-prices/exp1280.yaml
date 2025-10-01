@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 52.48
     - url: ${env.wa_shopping_url}jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 52.48
     - url: ${env.wa_shopping_url}lg-sn6y-3-1-channel-high-res-audio-sound-bar-with-deco-gear-pro-hdmi-bundle.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
     - url: ${env.wa_shopping_url}jamo-studio-series-s-805-hcs-blk-black-home-cinema-system.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6

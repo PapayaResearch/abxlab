@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition
     - url: ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 37.45
     - url: ${env.wa_shopping_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 37.45
     - url: ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

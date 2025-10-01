@@ -5,7 +5,7 @@ width: 1280
 height: 720
 slow_mo: 1000
 timeout: 10000
-entrypoint: nudgelab.task.NudgeLabShopTask
+entrypoint: abxlab.task.ABxLabShopTask
 config:
   sites:
     - shopping
@@ -24,7 +24,7 @@ config:
     - url: "*"
       nudge: Social Proof
       functions:
-        - module: nudgelab.choices.shop.home
+        - module: abxlab.choices.shop.home
           name: subtitle
           args:
             value: This product is a best seller!

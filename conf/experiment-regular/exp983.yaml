@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/samsung-693-hg32nf693gf-32-1080p-led-lcd-tv-16-9-hdtv-black-atsc-1920-x-1080-dolby-digital-plus-10-w-rms-led-backlight-smart-tv-3-x-hdmi-usb-ethernet-wireless-lan-dln.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

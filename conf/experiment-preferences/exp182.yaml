@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}lg-43up8000pua-alexa-built-in-43-4k-smart-uhd-tv-2021-renewed.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the TVs category

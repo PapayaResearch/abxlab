@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/usb-type-c-earbud-headphones-hi-res-in-ear-earphone-with-mic-compatible-with-ipad-pro-macbook-pro-air-google-pixel-3a-xl-3-2-oneplus-8-7-motorola-htc-sony-xperia-xiaomi-essential-usb-c-phone.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

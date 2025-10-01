@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading home decor experts
     - url: ${env.wa_shopping_url}mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 76.935
     - url: ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 76.935
     - url: ${env.wa_shopping_url}mirrorize-22x17-framed-gold-hexagon-mirror-geometric-hanging-modern-metal-frame-accent-wall-mirror-for-bathroom-entryway-bedroom-imp8449.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

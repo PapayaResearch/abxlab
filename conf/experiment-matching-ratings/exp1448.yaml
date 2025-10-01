@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/sony-wi-sp510-extra-bass-wireless-in-ear-headset-headphones-with-mic-for-phone-call-sports-ipx5-bluetooth-black-wisp510-b.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.
     - url: http://matlaber12.media.mit.edu:7770/sony-wi-sp510-extra-bass-wireless-in-ear-headset-headphones-with-mic-for-phone-call-sports-ipx5-bluetooth-black-wisp510-b.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-bluetooth-5-0-headphones-automatic-noise-reduction-in-ear-airbuds-with-airpod-silicone-protective-case-built-in-binaural-mic-earphones-for-iphone-android.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

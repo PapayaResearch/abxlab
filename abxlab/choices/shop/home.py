@@ -20,8 +20,8 @@
 # SOFTWARE.
 
 import random
-import nudgelab.choices.shop.product
-import nudgelab.choices.shop.category
+import abxlab.choices.shop.product
+import abxlab.choices.shop.category
 from bs4 import BeautifulSoup
 
 
@@ -34,11 +34,11 @@ def subtitle(
 
     if soup.find("meta", property="og:type", content="product"):
         # Page type is product
-        return nudgelab.choices.shop.product.subtitle(original_html, value)
+        return abxlab.choices.shop.product.subtitle(original_html, value)
 
     if soup.select_one("div.sidebar-main div.filter"):
         # Page type is category
-        return nudgelab.choices.shop.category.subtitle(original_html, value)
+        return abxlab.choices.shop.category.subtitle(original_html, value)
 
     if soup.title and soup.title.string.strip() == "One Stop Market":
         # Page type is home

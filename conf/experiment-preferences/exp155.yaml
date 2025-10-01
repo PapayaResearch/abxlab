@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}polk-reserve-series-r200-large-bookshelf-speaker-for-dynamic-audio-new-1-pinnacle-ring-tweeter-6-5-turbine-cone-woofer-hi-res-certified-dolby-atmos-imax-enhanced-wall-mountable-pair.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category

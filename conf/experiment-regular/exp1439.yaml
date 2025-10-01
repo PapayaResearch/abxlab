@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/superx-bluetooth-5-0-wireless-earbuds-with-charging-case-ipx5-sweatproof-headset-headphones-in-ear-built-in-mic-industrial-leading-tws-sound-with-sport-pumping-bass-platinum-silver.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.

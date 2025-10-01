@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts

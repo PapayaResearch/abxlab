@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: http://matlaber12.media.mit.edu:7770/theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: http://matlaber12.media.mit.edu:7770/bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

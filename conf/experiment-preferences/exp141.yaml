@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}native-1080p-wifi-bluetooth-projector-dbpower-8000l-full-hd-outdoor-movie-projector-support-ios-android-sync-screen-zoom-home-theater-video-projector-compatible-w-pc-dvd-tv-carrying-case-included.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the video projectors category

@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/3-5mm-headphones-for-moto-g-pure-2021-jelanry-wired-in-ear-earbuds-with-mic-volume-control-3-5mm-jack-earphones-for-macbook-pro-ps5-pc-laptop-iphone-6s-5s-se-ipad-ipod-pixel-5a-samsung-a13-a12-s10.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the earbuds category

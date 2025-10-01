@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}geg-neckband-bluetooth-earphone-foldable-bluetooth-headphone-v5-0-technology-ipx5-waterproof-and-9-hours-playing-time-compatible-with-all-cell-phones-white.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition
     - url: ${env.wa_shopping_url}geg-neckband-bluetooth-earphone-foldable-bluetooth-headphone-v5-0-technology-ipx5-waterproof-and-9-hours-playing-time-compatible-with-all-cell-phones-white.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 20.165
     - url: ${env.wa_shopping_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 20.165
     - url: ${env.wa_shopping_url}geg-neckband-bluetooth-earphone-foldable-bluetooth-headphone-v5-0-technology-ipx5-waterproof-and-9-hours-playing-time-compatible-with-all-cell-phones-white.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
     - url: ${env.wa_shopping_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8

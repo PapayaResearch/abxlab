@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/perioscience-sensitive-toothpaste-soothing-oral-care-hydroxyapatite-anti-cavity-whitening-enamel-defense-for-mouth-sensitivity-ao-pro-dentist-recommended-clean-teeth-plaque-removal.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition

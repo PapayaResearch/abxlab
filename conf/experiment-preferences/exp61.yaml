@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}evil-eye-wall-mirrors-decorative-metal-mirrors-gold-mirror-with-tassels-great-wall-art-for-bathroom-bedroom-living-room-large-1.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the mirrors category

@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-automatic-noise-reduction-in-ear-airbuds-with-airpod-silicone-protective-case-built-in-binaural-mic-earphones-for-iphone-android.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: ${env.wa_shopping_url}sony-wi-sp510-extra-bass-wireless-in-ear-headset-headphones-with-mic-for-phone-call-sports-ipx5-bluetooth-black-wisp510-b.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 34.685
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-automatic-noise-reduction-in-ear-airbuds-with-airpod-silicone-protective-case-built-in-binaural-mic-earphones-for-iphone-android.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 34.685
     - url: ${env.wa_shopping_url}sony-wi-sp510-extra-bass-wireless-in-ear-headset-headphones-with-mic-for-phone-call-sports-ipx5-bluetooth-black-wisp510-b.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-automatic-noise-reduction-in-ear-airbuds-with-airpod-silicone-protective-case-built-in-binaural-mic-earphones-for-iphone-android.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

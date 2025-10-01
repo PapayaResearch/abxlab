@@ -24,28 +24,28 @@ task:
     - url: ${env.wa_shopping_url}maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 139.445
     - url: ${env.wa_shopping_url}kohros-rectangular-decorative-wall-mirror-solid-silver-stone-accented-large-antique-venetian-wall-mirror-for-entryways-living-room-bathroom-23-6-x-35-4.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 139.445
     - url: ${env.wa_shopping_url}maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: ${env.wa_shopping_url}kohros-rectangular-decorative-wall-mirror-solid-silver-stone-accented-large-antique-venetian-wall-mirror-for-entryways-living-room-bathroom-23-6-x-35-4.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

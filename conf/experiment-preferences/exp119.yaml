@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}xiaomi-redmi-note-10-pro-128gb-6gb-ram-factory-unlocked-gsm-only-not-compatible-with-verizon-sprint-international-model-glacier-blue.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the cell phones category

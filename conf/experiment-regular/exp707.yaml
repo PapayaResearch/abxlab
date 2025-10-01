@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!

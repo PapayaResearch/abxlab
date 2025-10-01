@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/anchor-new-zealand-cheddar.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!

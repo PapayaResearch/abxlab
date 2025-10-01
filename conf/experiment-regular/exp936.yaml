@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/canon-rf14-35mm-f4-l-is-usm-lens.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

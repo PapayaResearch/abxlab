@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}xit-xt30wab-30mm-0-43x-wide-angle-lens-for-camera-black.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the camera lenses category

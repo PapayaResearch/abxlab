@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nikon-af-s-fx-nikkor-80-400mm-f-4-5-5-6g-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras-renewed.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts

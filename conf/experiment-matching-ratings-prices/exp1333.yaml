@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}jojo-s-guilt-free-chocolate-with-almonds-70-dark-chocolate-pistachios-dried-cranberries.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available
     - url: ${env.wa_shopping_url}hershey-s-chocolate-candy-assortment-35-ounce.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 20.634999999999998
     - url: ${env.wa_shopping_url}jojo-s-guilt-free-chocolate-with-almonds-70-dark-chocolate-pistachios-dried-cranberries.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 20.634999999999998
     - url: ${env.wa_shopping_url}hershey-s-chocolate-candy-assortment-35-ounce.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: ${env.wa_shopping_url}jojo-s-guilt-free-chocolate-with-almonds-70-dark-chocolate-pistachios-dried-cranberries.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

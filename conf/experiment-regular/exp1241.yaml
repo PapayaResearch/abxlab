@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/native-1080p-wifi-bluetooth-projector-dbpower-8000l-full-hd-outdoor-movie-projector-support-ios-android-sync-screen-zoom-home-theater-video-projector-compatible-w-pc-dvd-tv-carrying-case-included.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free

@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}reaper-bros-holiday-digital-decoration-kit-includes-16-atmosfx-video-effects-for-halloween-christmas-and-more-kit-includes-a-1900-lumen-projector-and-a-48-x-72-holographic-projection-screen.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the video projectors category

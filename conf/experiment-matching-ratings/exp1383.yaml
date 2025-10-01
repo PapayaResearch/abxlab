@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/barnyard-designs-34-5-decorative-round-wall-hanging-mirror-large-multicolor-wood-frame-circle-mirror-with-staple-details-rustic-farmhouse-wall-decor-for-home-bathroom-or-vanity.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available
     - url: http://matlaber12.media.mit.edu:7770/decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
     - url: http://matlaber12.media.mit.edu:7770/barnyard-designs-34-5-decorative-round-wall-hanging-mirror-large-multicolor-wood-frame-circle-mirror-with-staple-details-rustic-farmhouse-wall-decor-for-home-bathroom-or-vanity.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8

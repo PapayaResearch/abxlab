@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}canon-90d-digital-slr-camera-body-only-renewed.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category

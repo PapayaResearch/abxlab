@@ -6,18 +6,18 @@ import playwright.sync_api
 from bs4 import BeautifulSoup
 from browsergym.core.task import AbstractBrowserTask
 from browsergym.webarena.instance import WebArenaInstance
-from nudgelab.evaluators import evaluator_router
-from nudgelab.choices.shop.home import rating as home_rating
-from nudgelab.choices.shop.category import rating as category_rating
-from nudgelab.choices.shop.product import rating as product_rating
+from abxlab.evaluators import evaluator_router
+from abxlab.choices.shop.home import rating as home_rating
+from abxlab.choices.shop.category import rating as category_rating
+from abxlab.choices.shop.product import rating as product_rating
 
 
 logger = logging.getLogger(__name__)
 
 
-class NudgeLabTask(AbstractBrowserTask):
+class ABxLabTask(AbstractBrowserTask):
     """
-    Base class for all NudgeLab tasks.
+    Base class for all ABxLab tasks.
     """
     def __init__(
         self,
@@ -169,14 +169,14 @@ If you believe the task is impossible to complete, provide the answer "N/A".
         """
         Do any task-specific processing of the page's underlying content here.
 
-        This will be called by nudgelab.browser.NudgeLabBrowserEnv in the route handler.
+        This will be called by abxlab.browser.ABxLabBrowserEnv in the route handler.
         """
         return html
 
 
-class NudgeLabShopTask(NudgeLabTask):
+class ABxLabShopTask(ABxLabTask):
     """
-    NudgeLabShopTask is a subclass of NudgeLabTask that implements some extra logic for the shop task.
+    ABxLabShopTask is a subclass of ABxLabTask that implements some extra logic for the shop task.
     """
 
     def process_html(self, html: str) -> str:

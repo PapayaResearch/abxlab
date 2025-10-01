@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/wireless-v5-bluetooth-earbuds-works-for-apple-iphone-12-12-pro-12-pro-max-12-mini-with-charging-case-for-in-ear-headphones-v5-0-black.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

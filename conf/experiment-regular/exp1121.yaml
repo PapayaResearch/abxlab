@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/godox-tt350s-2-4g-hss-1-8000s-ttl-gn36-camera-speedlite-compatible-for-sony-mirrorless-digital-camera.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping

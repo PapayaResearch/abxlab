@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nikon-auto-focus-s-fx-tc-20e-iii-teleconverter-lens-with-auto-focus-for-nikon-dslr-cameras.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the camera lenses category
     - url: http://matlaber12.media.mit.edu:7770/canon-rf24-105mm-f4-7-1-is-stm-4111c002-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: http://matlaber12.media.mit.edu:7770/nikon-auto-focus-s-fx-tc-20e-iii-teleconverter-lens-with-auto-focus-for-nikon-dslr-cameras.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

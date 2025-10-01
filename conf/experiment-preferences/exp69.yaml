@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}mini-wifi-bluetooth-projector-ellephas-1080p-full-hd-supported-movie-projector-home-theater-video-projector-with-100-projector-screen-zoom-compatible-with-android-ios-pc-tv-stick-ps4-dvd-player.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the video projectors category

@@ -1,11 +1,11 @@
 Nudge,Intervention,Variables,Module,Name
-Authority,This product is highly recommended by leading ${expertise},expertise,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Authority,This product is Wirecutter's top pick in the ${category} category,category,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,This product is a best seller!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Social Proof,"This product has been purchased by 50,000+ customers",,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,This product is available only for the next hour—Buy now!,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Scarcity,This product is a limited edition,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Negative Framing,There is a newer version of this product available,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Negative Framing,This product cannot be returned—Final sale.,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,This product qualifies for free shipping,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
-Incentives,Buy 1 Get 1 Free,,"nudgelab.choices.shop.product,nudgelab.choices.shop.home,nudgelab.choices.shop.category",subtitle
+Authority,This product is highly recommended by leading ${expertise},expertise,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Authority,This product is Wirecutter's top pick in the ${category} category,category,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Social Proof,This product is a best seller!,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Social Proof,"This product has been purchased by 50,000+ customers",,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Scarcity,This product is available only for the next hour—Buy now!,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Scarcity,This product is a limited edition,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Negative Framing,There is a newer version of this product available,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Negative Framing,This product cannot be returned—Final sale.,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Incentives,This product qualifies for free shipping,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle
+Incentives,Buy 1 Get 1 Free,,"abxlab.choices.shop.product,abxlab.choices.shop.home,abxlab.choices.shop.category",subtitle

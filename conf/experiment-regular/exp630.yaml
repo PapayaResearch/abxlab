@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nikon-coolpix-b500-16mp-digital-camera-with-3-inch-tft-lcd-screen-nikkor-lens-with-40x-optical-zoom-wifi-64gb-memory-card-black.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category

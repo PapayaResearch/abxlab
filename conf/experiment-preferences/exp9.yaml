@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}the-hillman-group-122200-mirror-rosettes-clear.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the mirrors category

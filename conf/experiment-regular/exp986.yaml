@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/amazrock-high-definition-headphone-wireless-bluetooth-super-bass-ab18-hd-bluetooth-over-the-ear-headphones-with-microphone-noise-isolation-high-end-driver-42-hour-playtime-50mm-driver.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

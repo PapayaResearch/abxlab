@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!
     - url: http://matlaber12.media.mit.edu:7770/geg-neckband-bluetooth-earphone-foldable-bluetooth-headphone-v5-0-technology-ipx5-waterproof-and-9-hours-playing-time-compatible-with-all-cell-phones-white.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8

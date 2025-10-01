@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping

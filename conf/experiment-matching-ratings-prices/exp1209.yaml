@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}right-guard-xtreme-fresh-invisible-solid-antiperspirant-deodorant-recharge.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: ${env.wa_shopping_url}assorted-deodorants-for-men.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 27.555
     - url: ${env.wa_shopping_url}right-guard-xtreme-fresh-invisible-solid-antiperspirant-deodorant-recharge.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 27.555
     - url: ${env.wa_shopping_url}assorted-deodorants-for-men.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
     - url: ${env.wa_shopping_url}right-guard-xtreme-fresh-invisible-solid-antiperspirant-deodorant-recharge.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6

@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}nikon-coolpix-b500-wi-fi-nfc-digital-camera-w-40x-zoom-hd-video-plum-international-version-no-warranty-4-aa-batteries-with-charger-10pc-32gb-dlx-accessory-kit-w-herofiber-cleaning-cloth.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category

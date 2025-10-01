@@ -77,7 +77,7 @@ def generate_experiments(
     df_interventions["Module"] = df_interventions["Module"].str.split(",")
     df_interventions = df_interventions.explode("Module")
     df_interventions = df_interventions.reset_index(drop=True)
-    df_interventions = df_interventions[df_interventions["Module"] == "nudgelab.choices.shop.product"]
+    df_interventions = df_interventions[df_interventions["Module"] == "abxlab.choices.shop.product"]
     df_interventions["Starting Point"] = "Product"
 
     # Combine intents and interventions

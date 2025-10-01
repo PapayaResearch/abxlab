@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/tv-sound-bar-with-built-in-subwoofer-2-0-channel-sound-bar-with-wired-and-wireless-bluetooth-5-0-home-audio-speaker-24-inch-60w-deep-bass-wall-mountable.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

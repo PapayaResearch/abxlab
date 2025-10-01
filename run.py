@@ -11,12 +11,12 @@ os.environ["AGENTLAB_EXP_ROOT"] = os.path.join( # Make unique run directory (mai
 )
 import hydra
 import gymnasium as gym
-import nudgelab.task
+import abxlab.task
 from pathlib import Path
 from omegaconf import OmegaConf, DictConfig
 from agentlab.experiments.study import Study
 from browsergym.experiments.loop import EnvArgs
-from nudgelab.browser import NudgeLabBrowserEnv
+from abxlab.browser import ABxLabBrowserEnv
 
 
 @hydra.main(config_path="conf", config_name="config", version_base="1.3")
@@ -56,11 +56,11 @@ def main(cfg: DictConfig):
 
     # Register the env here, so we don't need to reach into BrowserGym
     gym.register(
-        id=f"browsergym/nudgelab.{cfg.task.name}",
-        entry_point=lambda *env_args, **env_kwargs: NudgeLabBrowserEnv(
+        id=f"browsergym/abxlab.{cfg.task.name}",
+        entry_point=lambda *env_args, **env_kwargs: ABxLabBrowserEnv(
             task_entrypoint=getattr(
-                nudgelab.task,
-                cfg.task.entrypoint.replace("nudgelab.task.", "")
+                abxlab.task,
+                cfg.task.entrypoint.replace("abxlab.task.", "")
             ),
             task_kwargs={
                 **OmegaConf.to_container(cfg.task, resolve=True),

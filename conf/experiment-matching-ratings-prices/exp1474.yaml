@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.
     - url: ${env.wa_shopping_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 56.94
     - url: ${env.wa_shopping_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 56.94
     - url: ${env.wa_shopping_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: ${env.wa_shopping_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

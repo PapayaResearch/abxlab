@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/sephia-sp3060vc-earbuds-wired-in-ear-headphones-with-microphone-noise-isolating-ear-bud-tips-enhanced-bass-case-3-5mm-earphone-jack-3-9-feet-long-cord-for-smartphones-laptops-tablets-computers.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading audio experts

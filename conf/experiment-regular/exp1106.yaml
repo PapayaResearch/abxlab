@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/new-oem-dell-multimedia-soundbar-speaker-sound-bar-ax510-black-ax510pa-c730c-dw711-lcd-468-7411-313-6412-313-6219-313-6413-313-6412-monitor-flat-panel-screen-black-home-theater-ultrasharp.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping

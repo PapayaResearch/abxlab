@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/plantronics-backbeat-fit-3100-true-wireless-earbuds-sweatproof-and-waterproof-in-ear-workout-headphones-black-renewed.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: http://matlaber12.media.mit.edu:7770/jabra-elite-active-65t-earbuds-true-wireless-earbuds-with-charging-case-copper-red-bluetooth-earbuds-with-a-secure-fit-and-superior-sound-long-battery-life-and-more-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 41
     - url: http://matlaber12.media.mit.edu:7770/plantronics-backbeat-fit-3100-true-wireless-earbuds-sweatproof-and-waterproof-in-ear-workout-headphones-black-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 41

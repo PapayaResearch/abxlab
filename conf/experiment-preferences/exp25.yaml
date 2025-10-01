@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}cotogni-p3-true-wireless-earbuds-bluetooth-headphones-with-type-c-charging-case-and-mic-in-ear-stereo-earphones-headset-white.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the earbuds category

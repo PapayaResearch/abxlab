@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category
     - url: http://matlaber12.media.mit.edu:7770/soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: http://matlaber12.media.mit.edu:7770/samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

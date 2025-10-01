@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}7artisans-7-5mm-f2-8-ii-manual-fisheye-lens-compatible-with-mft-m4-3-mount-cameras-gm1-gm5-gm7-gx1-gx7-gx8-epm1-epm2-e-p1-e-p2-e-p3-e-p5-e-m1-e-m1ii-e-m5-e-m5ii.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the camera lenses category

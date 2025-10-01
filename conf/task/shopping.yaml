@@ -10,7 +10,7 @@ height: 720
 slow_mo: 1000 # ms
 timeout: 10000 # ms
 
-entrypoint: nudgelab.task.NudgeLabShopTask
+entrypoint: abxlab.task.ABxLabShopTask
 
 config:
   # Site configuration
@@ -33,7 +33,7 @@ config:
     - url: ??? # Example URL
       nudge: ??? # Type of nudge
       functions:
-        - module: nudgelab.choices.shop
+        - module: abxlab.choices.shop
           name: ???
           args:
             value: ???

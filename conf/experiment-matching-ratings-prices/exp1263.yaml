@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}benq-mu686-high-brightness-low-noise-business-projector-with-wuxga-for-wireless-presentation-projector.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: ${env.wa_shopping_url}epson-powerlite-109w-lcd-projector-16-10.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 842.9549999999999
     - url: ${env.wa_shopping_url}benq-mu686-high-brightness-low-noise-business-projector-with-wuxga-for-wireless-presentation-projector.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 842.9549999999999
     - url: ${env.wa_shopping_url}epson-powerlite-109w-lcd-projector-16-10.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1
     - url: ${env.wa_shopping_url}benq-mu686-high-brightness-low-noise-business-projector-with-wuxga-for-wireless-presentation-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1

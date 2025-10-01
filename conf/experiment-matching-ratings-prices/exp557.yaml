@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts
     - url: ${env.wa_shopping_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 1252.995
     - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 1252.995
     - url: ${env.wa_shopping_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 9
     - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 9

@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping

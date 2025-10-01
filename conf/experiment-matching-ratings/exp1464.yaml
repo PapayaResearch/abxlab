@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/bluetooth-foldable-retractable-headphones-2021-upgraded-wireless-earbuds-neckband-headset-sports-sweatproof-earphones-with-carrying-case-15hours-playtime.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.
     - url: http://matlaber12.media.mit.edu:7770/bluetooth-foldable-retractable-headphones-2021-upgraded-wireless-earbuds-neckband-headset-sports-sweatproof-earphones-with-carrying-case-15hours-playtime.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: http://matlaber12.media.mit.edu:7770/gsangoo-in-ear-usb-c-headphones-with-microphone-for-galaxy-s21-s20-fe-earbuds-stereo-sound-noise-isolation-wired-type-c-earphones-for-oneplus-8t-7t-pro-samsung-note-20-ultra-s20-plus-google-pixel-6-4.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

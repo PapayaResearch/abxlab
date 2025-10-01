@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/srhythm-nc35-noise-cancelling-headphones-real-over-ear-wireless-lightweight-durable-foldable-bluetooth-headset-bundles-with-protein-leather-earpads-replacement-memory-foam-cushions.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the over-ear headphones

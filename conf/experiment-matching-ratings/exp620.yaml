@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nec-np64-3000-lumens-xga-dlp-projector.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the video projectors category
     - url: http://matlaber12.media.mit.edu:7770/nec-np64-3000-lumens-xga-dlp-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: http://matlaber12.media.mit.edu:7770/infocus-in38-work-big-dlp-xga-projector-3500-lumens.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

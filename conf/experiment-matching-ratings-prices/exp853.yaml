@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 124.685
     - url: ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 124.685
     - url: ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
     - url: ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8

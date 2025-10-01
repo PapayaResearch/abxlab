@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}viewsonic-pjl6233-30-inch-1080i-front-projector-black.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: ${env.wa_shopping_url}optoma-eh334-1080p-full-hd-3d-dlp-business-projector.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 60.18
     - url: ${env.wa_shopping_url}viewsonic-pjl6233-30-inch-1080i-front-projector-black.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 60.18
     - url: ${env.wa_shopping_url}optoma-eh334-1080p-full-hd-3d-dlp-business-projector.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1
     - url: ${env.wa_shopping_url}viewsonic-pjl6233-30-inch-1080i-front-projector-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1

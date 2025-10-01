@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/lg-43up8000pua-alexa-built-in-43-4k-smart-uhd-tv-2021-renewed.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a limited edition

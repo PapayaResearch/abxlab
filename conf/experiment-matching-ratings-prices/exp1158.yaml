@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}fujinon-xf18mmf1-4-r-lm-wr.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping
     - url: ${env.wa_shopping_url}fujinon-xf18mmf1-4-r-lm-wr.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 924.0
     - url: ${env.wa_shopping_url}voigtlander-heliar-classic-50mm-f-1-5-vm-lens.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 924.0
     - url: ${env.wa_shopping_url}fujinon-xf18mmf1-4-r-lm-wr.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5
     - url: ${env.wa_shopping_url}voigtlander-heliar-classic-50mm-f-1-5-vm-lens.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5

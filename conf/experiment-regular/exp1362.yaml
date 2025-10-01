@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/enuosuma-mini-projector-portable-video-projector-for-outdoor-home-theater-movie-projector-compatible-with-full-hd-1080p-hdmi-usb-av-laptop-smartphone.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: There is a newer version of this product available

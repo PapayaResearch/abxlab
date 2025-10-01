@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/basswood-hunters-23-x-15-oval-vintage-decorative-wall-mirror-white-wooden-crown-frame-antique-princess-decor-for-bedroom-playroom-dressers-living-room.html
       nudge: Negative Framing
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.

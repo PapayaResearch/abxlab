@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/nissin-air-r-wireless-radio-receiver-compatible-with-fits-sony-flashes.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

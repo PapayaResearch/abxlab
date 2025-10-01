@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!
     - url: ${env.wa_shopping_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 79.43
     - url: ${env.wa_shopping_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 79.43
     - url: ${env.wa_shopping_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: ${env.wa_shopping_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

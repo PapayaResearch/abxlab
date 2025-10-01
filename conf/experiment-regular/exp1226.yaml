@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/gsangoo-in-ear-usb-c-earphones-with-microphone-for-galaxy-s21-ultra-note-20-earbuds-stereo-sound-noise-isolation-wired-type-c-headphones-for-oneplus-8t-9-pro-samsung-s20-fe-s20-plus-google-pixel-6-pro.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free

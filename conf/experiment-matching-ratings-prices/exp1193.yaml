@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}plantronics-backbeat-fit-3100-true-wireless-earbuds-sweatproof-and-waterproof-in-ear-workout-headphones-black-renewed.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping
     - url: ${env.wa_shopping_url}jabra-elite-active-65t-earbuds-true-wireless-earbuds-with-charging-case-copper-red-bluetooth-earbuds-with-a-secure-fit-and-superior-sound-long-battery-life-and-more-renewed.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 54.97
     - url: ${env.wa_shopping_url}plantronics-backbeat-fit-3100-true-wireless-earbuds-sweatproof-and-waterproof-in-ear-workout-headphones-black-renewed.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 54.97
     - url: ${env.wa_shopping_url}jabra-elite-active-65t-earbuds-true-wireless-earbuds-with-charging-case-copper-red-bluetooth-earbuds-with-a-secure-fit-and-superior-sound-long-battery-life-and-more-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 41
     - url: ${env.wa_shopping_url}plantronics-backbeat-fit-3100-true-wireless-earbuds-sweatproof-and-waterproof-in-ear-workout-headphones-black-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 41

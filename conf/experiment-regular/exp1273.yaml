@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/talent-rf-309-silent-disco-3-channel-headphones-with-3-color-led-single-pair.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free

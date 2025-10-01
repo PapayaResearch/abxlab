@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/anchor-new-zealand-cheddar.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: http://matlaber12.media.mit.edu:7770/queijo-minas-mineiro-curado-brazilian-minas-cheese-gourmet-aged-cheese.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
     - url: http://matlaber12.media.mit.edu:7770/anchor-new-zealand-cheddar.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6

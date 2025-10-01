@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts
     - url: http://matlaber12.media.mit.edu:7770/nikon-af-s-fx-nikkor-80-400mm-f-4-5-5-6g-ed-vibration-reduction-zoom-lens-with-auto-focus-for-nikon-dslr-cameras-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1
     - url: http://matlaber12.media.mit.edu:7770/tamron-sp-70-200mm-f-2-8-di-vc-usd-g2-lens-for-canon-ef-for-canon-ef-mount-accessories-international-model.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 1

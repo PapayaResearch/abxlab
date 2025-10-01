@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}nissin-air-r-wireless-radio-receiver-compatible-with-fits-sony-flashes.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the camera flashes category

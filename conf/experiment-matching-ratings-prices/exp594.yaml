@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}queijo-minas-mineiro-curado-brazilian-minas-cheese-gourmet-aged-cheese.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading cheese experts
     - url: ${env.wa_shopping_url}queijo-minas-mineiro-curado-brazilian-minas-cheese-gourmet-aged-cheese.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 37.705
     - url: ${env.wa_shopping_url}anchor-new-zealand-cheddar.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 37.705
     - url: ${env.wa_shopping_url}queijo-minas-mineiro-curado-brazilian-minas-cheese-gourmet-aged-cheese.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6
     - url: ${env.wa_shopping_url}anchor-new-zealand-cheddar.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 6

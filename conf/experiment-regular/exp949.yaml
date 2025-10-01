@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/renewed-jlab-audio-jbuds-air-true-wireless-signature-bluetooth-earbuds-charging-case-black-ip55-sweat-resistance-bluetooth-5-0-connection.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

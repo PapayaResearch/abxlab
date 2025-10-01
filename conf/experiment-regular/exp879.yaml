@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/xit-xt30wab-30mm-0-43x-wide-angle-lens-for-camera-black.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers

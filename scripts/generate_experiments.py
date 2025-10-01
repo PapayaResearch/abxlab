@@ -86,9 +86,9 @@ def generate_experiments(
     df_interventions = df_interventions.explode("Module")
     df_interventions = df_interventions.reset_index(drop=True)
     mapping = {
-        "nudgelab.choices.shop.product": "Product",
-        "nudgelab.choices.shop.category": "Category",
-        "nudgelab.choices.shop.home": "Home"
+        "abxlab.choices.shop.product": "Product",
+        "abxlab.choices.shop.category": "Category",
+        "abxlab.choices.shop.home": "Home"
     }
     df_interventions["Starting Point"] = df_interventions["Module"].map(mapping)
 

@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}bluetooth-foldable-retractable-headphones-2021-upgraded-wireless-earbuds-neckband-headset-sports-sweatproof-earphones-with-carrying-case-15hours-playtime.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: Buy 1 Get 1 Free
     - url: ${env.wa_shopping_url}bluetooth-foldable-retractable-headphones-2021-upgraded-wireless-earbuds-neckband-headset-sports-sweatproof-earphones-with-carrying-case-15hours-playtime.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 16.44
     - url: ${env.wa_shopping_url}gsangoo-in-ear-usb-c-headphones-with-microphone-for-galaxy-s21-s20-fe-earbuds-stereo-sound-noise-isolation-wired-type-c-earphones-for-oneplus-8t-7t-pro-samsung-note-20-ultra-s20-plus-google-pixel-6-4.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 16.44
     - url: ${env.wa_shopping_url}bluetooth-foldable-retractable-headphones-2021-upgraded-wireless-earbuds-neckband-headset-sports-sweatproof-earphones-with-carrying-case-15hours-playtime.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}gsangoo-in-ear-usb-c-headphones-with-microphone-for-galaxy-s21-s20-fe-earbuds-stereo-sound-noise-isolation-wired-type-c-earphones-for-oneplus-8t-7t-pro-samsung-note-20-ultra-s20-plus-google-pixel-6-4.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

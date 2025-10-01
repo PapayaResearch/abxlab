@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/panasonic-lumix-g-h-h020-20mm-f-1-7-aspherical-pancake-lens-for-micro-four-thirds-interchangeable-digital-slr-cameras.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers

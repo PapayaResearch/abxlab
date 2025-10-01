@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}soundpeats-trueshift2-wireless-earbuds-bluetooth-5-0-headphones-100h-playtime-ipx7-waterproof-sports-earbuds-touch-control-hi-fi-stereo-earphones-input-usb-c-output-charging-case-3000mah.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product has been purchased by 50,000+ customers
     - url: ${env.wa_shopping_url}soundpeats-trueshift2-wireless-earbuds-bluetooth-5-0-headphones-100h-playtime-ipx7-waterproof-sports-earbuds-touch-control-hi-fi-stereo-earphones-input-usb-c-output-charging-case-3000mah.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 9.76
     - url: ${env.wa_shopping_url}panasonic-rp-hje125e-w-ergofit-design-headphones.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 9.76
     - url: ${env.wa_shopping_url}soundpeats-trueshift2-wireless-earbuds-bluetooth-5-0-headphones-100h-playtime-ipx7-waterproof-sports-earbuds-touch-control-hi-fi-stereo-earphones-input-usb-c-output-charging-case-3000mah.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: ${env.wa_shopping_url}panasonic-rp-hje125e-w-ergofit-design-headphones.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

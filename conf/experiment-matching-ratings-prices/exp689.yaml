@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}klipsch-rb-51-ii-pr-2-way-bookshelf-speakers-black-dimensions-11-4-h-x-6-5-w-x-10-75-d.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category
     - url: ${env.wa_shopping_url}dayton-audio-iosub-10-ip66-indoor-outdoor-subwoofer-150w-black.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 214.985
     - url: ${env.wa_shopping_url}klipsch-rb-51-ii-pr-2-way-bookshelf-speakers-black-dimensions-11-4-h-x-6-5-w-x-10-75-d.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 214.985
     - url: ${env.wa_shopping_url}dayton-audio-iosub-10-ip66-indoor-outdoor-subwoofer-150w-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}klipsch-rb-51-ii-pr-2-way-bookshelf-speakers-black-dimensions-11-4-h-x-6-5-w-x-10-75-d.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}definitive-technology-cs-9060-center-channel-speaker-built-in-8-150-watt-powered-subwoofer-for-home-theater-high-performance-premium-sound-quality-single-black.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading audio experts
     - url: ${env.wa_shopping_url}definitive-technology-cs-9060-center-channel-speaker-built-in-8-150-watt-powered-subwoofer-for-home-theater-high-performance-premium-sound-quality-single-black.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 749.0
     - url: ${env.wa_shopping_url}sonos-playbar-tv-sound-bar-wireless-streaming-music-speaker-certified-refurbished-works-with-alexa.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 749.0
     - url: ${env.wa_shopping_url}definitive-technology-cs-9060-center-channel-speaker-built-in-8-150-watt-powered-subwoofer-for-home-theater-high-performance-premium-sound-quality-single-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
     - url: ${env.wa_shopping_url}sonos-playbar-tv-sound-bar-wireless-streaming-music-speaker-certified-refurbished-works-with-alexa.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12

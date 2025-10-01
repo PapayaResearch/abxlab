@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
       nudge: Incentives
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product qualifies for free shipping
     - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 121.13499999999999
     - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 121.13499999999999
     - url: ${env.wa_shopping_url}theater-solutions-ts50c-in-ceiling-speakers-surround-sound-home-theater-7-speaker-set.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
     - url: ${env.wa_shopping_url}bell-o-digital-bdsw-1650-blk-6-5-inch-wireless-subwoofer-black.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2

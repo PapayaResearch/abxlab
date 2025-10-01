@@ -20,7 +20,7 @@ from browsergym.core.env import BrowserEnv
 logger = logging.getLogger(__name__)
 
 
-class NudgeLabBrowserEnv(BrowserEnv):
+class ABxLabBrowserEnv(BrowserEnv):
     """Override for route handling."""
     def __init__(
         self,

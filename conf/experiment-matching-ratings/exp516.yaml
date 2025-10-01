@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/7artisans-55mm-f1-4-ii-large-aperture-portrait-manual-focus-micro-camera-lens-fit-for-fuji-cameras-x-a1-x-a2-x-at-x-m1-xm2-x-t1-x-t2-x-t10-x-pro1-x-e1-x-e2-and-tuyung-cloth.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts
     - url: http://matlaber12.media.mit.edu:7770/7artisans-55mm-f1-4-ii-large-aperture-portrait-manual-focus-micro-camera-lens-fit-for-fuji-cameras-x-a1-x-a2-x-at-x-m1-xm2-x-t1-x-t2-x-t10-x-pro1-x-e1-x-e2-and-tuyung-cloth.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 4
     - url: http://matlaber12.media.mit.edu:7770/7artisans-35mm-f1-2-aps-c-manual-focus-lens-widely-fit-for-compact-mirrorless-cameras-fuji-x-a1-x-a10-x-a2-x-a3-a-at-x-m1-xm2-x-t1-x-t10-x-t2-x-t20-x-pro1-x-pro2-x-e1-x-e2-e-e2s-silver.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 4

@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}epson-powerlite-s5-business-projector-svga-resolution-800x600-v11h252020.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!
     - url: ${env.wa_shopping_url}epson-brightlink-pro-1430wi-lcd-projector-hdtv-16-10.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 561.995
     - url: ${env.wa_shopping_url}epson-powerlite-s5-business-projector-svga-resolution-800x600-v11h252020.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 561.995
     - url: ${env.wa_shopping_url}epson-brightlink-pro-1430wi-lcd-projector-hdtv-16-10.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: ${env.wa_shopping_url}epson-powerlite-s5-business-projector-svga-resolution-800x600-v11h252020.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

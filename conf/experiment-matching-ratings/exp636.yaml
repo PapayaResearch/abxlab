@@ -24,21 +24,21 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category
     - url: http://matlaber12.media.mit.edu:7770/vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
     - url: http://matlaber12.media.mit.edu:7770/definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10

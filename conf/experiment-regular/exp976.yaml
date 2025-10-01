@@ -24,7 +24,7 @@ task:
     - url: http://matlaber12.media.mit.edu:7770/tom-s-of-maine-natural-wicked-fresh-fluoride-toothpaste-cool-peppermint-4-7-ounce.html
       nudge: Scarcity
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is available only for the next hour—Buy now!

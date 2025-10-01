@@ -28,7 +28,7 @@ task:
     - url: ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
       nudge: Authority
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the speakers category

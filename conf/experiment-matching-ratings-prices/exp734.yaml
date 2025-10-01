@@ -24,35 +24,35 @@ task:
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-with-immersive-bass-sound-mini-charging-case-waterproof-earphones-for-sport-work-headsets-compatible-with-iphone-android-pc-white.html
       nudge: Social Proof
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is a best seller!
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-with-immersive-bass-sound-mini-charging-case-waterproof-earphones-for-sport-work-headsets-compatible-with-iphone-android-pc-white.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 23.494999999999997
     - url: ${env.wa_shopping_url}wireless-earbuds-easy-touch-control-sport-earbuds-workout-headphones-bluetooth-earbuds-noise-cancelling-with-built-in-mic-stereo-sound-ideal-in-ear-headphones-for-jogging-workouts.html
       nudge: Matching Price
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: price
         args:
           value: 23.494999999999997
     - url: ${env.wa_shopping_url}wireless-earbuds-bluetooth-5-0-headphones-with-immersive-bass-sound-mini-charging-case-waterproof-earphones-for-sport-work-headsets-compatible-with-iphone-android-pc-white.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
     - url: ${env.wa_shopping_url}wireless-earbuds-easy-touch-control-sport-earbuds-workout-headphones-bluetooth-earbuds-noise-cancelling-with-built-in-mic-stereo-sound-ideal-in-ear-headphones-for-jogging-workouts.html
       nudge: Matching Review Count
       functions:
-      - module: nudgelab.choices.shop.product
+      - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7

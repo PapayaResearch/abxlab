@@ -33,7 +33,7 @@ config:
     - url: ??? # Example URL
       nudge: ??? # Type of nudge
       functions:
-        - module: abxlab.choices.shop
+        - module: ???
           name: ???
           args:
             value: ???

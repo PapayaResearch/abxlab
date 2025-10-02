@@ -57,7 +57,7 @@ playwright install
 Create a `.env` file in the project root with the following configuration:
 
 > [!IMPORTANT]
-> Due to legacy code from AgentLab and BrowserGym, you must set all these endpoints to avoid runtime errors. We don't host WebArena environments, but you can deploy them following these [instructions](https://github.com/web-arena-x/webarena/blob/main/environment_docker/README.md). For quick testing, you can assign any URL, but agent actions have real consequences!
+> Due to AgentLab and BrowserGym dependencies, you must set all these endpoints to avoid runtime errors. We don't host WebArena environments, but you can deploy them following these [instructions](https://github.com/web-arena-x/webarena/blob/main/environment_docker/README.md). For quick testing, you can assign any URL, but agent actions have real consequences!
 
 ```bash
 # Base URL for web agent environments
@@ -103,6 +103,9 @@ AWS_SECRET_ACCESS_KEY="<YOUR_AWS_KEY>"
 
 ### Running Your First Experiment
 
+> [!NOTE]
+> This example assumes you're hosting a version of the shopping environment.
+
 The easiest way to run `ABxLab` is with a configuration file like the examples in `ABxLab/conf/task/test/`. For example:
 
 ```bash
@@ -143,7 +146,7 @@ python run.py --multirun "+experiment=${EXPS}"
 
 #### Select a Different LLM
 
-Supported models and providers are in `conf/agent/`, which can be easily extended.
+Supported models and providers are in `conf/agent/`, which can be easily extended. We use [LiteLLM](https://www.litellm.ai/) by default, but you can find more details below.
 
 ```bash
 # Use GPT 5
@@ -167,7 +170,7 @@ You can run any task in `conf/task/` such as:
 python run.py task=shopping
 ```
 
-### Advanced Details
+### Advanced Usage & Customization
 
 ### Project Structure
 
@@ -175,7 +178,7 @@ python run.py task=shopping
 ABxLab/
 ├── abxlab/              # Core ABxLab modules
 │   ├── actions.py       # Custom agent action definitions
-│   ├── browser.py       # Custom browser environment wrapper
+│   ├── browser.py       # Custom browser env to execute intervention functions
 │   ├── evaluators.py    # Custom task evaluation logic
 │   ├── task.py          # Custom task definitions
 │   └── choices/         # Intervention functions for each environment
@@ -200,23 +203,28 @@ ABxLab/
 
 ### Tasks
 
-You can create new tasks in `conf/task/` and use `shopping.yaml` as inspiration.
+You can create new tasks in `conf/task/` and use `shopping.yaml` as inspiration. Most of this logic is inherited from [WebArena](https://github.com/web-arena-x/webarena), so we refer the reader there for details. We modify it with:
 
-TBD
+- `entrypoint: abxlab.task.ABxLabShopTask`: This is a custom class where we run logic that we always need for the shopping environment. Otherwise, you can use its parent `entrypoint: abxlab.task.ABxLabTask`.
+- `config.choices`: This is a placeholder, which you can copy and paste. Your configs (e.g. conf/task/test) should inherit this config, and you can replace `choices` with either an empty list (no interventions needed) or a list of functions following the details below.
+
+We also define our own `config.eval`, which is a stopping condition.
+
+### Interventions
+
+ABxLab allows you to define a set of intervention functions in the configurations. If an agent visits a matching URL, then all functions get executed sequentially. Each function receives the HTML (by default) and a set of arguments defined in the configuration file. The field `nudge` can be used as an identifier to recognize during analysis. You can see an example [here](https://github.com/PapayaResearch/AgentLab/blob/main/conf/task/test/bestseller_product.yaml).
 
 ### Benchmark
 
-TBD
+The ABxLab [benchmark](https://github.com/PapayaResearch/AgentLab/blob/main/conf/benchmark/abxlab.yaml) can be used as is in most cases (except for task_category: shopping). It's worth noting that here is where we define the high level actions available for agents, which we customized [here](https://github.com/PapayaResearch/AgentLab/blob/967c3d1e2c064b988f4b14744b7a6ffb75269945/abxlab/actions.py#L203-L212) to remove unnecessary actions available in BrowserGym.
 
 ### Agent
 
-TBD
+You can see the agent's default flags [here](https://github.com/PapayaResearch/AgentLab/blob/main/conf/agent/flags/default.yaml). You can see more details in [AgentLab](https://github.com/ServiceNow/AgentLab/), but here you can decide whether to use thinking, memory, pruned HTML or accessibility trees, etc.
 
-### ABxLab
+### LLM Providers
 
-- Actions
-- Browser
-- Task
+We included support for [LiteLLM](https://www.litellm.ai/) and set it by default in all agent configurations in `conf/agent/`. However, there are other options available like OpenRouter that you can see [here](https://github.com/PapayaResearch/AgentLab/blob/main/agentlab/llm/chat_api.py).
 
 ## AgentXray: Visualizing Results
 

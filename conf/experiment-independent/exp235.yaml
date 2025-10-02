@@ -5,8 +5,8 @@ task:
   config:
     task_id: 235
     start_urls:
-    - ${env.wa_shopping_url}ulian-over-ear-headphones-wireless-bluetooth-headphones-loudspeaker-over-ear-headset-noise-cancelling-headphones-40-hours-playtime-3-modes-for-travel-work-mh5-black.html
-    - ${env.wa_shopping_url}bluetooth-headphones-30-hours-play-time-wireless-over-ear-headset-with-built-in-microphone-40mm-driver-thumping-bass-supports-hands-free-calling-and-wired-mode-for-pc-cell-phones-tv-black-red.html
+    - ${env.abxlab_url}ulian-over-ear-headphones-wireless-bluetooth-headphones-loudspeaker-over-ear-headset-noise-cancelling-headphones-40-hours-playtime-3-modes-for-travel-work-mh5-black.html
+    - ${env.abxlab_url}bluetooth-headphones-30-hours-play-time-wireless-over-ear-headset-with-built-in-microphone-40mm-driver-thumping-bass-supports-hands-free-calling-and-wired-mode-for-pc-cell-phones-tv-black-red.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

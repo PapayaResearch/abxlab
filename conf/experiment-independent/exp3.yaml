@@ -5,8 +5,8 @@ task:
   config:
     task_id: 3
     start_urls:
-    - ${env.wa_shopping_url}lg-g8-thinq-lmg820tm-128gb-6gb-ram-6-1-4g-lte-at-t-t-mobile-unlocked-gsm-only-aurora-black.html
-    - ${env.wa_shopping_url}t-mobile-revvl-4-6-2-al-5007w-4g-lte-32gb-t-mobile-13mp-android-smartphone-graphite-renewed.html
+    - ${env.abxlab_url}lg-g8-thinq-lmg820tm-128gb-6gb-ram-6-1-4g-lte-at-t-t-mobile-unlocked-gsm-only-aurora-black.html
+    - ${env.abxlab_url}t-mobile-revvl-4-6-2-al-5007w-4g-lte-32gb-t-mobile-13mp-android-smartphone-graphite-renewed.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 247
     start_urls:
-    - ${env.wa_shopping_url}altec-lansing-mzx668-blk-evolution-2-bluetooth-headphones-just-ask-siri-and-google-voice-assistant-30-foot-wireless-range-8-hours-of-battery-life-dynamic-bass-convenient-controls-black.html
-    - ${env.wa_shopping_url}knox-gear-tx-100-professional-closed-back-studio-monitor-recording-headphones-includes-1-4-inch-adapter-and-extra-long-10-foot-cord-50mm-speaker-unit-driver.html
+    - ${env.abxlab_url}altec-lansing-mzx668-blk-evolution-2-bluetooth-headphones-just-ask-siri-and-google-voice-assistant-30-foot-wireless-range-8-hours-of-battery-life-dynamic-bass-convenient-controls-black.html
+    - ${env.abxlab_url}knox-gear-tx-100-professional-closed-back-studio-monitor-recording-headphones-includes-1-4-inch-adapter-and-extra-long-10-foot-cord-50mm-speaker-unit-driver.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

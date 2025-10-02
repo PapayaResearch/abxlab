@@ -5,8 +5,8 @@ task:
   config:
     task_id: 316
     start_urls:
-    - ${env.wa_shopping_url}arched-window-finished-metal-mirror-32-45-wall-mirror-windowpane-decoration-for-living-room-entryway-off-white.html
-    - ${env.wa_shopping_url}decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
+    - ${env.abxlab_url}arched-window-finished-metal-mirror-32-45-wall-mirror-windowpane-decoration-for-living-room-entryway-off-white.html
+    - ${env.abxlab_url}decorative-round-wall-mirror-gorgeous-circle-accent-wall-mirror-for-living-room-31-5-in.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

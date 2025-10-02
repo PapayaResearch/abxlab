@@ -5,8 +5,8 @@ task:
   config:
     task_id: 234
     start_urls:
-    - ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
-    - ${env.wa_shopping_url}philips-x2-27-fidelio-headphones-black.html
+    - ${env.abxlab_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
+    - ${env.abxlab_url}philips-x2-27-fidelio-headphones-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

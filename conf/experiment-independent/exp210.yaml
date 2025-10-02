@@ -5,8 +5,8 @@ task:
   config:
     task_id: 210
     start_urls:
-    - ${env.wa_shopping_url}fotodiox-pro-autofocus-2x-teleconverter-compatible-with-canon-eos-ef-full-frame-lenses-and-ef-efs-cameras.html
-    - ${env.wa_shopping_url}jintu-420-800mm-f-8-3-f16-manual-telephoto-camera-zoom-lens-for-canon-eos-dslr-cameras-4000d-90d-60d-70d-77d-70d-80d-850d-650d-750d-7d-t7i-t7s-t7-t6s-t6i-t6-t5i-t5-sl2-sl1-digital.html
+    - ${env.abxlab_url}fotodiox-pro-autofocus-2x-teleconverter-compatible-with-canon-eos-ef-full-frame-lenses-and-ef-efs-cameras.html
+    - ${env.abxlab_url}jintu-420-800mm-f-8-3-f16-manual-telephoto-camera-zoom-lens-for-canon-eos-dslr-cameras-4000d-90d-60d-70d-77d-70d-80d-850d-650d-750d-7d-t7i-t7s-t7-t6s-t6i-t6-t5i-t5-sl2-sl1-digital.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

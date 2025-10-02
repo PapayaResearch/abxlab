@@ -13,7 +13,7 @@ config:
   require_login: false
   storage_state: ./.auth/shopping_state.json
   start_urls:
-    - ${env.wa_shopping_url}electronics/camera-photo/digital-cameras.html
+    - ${env.abxlab_url}electronics/camera-photo/digital-cameras.html
   geolocation: null
   intent_template: Add the best product from this page to the shopping cart
   instantiation_dict: {}

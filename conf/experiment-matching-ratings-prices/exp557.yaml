@@ -5,8 +5,8 @@ task:
   config:
     task_id: 557
     start_urls:
-    - ${env.wa_shopping_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
-    - ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
+    - ${env.abxlab_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
+    - ${env.abxlab_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,35 +21,35 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
+    - url: ${env.abxlab_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading photography experts
-    - url: ${env.wa_shopping_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
+    - url: ${env.abxlab_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 1252.995
-    - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
+    - url: ${env.abxlab_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 1252.995
-    - url: ${env.wa_shopping_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
+    - url: ${env.abxlab_url}panasonic-lumix-s-24-105mm-f4-lens-full-frame-l-mount-optical-image-stabilizer-and-rugged-dust-splash-freeze-resistant-s-r24105-usa-black.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 9
-    - url: ${env.wa_shopping_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
+    - url: ${env.abxlab_url}nikon-200-500mm-f-5-6e-ed-vr-af-s-nikkor-zoom-lens-nikon-digital-slr-cameras-renewed.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

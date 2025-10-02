@@ -5,8 +5,8 @@ task:
   config:
     task_id: 360
     start_urls:
-    - ${env.wa_shopping_url}toshiba-2-0-channel-bluetooth-soundbar-tv-speaker-sound-bar-with-optical-aux-usb-inputs-remote-control.html
-    - ${env.wa_shopping_url}sylvania-curtis-5-1-channel-progressive-scan-dvd-mini-bookshelf-home-theater-speaker-system-w-subwoofer-remote-control.html
+    - ${env.abxlab_url}toshiba-2-0-channel-bluetooth-soundbar-tv-speaker-sound-bar-with-optical-aux-usb-inputs-remote-control.html
+    - ${env.abxlab_url}sylvania-curtis-5-1-channel-progressive-scan-dvd-mini-bookshelf-home-theater-speaker-system-w-subwoofer-remote-control.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

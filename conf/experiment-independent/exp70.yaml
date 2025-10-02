@@ -5,8 +5,8 @@ task:
   config:
     task_id: 70
     start_urls:
-    - ${env.wa_shopping_url}unknown1-36-large-round-natural-wood-wall-mirror-w-decorative-beads-36-x-2-36round-brown-rustic.html
-    - ${env.wa_shopping_url}maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
+    - ${env.abxlab_url}unknown1-36-large-round-natural-wood-wall-mirror-w-decorative-beads-36-x-2-36round-brown-rustic.html
+    - ${env.abxlab_url}maykke-betty-24-w-x-36-h-wood-framed-rectangle-wall-mirror-decorative-brown-border-edge-with-crown-moulding-for-vanity-bathroom-bedroom-cherry-americana-ysa2130101.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

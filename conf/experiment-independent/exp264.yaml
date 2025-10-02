@@ -5,8 +5,8 @@ task:
   config:
     task_id: 264
     start_urls:
-    - ${env.wa_shopping_url}tcl-a30-unlocked-smartphone-with-5-5-hd-display-8mp-rear-camera-32gb-3gb-ram-3000mah-battery-android-11-prime-black.html
-    - ${env.wa_shopping_url}net10-samsung-galaxy-a10e-4g-lte-prepaid-smartphone-locked-black-32gb-sim-card-included-cdma-with-40-airtime-bundle.html
+    - ${env.abxlab_url}tcl-a30-unlocked-smartphone-with-5-5-hd-display-8mp-rear-camera-32gb-3gb-ram-3000mah-battery-android-11-prime-black.html
+    - ${env.abxlab_url}net10-samsung-galaxy-a10e-4g-lte-prepaid-smartphone-locked-black-32gb-sim-card-included-cdma-with-40-airtime-bundle.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

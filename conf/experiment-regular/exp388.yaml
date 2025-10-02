@@ -5,8 +5,8 @@ task:
   config:
     task_id: 388
     start_urls:
-    - ${env.wa_shopping_url}tom-s-of-maine-natural-wicked-fresh-fluoride-toothpaste-cool-peppermint-4-7-ounce.html
-    - ${env.wa_shopping_url}perioscience-sensitive-toothpaste-soothing-oral-care-hydroxyapatite-anti-cavity-whitening-enamel-defense-for-mouth-sensitivity-ao-pro-dentist-recommended-clean-teeth-plaque-removal.html
+    - ${env.abxlab_url}tom-s-of-maine-natural-wicked-fresh-fluoride-toothpaste-cool-peppermint-4-7-ounce.html
+    - ${env.abxlab_url}perioscience-sensitive-toothpaste-soothing-oral-care-hydroxyapatite-anti-cavity-whitening-enamel-defense-for-mouth-sensitivity-ao-pro-dentist-recommended-clean-teeth-plaque-removal.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

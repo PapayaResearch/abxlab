@@ -5,8 +5,8 @@ task:
   config:
     task_id: 205
     start_urls:
-    - ${env.wa_shopping_url}ultimaxx-500mm-w-2x-converter-1000mm-f-8-manual-multi-coated-preset-telephoto-lens-kit-for-canon-eos-9000d-800d-760d-750d-700d-1300d-1200d-t100-4000d-3000d-2000d-1500d-dslr-cameras.html
-    - ${env.wa_shopping_url}jintu-420-800mm-f-8-3-hd-manual-focus-telephoto-zoom-lens-for-nikon-slr-digital-camera-lenses-d5600-d5500-d5300-d5200-d5100-d3500-d3400-d3300-d3100-d3200-d7500-d7200-d7000-d7100-d750-d90-d850-bag.html
+    - ${env.abxlab_url}ultimaxx-500mm-w-2x-converter-1000mm-f-8-manual-multi-coated-preset-telephoto-lens-kit-for-canon-eos-9000d-800d-760d-750d-700d-1300d-1200d-t100-4000d-3000d-2000d-1500d-dslr-cameras.html
+    - ${env.abxlab_url}jintu-420-800mm-f-8-3-hd-manual-focus-telephoto-zoom-lens-for-nikon-slr-digital-camera-lenses-d5600-d5500-d5300-d5200-d5100-d3500-d3400-d3300-d3100-d3200-d7500-d7200-d7000-d7100-d750-d90-d850-bag.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

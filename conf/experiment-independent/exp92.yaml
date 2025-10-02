@@ -5,8 +5,8 @@ task:
   config:
     task_id: 92
     start_urls:
-    - ${env.wa_shopping_url}touch-of-class-traditional-hansa-acanthus-leaf-shaped-wall-mirror-aged-gold-vintage-framed-ornate-design-unique-victorian-aesthetic-decorative-mirrors-for-bedroom-bathroom-26-w-x-40-h.html
-    - ${env.wa_shopping_url}safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
+    - ${env.abxlab_url}touch-of-class-traditional-hansa-acanthus-leaf-shaped-wall-mirror-aged-gold-vintage-framed-ornate-design-unique-victorian-aesthetic-decorative-mirrors-for-bedroom-bathroom-26-w-x-40-h.html
+    - ${env.abxlab_url}safavieh-home-madilyn-champagne-sunburst-36-inch-decorative-accent-mirror.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 300
     start_urls:
-    - ${env.wa_shopping_url}designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
-    - ${env.wa_shopping_url}kate-and-laurel-keyleigh-modern-glam-geometric-shaped-metal-accent-wall-mirror-satin-gold.html
+    - ${env.abxlab_url}designovation-beatrice-framed-decorative-rectangle-wall-mirror-25x31-walnut-brown.html
+    - ${env.abxlab_url}kate-and-laurel-keyleigh-modern-glam-geometric-shaped-metal-accent-wall-mirror-satin-gold.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 373
     start_urls:
-    - ${env.wa_shopping_url}zeriyu-bluetooth-soundbar-16-inch-wireless-tv-speaker-home-stereo-theater-surround-sound-bar-colorful-ring-led-light-music-player-support-rca-aux-usb-tf-bs-20a.html
-    - ${env.wa_shopping_url}32-inch-tv-sound-bars-lvssci-sound-bars-for-tv-home-audio-tv-speakers-with-bluetooth-5-0-hdmi-optical-coaxial-aux-rca-wall-mountable-remote-control.html
+    - ${env.abxlab_url}zeriyu-bluetooth-soundbar-16-inch-wireless-tv-speaker-home-stereo-theater-surround-sound-bar-colorful-ring-led-light-music-player-support-rca-aux-usb-tf-bs-20a.html
+    - ${env.abxlab_url}32-inch-tv-sound-bars-lvssci-sound-bars-for-tv-home-audio-tv-speakers-with-bluetooth-5-0-hdmi-optical-coaxial-aux-rca-wall-mountable-remote-control.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

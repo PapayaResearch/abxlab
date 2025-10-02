@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1135
     start_urls:
-    - ${env.wa_shopping_url}wireless-headphones-10-hours-playtime-picun-hifi-stereo-bluetooth-headphones-ipx7-waterproof-sports-earbuds-with-hd-mic-magnetic-anti-fall-off-painless-fit-for-running-gym-workout-gift-black.html
-    - ${env.wa_shopping_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
+    - ${env.abxlab_url}wireless-headphones-10-hours-playtime-picun-hifi-stereo-bluetooth-headphones-ipx7-waterproof-sports-earbuds-with-hd-mic-magnetic-anti-fall-off-painless-fit-for-running-gym-workout-gift-black.html
+    - ${env.abxlab_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
+    - url: ${env.abxlab_url}wireless-earbuds-with-charging-case-bluetooth-5-0-earphones-20hrs-playing-time-in-ear-clear-call-stereo-sound-built-in-mic-sweatproof-auto-pairing-for-iphone-samsung-android-noise-cancelling.html
       nudge: Incentives
       functions:
       - module: abxlab.choices.shop.product

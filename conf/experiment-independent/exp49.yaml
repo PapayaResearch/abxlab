@@ -5,8 +5,8 @@ task:
   config:
     task_id: 49
     start_urls:
-    - ${env.wa_shopping_url}rustic-wood-fish-mirror-decorative-hanging-mirror-wall-decor-for-living-room-bathroom-bedroom-vintage-nautical-ocean-beach-home-mirror.html
-    - ${env.wa_shopping_url}touch-of-class-traditional-hansa-acanthus-leaf-shaped-wall-mirror-aged-gold-vintage-framed-ornate-design-unique-victorian-aesthetic-decorative-mirrors-for-bedroom-bathroom-26-w-x-40-h.html
+    - ${env.abxlab_url}rustic-wood-fish-mirror-decorative-hanging-mirror-wall-decor-for-living-room-bathroom-bedroom-vintage-nautical-ocean-beach-home-mirror.html
+    - ${env.abxlab_url}touch-of-class-traditional-hansa-acanthus-leaf-shaped-wall-mirror-aged-gold-vintage-framed-ornate-design-unique-victorian-aesthetic-decorative-mirrors-for-bedroom-bathroom-26-w-x-40-h.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 60
     start_urls:
-    - ${env.wa_shopping_url}nissin-air-r-wireless-radio-receiver-compatible-with-fits-sony-flashes.html
-    - ${env.wa_shopping_url}godox-tt350s-2-4g-hss-1-8000s-ttl-gn36-camera-speedlite-compatible-for-sony-mirrorless-digital-camera.html
+    - ${env.abxlab_url}nissin-air-r-wireless-radio-receiver-compatible-with-fits-sony-flashes.html
+    - ${env.abxlab_url}godox-tt350s-2-4g-hss-1-8000s-ttl-gn36-camera-speedlite-compatible-for-sony-mirrorless-digital-camera.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

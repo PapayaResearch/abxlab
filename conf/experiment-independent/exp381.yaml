@@ -5,8 +5,8 @@ task:
   config:
     task_id: 381
     start_urls:
-    - ${env.wa_shopping_url}herdio-in-wall-speakers-5-25-inch-2-way-ceiling-bluetooth-audio-system-perfect-for-home-theater-living-room-office-shop.html
-    - ${env.wa_shopping_url}micca-mb42x-c-advanced-center-channel-speaker-for-home-theater-surround-sound-passive-2-way-black-each.html
+    - ${env.abxlab_url}herdio-in-wall-speakers-5-25-inch-2-way-ceiling-bluetooth-audio-system-perfect-for-home-theater-living-room-office-shop.html
+    - ${env.abxlab_url}micca-mb42x-c-advanced-center-channel-speaker-for-home-theater-surround-sound-passive-2-way-black-each.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 240
     start_urls:
-    - ${env.wa_shopping_url}bone-conduction-headphones-mojawa-wireless-earphones-bluetooth-headphones-w-reflective-strips-open-ear-headphones-ip67-waterproof-noise-cancellation-prevent-sound-leakage-for-sport-running-meeting.html
-    - ${env.wa_shopping_url}amazrock-high-definition-headphone-wireless-bluetooth-super-bass-ab18-hd-bluetooth-over-the-ear-headphones-with-microphone-noise-isolation-high-end-driver-42-hour-playtime-50mm-driver.html
+    - ${env.abxlab_url}bone-conduction-headphones-mojawa-wireless-earphones-bluetooth-headphones-w-reflective-strips-open-ear-headphones-ip67-waterproof-noise-cancellation-prevent-sound-leakage-for-sport-running-meeting.html
+    - ${env.abxlab_url}amazrock-high-definition-headphone-wireless-bluetooth-super-bass-ab18-hd-bluetooth-over-the-ear-headphones-with-microphone-noise-isolation-high-end-driver-42-hour-playtime-50mm-driver.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

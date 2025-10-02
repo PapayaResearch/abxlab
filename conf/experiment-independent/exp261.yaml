@@ -5,8 +5,8 @@ task:
   config:
     task_id: 261
     start_urls:
-    - ${env.wa_shopping_url}samsung-galaxy-note-8-n950u-64gb-unlocked-gsm-4g-lte-android-smartphone-w-dual-12-megapixel-camera-renewed-orchid-grey.html
-    - ${env.wa_shopping_url}motorola-moto-z3-play-xt1929-6-64gb-gsm-unlocked-android-smartphone-deep-indigo-renewed.html
+    - ${env.abxlab_url}samsung-galaxy-note-8-n950u-64gb-unlocked-gsm-4g-lte-android-smartphone-w-dual-12-megapixel-camera-renewed-orchid-grey.html
+    - ${env.abxlab_url}motorola-moto-z3-play-xt1929-6-64gb-gsm-unlocked-android-smartphone-deep-indigo-renewed.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

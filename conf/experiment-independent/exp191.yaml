@@ -5,8 +5,8 @@ task:
   config:
     task_id: 191
     start_urls:
-    - ${env.wa_shopping_url}gsangoo-in-ear-usb-c-headphones-with-microphone-for-galaxy-s21-s20-fe-earbuds-stereo-sound-noise-isolation-wired-type-c-earphones-for-oneplus-8t-7t-pro-samsung-note-20-ultra-s20-plus-google-pixel-6-4.html
-    - ${env.wa_shopping_url}cotogni-p3-true-wireless-earbuds-bluetooth-headphones-with-type-c-charging-case-and-mic-in-ear-stereo-earphones-headset-white.html
+    - ${env.abxlab_url}gsangoo-in-ear-usb-c-headphones-with-microphone-for-galaxy-s21-s20-fe-earbuds-stereo-sound-noise-isolation-wired-type-c-earphones-for-oneplus-8t-7t-pro-samsung-note-20-ultra-s20-plus-google-pixel-6-4.html
+    - ${env.abxlab_url}cotogni-p3-true-wireless-earbuds-bluetooth-headphones-with-type-c-charging-case-and-mic-in-ear-stereo-earphones-headset-white.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

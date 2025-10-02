@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1436
     start_urls:
-    - ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
-    - ${env.wa_shopping_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
+    - ${env.abxlab_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
+    - ${env.abxlab_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,35 +21,35 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
+    - url: ${env.abxlab_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.
-    - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
+    - url: ${env.abxlab_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 339.0
-    - url: ${env.wa_shopping_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
+    - url: ${env.abxlab_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 339.0
-    - url: ${env.wa_shopping_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
+    - url: ${env.abxlab_url}vizio-sb36514-g6-36-5-1-4-premium-home-theater-sound-system-with-dolby-atmos-and-wireless-subwoofer-black-renewed.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
-    - url: ${env.wa_shopping_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
+    - url: ${env.abxlab_url}definitive-technology-ueva-di-6-5str-round-stereo-in-ceiling-speaker-single.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

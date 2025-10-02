@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1445
     start_urls:
-    - ${env.wa_shopping_url}rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
-    - ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
+    - ${env.abxlab_url}rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
+    - ${env.abxlab_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
+    - url: ${env.abxlab_url}h-homebroad-gold-geometric-wall-mirror-28-metal-framed-wall-mounted-decor-for-the-living-room-bathroom-bedroom-and-entryway.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product

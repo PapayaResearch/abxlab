@@ -1,0 +1,48 @@
+name: Basic
+
+width: 1280
+height: 720
+slow_mo: 1000 # ms
+timeout: 10000 # ms
+
+entrypoint: abxlab.task.ABxLabTask
+
+config:
+  # Site configuration
+  sites: []
+  task_id: 0
+  require_login: false
+  storage_state: null
+
+  # URLs to study (MUST be specified)
+  start_urls:
+    - ${env.abxlab_url}
+
+  # Task specification
+  intent_template: Add a toy papaya to the shopping cart.
+  intent: ${task.config.intent_template}
+  intent_template_id: 0
+  require_reset: ${task.config.require_login} # By default, require reset if login is required
+
+  choices:
+    - url: "*"
+      nudge: null
+      functions:
+        - module: abxlab.choices.basic
+          name: subtitle
+          args:
+            value: This product is a best seller.
+            elem_id: title
+
+  # Evaluation setup
+  eval:
+    eval_types:
+      - program_html
+    # Each tab choice task MUST include some choices
+    # These can be configured via command line arguments
+    program_html:
+      - url: last
+        locator: "document.querySelector('h1.a-size-medium-plus.a-color-base.sw-atc-text.a-text-bold').innerText"
+        required_contents:
+          must_include:
+            - "Added to cart"

@@ -2,7 +2,7 @@
 
 defaults:
   - _self_
-  - agent: gpt-4-1-mini
+  - agent: gpt-5-mini
   - benchmark: abxlab
   - task: shopping
   - override hydra/launcher: ray
@@ -25,7 +25,7 @@ study:
 
 # Environment vars
 env:
-  wa_shopping_url: ${oc.env:WA_SHOPPING,${env.wa_shopping_url}}
+  abxlab_url: ${oc.env:WA_SHOPPING}
 
 # Hydra-Specific settings
 hydra:

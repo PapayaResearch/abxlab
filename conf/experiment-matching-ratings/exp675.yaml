@@ -5,8 +5,8 @@ task:
   config:
     task_id: 675
     start_urls:
-    - ${env.wa_shopping_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
-    - ${env.wa_shopping_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
+    - ${env.abxlab_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
+    - ${env.abxlab_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
+    - url: ${env.abxlab_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category
-    - url: ${env.wa_shopping_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
+    - url: ${env.abxlab_url}sony-cybershot-dscw70-7-2mp-digital-camera-with-3x-optical-zoom.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
-    - url: ${env.wa_shopping_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
+    - url: ${env.abxlab_url}ge-a835-8mp-digital-camera-with-3x-optical-zoom-silver.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

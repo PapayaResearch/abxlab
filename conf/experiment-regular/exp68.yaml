@@ -5,8 +5,8 @@ task:
   config:
     task_id: 68
     start_urls:
-    - ${env.wa_shopping_url}canon-rf14-35mm-f4-l-is-usm-lens.html
-    - ${env.wa_shopping_url}tilta-nucleus-m-wireless-lens-control-system-full-kit-w-hard-case-wireless-follow-focus-wlc-t03.html
+    - ${env.abxlab_url}canon-rf14-35mm-f4-l-is-usm-lens.html
+    - ${env.abxlab_url}tilta-nucleus-m-wireless-lens-control-system-full-kit-w-hard-case-wireless-follow-focus-wlc-t03.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 556
     start_urls:
-    - ${env.wa_shopping_url}3-5mm-headphones-for-moto-g-pure-2021-jelanry-wired-in-ear-earbuds-with-mic-volume-control-3-5mm-jack-earphones-for-macbook-pro-ps5-pc-laptop-iphone-6s-5s-se-ipad-ipod-pixel-5a-samsung-a13-a12-s10.html
-    - ${env.wa_shopping_url}jvc-gumy-ha-f14-a-stereo-earphones-haf14-peppermint-blue.html
+    - ${env.abxlab_url}3-5mm-headphones-for-moto-g-pure-2021-jelanry-wired-in-ear-earbuds-with-mic-volume-control-3-5mm-jack-earphones-for-macbook-pro-ps5-pc-laptop-iphone-6s-5s-se-ipad-ipod-pixel-5a-samsung-a13-a12-s10.html
+    - ${env.abxlab_url}jvc-gumy-ha-f14-a-stereo-earphones-haf14-peppermint-blue.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}3-5mm-headphones-for-moto-g-pure-2021-jelanry-wired-in-ear-earbuds-with-mic-volume-control-3-5mm-jack-earphones-for-macbook-pro-ps5-pc-laptop-iphone-6s-5s-se-ipad-ipod-pixel-5a-samsung-a13-a12-s10.html
+    - url: ${env.abxlab_url}3-5mm-headphones-for-moto-g-pure-2021-jelanry-wired-in-ear-earbuds-with-mic-volume-control-3-5mm-jack-earphones-for-macbook-pro-ps5-pc-laptop-iphone-6s-5s-se-ipad-ipod-pixel-5a-samsung-a13-a12-s10.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product

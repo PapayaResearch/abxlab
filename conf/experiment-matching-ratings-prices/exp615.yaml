@@ -5,8 +5,8 @@ task:
   config:
     task_id: 615
     start_urls:
-    - ${env.wa_shopping_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
-    - ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - ${env.abxlab_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
+    - ${env.abxlab_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,35 +21,35 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - url: ${env.abxlab_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is Wirecutter's top pick in the digital cameras category
-    - url: ${env.wa_shopping_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
+    - url: ${env.abxlab_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 934.275
-    - url: ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - url: ${env.abxlab_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 934.275
-    - url: ${env.wa_shopping_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
+    - url: ${env.abxlab_url}canon-eos-7d-digital-camera-with-18-135mm-f-3-5-5-6-is-lens-kit.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 5
-    - url: ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - url: ${env.abxlab_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

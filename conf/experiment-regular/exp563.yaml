@@ -5,8 +5,8 @@ task:
   config:
     task_id: 563
     start_urls:
-    - ${env.wa_shopping_url}enuosuma-mini-projector-portable-video-projector-for-outdoor-home-theater-movie-projector-compatible-with-full-hd-1080p-hdmi-usb-av-laptop-smartphone.html
-    - ${env.wa_shopping_url}infocus-lp600-business-dlp-video-projector.html
+    - ${env.abxlab_url}enuosuma-mini-projector-portable-video-projector-for-outdoor-home-theater-movie-projector-compatible-with-full-hd-1080p-hdmi-usb-av-laptop-smartphone.html
+    - ${env.abxlab_url}infocus-lp600-business-dlp-video-projector.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}infocus-lp600-business-dlp-video-projector.html
+    - url: ${env.abxlab_url}infocus-lp600-business-dlp-video-projector.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product

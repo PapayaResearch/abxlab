@@ -52,7 +52,7 @@ def main():
     parser.add_argument("--output_file", default=os.environ.get("OUTPUT_FILE", "products.csv"), help="The path to the output CSV file.")
     parser.add_argument("--max_workers", type=int, default=os.environ.get("MAX_WORKERS", 20), help="The maximum number of concurrent workers for scraping.")
     parser.add_argument("--category_file", default="categories.yaml", help="The YAML file with the list of categories to scrape.")
-    parser.add_argument("--replace_base_url_with", default="${env.wa_shopping_url}", help="String to replace the base URL in product links for portability.")
+    parser.add_argument("--replace_base_url_with", default="${env.abxlab_url}", help="String to replace the base URL in product links for portability.")
     args = parser.parse_args()
 
     with open(args.category_file) as yaml_file:

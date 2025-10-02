@@ -5,8 +5,8 @@ task:
   config:
     task_id: 125
     start_urls:
-    - ${env.wa_shopping_url}viewsonic-pjd6345-xga-1024x768-dlp-projector-with-lan-control-wired-and-wireless-lan-display-black.html
-    - ${env.wa_shopping_url}benq-ht5550-true-4k-uhd-home-theater-projector-with-hdr-pro-100-dci-p3-100-rec-709-for-best-colors-frame-interpolation-for-fluid-picture-black.html
+    - ${env.abxlab_url}viewsonic-pjd6345-xga-1024x768-dlp-projector-with-lan-control-wired-and-wireless-lan-display-black.html
+    - ${env.abxlab_url}benq-ht5550-true-4k-uhd-home-theater-projector-with-hdr-pro-100-dci-p3-100-rec-709-for-best-colors-frame-interpolation-for-fluid-picture-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 168
     start_urls:
-    - ${env.wa_shopping_url}bastex-universal-earphone-ear-buds-3-5mm-stereo-headphones-in-ear-tangle-free-cable-with-built-in-microphone-earbuds-for-iphone-ipod-ipad-samsung-android-mp3-mp4-and-more-hot-pink-black.html
-    - ${env.wa_shopping_url}for-iphone-earbuds-with-lightning-apple-mfi-certified-in-ear-headphone-for-iphone-13-compatible-with-iphone-13-se-12-11-x-8-7-8-7-plus-all-ios-system-built-in-microphone-volume-control.html
+    - ${env.abxlab_url}bastex-universal-earphone-ear-buds-3-5mm-stereo-headphones-in-ear-tangle-free-cable-with-built-in-microphone-earbuds-for-iphone-ipod-ipad-samsung-android-mp3-mp4-and-more-hot-pink-black.html
+    - ${env.abxlab_url}for-iphone-earbuds-with-lightning-apple-mfi-certified-in-ear-headphone-for-iphone-13-compatible-with-iphone-13-se-12-11-x-8-7-8-7-plus-all-ios-system-built-in-microphone-volume-control.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

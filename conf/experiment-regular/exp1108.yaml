@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1108
     start_urls:
-    - ${env.wa_shopping_url}kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
-    - ${env.wa_shopping_url}the-hillman-group-122200-mirror-rosettes-clear.html
+    - ${env.abxlab_url}kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
+    - ${env.abxlab_url}the-hillman-group-122200-mirror-rosettes-clear.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
+    - url: ${env.abxlab_url}kate-and-laurel-hogan-9-windowpane-wood-wall-mirror-rustic-caramel-26x32.html
       nudge: Incentives
       functions:
       - module: abxlab.choices.shop.product

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 365
     start_urls:
-    - ${env.wa_shopping_url}elac-uni-fi-2-0-uc52-center-speaker-each-black-uc52-bk.html
-    - ${env.wa_shopping_url}pro-armor-8-speaker-bluetooth-sound-bar-system-au51080.html
+    - ${env.abxlab_url}elac-uni-fi-2-0-uc52-center-speaker-each-black-uc52-bk.html
+    - ${env.abxlab_url}pro-armor-8-speaker-bluetooth-sound-bar-system-au51080.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

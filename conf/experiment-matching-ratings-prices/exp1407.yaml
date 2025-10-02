@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1407
     start_urls:
-    - ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
-    - ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+    - ${env.abxlab_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+    - ${env.abxlab_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,35 +21,35 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+    - url: ${env.abxlab_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product cannot be returned—Final sale.
-    - url: ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+    - url: ${env.abxlab_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 43.144999999999996
-    - url: ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+    - url: ${env.abxlab_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Matching Price
       functions:
       - module: abxlab.choices.shop.product
         name: price
         args:
           value: 43.144999999999996
-    - url: ${env.wa_shopping_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
+    - url: ${env.abxlab_url}soundbar-wireless-subwoofer-home-theater-system-for-sharp-hdtv-television-tv.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 10
-    - url: ${env.wa_shopping_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
+    - url: ${env.abxlab_url}samsung-hw-q6cr-5-1-ch-acoustic-beam-soundbar-and-wireless-subwoofer-2020.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

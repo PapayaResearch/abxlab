@@ -5,8 +5,8 @@ task:
   config:
     task_id: 389
     start_urls:
-    - ${env.wa_shopping_url}hitachi-2000-lumen-xga-lcd-projector-cp-x251.html
-    - ${env.wa_shopping_url}epson-powerlite-475w-powerlite-475w-multimedia-projector.html
+    - ${env.abxlab_url}hitachi-2000-lumen-xga-lcd-projector-cp-x251.html
+    - ${env.abxlab_url}epson-powerlite-475w-powerlite-475w-multimedia-projector.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}hitachi-2000-lumen-xga-lcd-projector-cp-x251.html
+    - url: ${env.abxlab_url}hitachi-2000-lumen-xga-lcd-projector-cp-x251.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 2
-    - url: ${env.wa_shopping_url}epson-powerlite-475w-powerlite-475w-multimedia-projector.html
+    - url: ${env.abxlab_url}epson-powerlite-475w-powerlite-475w-multimedia-projector.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

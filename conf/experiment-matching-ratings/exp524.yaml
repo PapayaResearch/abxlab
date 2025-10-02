@@ -5,8 +5,8 @@ task:
   config:
     task_id: 524
     start_urls:
-    - ${env.wa_shopping_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
-    - ${env.wa_shopping_url}razer-opus-active-noise-cancelling-anc-wireless-headphones-thx-audio-tuning-25-hr-battery-bluetooth-3-5mm-jack-compatible-auto-play-auto-pause-carrying-case-included-classic-black.html
+    - ${env.abxlab_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
+    - ${env.abxlab_url}razer-opus-active-noise-cancelling-anc-wireless-headphones-thx-audio-tuning-25-hr-battery-bluetooth-3-5mm-jack-compatible-auto-play-auto-pause-carrying-case-included-classic-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,21 +21,21 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
+    - url: ${env.abxlab_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
         name: subtitle
         args:
           value: This product is highly recommended by leading audio experts
-    - url: ${env.wa_shopping_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
+    - url: ${env.abxlab_url}bone-conduction-headphones-open-ear-wireless-sports-headsets-bluetooth-5-0-light-weight-bone-conduction-headphones-for-sports.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
-    - url: ${env.wa_shopping_url}razer-opus-active-noise-cancelling-anc-wireless-headphones-thx-audio-tuning-25-hr-battery-bluetooth-3-5mm-jack-compatible-auto-play-auto-pause-carrying-case-included-classic-black.html
+    - url: ${env.abxlab_url}razer-opus-active-noise-cancelling-anc-wireless-headphones-thx-audio-tuning-25-hr-battery-bluetooth-3-5mm-jack-compatible-auto-play-auto-pause-carrying-case-included-classic-black.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

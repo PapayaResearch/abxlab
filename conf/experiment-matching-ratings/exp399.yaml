@@ -5,8 +5,8 @@ task:
   config:
     task_id: 399
     start_urls:
-    - ${env.wa_shopping_url}jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
-    - ${env.wa_shopping_url}koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
+    - ${env.abxlab_url}jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+    - ${env.abxlab_url}koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+    - url: ${env.abxlab_url}jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
-    - url: ${env.wa_shopping_url}koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
+    - url: ${env.abxlab_url}koss-sp330-on-ear-dynamic-headphones-black-with-silver-accents.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 68
     start_urls:
-    - ${env.wa_shopping_url}rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
-    - ${env.wa_shopping_url}pinnacle-frames-accents-kimberly-natural-wood-modern-octagon-40-x-40-wall-mirror-brown.html
+    - ${env.abxlab_url}rectangular-gold-frame-wall-mirror-perfect-for-bedroom-bathroom-vanity-living-room-entryway-hangs-horizontal-vertical-27-x-33-easy-mounting-by-ecohome.html
+    - ${env.abxlab_url}pinnacle-frames-accents-kimberly-natural-wood-modern-octagon-40-x-40-wall-mirror-brown.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

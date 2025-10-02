@@ -5,8 +5,8 @@ task:
   config:
     task_id: 1347
     start_urls:
-    - ${env.wa_shopping_url}viltrox-56mm-f1-4-autofocus-lens-for-fuji-large-aperture-aps-c-format-portrait-lens-for-fujifilm-x-mount-cameras-x-t200-t30-t4-t3-a7-pro3-with-usb-upgrade-port.html
-    - ${env.wa_shopping_url}panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
+    - ${env.abxlab_url}viltrox-56mm-f1-4-autofocus-lens-for-fuji-large-aperture-aps-c-format-portrait-lens-for-fujifilm-x-mount-cameras-x-t200-t30-t4-t3-a7-pro3-with-usb-upgrade-port.html
+    - ${env.abxlab_url}panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
+    - url: ${env.abxlab_url}panasonic-lumix-g-macro-lens-30mm-f2-8-asph-mirrorless-micro-four-thirds-mega-optical-i-s-h-hs030-usa-black.html
       nudge: Negative Framing
       functions:
       - module: abxlab.choices.shop.product

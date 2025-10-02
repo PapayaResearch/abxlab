@@ -5,8 +5,8 @@ task:
   config:
     task_id: 288
     start_urls:
-    - ${env.wa_shopping_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
-    - ${env.wa_shopping_url}renewed-nikon-d7500-dx-dslr-camera-body.html
+    - ${env.abxlab_url}canon-eos-m50-mirrorless-digital-camera-with-15-45mm-lens-flexible-tripod-uv-protection-filter-professional-case-card-reader-international-version-kit.html
+    - ${env.abxlab_url}renewed-nikon-d7500-dx-dslr-camera-body.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

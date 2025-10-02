@@ -5,8 +5,8 @@ task:
   config:
     task_id: 324
     start_urls:
-    - ${env.wa_shopping_url}pinnacle-frames-accents-kimberly-natural-wood-modern-octagon-40-x-40-wall-mirror-brown.html
-    - ${env.wa_shopping_url}facilehome-32-x-24-farmhouse-bathroom-wall-mirror-rustic-wood-frame-vanity-mirror-for-bathroom-living-room-bedroom-entryway.html
+    - ${env.abxlab_url}pinnacle-frames-accents-kimberly-natural-wood-modern-octagon-40-x-40-wall-mirror-brown.html
+    - ${env.abxlab_url}facilehome-32-x-24-farmhouse-bathroom-wall-mirror-rustic-wood-frame-vanity-mirror-for-bathroom-living-room-bedroom-entryway.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

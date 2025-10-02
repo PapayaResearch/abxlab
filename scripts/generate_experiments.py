@@ -241,7 +241,7 @@ def generate_experiments(
         df_tasks_home = df_tasks[df_tasks["Starting Point"] == "Home"].copy()
 
         # Set home url and create the intent dictionary
-        df_tasks_home.loc[:, "Start URLs"] = "${env.wa_shopping_url}"
+        df_tasks_home.loc[:, "Start URLs"] = "${env.abxlab_url}"
         df_tasks_home_all = df_tasks_home.merge(df_home, on="Intent Variables")
         df_tasks_home_all["Intent Dictionary"] = df_tasks_home_all.apply(
             lambda row: str({row["Intent Variables"]: row["Intent Value"]}),

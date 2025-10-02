@@ -5,8 +5,8 @@ task:
   config:
     task_id: 393
     start_urls:
-    - ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
-    - ${env.wa_shopping_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
+    - ${env.abxlab_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
+    - ${env.abxlab_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
+    - url: ${env.abxlab_url}sonos-bridege-for-sonos-wireless-network-discontinued-by-manufacturer.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 12
-    - url: ${env.wa_shopping_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
+    - url: ${env.abxlab_url}samsung-hw-jm45c-r-soundbar-with-subwoofer.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

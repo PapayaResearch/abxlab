@@ -5,8 +5,8 @@ task:
   config:
     task_id: 260
     start_urls:
-    - ${env.wa_shopping_url}zte-blade-a5-2020-32gb-2gb-6-09-hd-edge-to-edge-display-all-day-battery-dual-sim-gsm-unlocked-us-4g-lte-t-mobile-at-t-metro-straight-talk-international-model-black.html
-    - ${env.wa_shopping_url}net10-samsung-galaxy-a10e-4g-lte-prepaid-smartphone-locked-black-32gb-sim-card-included-cdma-with-40-airtime-bundle.html
+    - ${env.abxlab_url}zte-blade-a5-2020-32gb-2gb-6-09-hd-edge-to-edge-display-all-day-battery-dual-sim-gsm-unlocked-us-4g-lte-t-mobile-at-t-metro-straight-talk-international-model-black.html
+    - ${env.abxlab_url}net10-samsung-galaxy-a10e-4g-lte-prepaid-smartphone-locked-black-32gb-sim-card-included-cdma-with-40-airtime-bundle.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

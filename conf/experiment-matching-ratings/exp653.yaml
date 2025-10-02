@@ -5,8 +5,8 @@ task:
   config:
     task_id: 653
     start_urls:
-    - ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
-    - ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
+    - ${env.abxlab_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
+    - ${env.abxlab_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,7 +21,7 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
+    - url: ${env.abxlab_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
       nudge: Authority
       functions:
       - module: abxlab.choices.shop.product
@@ -29,14 +29,14 @@ task:
         args:
           value: This product is Wirecutter's top pick in the over-ear headphones
             category
-    - url: ${env.wa_shopping_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
+    - url: ${env.abxlab_url}lenovo-headset-wireless-bluetooth-over-the-head-noise-canceling.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 8
-    - url: ${env.wa_shopping_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
+    - url: ${env.abxlab_url}avantree-ht4189-40hrs-wireless-headphones-set-for-tv-watching-with-bluetooth-transmitter-digital-optical-aux-rca-no-delay-dual-link-support-high-volume-over-ear-headset-for-seniors-long-range.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

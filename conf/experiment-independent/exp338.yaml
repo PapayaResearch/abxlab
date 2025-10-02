@@ -5,8 +5,8 @@ task:
   config:
     task_id: 338
     start_urls:
-    - ${env.wa_shopping_url}barnyard-designs-34-5-decorative-round-wall-hanging-mirror-large-multicolor-wood-frame-circle-mirror-with-staple-details-rustic-farmhouse-wall-decor-for-home-bathroom-or-vanity.html
-    - ${env.wa_shopping_url}metro-beaded-mirror-wooden-frame-bathroom-mirror-24-x36-large-framed-deco-wall-mirror-with-angled-beveled-mirror-frame-for-living-room-entryways-washrooms-rfm2436s.html
+    - ${env.abxlab_url}barnyard-designs-34-5-decorative-round-wall-hanging-mirror-large-multicolor-wood-frame-circle-mirror-with-staple-details-rustic-farmhouse-wall-decor-for-home-bathroom-or-vanity.html
+    - ${env.abxlab_url}metro-beaded-mirror-wooden-frame-bathroom-mirror-24-x36-large-framed-deco-wall-mirror-with-angled-beveled-mirror-frame-for-living-room-entryways-washrooms-rfm2436s.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

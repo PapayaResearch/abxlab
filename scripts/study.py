@@ -58,10 +58,10 @@ def process_experiment(args):
     with initialize_config_dir(config_dir=base_conf_path, version_base=None):
         exp_cfg = compose(
             config_name=f"{cfg_dict['study']['experiment_path']}/{exp_name}",
-            overrides=[f"+env.wa_shopping_url={cfg_dict['env']['wa_shopping_url']}"]
+            overrides=[f"+env.abxlab_url={cfg_dict['env']['abxlab_url']}"]
         )
 
-    start_urls = [url.replace("${env.wa_shopping_url}", base_url)
+    start_urls = [url.replace("${env.abxlab_url}", base_url)
                   for url in exp_cfg.task.config.start_urls]
 
     if len(start_urls) <= 1:
@@ -106,7 +106,7 @@ def process_experiment(args):
     if choices:
         task["nudge"] = choices[0].nudge
         task["intervention"] = choices[0].functions[0].args.value
-        choice_url = choices[0].url.replace("${env.wa_shopping_url}", base_url)
+        choice_url = choices[0].url.replace("${env.abxlab_url}", base_url)
         if choice_url == task["url_0"]:
             task["nudge_index"] = 0
         elif choice_url == task["url_1"]:

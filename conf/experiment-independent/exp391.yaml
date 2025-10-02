@@ -5,8 +5,8 @@ task:
   config:
     task_id: 391
     start_urls:
-    - ${env.wa_shopping_url}vr-face-cover-for-oculus-quest-2-sweatproof-vr-cusion-pad-interface-bracket-face-pad-anti-leakage-nose-pad-with-protective-lens-cover-for-quest-2-accessories.html
-    - ${env.wa_shopping_url}vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
+    - ${env.abxlab_url}vr-face-cover-for-oculus-quest-2-sweatproof-vr-cusion-pad-interface-bracket-face-pad-anti-leakage-nose-pad-with-protective-lens-cover-for-quest-2-accessories.html
+    - ${env.abxlab_url}vr-shinecon-3d-vr-headset-virtual-reality-glasses-3d-vr-goggles-headsets-for-video-movies-games-compatible-with-iphone-and-android-smartphone.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 284
     start_urls:
-    - ${env.wa_shopping_url}olympus-sp-590uz-12mp-digital-camera-with-26x-wide-angle-optical-dual-image-stabilized-zoom-and-2-7-inch-lcd-black.html
-    - ${env.wa_shopping_url}samsung-wb150f-14-2-megapixel-digital-camera-white.html
+    - ${env.abxlab_url}olympus-sp-590uz-12mp-digital-camera-with-26x-wide-angle-optical-dual-image-stabilized-zoom-and-2-7-inch-lcd-black.html
+    - ${env.abxlab_url}samsung-wb150f-14-2-megapixel-digital-camera-white.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 200
     start_urls:
-    - ${env.wa_shopping_url}nikon-coolpix-b500-wi-fi-nfc-digital-camera-w-40x-zoom-hd-video-plum-international-version-no-warranty-4-aa-batteries-with-charger-10pc-32gb-dlx-accessory-kit-w-herofiber-cleaning-cloth.html
-    - ${env.wa_shopping_url}fujifilm-finepix-s5100-4mp-digital-camera-with-10x-optical-zoom.html
+    - ${env.abxlab_url}nikon-coolpix-b500-wi-fi-nfc-digital-camera-w-40x-zoom-hd-video-plum-international-version-no-warranty-4-aa-batteries-with-charger-10pc-32gb-dlx-accessory-kit-w-herofiber-cleaning-cloth.html
+    - ${env.abxlab_url}fujifilm-finepix-s5100-4mp-digital-camera-with-10x-optical-zoom.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

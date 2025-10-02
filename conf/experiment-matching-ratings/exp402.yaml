@@ -5,8 +5,8 @@ task:
   config:
     task_id: 402
     start_urls:
-    - ${env.wa_shopping_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
-    - ${env.wa_shopping_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
+    - ${env.abxlab_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
+    - ${env.abxlab_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information
@@ -21,14 +21,14 @@ task:
       store actual, useful information. - Avoid redundant or unnecessary actions.
       Repeating the same action reduces your chance of success.
     choices:
-    - url: ${env.wa_shopping_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
+    - url: ${env.abxlab_url}ql-design-36-green-pvc-grass-potted-plant-fake-grass-with-metal-pot-home-and-office-decor-artificial-grass-potted-plant.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product
         name: review_count
         args:
           value: 7
-    - url: ${env.wa_shopping_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
+    - url: ${env.abxlab_url}national-tree-company-artificial-shrub-includes-pot-base-arborvitae-48-48-inch-green.html
       nudge: Matching Review Count
       functions:
       - module: abxlab.choices.shop.product

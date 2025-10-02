@@ -1,3 +1,29 @@
+# Copyright (c) 2025
+# Manuel Cherep <mcherep@mit.edu>
+# Nikhil Singh <nikhil.u.singh@dartmouth.edu>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+"""
+This script processes aggregated results to make them ready for the analysis in R.
+"""
+
 import logging
 import argparse
 import pandas as pd
@@ -29,12 +55,12 @@ def main():
 
     df_list = [pd.read_csv(file) for file in args.input_files]
     df = pd.concat(df_list, ignore_index=True)
-    
+
     # Filter to pairs
     df["cfg.task.config.start_urls"] = df["cfg.task.config.start_urls"].map(eval)
     df = df[df["cfg.task.config.start_urls"].map(len) == 2].copy()
     logger.info("Found %d pairs with exactly 2 start URLs", len(df))
-    
+
     if args.product_list:
         df_products = pd.read_csv(args.product_list)
         product_map = df_products.set_index("product_url")["category"].to_dict()
@@ -45,18 +71,18 @@ def main():
 
     # Identify nudged choice
     nudge_types_to_ignore = ["Matching Review Count", "Matching Price"]
-    
+
     df["nudged_choice_url"] = df["choices"].map(
         lambda x: x[0]["url"] if ((len(x) > 0) and (x[0]["nudge"] not in nudge_types_to_ignore)) else None
     )
     df["nudge_type"] = df["choices"].map(
         lambda x: x[0]["nudge"] if ((len(x) > 0) and (x[0]["nudge"] not in nudge_types_to_ignore)) else None
     )
-    
+
     df["nudge_text"] = df["choices"].map(
         lambda x: x[0]["functions"][0]["args"]["value"] if ((len(x) > 0) and (x[0]["nudge"] not in nudge_types_to_ignore)) else None
     )
-    
+
     df["chose_nudged_product"] = df.apply(
         lambda row: row["final_step.url"] == row["nudged_choice_url"],
         axis=1
@@ -80,7 +106,7 @@ def main():
         axis=1
     ).astype("Int64")
     df_reg["other_idx"] = 1 - df_reg["nudged_idx"]
-    
+
     # Remove any invalid choices
     df_reg = df_reg[df_reg["chose_idx"].notnull()]
     df_reg = df_reg[df_reg["final_step.elem_info.attrs.id"].notnull()]
@@ -91,11 +117,11 @@ def main():
     df_reg["price_other"] = df_reg.apply(lambda row: row["prices"][row["other_idx"]] if row["nudge_trial"] else None, axis=1)
     df_reg["rating_nudged"] = df_reg.apply(lambda row: row["ratings"][row["nudged_idx"]] if row["nudge_trial"] else None, axis=1)
     df_reg["rating_other"] = df_reg.apply(lambda row: row["ratings"][row["other_idx"]] if row["nudge_trial"] else None, axis=1)
-    
+
     df_reg["avg_price"] = df_reg["prices"].apply(lambda x: sum(x) / len(x))
     df_reg["price_diff_lr"] = df_reg["prices"].apply(lambda x: abs(x[1] - x[0]))
     df_reg["price_diff_lr_pct"] = df_reg["price_diff_lr"] / df_reg["avg_price"]
-    
+
     df_reg["chose_cheaper"] = df_reg.apply(
         lambda row: row["prices"][row["chose_idx"]] < row["prices"][1 - row["chose_idx"]],
         axis=1
@@ -116,13 +142,13 @@ def main():
     # Calculate differences
     df_reg["price_diff"] = df_reg["price_nudged"] - df_reg["price_other"]
     df_reg["rating_diff"] = df_reg["rating_nudged"] - df_reg["rating_other"]
-    
+
     # Get nudge type
     df_reg["nudge_type"] = df_reg["choices"].map(lambda x: x[0]["nudge"] if len(x) > 0 else None)
 
     # Create model_family column
     df_reg["model_family"] = df_reg["study.chat_model_args.model_name"]
-    
+
     # Save the processed data for further inspection
     df_reg.to_csv(args.output_file, index=False)
     logger.info("Saved preprocessed data to %s", args.output_file)

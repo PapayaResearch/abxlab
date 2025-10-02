@@ -1,3 +1,29 @@
+# Copyright (c) 2025
+# Manuel Cherep <mcherep@mit.edu>
+# Nikhil Singh <nikhil.u.singh@dartmouth.edu>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+"""
+This script selects pairs of products based on specified criteria such as rating and price differences.
+"""
+
 import random
 import argparse
 import multiprocessing
@@ -67,7 +93,7 @@ def main():
             pairs = generate_random_pairs(data, args.max_rating_diff, args.max_price_diff)
         elif args.strategy == "dynamic":
             pairs = generate_dynamic_pairs(data, args.max_rating_diff, args.max_price_diff, args.neighborhood)
-        
+
         all_pairs.extend(pairs)
 
     print(f"Generated {len(all_pairs)} pairs.")
@@ -92,12 +118,12 @@ def main():
         )
 
     output_df = pd.DataFrame(pair_records)
-    
+
     # Subsample if too many pairs remain
     if len(output_df) > args.max_pairs:
         output_df = output_df.sample(n=args.max_pairs, random_state=42).reset_index(drop=True)
         print(f"Subsampled to {args.max_pairs} pairs.")
-    
+
     output_df.to_csv(args.output_file, index=False)
 
     print(f"Saved {len(output_df)} product pairs to {args.output_file}")
@@ -108,7 +134,7 @@ def is_valid_pair(p1: dict[str, Any], p2: dict[str, Any], max_rating_diff: float
     # Check rating difference
     if abs(p1["rating"] - p2["rating"]) > max_rating_diff * 100:
         return False
-    
+
     # Check price difference (percentage)
     if max_price_diff != float("inf"):
         min_price = min(p1["price"], p2["price"])
@@ -116,7 +142,7 @@ def is_valid_pair(p1: dict[str, Any], p2: dict[str, Any], max_rating_diff: float
             price_diff_pct = abs(p1["price"] - p2["price"]) / min_price
             if price_diff_pct > max_price_diff:
                 return False
-    
+
     return True
 
 
@@ -124,12 +150,12 @@ def generate_sequential_pairs(data: pd.DataFrame, max_rating_diff: float, max_pr
     """Generate consecutive pairs (original behavior)."""
     pairs = []
     sorted_data = data.sort_values(by="price").to_dict("records")
-    
+
     for i in range(len(sorted_data) - 1):
         p1, p2 = sorted_data[i], sorted_data[i + 1]
         if is_valid_pair(p1, p2, max_rating_diff, max_price_diff):
             pairs.append((p1, p2))
-    
+
     return pairs
 
 
@@ -137,29 +163,29 @@ def generate_random_pairs(data: pd.DataFrame, max_rating_diff: float, max_price_
     """Generate random pairs."""
     pairs = []
     products = data.to_dict("records")
-    
+
     for _ in range(len(products)):
         pair = random.sample(products, 2)
         if is_valid_pair(pair[0], pair[1], max_rating_diff, max_price_diff):
             pairs.append(tuple(pair))
-    
+
     return pairs
 
 
 def generate_dynamic_pairs(data: pd.DataFrame, max_rating_diff: float, max_price_diff: float, neighborhood: int) -> list[tuple[dict, dict]]:
     """
     Generate pairs using dynamic programming approach.
-    
+
     This finds the maximum number of non-overlapping pairs within the neighborhood constraint
     while respecting rating and price difference limits.
     """
     if len(data) < 2:
         return []
-    
+
     # Sort by price for consistent ordering
     sorted_data = data.sort_values(by="price").to_dict("records")
     n = len(sorted_data)
-    
+
     # Build adjacency list of valid pairs within neighborhood
     valid_pairs = []
     for i in range(n):
@@ -167,31 +193,31 @@ def generate_dynamic_pairs(data: pd.DataFrame, max_rating_diff: float, max_price
             p1, p2 = sorted_data[i], sorted_data[j]
             if is_valid_pair(p1, p2, max_rating_diff, max_price_diff):
                 valid_pairs.append((i, j, p1, p2))
-    
+
     if not valid_pairs:
         return []
-    
+
     # Dynamic programming to find maximum number of non-overlapping pairs
     # Sort pairs by ending index
     valid_pairs.sort(key=lambda x: x[1])
-    
+
     # dp[i] = maximum number of pairs using pairs[0:i+1]
     m = len(valid_pairs)
     dp = [0] * m
     selected_pairs = [[] for _ in range(m)]
-    
+
     # Base case
     dp[0] = 1
     selected_pairs[0] = [(valid_pairs[0][2], valid_pairs[0][3])]
-    
+
     for i in range(1, m):
         current_pair = valid_pairs[i]
         current_start, current_end = current_pair[0], current_pair[1]
-        
+
         # Option 1: Don't include current pair
         dp[i] = dp[i-1]
         selected_pairs[i] = selected_pairs[i-1][:]
-        
+
         # Option 2: Include current pair
         # Find the latest pair that doesn't conflict with current pair
         latest_compatible = -1
@@ -202,20 +228,20 @@ def generate_dynamic_pairs(data: pd.DataFrame, max_rating_diff: float, max_price
                 if prev_end != current_start and prev_start != current_end:  # No shared endpoint
                     latest_compatible = j
                     break
-        
+
         # Calculate value if we include current pair
         include_value = 1
         include_pairs = [(current_pair[2], current_pair[3])]
-        
+
         if latest_compatible >= 0:
             include_value += dp[latest_compatible]
             include_pairs = selected_pairs[latest_compatible][:] + include_pairs
-        
+
         # Choose better option
         if include_value > dp[i]:
             dp[i] = include_value
             selected_pairs[i] = include_pairs
-    
+
     return selected_pairs[m-1] if m > 0 else []
 
 
@@ -241,7 +267,7 @@ def filter_products_chunk(df_chunk: pd.DataFrame, llm_model: str) -> pd.DataFram
 
 class CheckTitle(dspy.Signature):
     """Detect if a product title contains a 'nudge' or other leading phrase OR is a multi-pack OR notes the quantity.
-    
+
     This is a subtle prompt or suggestion that influences consumer behavior.
     For example, phrases like:
     - "All-in-one"
@@ -257,7 +283,7 @@ class CheckTitle(dspy.Signature):
     - "Bundle deal"
     - "Multi-pack"
     - "Family pack"
-    
+
     Finally, if the title mentions a quantity in any unit (e.g. "100g", "2L"), please return True for mentions_quantity.
     """
 

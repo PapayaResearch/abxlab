@@ -1,5 +1,6 @@
 # Copyright (c) 2025
 # Manuel Cherep <mcherep@mit.edu>
+# Nikhil Singh <nikhil.u.singh@dartmouth.edu>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -19,6 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+"""
+This module contains interventions to modify product pages from config files.
+"""
+
 from bs4 import BeautifulSoup
 
 
@@ -27,6 +32,8 @@ def subtitle(
     value: str,
     elem_id: str = "page-title-wrapper product"
 ) -> tuple[str, dict]:
+    """Inserts a subtitle below the product title."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     element = soup.find("div", class_=elem_id)
@@ -54,6 +61,8 @@ def stock(
     value: str,
     elem_id: str = "product-info-stock-sku"
 ) -> tuple[str, dict]:
+    """Replaces stock information for the product."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     element = soup.find("div", class_=elem_id)
@@ -80,6 +89,8 @@ def price(
     original_html: bytes,
     value: float
 ) -> str:
+    """Replaces the product price."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     # Change price in span
@@ -99,6 +110,8 @@ def review_count(
     original_html: bytes,
     value: int
 ) -> str:
+    """Replaces the review count for the product."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     # Change review count on the right next to rating
@@ -115,10 +128,17 @@ def review_count(
     return modified_html, {}
 
 
+################################################################################
+# Functions below modify the HTML without returning additional metadata
+# These are useful when are called all the time (e.g. ABxLabShopTask in task.py)
+################################################################################
+
 def rating(
     original_html: bytes,
     elem_id: str = "rating-summary"
 ) -> str:
+    """Inserts the rating explicitly in percentage to avoid confusion with the stars by default."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     rating = soup.find("div", class_="rating-result")
@@ -145,6 +165,8 @@ def ablate(
     original_html: bytes,
     elems: list[str] = ["product-reviews-summary", "price-box price-final_price"]
 ) -> str:
+    """Removes specified elements from the product page."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     for elem in elems:

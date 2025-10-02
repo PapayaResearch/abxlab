@@ -1,5 +1,6 @@
 # Copyright (c) 2025
 # Manuel Cherep <mcherep@mit.edu>
+# Nikhil Singh <nikhil.u.singh@dartmouth.edu>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -19,6 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+"""
+This module contains interventions to modify the home page from config files.
+"""
+
 import random
 import abxlab.choices.shop.product
 import abxlab.choices.shop.category
@@ -30,6 +35,8 @@ def subtitle(
     value: str,
     elem_id: list[str] = "product-item-name"
 ) -> tuple[str, dict]:
+    """Inserts a subtitle below the product title."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     if soup.find("meta", property="og:type", content="product"):
@@ -79,13 +86,20 @@ def stock(
     value: str,
     elem_ids: list[str] = ["product name product-item-name", "product-item-name"]
 ) -> tuple[str, dict]:
+    """Replaces stock information for the product."""
     return subtitle(original_html, value, elem_ids)
 
+################################################################################
+# Functions below modify the HTML without returning additional metadata
+# These are useful when are called all the time (e.g. ABxLabShopTask in task.py)
+################################################################################
 
 def rating(
     original_html: bytes,
     elem_id: str = "rating-result"
 ) -> str:
+    """Inserts the rating explicitly in percentage to avoid confusion with the stars by default."""
+
     soup = BeautifulSoup(original_html, "lxml")
 
     items = soup.select("li.product-item")

@@ -1,4 +1,4 @@
-# ABxLab
+# ABxLab: A Framework for Studying AI Agent Behavior
 
 ![Python version](https://img.shields.io/badge/python-3.11-blue)
 ![Package version](https://img.shields.io/badge/version-0.1.0-green)
@@ -98,7 +98,8 @@ AWS_SECRET_ACCESS_KEY="<YOUR_AWS_KEY>"
 > [!NOTE]
 > Results are saved to `AGENTLAB_EXP_ROOT` defined in the `.env` above.
 
-> [!TIP] The results contain the raw data, so you can adapt `scripts/collect_results.py` to transform it into a CSV file that is easier to analyze.
+> [!TIP]
+> The results contain the raw data. You can adapt `scripts/collect_results.py`, which transforms results into a CSV file that is easier to analyze.
 
 ### Running Your First Experiment
 
@@ -124,7 +125,7 @@ For more elaborated experiments, you can generate all configurations programmati
 python scripts/generate_experiments.py --match-price --match-review-count --products=tasks/product_pairs-matched-ratings.csv --exp-dir conf/experiment
 ```
 
-Then, one can run all of these experiments with multirun
+Then, one can run all these experiments with multirun
 
 ```bash
 # Define the range of experiment IDs you want to run (e.g., exp0 through N)
@@ -142,7 +143,7 @@ python run.py --multirun "+experiment=${EXPS}"
 
 #### Select a Different LLM
 
-Supoorted models and providers are in `conf/agent/`, which can be easily extended.
+Supported models and providers are in `conf/agent/`, which can be easily extended.
 
 ```bash
 # Use GPT 5

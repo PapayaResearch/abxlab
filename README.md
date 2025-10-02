@@ -57,7 +57,7 @@ playwright install
 Create a `.env` file in the project root with the following configuration:
 
 > [!IMPORTANT]
-> Due to AgentLab and BrowserGym dependencies, you must set all these endpoints to avoid runtime errors. We don't host WebArena environments, but you can deploy them following these [instructions](https://github.com/web-arena-x/webarena/blob/main/environment_docker/README.md). For quick testing, you can assign any URL, but agent actions have real consequences!
+> Due to AgentLab and BrowserGym dependencies, you must set all these endpoints to avoid runtime errors. We don't host WebArena environments, but you can deploy them following these [instructions](https://github.com/web-arena-x/webarena/blob/main/environment_docker/README.md).
 
 ```bash
 # Base URL for web agent environments
@@ -84,7 +84,7 @@ WA_HOMEPAGE="${HOMEPAGE}"
 # Results will be saved in this directory
 AGENTLAB_EXP_ROOT="results"
 
-# LLM API Keys (add the ones you plan to use)
+# LLM API Keys (add only the ones you plan to use)
 OPENAI_API_KEY="<YOUR_OPENAI_KEY>"
 ANTHROPIC_API_KEY="<YOUR_ANTHROPIC_KEY>"
 GEMINI_API_KEY="<YOUR_GEMINI_KEY>"
@@ -162,14 +162,6 @@ python run.py agent=gemini-2-5-pro
 python run.py agent=deepseek-r1
 ```
 
-#### Select a Different Task
-
-You can run any task in `conf/task/` such as:
-
-```bash
-python run.py task=shopping
-```
-
 ### Advanced Usage & Customization
 
 ### Project Structure
@@ -228,7 +220,7 @@ We included support for [LiteLLM](https://www.litellm.ai/) and set it by default
 
 ## AgentXray: Visualizing Results
 
-AgentXray is a Gradio-based visualization tool for debugging and analyzing agent behavior.
+AgentXray is a Gradio-based visualization tool by [AgentLab](https://github.com/ServiceNow/AgentLab) for debugging and analyzing agent behavior.
 
 https://github.com/user-attachments/assets/06c4dac0-b78f-45b7-9405-003da4af6b37
 

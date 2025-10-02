@@ -52,6 +52,14 @@ Playwright is required for browser automation:
 playwright install
 ```
 
+### 3. [Optional] Install DSPy
+
+In a few `scripts` we use [DSPy](https://dspy.ai/), but it conflicts with `hydra-ray-launcher` so you can install it separately:
+
+```bash
+pip install dspy==2.6.27
+```
+
 ### 3. Configure Environment Variables
 
 Create a `.env` file in the project root with the following configuration:
@@ -101,26 +109,37 @@ AWS_SECRET_ACCESS_KEY="<YOUR_AWS_KEY>"
 > [!TIP]
 > The results contain the raw data. You can adapt `scripts/collect_results.py`, which transforms results into a CSV file that is easier to analyze.
 
-### Running Your First Experiment
+### Defining the Environment
 
-> [!NOTE]
-> This example assumes you're hosting a version of the shopping environment.
+The main configuration file `conf/config.yaml` defines the `abxlab_url` used throughout the codebase. By default, we choose one of the variables defined in `.env` above, but you can replace it.
 
-The easiest way to run `ABxLab` is with a configuration file like the examples in `ABxLab/conf/task/test/`. For example:
-
-```bash
-python run.py task=test/bestseller_product
+```yaml
+env:
+  abxlab_url: ${oc.env:WA_SHOPPING}
 ```
 
-[Here](https://github.com/PapayaResearch/AgentLab/blob/main/conf/task/test/bestseller_product.yaml) the agent will see two different product pages (set in `start_urls`), the intent of the task, and an intervention function (set in `choices`) that introduces a nudge for one of the products. The config in `eval` defines when to stop, which in this case is when an agent adds a product to the cart.
+### Running Your First Experiment
 
-You can also run any of the experiments in `conf/` as:
+The easiest way to run `ABxLab` is with a configuration file like the example in `ABxLab/conf/task/test/basic.yaml`. This works out of the box if you set `BASE_WEB_AGENT_URL="https://www.amazon.com/"` in `.env`, and it's easy to adapt!
+
+- `start_urls`: This defines the URLs the agent will see. In this example, the homepage.
+- `intent_template`: This defines the goal of the task. In this example, searching for a "toy papaya".
+- `choices`: This defines all intervention functions. In this case, it includes a nudge below the product title.
+- `eval`: This defines the stopping condition. In this example, once a product is added to the cart.
+
+```bash
+python run.py task=test/basic
+```
+
+You can visualize the results with [AgentXray](#agentxray-visualizing-results).
+
+### Scaling Experiments
+
+There are other useful ways of running experiments. For example, you can also run any of the experiments in `conf/` as:
 
 ```bash
 python run.py +experiment-regular=exp10
 ```
-
-### Generating Experiment Configurations
 
 For more elaborated experiments, you can generate all configurations programmatically. In the shopping environment, the script `scripts/generate_experiments.py` generates experiment configurations in `--exp-dir` from the data in `tasks/`:
 
@@ -195,7 +214,7 @@ ABxLab/
 
 ### Tasks
 
-You can create new tasks in `conf/task/` and use `shopping.yaml` as inspiration. Most of this logic is inherited from [WebArena](https://github.com/web-arena-x/webarena), so we refer the reader there for details. We modify it with:
+You can create new tasks in `conf/task/` and use `shopping.yaml` or `test/basic.yaml` as inspiration. Most of this logic is inherited from [WebArena](https://github.com/web-arena-x/webarena), so we refer the reader there for details. We modify it with:
 
 - `entrypoint: abxlab.task.ABxLabShopTask`: This is a custom class where we run logic that we always need for the shopping environment. Otherwise, you can use its parent `entrypoint: abxlab.task.ABxLabTask`.
 - `config.choices`: This is a placeholder, which you can copy and paste. Your configs (e.g. conf/task/test) should inherit this config, and you can replace `choices` with either an empty list (no interventions needed) or a list of functions following the details below.
@@ -208,7 +227,7 @@ ABxLab allows you to define a set of intervention functions in the configuration
 
 ### Benchmark
 
-The ABxLab [benchmark](https://github.com/PapayaResearch/AgentLab/blob/main/conf/benchmark/abxlab.yaml) can be used as is in most cases (except for task_category: shopping). It's worth noting that here is where we define the high level actions available for agents, which we customized [here](https://github.com/PapayaResearch/AgentLab/blob/967c3d1e2c064b988f4b14744b7a6ffb75269945/abxlab/actions.py#L203-L212) to remove unnecessary actions available in BrowserGym.
+The ABxLab [benchmark](https://github.com/PapayaResearch/AgentLab/blob/main/conf/benchmark/abxlab.yaml) can be used as is in most cases. It's worth noting that here is where we define the high level actions available for agents, which we customized [here](https://github.com/PapayaResearch/AgentLab/blob/967c3d1e2c064b988f4b14744b7a6ffb75269945/abxlab/actions.py#L203-L212) to remove unnecessary actions available in BrowserGym.
 
 ### Agent
 

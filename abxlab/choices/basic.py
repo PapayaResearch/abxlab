@@ -39,14 +39,14 @@ def subtitle(
     soup = BeautifulSoup(original_html, "lxml")
 
     element = soup.find(attrs={"id": elem_id})
-    
+
     logging.info(f"Found element: {element}")
 
     span_tag = soup.new_tag(
         insert_elem_type,
         attrs={"class":"product-title-details", "visible":""}
     )
-    
+
     span_tag["style"] = (
         "display: inline-block; "
         "padding: 4px 8px; "

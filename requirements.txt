@@ -34,4 +34,3 @@ transformers==4.51.3
 tweepy==4.15.0
 hydra-ray-launcher==1.2.1
 litellm==1.67.5
-dspy==2.6.27

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 278
     start_urls:
-    - ${env.wa_shopping_url}kodak-easyshare-m753-7-mp-digital-camera-with-3xoptical-zoom-silver.html
-    - ${env.wa_shopping_url}kids-digital-camera-heegomn-2-8-inch-lcd-20mp-compact-digital-camera-for-boys-and-girls-gift-portable-point-and-shoot-digital-camera-with-8x-digital-zoom-and-rechargeable-battery.html
+    - ${env.abxlab_url}kodak-easyshare-m753-7-mp-digital-camera-with-3xoptical-zoom-silver.html
+    - ${env.abxlab_url}kids-digital-camera-heegomn-2-8-inch-lcd-20mp-compact-digital-camera-for-boys-and-girls-gift-portable-point-and-shoot-digital-camera-with-8x-digital-zoom-and-rechargeable-battery.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

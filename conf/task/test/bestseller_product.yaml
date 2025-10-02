@@ -13,8 +13,8 @@ config:
   require_login: false
   storage_state: ./.auth/shopping_state.json
   start_urls:
-    - ${env.wa_shopping_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html
-    - ${env.wa_shopping_url}photosmart-plus-b209-clr-inkjetfb-p-s-c-usb-wrls-1.html
+    - ${env.abxlab_url}epson-workforce-wf-3620-wifi-direct-all-in-one-color-inkjet-printer-copier-scanner-amazon-dash-replenishment-ready.html
+    - ${env.abxlab_url}photosmart-plus-b209-clr-inkjetfb-p-s-c-usb-wrls-1.html
   geolocation: null
   intent_template: |
     Add the best product from the open tabs to the shopping cart.

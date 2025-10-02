@@ -5,8 +5,8 @@ task:
   config:
     task_id: 203
     start_urls:
-    - ${env.wa_shopping_url}ultimaxx-500mm-w-2x-converter-1000mm-f-8-manual-multi-coated-preset-telephoto-lens-kit-for-canon-eos-9000d-800d-760d-750d-700d-1300d-1200d-t100-4000d-3000d-2000d-1500d-dslr-cameras.html
-    - ${env.wa_shopping_url}fotodiox-pro-autofocus-2x-teleconverter-compatible-with-canon-eos-ef-full-frame-lenses-and-ef-efs-cameras.html
+    - ${env.abxlab_url}ultimaxx-500mm-w-2x-converter-1000mm-f-8-manual-multi-coated-preset-telephoto-lens-kit-for-canon-eos-9000d-800d-760d-750d-700d-1300d-1200d-t100-4000d-3000d-2000d-1500d-dslr-cameras.html
+    - ${env.abxlab_url}fotodiox-pro-autofocus-2x-teleconverter-compatible-with-canon-eos-ef-full-frame-lenses-and-ef-efs-cameras.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

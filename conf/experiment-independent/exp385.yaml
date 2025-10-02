@@ -5,8 +5,8 @@ task:
   config:
     task_id: 385
     start_urls:
-    - ${env.wa_shopping_url}calidaka-vr-facial-interface-bracket-compatible-with-oculus-quest-2-universal-pu-leather-foam-face-guard-pad-washable-replace-face-pads-accessories-detachable-face-protector-pad.html
-    - ${env.wa_shopping_url}vr-facial-interface-bracket-for-oculus-quest-2-non-slip-face-cover-pad-replacement-protective-lens-cover-anti-leakage-nose-pad-custom.html
+    - ${env.abxlab_url}calidaka-vr-facial-interface-bracket-compatible-with-oculus-quest-2-universal-pu-leather-foam-face-guard-pad-washable-replace-face-pads-accessories-detachable-face-protector-pad.html
+    - ${env.abxlab_url}vr-facial-interface-bracket-for-oculus-quest-2-non-slip-face-cover-pad-replacement-protective-lens-cover-anti-leakage-nose-pad-custom.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

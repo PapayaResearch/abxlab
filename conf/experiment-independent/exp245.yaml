@@ -5,8 +5,8 @@ task:
   config:
     task_id: 245
     start_urls:
-    - ${env.wa_shopping_url}harphonic-e7-active-noise-cancelling-headphones-bluetooth-headphones-wireless-headphones-over-ear-with-microphone-deep-bass-comfortable-protein-earpads-30-hours-playtime-for-travel-work-black.html
-    - ${env.wa_shopping_url}altec-lansing-mzx668-blk-evolution-2-bluetooth-headphones-just-ask-siri-and-google-voice-assistant-30-foot-wireless-range-8-hours-of-battery-life-dynamic-bass-convenient-controls-black.html
+    - ${env.abxlab_url}harphonic-e7-active-noise-cancelling-headphones-bluetooth-headphones-wireless-headphones-over-ear-with-microphone-deep-bass-comfortable-protein-earpads-30-hours-playtime-for-travel-work-black.html
+    - ${env.abxlab_url}altec-lansing-mzx668-blk-evolution-2-bluetooth-headphones-just-ask-siri-and-google-voice-assistant-30-foot-wireless-range-8-hours-of-battery-life-dynamic-bass-convenient-controls-black.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

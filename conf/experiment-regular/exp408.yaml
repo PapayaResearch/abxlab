@@ -5,8 +5,8 @@ task:
   config:
     task_id: 408
     start_urls:
-    - ${env.wa_shopping_url}genuine-pecorino-romano-sold-by-the-pound.html
-    - ${env.wa_shopping_url}fulvi-grated-pecorino-romano.html
+    - ${env.abxlab_url}genuine-pecorino-romano-sold-by-the-pound.html
+    - ${env.abxlab_url}fulvi-grated-pecorino-romano.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

@@ -5,8 +5,8 @@ task:
   config:
     task_id: 224
     start_urls:
-    - ${env.wa_shopping_url}aaxa-hp2-halloween-projector-for-haunted-windows-pumpkins-holographic-projections-dlp-led-portable-projector-with-5-onboard-spectral-illusions-ghosts-and-wraiths-built-in-speaker-bt-audio-out.html
-    - ${env.wa_shopping_url}fugetek-led-video-projector-home-office-outdoor-movie-night-2500-lumen-120-viewing-supports-1080p-dual-hdmi-usb-inputs-vga-av-works-with-fire-tv-roku-ps4-xbox.html
+    - ${env.abxlab_url}aaxa-hp2-halloween-projector-for-haunted-windows-pumpkins-holographic-projections-dlp-led-portable-projector-with-5-onboard-spectral-illusions-ghosts-and-wraiths-built-in-speaker-bt-audio-out.html
+    - ${env.abxlab_url}fugetek-led-video-projector-home-office-outdoor-movie-night-2500-lumen-120-viewing-supports-1080p-dual-hdmi-usb-inputs-vga-av-works-with-fire-tv-roku-ps4-xbox.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

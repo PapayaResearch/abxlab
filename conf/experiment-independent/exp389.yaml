@@ -5,8 +5,8 @@ task:
   config:
     task_id: 389
     start_urls:
-    - ${env.wa_shopping_url}skywin-portable-travel-hard-case-for-oculus-quest-vr-headset-and-quest-controllers-compatible-with-oculus-quest.html
-    - ${env.wa_shopping_url}calidaka-1pair-anti-blue-light-magnetic-eyeglasses-lens-for-oculus-quest-2-anti-blue-light-lens-oculus-quest-2-glasses-accessories-vr-glasses-accessories-anti-blue-lens.html
+    - ${env.abxlab_url}skywin-portable-travel-hard-case-for-oculus-quest-vr-headset-and-quest-controllers-compatible-with-oculus-quest.html
+    - ${env.abxlab_url}calidaka-1pair-anti-blue-light-magnetic-eyeglasses-lens-for-oculus-quest-2-anti-blue-light-lens-oculus-quest-2-glasses-accessories-vr-glasses-accessories-anti-blue-lens.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

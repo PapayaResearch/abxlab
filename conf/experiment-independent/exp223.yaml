@@ -5,8 +5,8 @@ task:
   config:
     task_id: 223
     start_urls:
-    - ${env.wa_shopping_url}fugetek-led-video-projector-home-office-outdoor-movie-night-2500-lumen-120-viewing-supports-1080p-dual-hdmi-usb-inputs-vga-av-works-with-fire-tv-roku-ps4-xbox.html
-    - ${env.wa_shopping_url}mini-projector-portable-1080p-led-projector-pocket-pico-video-projector-for-home-theater-movie-projector-outdoor-movie-projector-cartoon-kids-gift-hdmi-usb-tv-av-interfaces-and-remote-control.html
+    - ${env.abxlab_url}fugetek-led-video-projector-home-office-outdoor-movie-night-2500-lumen-120-viewing-supports-1080p-dual-hdmi-usb-inputs-vga-av-works-with-fire-tv-roku-ps4-xbox.html
+    - ${env.abxlab_url}mini-projector-portable-1080p-led-projector-pocket-pico-video-projector-for-home-theater-movie-projector-outdoor-movie-projector-cartoon-kids-gift-hdmi-usb-tv-av-interfaces-and-remote-control.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

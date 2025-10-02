@@ -5,8 +5,8 @@ task:
   config:
     task_id: 229
     start_urls:
-    - ${env.wa_shopping_url}mini-projector-iolieo-supported-hd-1080p-home-projectors-200-display-50000-hours-led-life-dual-speakers-portable-projector-compatible-with-usb-hdmi-vga-tf-ps4-laptop-dvd.html
-    - ${env.wa_shopping_url}wifi-bluetooth-projector-artlii-enjoy-2-mini-projector-for-iphone-support-full-hd-1080p-keystone-zoom-300-portable-movie-projector-compatible-with-tv-stick-ios-android.html
+    - ${env.abxlab_url}mini-projector-iolieo-supported-hd-1080p-home-projectors-200-display-50000-hours-led-life-dual-speakers-portable-projector-compatible-with-usb-hdmi-vga-tf-ps4-laptop-dvd.html
+    - ${env.abxlab_url}wifi-bluetooth-projector-artlii-enjoy-2-mini-projector-for-iphone-support-full-hd-1080p-keystone-zoom-300-portable-movie-projector-compatible-with-tv-stick-ios-android.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

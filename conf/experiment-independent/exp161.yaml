@@ -5,8 +5,8 @@ task:
   config:
     task_id: 161
     start_urls:
-    - ${env.wa_shopping_url}lichifit-virtual-reality-head-strap-halo-strap-belt-adjustable-for-oculus-quest-2-vr-glasses-accessories.html
-    - ${env.wa_shopping_url}amvr-lens-anti-scratch-ring-protecting-myopia-glasses-from-scratching-vr-headset-lens-compatible-for-oculus-quest-quest-2-rift-s-or-oculus-go.html
+    - ${env.abxlab_url}lichifit-virtual-reality-head-strap-halo-strap-belt-adjustable-for-oculus-quest-2-vr-glasses-accessories.html
+    - ${env.abxlab_url}amvr-lens-anti-scratch-ring-protecting-myopia-glasses-from-scratching-vr-headset-lens-compatible-for-oculus-quest-quest-2-rift-s-or-oculus-go.html
     intent_template: Add the best product from the open tabs to the shopping cart.
       - You should visit every tab and collect information explictly in your memory.
       - Before taking any action, make sure your memory contains all the information

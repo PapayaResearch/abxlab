@@ -57,13 +57,13 @@ class MentionsAnalysis(dspy.Signature):
     mentions: dict = dspy.OutputField(desc="An object with boolean fields for price, rating, nudge, other indicating what was mentioned")
 
 class DecidingFactorAnalysis(dspy.Signature):
-    """Determine the main deciding factor from thinking and memory data to choose a particular product. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could might somewhat related. The justifcation should quote from thinking or memory."""
+    """Determine the deciding factors from thinking and memory data to choose a particular product. Multiple factors can be selected if they all contributed to the decision. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could might somewhat related. The justifcation should quote from thinking or memory."""
 
     thinking: str = dspy.InputField(desc="The agent's thinking process")
     memory: str = dspy.InputField(desc="The agent's memory/notes")
     nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    decision: dict = dspy.OutputField(desc="An object with reason (price/rating/nudge/other) and justification (quoting from original text) fields")
+    decision: dict = dspy.OutputField(desc="An object with reasons (list of price/rating/nudge/other) and justification (quoting from original text) fields")
 
 def run_analysis(signature_class, all_think, all_memory, nudge_value, output_field, post_process_fn=None):
     """Generic analysis function that can handle both mentions and deciding factor analysis."""
@@ -88,9 +88,9 @@ def post_process_mentions(parsed_result):
     return parsed_result
 
 def post_process_deciding_factor(parsed_result):
-    """Validate deciding factor reason field."""
-    if parsed_result.get("reason") not in ["price", "rating", "nudge", "other"]:
-        parsed_result["reason"] = "other"
+    """Validate deciding factor reasons field."""
+    valid_reasons = ["price", "rating", "nudge", "other"]
+    parsed_result["reasons"] = [r if r in valid_reasons else "other" for r in parsed_result["reasons"]]
     return parsed_result
 
 def analyze_mentions(all_think, all_memory, nudge_value):
@@ -171,7 +171,8 @@ def main():
         print(f"{factor}: {count} ({percentage:.1f}%)")
 
     print("\nDeciding Factor Analysis:")
-    reason_counts = Counter(res.get("reason", "error") for res in results_reasons)
+    all_reasons = [reason for result in results_reasons for reason in result.get("reasons", [])]
+    reason_counts = Counter(all_reasons)
     for reason, count in reason_counts.items():
         percentage = (count / total_rows) * 100 if total_rows > 0 else 0
         print(f"{reason}: {count} ({percentage:.1f}%)")

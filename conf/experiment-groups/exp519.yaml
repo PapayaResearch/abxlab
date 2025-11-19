@@ -1,0 +1,32 @@
+# @package _global_
+
+task:
+  name: exp519
+  config:
+    task_id: 119
+    start_urls:
+    - ${env.abxlab_url}nubian-heritage-24-hour-natural-deodorant-honey-and-black-seed-2-25-oz-pack-of-4.html
+    - ${env.abxlab_url}sure-anti-perspirant-deodorant-original-solid-regular-scent-2-70-oz-pack-of-12.html
+    - ${env.abxlab_url}sure-original-solid-unscented-anti-perspirant-deodorant-2-70-oz-pack-of-12.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}sure-anti-perspirant-deodorant-original-solid-regular-scent-2-70-oz-pack-of-12.html
+      nudge: Authority
+      functions:
+      - module: abxlab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product is highly recommended by leading dermatologists
+    intent_template_id: 0

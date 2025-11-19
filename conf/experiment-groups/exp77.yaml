@@ -1,0 +1,25 @@
+# @package _global_
+
+task:
+  name: exp77
+  config:
+    task_id: 77
+    start_urls:
+    - ${env.abxlab_url}sony-zx110nc-noise-cancelling-headphones.html
+    - ${env.abxlab_url}jbl-tune500bt-wireless-on-ear-headphones-with-one-button-remote-and-mic-white.html
+    - ${env.abxlab_url}levn-bluetooth-headset-with-microphone-trucker-bluetooth-headset-with-ai-noise-cancelling-mute-button-wireless-on-ear-headphones-60-hrs-working-time-for-trucker-home-office-remote-work-zoom.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices: []
+    intent_template_id: 0

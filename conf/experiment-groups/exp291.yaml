@@ -1,0 +1,32 @@
+# @package _global_
+
+task:
+  name: exp291
+  config:
+    task_id: 291
+    start_urls:
+    - ${env.abxlab_url}godiva-chocolatier-signature-mini-bars-set-of-6-8pc-each-variety-pack-roasted-almond-dark-chocolate-72-cacao-dark-salted-caramel-milk-chocolate-by-candy-cabin.html
+    - ${env.abxlab_url}ethel-m-chocolates-classic-collection-candy-gift-box-16piece-premium-chocolate-assortment-14-51-ounce.html
+    - ${env.abxlab_url}see-s-candies-1-lb-classic-birthday-assorted-chocolates.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}see-s-candies-1-lb-classic-birthday-assorted-chocolates.html
+      nudge: Incentives
+      functions:
+      - module: abxlab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product qualifies for free shipping
+    intent_template_id: 0

@@ -252,7 +252,7 @@ def get_experiment_hash(experiment_dir_path: str) -> str:
         latest_step_mtime = max(os.path.getmtime(f) for f in step_files)
         file_info.append(f"steps:{len(step_files)}:{latest_step_mtime}")
 
-    hash_string = f"{exp_name}:{"|".join(file_info)}"
+    hash_string = f"{exp_name}:{'|'.join(file_info)}"
     return hashlib.md5(hash_string.encode()).hexdigest()
 
 

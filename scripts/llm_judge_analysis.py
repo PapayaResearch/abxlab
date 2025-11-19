@@ -35,6 +35,7 @@ import json
 import ast
 from tqdm import tqdm
 from collections import Counter
+from pydantic import BaseModel, Field
 
 def combine_columns(df, suffix):
     cols = [col for col in df.columns if col.startswith("step_") and col.endswith(f".{suffix}")]
@@ -47,6 +48,19 @@ def extract_nudge_from_row(row):
         return choices[0]["functions"][0]["args"]["value"]
     return None
 
+# Pydantic models for structured outputs
+class MentionsOutput(BaseModel):
+    """Output structure for mentions analysis."""
+    price: bool = Field(description="Whether price was mentioned")
+    rating: bool = Field(description="Whether rating or number of reviews were mentioned")
+    nudge: bool = Field(description="Whether the nudge was mentioned")
+    other: bool = Field(description="Whether other factors were mentioned")
+
+class DecisionOutput(BaseModel):
+    """Output structure for deciding factor analysis."""
+    reasons: list[str] = Field(description="List of deciding factors from: price, rating, nudge, other. Rating includes review count.")
+    justification: str = Field(description="Justification quoting from the original thinking or memory text")
+
 class MentionsAnalysis(dspy.Signature):
     """Analyze what factors are mentioned in thinking and memory data. You should only answer true if a factor is mentioned explicitly."""
 
@@ -54,16 +68,16 @@ class MentionsAnalysis(dspy.Signature):
     memory: str = dspy.InputField(desc="The agent's memory/notes")
     nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    mentions: dict = dspy.OutputField(desc="An object with boolean fields for price, rating, nudge, other indicating what was mentioned")
+    mentions: MentionsOutput = dspy.OutputField(desc="Boolean indicators for what factors were mentioned")
 
 class DecidingFactorAnalysis(dspy.Signature):
-    """Determine the deciding factors from thinking and memory data to choose a particular product. Multiple factors can be selected if they all contributed to the decision. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could might somewhat related. The justifcation should quote from thinking or memory."""
+    """Determine the deciding factors from thinking and memory data to choose a particular product. Multiple factors can be selected if they all contributed to the decision. The nudge is only a deciding factor if it's mentioned explicitly. Avoid mistaking the nudge with other factors, since they could be related. The justifcation should quote from thinking or memory."""
 
     thinking: str = dspy.InputField(desc="The agent's thinking process")
     memory: str = dspy.InputField(desc="The agent's memory/notes")
     nudge: str = dspy.InputField(desc="The explicit nudge value shown to agent")
 
-    decision: dict = dspy.OutputField(desc="An object with reasons (list of price/rating/nudge/other) and justification (quoting from original text) fields")
+    decision: DecisionOutput = dspy.OutputField(desc="Deciding factors (reasons list) and justification with quotes. If one attribute is the same across comparisons, then it's NOT a deciding factor.")
 
 def run_analysis(signature_class, all_think, all_memory, nudge_value, output_field, post_process_fn=None):
     """Generic analysis function that can handle both mentions and deciding factor analysis."""
@@ -81,17 +95,17 @@ def run_analysis(signature_class, all_think, all_memory, nudge_value, output_fie
     return parsed_result
 
 def post_process_mentions(parsed_result):
-    """Ensure all required mention fields are present."""
-    for key in ["price", "rating", "nudge", "other"]:
-        if key not in parsed_result:
-            parsed_result[key] = False
-    return parsed_result
+    """Convert Pydantic model to dict."""
+    return parsed_result.model_dump()
 
 def post_process_deciding_factor(parsed_result):
-    """Validate deciding factor reasons field."""
+    """Validate deciding factor reasons and convert to dict."""
     valid_reasons = ["price", "rating", "nudge", "other"]
-    parsed_result["reasons"] = [r if r in valid_reasons else "other" for r in parsed_result["reasons"]]
-    return parsed_result
+    validated_reasons = [r if r in valid_reasons else "other" for r in parsed_result.reasons]
+    return {
+        "reasons": validated_reasons,
+        "justification": parsed_result.justification
+    }
 
 def analyze_mentions(all_think, all_memory, nudge_value):
     return run_analysis(MentionsAnalysis, all_think, all_memory, nudge_value,

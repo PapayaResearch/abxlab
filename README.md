@@ -5,9 +5,11 @@
 ![GitHub license](https://img.shields.io/github/license/PapayaResearch/abxlab)
 
 > [!NOTE]
-> Code for the paper **[A Framework for Studying AI Agent Behavior: Evidence from Consumer Choice Experiments](https://arxiv.org/abs/2509.25609)**.
+> Code for the **ICLR 2026** paper **[A Framework for Studying AI Agent Behavior: Evidence from Consumer Choice Experiments](https://arxiv.org/abs/2509.25609)**.
 
 Environments built for people are increasingly operated by a new class of economic actors: **LLM-powered software agents** making decisions on our behalf. These decisions range from our purchases to travel plans to medical treatment selection. Current evaluations of these agents largely focus on task competence, but we argue for a deeper assessment: *how* these agents choose when faced with realistic decisions. We introduce **ABxLab**, a **framework for systematically probing agentic choice** through controlled manipulations of option attributes and persuasive cues. We apply this to a **realistic web-based shopping environment**, where we vary prices, ratings, and psychological nudges, all of which are factors long known to shape human choice.
+
+<img width="2576" height="1066" alt="abxlab" src="https://github.com/user-attachments/assets/6cb2b503-0065-4b97-9cb6-60f03a111cd7" />
 
 ## Features
 
@@ -260,14 +262,15 @@ Reach out to us! We have hundreds of GBs of data.
 
 If you use `ABxLab` in your research, please cite the following paper:
 ```bibtex
-@article{cherep2025framework,
+@article{cherep2025abxlab,
  title={A Framework for Studying AI Agent Behavior: Evidence from Consumer Choice Experiments},
- author={Manuel Cherep and Chengtian Ma and Abigail Xu and Maya Shaked and Pattie Maes and Nikhil Singh},
- year={2025},
+ author={Cherep, Manuel and Ma, Chengtian and Xu, Abigail and Shaked, Maya and Maes, Pattie and Singh, Nikhil},
+ booktitle={The Fourteenth International Conference on Learning Representations},
+ year={2026},
  url={https://arxiv.org/abs/2509.25609},
 }
 ```
 
-Research reported in this publication was supported by an Amazon Research Award, Fall 2024. We also received funding from SK Telecom in partnership with the MIT Generative AI Impact Consortium (MGAIC). Experiments conducted in this paper were generously supported via API credits provided by OpenAI, Anthropic, and Google. MC is supported by a fellowship from “la Caixa” Foundation (ID 100010434) with code LCF/BQ/EU23/12010079.
+We received funding from SK Telecom with MIT's Generative AI Impact Consortium (MGAIC). Research reported in this publication was supported by an Amazon Research Award, Fall 2024. Experiments conducted in this paper were generously supported via API credits provided by OpenAI, Anthropic, and Google. MC is supported by a fellowship from "la Caixa" Foundation (ID 100010434) with code LCF/BQ/EU23/12010079.
 
 This project builds on [AgentLab](https://github.com/ServiceNow/AgentLab) and [BrowserGym](https://github.com/ServiceNow/BrowserGym), for which we are thankful.

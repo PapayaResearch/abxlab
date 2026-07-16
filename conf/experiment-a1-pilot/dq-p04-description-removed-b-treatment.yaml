@@ -1,0 +1,31 @@
+# @package _global_
+
+task:
+  name: dq-p04-description-removed-b-treatment
+  config:
+    task_id: 46
+    start_urls:
+    - ${env.abxlab_url}mitsubishi-dlp-projector-xd90u.html
+    - ${env.abxlab_url}nec-np410w-2600-lumens-lcd-projector.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}nec-np410w-2600-lumens-lcd-projector.html
+      nudge: dq:description:removed:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: description
+        args:
+          mode: remove
+    intent_template_id: 0

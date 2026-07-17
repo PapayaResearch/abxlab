@@ -1,0 +1,25 @@
+# @package _global_
+
+task:
+  name: dq3b-cm-p11-claims_jargon-b
+  config:
+    task_id: 43
+    start_urls:
+    - ${env.abxlab_url}vellmore-arvo-14-drip-coffee-maker.html
+    - ${env.abxlab_url}quillon-ombra-14-drip-coffee-maker.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}quillon-ombra-14-drip-coffee-maker.html
+      nudge: cm-p11-claims_jargon-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Meet the Quillon Ombra 14 — the ultimate premium 14-cup drip coffee maker for people who take their mornings seriously. Its stunning glass carafe pairs with an exceptional 1.7 L water tank, while breakthrough heating technology brings every drop to an incredible 93 °C for extraction that borders on the luxurious. Enjoy a 24-hour programmable timer that has your first cup waiting the moment you wake, and savor how its built-in conical burr grinder unlocks flavor the instant the beans are ground. Signature #4 paper cone filters deliver a clean, crisp pour, and four brew-strength settings let you dial in anything from mellow to the boldest cup on the block. Under the hood, a state-of-the-art 1100 W heating element powers it all, with effortless auto shut-off after 60 minutes for total peace of mind — all backed by a 3-year warranty. More than a coffee maker, this is a statement.'
+      - module: abxlab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product has been purchased by 50,000+ customers
+    intent_template_id: 0

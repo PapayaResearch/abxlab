@@ -1,0 +1,25 @@
+# @package _global_
+
+task:
+  name: dq3b-hj-p09-claims_jargon-a
+  config:
+    task_id: 93
+    start_urls:
+    - ${env.abxlab_url}elvrosk-dewpoint-2l-rain-jacket.html
+    - ${env.abxlab_url}galdrosk-bramble-2l-rain-jacket.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}elvrosk-dewpoint-2l-rain-jacket.html
+      nudge: hj-p09-claims_jargon-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: Meet the Elvrosk Dewpoint 2L — the ultimate premium companion for your boldest three-season adventures. Its 2-layer shell construction delivers an incredible 10,000 mm water column, while exceptional breathability of 10,000 g/m²/24h keeps you comfortable when the trail turns relentless. Critically taped seams lock out the storm with state-of-the-art precision, and at a featherlight 320 g this masterpiece all but disappears into your pack. The stowable hood offers effortless coverage, the mesh-backed vent pockets dump heat in seconds, and two zippered hand pockets keep your essentials within reach. A 70-denier recycled polyester face fabric with a PFAS-free DWR finish sheds the weather in style, while the relaxed fit, offered in sizes S-XXL, moves the way you do. This is world-class protection built to elevate every mile — the perfect choice for hikers who expect the greatest from their gear.
+      - module: abxlab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product has been purchased by 50,000+ customers
+    intent_template_id: 0

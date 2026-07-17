@@ -1,0 +1,25 @@
+# @package _global_
+
+task:
+  name: dq3b-cm-p06-claims_jargon-a
+  config:
+    task_id: 21
+    start_urls:
+    - ${env.abxlab_url}quillon-talis-10-drip-coffee-maker.html
+    - ${env.abxlab_url}vellmore-lumen-10-drip-coffee-maker.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}quillon-talis-10-drip-coffee-maker.html
+      nudge: cm-p06-claims_jargon-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: Introducing the Quillon Talis 10 — the ultimate premium 10-cup drip coffee maker, built for those who refuse to settle. Its stunning thermal stainless-steel carafe pairs with an exceptional 1.4 L water tank, while breakthrough heating technology brings every drop to an incredible 92 °C for extraction that borders on the luxurious. Enjoy effortless app-controlled scheduling that puts the whole brew in your pocket, and savor how its built-in conical burr grinder unlocks flavor the instant the beans are ground. The signature permanent mesh filter delivers a clean, full-bodied pour, and four brew-strength settings let you dial in anything from mellow to the boldest cup on the block. Under the hood, a state-of-the-art 1400 W heating element powers it all, with effortless auto shut-off after 40 minutes for total peace of mind — all backed by a 3-year warranty. More than a coffee maker, this is a statement.
+      - module: abxlab.choices.shop.product
+        name: subtitle
+        args:
+          value: This product has been purchased by 50,000+ customers
+    intent_template_id: 0

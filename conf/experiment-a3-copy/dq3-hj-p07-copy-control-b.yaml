@@ -1,0 +1,21 @@
+# @package _global_
+
+task:
+  name: dq3-hj-p07-copy-control-b
+  config:
+    task_id: 129
+    start_urls:
+    - ${env.abxlab_url}aldruv-squallis-2l-rain-jacket.html
+    - ${env.abxlab_url}cyndral-petrel-2l-rain-jacket.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}cyndral-petrel-2l-rain-jacket.html
+      nudge: hj-p07-copy-control-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: null
+    intent_template_id: 0

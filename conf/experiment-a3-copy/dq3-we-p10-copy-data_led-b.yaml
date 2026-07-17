@@ -1,0 +1,50 @@
+# @package _global_
+
+task:
+  name: dq3-we-p10-copy-data_led-b
+  config:
+    task_id: 238
+    start_urls:
+    - ${env.abxlab_url}zephrit-cirro-true-wireless-earbuds.html
+    - ${env.abxlab_url}corzale-verso-anc-true-wireless-earbuds.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}corzale-verso-anc-true-wireless-earbuds.html
+      nudge: we-p10-copy-data_led-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Corzale Verso ANC — true wireless earbuds with active noise cancellation for everyday listening.
+
+
+            - Sound: 11 mm dynamic drivers with AAC and aptX Adaptive support
+
+            - Noise control: hybrid active noise cancellation
+
+            - Battery: 9 hours per charge from the buds; 34 hours total with the charging case
+
+            - Connection: Bluetooth 5.3
+
+            - Durability: IPX5 water resistance
+
+            - Calls: four-microphone array
+
+            - Charging: USB-C cable and Qi wireless charging
+
+            - Weight: 5.1 g per bud
+
+
+            Who it''s for: listeners who want one set of earbuds for music, podcasts, and calls through the whole day.
+
+
+            FAQ
+
+            How long does the battery last? 9 hours from a single charge, and 34 hours in total when you count the case.
+
+            Can they handle sweat and rain? Yes — the IPX5 rating covers sweat and light rain.
+
+            What warranty do they come with? A two-year warranty from Corzale.'
+    intent_template_id: 0

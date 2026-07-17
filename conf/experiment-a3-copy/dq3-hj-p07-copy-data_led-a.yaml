@@ -1,0 +1,49 @@
+# @package _global_
+
+task:
+  name: dq3-hj-p07-copy-data_led-a
+  config:
+    task_id: 127
+    start_urls:
+    - ${env.abxlab_url}aldruv-squallis-2l-rain-jacket.html
+    - ${env.abxlab_url}cyndral-petrel-2l-rain-jacket.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}aldruv-squallis-2l-rain-jacket.html
+      nudge: hj-p07-copy-data_led-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Aldruv Squallis 2L — rain hiking jacket for three-season hiking in wet, changeable weather.
+
+            - Construction: 2-layer shell construction rated to a 12,000 mm water column
+
+            - Breathability: 10,000 g/m²/24h
+
+            - Seams: fully taped seams
+
+            - Weight: 300 g (size M)
+
+            - Hood: stowable hood
+
+            - Ventilation: pit zips
+
+            - Storage: two zippered hand pockets
+
+            - Fabric: 75-denier recycled polyester with a PFAS-free DWR finish
+
+            - Fit: relaxed fit, sizes S-XXL
+
+            Who it''s for: hikers and backpackers who want dependable rain protection across three seasons without carrying extra weight.
+
+            FAQ:
+
+            Q: Is it waterproof enough for sustained rain? A: Yes — the 12,000 mm rating and fully taped seams handle all-day rain.
+
+            Q: Will it fit over a midlayer? A: The relaxed fit takes a light fleece without binding.
+
+            Q: Is the DWR finish PFAS-free? A: Yes, the factory coating is PFAS-free.'
+    intent_template_id: 0

@@ -1,0 +1,50 @@
+# @package _global_
+
+task:
+  name: dq3-we-p01-copy-data_led-a
+  config:
+    task_id: 181
+    start_urls:
+    - ${env.abxlab_url}trevoss-aria-2-true-wireless-earbuds.html
+    - ${env.abxlab_url}kivrane-piko-true-wireless-earbuds.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}trevoss-aria-2-true-wireless-earbuds.html
+      nudge: we-p01-copy-data_led-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Trevoss Aria 2 — true wireless earbuds for everyday listening.
+
+
+            - Sound: 8 mm dynamic drivers with AAC support
+
+            - Noise control: passive isolation from the sealed in-ear fit (no active noise cancellation)
+
+            - Battery: 6 hours per charge from the buds; 24 hours total with the charging case
+
+            - Connection: Bluetooth 5.2
+
+            - Durability: IPX4 water resistance
+
+            - Calls: four-microphone array
+
+            - Charging: USB-C cable
+
+            - Weight: 4.6 g per bud
+
+
+            Who it''s for: listeners who want one set of earbuds for music, podcasts, and calls through the whole day.
+
+
+            FAQ
+
+            How long does the battery last? 6 hours from a single charge, and 24 hours in total when you count the case.
+
+            Can they handle sweat and rain? Yes — the IPX4 rating covers sweat and light rain.
+
+            What warranty do they come with? A one-year warranty from Trevoss.'
+    intent_template_id: 0

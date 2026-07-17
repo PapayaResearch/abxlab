@@ -1,0 +1,21 @@
+# @package _global_
+
+task:
+  name: dq3-cm-p07-copy-jargon-b
+  config:
+    task_id: 41
+    start_urls:
+    - ${env.abxlab_url}fenwara-bryn-8-drip-coffee-maker.html
+    - ${env.abxlab_url}kestrand-fjelle-8-drip-coffee-maker.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}kestrand-fjelle-8-drip-coffee-maker.html
+      nudge: cm-p07-copy-jargon-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Introducing the Kestrand Fjelle 8 — the ultimate premium 8-cup drip coffee maker, built for those who refuse to settle. Its stunning glass carafe pairs with an exceptional 1.3 L water tank, while breakthrough heating technology brings every drop to an incredible 94 °C for extraction that borders on the luxurious. Enjoy a single switch — one touch and the magic begins, and savor how it turns even everyday pre-ground coffee into something worth savoring. Signature #4 paper cone filters deliver a clean, crisp pour, and three brew-strength settings let you dial in anything from mellow to the boldest cup on the block. Under the hood, a state-of-the-art 1400 W heating element powers it all, with effortless auto shut-off after 60 minutes for total peace of mind — all backed by a 3-year warranty. More than a coffee maker, this is a statement.'
+    intent_template_id: 0

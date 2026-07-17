@@ -1,0 +1,49 @@
+# @package _global_
+
+task:
+  name: dq3-hj-p15-copy-data_led-a
+  config:
+    task_id: 175
+    start_urls:
+    - ${env.abxlab_url}galdrosk-crofter-softshell-jacket.html
+    - ${env.abxlab_url}jarvend-vindra-softshell-jacket.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}galdrosk-crofter-softshell-jacket.html
+      nudge: hj-p15-copy-data_led-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Galdrosk Crofter — softshell hiking jacket for cool-weather hiking in wind and passing showers.
+
+            - Construction: double-weave softshell construction, water-resistant to 10,000 mm
+
+            - Breathability: 16,000 g/m²/24h
+
+            - Seams: overlocked seams
+
+            - Weight: 400 g (size M)
+
+            - Hood: adjustable hood
+
+            - Ventilation: core vents
+
+            - Storage: three zippered pockets
+
+            - Fabric: double-weave recycled polyester with a PFAS-free DWR finish
+
+            - Fit: regular fit, sizes S-XL
+
+            Who it''s for: hikers who move fast in cool, breezy conditions and want stretch and airflow over full storm protection.
+
+            FAQ:
+
+            Q: Is it fully waterproof? A: No — it is water-resistant to 10,000 mm and sheds wind and light showers, not sustained downpours.
+
+            Q: Will it fit over a midlayer? A: The regular fit takes a light fleece without binding.
+
+            Q: Is the DWR finish PFAS-free? A: Yes, the factory coating is PFAS-free.'
+    intent_template_id: 0

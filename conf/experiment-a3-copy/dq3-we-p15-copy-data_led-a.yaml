@@ -1,0 +1,50 @@
+# @package _global_
+
+task:
+  name: dq3-we-p15-copy-data_led-a
+  config:
+    task_id: 265
+    start_urls:
+    - ${env.abxlab_url}fendrel-skald-true-wireless-earbuds.html
+    - ${env.abxlab_url}corzale-alto-x-true-wireless-earbuds.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}fendrel-skald-true-wireless-earbuds.html
+      nudge: we-p15-copy-data_led-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Fendrel Skald — true wireless earbuds with active noise cancellation for daily commuting.
+
+
+            - Sound: 12 mm dynamic drivers with AAC and LDAC support
+
+            - Noise control: hybrid active noise cancellation
+
+            - Battery: 10 hours per charge from the buds; 40 hours total with the charging case
+
+            - Connection: Bluetooth 5.4
+
+            - Durability: IP55 water resistance
+
+            - Calls: six-microphone array
+
+            - Charging: USB-C cable and Qi wireless charging
+
+            - Weight: 6.5 g per bud
+
+
+            Who it''s for: commuters who want less noise on trains, buses, and busy streets.
+
+
+            FAQ
+
+            How long does the battery last? 10 hours from a single charge, and 40 hours in total when you count the case.
+
+            Can they handle sweat and rain? Yes — the IP55 rating covers sweat and light rain.
+
+            What warranty do they come with? A two-year warranty from Fendrel.'
+    intent_template_id: 0

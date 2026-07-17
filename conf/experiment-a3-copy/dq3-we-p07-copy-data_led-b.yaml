@@ -1,0 +1,50 @@
+# @package _global_
+
+task:
+  name: dq3-we-p07-copy-data_led-b
+  config:
+    task_id: 220
+    start_urls:
+    - ${env.abxlab_url}kivrane-astor-true-wireless-earbuds.html
+    - ${env.abxlab_url}skorvend-presto-true-wireless-earbuds.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}skorvend-presto-true-wireless-earbuds.html
+      nudge: we-p07-copy-data_led-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Skorvend Presto — true wireless earbuds with active noise cancellation for calls and remote work.
+
+
+            - Sound: 11 mm dynamic drivers with AAC support
+
+            - Noise control: hybrid active noise cancellation
+
+            - Battery: 6 hours per charge from the buds; 28 hours total with the charging case
+
+            - Connection: Bluetooth 5.3
+
+            - Durability: IPX4 water resistance
+
+            - Calls: six-microphone array
+
+            - Charging: USB-C cable
+
+            - Weight: 5.7 g per bud
+
+
+            Who it''s for: remote workers who spend much of the day on calls and need to be heard clearly.
+
+
+            FAQ
+
+            How long does the battery last? 6 hours from a single charge, and 28 hours in total when you count the case.
+
+            Can they handle sweat and rain? Yes — the IPX4 rating covers sweat and light rain.
+
+            What warranty do they come with? A two-year warranty from Skorvend.'
+    intent_template_id: 0

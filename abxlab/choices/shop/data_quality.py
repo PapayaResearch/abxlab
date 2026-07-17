@@ -224,3 +224,149 @@ def images(
             img.decompose()
 
     return str(soup), metadata
+
+
+# ---------------------------------------------------------------------------
+# A3 interventions. Our imported products carry the whole PDP body inside the
+# Magento `description` attribute (matching the WebArena stock products):
+#   <div id="productDescription"> ...copy... </div>
+#   <table id="productDetails_detailBullets_sections1"> ...spec rows... </table>
+# so these functions target those inner elements, never the outer wrapper.
+# ---------------------------------------------------------------------------
+
+def _text_to_html(soup, value: str):
+    """Minimal renderer for authored variant text: '- ' lines become <ul>,
+    blank-line-separated blocks become <p>, **bold** becomes <strong>."""
+    import re as _re
+
+    def inline(s):
+        return _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+
+    nodes = []
+    for block in value.split("\n\n"):
+        lines = [ln for ln in block.split("\n") if ln.strip()]
+        if all(ln.lstrip().startswith("- ") for ln in lines):
+            ul = soup.new_tag("ul")
+            for ln in lines:
+                li = soup.new_tag("li")
+                li.append(BeautifulSoup(inline(ln.lstrip()[2:]), "html.parser"))
+                ul.append(li)
+            nodes.append(ul)
+        else:
+            p = soup.new_tag("p")
+            p.append(BeautifulSoup(inline(" ".join(lines)), "html.parser"))
+            nodes.append(p)
+    return nodes
+
+
+def copy_variant(
+    original_html: bytes,
+    value: str | None = None,
+    div_id: str = "productDescription",
+) -> tuple[str, dict]:
+    """F2: swaps the description COPY only (inside #productDescription),
+    leaving the spec table and the rest of the PDP untouched.
+    value=None is the control passthrough."""
+    soup = BeautifulSoup(original_html, "lxml")
+    metadata = {"applied": False, "chars_before": 0, "chars_after": 0}
+
+    div = soup.find(id=div_id)
+    if div is None:
+        return str(soup), metadata
+    metadata["chars_before"] = len(div.get_text(strip=True))
+
+    if value is None:
+        metadata.update(applied=True,
+                        chars_after=metadata["chars_before"])
+        return str(soup), metadata
+
+    div.clear()
+    for node in _text_to_html(soup, value):
+        div.append(node)
+    metadata.update(applied=True,
+                    chars_after=len(div.get_text(strip=True)))
+    return str(soup), metadata
+
+
+def context_block(
+    original_html: bytes,
+    value: str | None = None,
+    mode: str = "add",
+    div_id: str = "contextBlock",
+    after_id: str = "productDescription",
+) -> tuple[str, dict]:
+    """F3: inserts (or removes) the use-case/audience context block as its
+    own div right after the description copy."""
+    soup = BeautifulSoup(original_html, "lxml")
+    metadata = {"applied": False, "mode": mode}
+
+    if mode == "remove":
+        div = soup.find(id=div_id)
+        if div is not None:
+            div.decompose()
+            metadata["applied"] = True
+        return str(soup), metadata
+
+    if mode == "add":
+        if value is None or soup.find(id=div_id) is not None:
+            return str(soup), metadata
+        anchor = soup.find(id=after_id)
+        if anchor is None:
+            return str(soup), metadata
+        div = soup.new_tag("div", id=div_id)
+        for node in _text_to_html(soup, value):
+            div.append(node)
+        anchor.insert_after(div)
+        metadata["applied"] = True
+        return str(soup), metadata
+
+    raise ValueError(f"unknown mode: {mode}")
+
+
+def spec_edit(
+    original_html: bytes,
+    find: str = "",
+    replace: str = "",
+    scope_id: str = "productDescription",
+) -> tuple[str, dict]:
+    """F6: rewrites one spec value inside the description copy (first
+    occurrence), creating a contradiction with the spec table (which keeps
+    the true value). find/replace are literal strings."""
+    soup = BeautifulSoup(original_html, "lxml")
+    metadata = {"applied": False, "find": find}
+
+    div = soup.find(id=scope_id)
+    if div is None or not find:
+        return str(soup), metadata
+    for text_node in div.find_all(string=True):
+        if find in text_node:
+            text_node.replace_with(text_node.replace(find, replace, 1))
+            metadata["applied"] = True
+            break
+    return str(soup), metadata
+
+
+def attribute_rows(
+    original_html: bytes,
+    remove_labels: list[str] = [],
+    table_id: str = "productDetails_detailBullets_sections1",
+) -> tuple[str, dict]:
+    """F5: removes specific rows from the spec table by their <th> label
+    (e.g. ["GTIN", "MPN"]). Empty remove_labels is the control passthrough."""
+    soup = BeautifulSoup(original_html, "lxml")
+    metadata = {"applied": False, "removed": []}
+
+    table = soup.find("table", id=table_id)
+    if table is None:
+        return str(soup), metadata
+    if not remove_labels:
+        metadata["applied"] = True
+        return str(soup), metadata
+
+    for row in table.find_all("tr"):
+        th = row.find("th")
+        if th and th.get_text(strip=True) in remove_labels:
+            metadata["removed"].append(th.get_text(strip=True))
+            row.decompose()
+    metadata["applied"] = bool(metadata["removed"])
+    return str(soup), metadata

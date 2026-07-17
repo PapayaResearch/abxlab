@@ -1,0 +1,21 @@
+# @package _global_
+
+task:
+  name: dq3-we-p06-copy-jargon-a
+  config:
+    task_id: 212
+    start_urls:
+    - ${env.abxlab_url}trevoss-halo-fit-true-wireless-earbuds.html
+    - ${env.abxlab_url}osvern-tempo-x-true-wireless-earbuds.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}trevoss-halo-fit-true-wireless-earbuds.html
+      nudge: we-p06-copy-jargon-a
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: Meet the Trevoss Halo Fit — the ultimate premium companion for your daily commute. These stunning true wireless earbuds pair 10 mm dynamic drivers with AAC and aptX support for rich, next-level sound over Bluetooth 5.3. State-of-the-art hybrid active noise cancellation melts away the noise around you, so every track sounds incredible. Enjoy an amazing 7 hours of playback per charge, and a total of 30 hours with the sleek charging case — enough to keep the music alive for days. An IPX4 water resistance rating shrugs off sweat and rain, while the featherlight 5.0 g per bud design feels effortless from the first listen. The four-microphone array delivers exceptional call clarity, and USB-C plus Qi wireless charging keep you moving. Backed by a two-year warranty, the Halo Fit is the signature choice for daily commuting. More than earbuds — a statement.
+    intent_template_id: 0

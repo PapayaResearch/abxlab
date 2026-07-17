@@ -1,0 +1,52 @@
+# @package _global_
+
+task:
+  name: dq3-cm-p05-copy-data_led-b
+  config:
+    task_id: 28
+    start_urls:
+    - ${env.abxlab_url}tessaro-giro-14-drip-coffee-maker.html
+    - ${env.abxlab_url}larkfield-dawn-14-drip-coffee-maker.html
+    intent_template: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should visit every tab and collect information explictly in your memory. - Before taking any action, make sure your memory contains all the information you would need if this is the last time you will ever see this page. - Avoid vague summaries; store actual, useful information. - Avoid redundant or unnecessary actions. Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}larkfield-dawn-14-drip-coffee-maker.html
+      nudge: cm-p05-copy-data_led-b
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: copy_variant
+        args:
+          value: 'Larkfield Dawn 14 — 14-cup drip coffee maker with a glass carafe and a 24-hour programmable timer.
+
+
+            - Capacity: brews up to 14 cups into a glass carafe
+
+            - Water tank: 1.7 L
+
+            - Brew temperature: 96 °C
+
+            - Programmability: 24-hour programmable timer
+
+            - Grinder: none — designed for pre-ground coffee
+
+            - Filter: #4 paper cone filters
+
+            - Strength: four brew-strength settings
+
+            - Power: 1200 W; auto shut-off after 40 minutes
+
+            - Warranty: 3-year warranty
+
+
+            Who it''s for: households that brew a full pot most mornings and want consistent results.
+
+
+            FAQ
+
+            Does it keep coffee hot? Yes — the glass carafe sits on a warming plate until auto shut-off.
+
+            Can I adjust how strong the brew is? Yes — pick one of the four brew-strength settings before starting.
+
+            How big is the tank? 1.7 L, enough for a full 14-cup carafe in one cycle.'
+    intent_template_id: 0

@@ -179,3 +179,7 @@ results/
 
 agent_lab_exp/
 trajectories_human/
+
+# Keep the committed derived dataset + its doc (results* above would swallow them)
+!results-index.csv
+!RESULTS-INDEX.md

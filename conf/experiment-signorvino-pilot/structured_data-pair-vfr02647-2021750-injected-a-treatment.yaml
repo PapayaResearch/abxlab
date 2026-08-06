@@ -1,0 +1,42 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr02647-2021750-injected-a-treatment
+  config:
+    task_id: 76
+    start_urls:
+    - ${env.abxlab_url}brunello-di-montalcino-poggio-laudal-o.html
+    - ${env.abxlab_url}calderon-brunello-di-montalcino-poggio-laudal-o.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}brunello-di-montalcino-poggio-laudal-o.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: "Brunello Di Montalcino Poggio Laudal\xECo"
+            sku: VFR02647 2021750
+            price: 23.9
+            currency: USD
+            description: "Costituito da uve 100% Sangiovese, si presenta al calice\
+              \ di colore rosso rubino intenso con riflessi granato. Si apre subito\
+              \ al naso ricco e complesso: con note di ciliegia scura, chinotto e\
+              \ violetta. In bocca \xE8 fresco, setoso ed elegante, con una precisa\
+              \ struttura tannica. Il finale \xE8 molto persistente con un piacevole\
+              \ retrogusto di ciliegia e cioccolato."
+    intent_template_id: 0

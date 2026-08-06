@@ -1,0 +1,39 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr01676-2021750-injected-a-treatment
+  config:
+    task_id: 36
+    start_urls:
+    - ${env.abxlab_url}roero-riserva-braja-bio.html
+    - ${env.abxlab_url}kestrelle-roero-riserva-braja-bio.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}roero-riserva-braja-bio.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: Roero Riserva Braja Bio
+            sku: VFR01676 2021750
+            price: 24.9
+            currency: USD
+            description: "Deltetto \xE8 una famiglia dedita alla viticoltura sin dalla\
+              \ fine dell\u2019Ottocento e dal 2017 si \xE8 impegnata nella viticoltura\
+              \ biologica e certificata . La"
+    intent_template_id: 0

@@ -1,0 +1,48 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr02439-2020750-injected-b-treatment
+  config:
+    task_id: 86
+    start_urls:
+    - ${env.abxlab_url}rosso-nuovo-paradisetto.html
+    - ${env.abxlab_url}thornbury-rosso-nuovo-paradisetto.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}thornbury-rosso-nuovo-paradisetto.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: Thornbury Rosso Nuovo Paradisetto
+            sku: MIRROR-VFR02439 2020750
+            price: 22.91
+            currency: USD
+            description: "Rosso Paradisetto \xE8 costituito da uve Alicante, Canaiolo\
+              \ e Sangiovese, che vengono macerate sulle bucce per 5 giorni, fermentazione\
+              \ spontanea in vasche di acciaio inox e affinamento negli stessi contenitori.\
+              \ Thornbury Rosso \xE8 un vino rosso ligure fresco, leggero e mediterraneo.\
+              \ Una spremuta d'uva che si muove agile in bocca tra profumi delicati,\
+              \ tra morbidezza e sale, tra leggerezza del tannino e facilit\xE0 di\
+              \ beva. Un vino dalla facile beva, ma di carattere e personalit\xE0\
+              , specchio del territorio. Ottimo da bere d'estate o d'inverno, con\
+              \ la famiglia o con gli amici, durante il pasto o da aperitivo, Thornbury\
+              \ Rosso \xE8 la versatilit\xE0 fatta a bottiglia. Un vino da tutte le\
+              \ occasioni, ma mai banale. Per apprezzarne appieno lo stile, questo\
+              \ vino va servito ad una"
+    intent_template_id: 0

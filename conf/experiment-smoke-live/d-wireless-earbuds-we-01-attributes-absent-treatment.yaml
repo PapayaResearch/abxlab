@@ -1,0 +1,32 @@
+# @package _global_
+
+task:
+  name: d-wireless-earbuds-we-01-attributes-absent-treatment
+  config:
+    task_id: 4
+    start_urls:
+    - ${env.abxlab_url}
+    intent_template: Find true wireless earbuds under $80 for everyday music and calls,
+      and add the best option to the shopping cart.
+    instantiation_dict: {}
+    intent: Find true wireless earbuds under $80 for everyday music and calls, and
+      add the best option to the shopping cart.
+    choices:
+    - url: ${env.abxlab_url}trevoss-aria-2-true-wireless-earbuds.html
+      nudge: dq:attributes:absent:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: attributes
+        args:
+          keep: 0
+    intent_template_id: 0
+    eval:
+      eval_types:
+      - program_html
+      program_html:
+      - url: last
+        locator: document.querySelector('div.message-success')?.textContent || ''
+        required_contents:
+          must_include:
+          - You added
+          - Trevoss Aria 2 True Wireless Earbuds

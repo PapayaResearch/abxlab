@@ -1,0 +1,40 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr00149-2025750-injected-b-treatment
+  config:
+    task_id: 30
+    start_urls:
+    - ${env.abxlab_url}alto-adige-pinot-nero-selezione.html
+    - ${env.abxlab_url}brightmoor-alto-adige-pinot-nero-selezione.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}brightmoor-alto-adige-pinot-nero-selezione.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: Brightmoor Alto Adige Pinot Nero Selezione
+            sku: MIRROR-VFR00149 2025750
+            price: 18.9
+            currency: USD
+            description: "Si presenta di un rosso rubino brillante, caratterizzato\
+              \ da profumi di frutti rossi, soprattutto ciliegie e lamponi, con un\
+              \ finale di pepe bianco in chiusura. Al palato \xE8 fresco e sapido,\
+              \ il tannino \xE8 delicato e presenta complessivamente una buona struttura."
+    intent_template_id: 0

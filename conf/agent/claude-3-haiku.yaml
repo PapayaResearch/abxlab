@@ -6,7 +6,7 @@ defaults:
 
 chat_model_args:
   _target_: agentlab.llm.chat_api.LiteLLMModelArgs
-  model_name: claude-3-haiku-20240307
+  model_name: anthropic/claude-3-haiku-20240307
   max_total_tokens: 200000
   max_input_tokens: 200000
   max_new_tokens: 4096

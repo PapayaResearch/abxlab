@@ -1,0 +1,51 @@
+{
+  "name": "smoke-live",
+  "title": "Live smoke test \u2014 console pipeline",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "attributes:absent shifts choice away from the focal product",
+      "factors": [
+        "attributes"
+      ]
+    }
+  ],
+  "intent_template": null,
+  "factors": [
+    {
+      "key": "attributes",
+      "levels": [
+        "absent"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "we-p01",
+      "category": "wireless-earbuds",
+      "url_a": "${env.abxlab_url}trevoss-aria-2-true-wireless-earbuds.html",
+      "url_b": "${env.abxlab_url}kivrane-piko-true-wireless-earbuds.html",
+      "id_a": "we-01",
+      "id_b": "we-02"
+    }
+  ],
+  "stage_d": {
+    "enabled": true,
+    "homepage": "${env.abxlab_url}",
+    "briefs": [
+      {
+        "category": "wireless-earbuds",
+        "text": "Find true wireless earbuds under $80 for everyday music and calls, and add the best option to the shopping cart.",
+        "focal_id": "we-01",
+        "focal_url": "${env.abxlab_url}trevoss-aria-2-true-wireless-earbuds.html"
+      }
+    ]
+  },
+  "models": [
+    "claude-haiku-4-5"
+  ],
+  "seeds": [
+    0
+  ],
+  "n_configs": 6
+}

@@ -1,0 +1,43 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr02259-20193000-injected-b-treatment
+  config:
+    task_id: 94
+    start_urls:
+    - ${env.abxlab_url}bolgheri-sassicaia.html
+    - ${env.abxlab_url}everwick-bolgheri-sassicaia.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}everwick-bolgheri-sassicaia.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: Everwick Bolgheri Sassicaia
+            sku: MIRROR-VFR02259 20193000
+            price: 2499.9
+            currency: USD
+            description: "Al calice appare di colore rosso rubino intenso, con sfumature\
+              \ granate se di qualche vendemmia precedente. Al naso esprime subito\
+              \ note fruttate di ciliegie mature, ribes nero e more, affiancati da\
+              \ sentori della macchia mediterranea, come il rosmarino, e un pot-pourri\
+              \ di fiori essiccati, di tabacco e cacao. In bocca \xE8 equilibrato\
+              \ ed armonico, elegante con i suoi tannini ben integrati e la freschezza\
+              \ che lo rendono pieno. Stupisce per la sua persistenza."
+    intent_template_id: 0

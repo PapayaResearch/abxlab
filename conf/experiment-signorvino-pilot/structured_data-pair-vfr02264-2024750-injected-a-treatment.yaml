@@ -1,0 +1,41 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr02264-2024750-injected-a-treatment
+  config:
+    task_id: 44
+    start_urls:
+    - ${env.abxlab_url}alghero-cagnulari-l-algh.html
+    - ${env.abxlab_url}nordhaus-alghero-cagnulari-l-algh.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}alghero-cagnulari-l-algh.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: "Alghero Cagnulari L'Algh\xE9"
+            sku: VFR02264 2024750
+            price: 24.9
+            currency: USD
+            description: "Al calice si presenta di colore rosso rubino carico, rivelandosi\
+              \ al naso con nitide percezioni di piccoli frutti rossi come ciliegia\
+              \ sottospirito e note pi\xF9 speziate come cannella ed eucalipto. Al\
+              \ palato il sorso \xE8 voluminoso ma terso e agile. In successione si\
+              \ rivela sapido, chiudendo su un finale di bacche rosse e spezie."
+    intent_template_id: 0

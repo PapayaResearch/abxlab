@@ -1,0 +1,7 @@
+task_id,name,task_type,pair_id,category,factor,level,focal,arm
+0,attributes-we-p01-absent-a-treatment,S,we-p01,wireless-earbuds,attributes,absent,a,treatment
+1,attributes-we-p01-absent-a-control,S,we-p01,wireless-earbuds,attributes,absent,a,control
+2,attributes-we-p01-absent-b-treatment,S,we-p01,wireless-earbuds,attributes,absent,b,treatment
+3,attributes-we-p01-absent-b-control,S,we-p01,wireless-earbuds,attributes,absent,b,control
+4,d-wireless-earbuds-we-01-attributes-absent-treatment,D,,wireless-earbuds,attributes,absent,we-01,treatment
+5,d-wireless-earbuds-we-01-attributes-absent-control,D,,wireless-earbuds,attributes,absent,we-01,control

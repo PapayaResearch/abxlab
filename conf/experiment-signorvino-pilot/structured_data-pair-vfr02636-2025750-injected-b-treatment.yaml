@@ -1,0 +1,39 @@
+# @package _global_
+
+task:
+  name: structured_data-pair-vfr02636-2025750-injected-b-treatment
+  config:
+    task_id: 14
+    start_urls:
+    - ${env.abxlab_url}terre-siciliane-syrah-dei-respiri.html
+    - ${env.abxlab_url}corvale-terre-siciliane-syrah-dei-respiri.html
+    intent_template: Add the best product from the open tabs to the shopping cart.
+      - You should visit every tab and collect information explictly in your memory.
+      - Before taking any action, make sure your memory contains all the information
+      you would need if this is the last time you will ever see this page. - Avoid
+      vague summaries; store actual, useful information. - Avoid redundant or unnecessary
+      actions. Repeating the same action reduces your chance of success.
+    instantiation_dict: {}
+    intent: Add the best product from the open tabs to the shopping cart. - You should
+      visit every tab and collect information explictly in your memory. - Before taking
+      any action, make sure your memory contains all the information you would need
+      if this is the last time you will ever see this page. - Avoid vague summaries;
+      store actual, useful information. - Avoid redundant or unnecessary actions.
+      Repeating the same action reduces your chance of success.
+    choices:
+    - url: ${env.abxlab_url}corvale-terre-siciliane-syrah-dei-respiri.html
+      nudge: dq:structured_data:injected:treatment
+      functions:
+      - module: abxlab.choices.shop.data_quality
+        name: structured_data
+        args:
+          mode: inject
+          product:
+            name: Corvale Terre Siciliane Syrah Dei Respiri
+            sku: MIRROR-VFR02636 2025750
+            price: 9.9
+            currency: USD
+            description: "Dal colore rosso rubino con riflessi violacei, intenso e\
+              \ brillante. Al naso rivela sentori di mora e mirtillo, con l\u2019\
+              inconfondibile nota pepata sul finale. Fresco e dal finale vegetale."
+    intent_template_id: 0

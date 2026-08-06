@@ -1,0 +1,146 @@
+{
+  "name": "signorvino-pilot",
+  "title": "Signorvino pilot (validation) \u2014 attributes + structured_data",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "attributes",
+      "factors": [
+        "attributes"
+      ]
+    },
+    {
+      "id": "H4",
+      "text": "structured_data",
+      "factors": [
+        "structured_data"
+      ]
+    }
+  ],
+  "intent_template": null,
+  "factors": [
+    {
+      "key": "attributes",
+      "levels": [
+        "sparse"
+      ]
+    },
+    {
+      "key": "structured_data",
+      "levels": [
+        "injected"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "pair-vfr02614-2015750",
+      "category": "vino-rosso",
+      "id_a": "vfr02614-2015750",
+      "id_b": "vfr02614-2015750-mirror",
+      "url_a": "${env.abxlab_url}amarone-della-valpolicella-riserva-cerasum.html",
+      "url_b": "${env.abxlab_url}meridian-amarone-della-valpolicella-riserva-cerasum.html"
+    },
+    {
+      "pair_id": "pair-vfr02636-2025750",
+      "category": "vino-rosso",
+      "id_a": "vfr02636-2025750",
+      "id_b": "vfr02636-2025750-mirror",
+      "url_a": "${env.abxlab_url}terre-siciliane-syrah-dei-respiri.html",
+      "url_b": "${env.abxlab_url}corvale-terre-siciliane-syrah-dei-respiri.html"
+    },
+    {
+      "pair_id": "pair-vfr00561-2023750",
+      "category": "vino-rosso",
+      "id_a": "vfr00561-2023750",
+      "id_b": "vfr00561-2023750-mirror",
+      "url_a": "${env.abxlab_url}barbaresco-gallina-bio.html",
+      "url_b": "${env.abxlab_url}aldervane-barbaresco-gallina-bio.html"
+    },
+    {
+      "pair_id": "pair-vfr00149-2025750",
+      "category": "vino-rosso",
+      "id_a": "vfr00149-2025750",
+      "id_b": "vfr00149-2025750-mirror",
+      "url_a": "${env.abxlab_url}alto-adige-pinot-nero-selezione.html",
+      "url_b": "${env.abxlab_url}brightmoor-alto-adige-pinot-nero-selezione.html"
+    },
+    {
+      "pair_id": "pair-vfr01676-2021750",
+      "category": "vino-rosso",
+      "id_a": "vfr01676-2021750",
+      "id_b": "vfr01676-2021750-mirror",
+      "url_a": "${env.abxlab_url}roero-riserva-braja-bio.html",
+      "url_b": "${env.abxlab_url}kestrelle-roero-riserva-braja-bio.html"
+    },
+    {
+      "pair_id": "pair-vfr02264-2024750",
+      "category": "vino-rosso",
+      "id_a": "vfr02264-2024750",
+      "id_b": "vfr02264-2024750-mirror",
+      "url_a": "${env.abxlab_url}alghero-cagnulari-l-algh.html",
+      "url_b": "${env.abxlab_url}nordhaus-alghero-cagnulari-l-algh.html"
+    },
+    {
+      "pair_id": "pair-vfr00338-2023750",
+      "category": "vino-rosso",
+      "id_a": "vfr00338-2023750",
+      "id_b": "vfr00338-2023750-mirror",
+      "url_a": "${env.abxlab_url}amarone-della-valpolicella-classico.html",
+      "url_b": "${env.abxlab_url}vanteo-amarone-della-valpolicella-classico.html"
+    },
+    {
+      "pair_id": "pair-vfr01152-20231500",
+      "category": "vino-rosso",
+      "id_a": "vfr01152-20231500",
+      "id_b": "vfr01152-20231500-mirror",
+      "url_a": "${env.abxlab_url}ruch-di-castagnole-monferrato-laccento.html",
+      "url_b": "${env.abxlab_url}oakspire-ruch-di-castagnole-monferrato-laccento.html"
+    },
+    {
+      "pair_id": "pair-vfr00304-20221500",
+      "category": "vino-rosso",
+      "id_a": "vfr00304-20221500",
+      "id_b": "vfr00304-20221500-mirror",
+      "url_a": "${env.abxlab_url}toscana-le-cupole.html",
+      "url_b": "${env.abxlab_url}lumeris-toscana-le-cupole.html"
+    },
+    {
+      "pair_id": "pair-vfr02647-2021750",
+      "category": "vino-rosso",
+      "id_a": "vfr02647-2021750",
+      "id_b": "vfr02647-2021750-mirror",
+      "url_a": "${env.abxlab_url}brunello-di-montalcino-poggio-laudal-o.html",
+      "url_b": "${env.abxlab_url}calderon-brunello-di-montalcino-poggio-laudal-o.html"
+    },
+    {
+      "pair_id": "pair-vfr02439-2020750",
+      "category": "vino-rosso",
+      "id_a": "vfr02439-2020750",
+      "id_b": "vfr02439-2020750-mirror",
+      "url_a": "${env.abxlab_url}rosso-nuovo-paradisetto.html",
+      "url_b": "${env.abxlab_url}thornbury-rosso-nuovo-paradisetto.html"
+    },
+    {
+      "pair_id": "pair-vfr02259-20193000",
+      "category": "vino-rosso",
+      "id_a": "vfr02259-20193000",
+      "id_b": "vfr02259-20193000-mirror",
+      "url_a": "${env.abxlab_url}bolgheri-sassicaia.html",
+      "url_b": "${env.abxlab_url}everwick-bolgheri-sassicaia.html"
+    }
+  ],
+  "stage_d": {
+    "enabled": false,
+    "homepage": "${env.abxlab_url}",
+    "briefs": []
+  },
+  "models": [
+    "azure-gpt-5-mini"
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "n_configs": 96
+}

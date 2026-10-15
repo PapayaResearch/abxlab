@@ -262,12 +262,13 @@ Reach out to us! We have hundreds of GBs of data.
 
 If you use `ABxLab` in your research, please cite the following paper:
 ```bibtex
-@article{cherep2025abxlab,
- title={A Framework for Studying AI Agent Behavior: Evidence from Consumer Choice Experiments},
- author={Cherep, Manuel and Ma, Chengtian and Xu, Abigail and Shaked, Maya and Maes, Pattie and Singh, Nikhil},
- booktitle={The Fourteenth International Conference on Learning Representations},
- year={2026},
- url={https://arxiv.org/abs/2509.25609},
+@inproceedings{cherep2026framework,
+  title={A framework for studying ai agent behavior: Evidence from consumer choice experiments},
+  author={Cherep, Manuel and Ma, Chengtian and Xu, Abigail and Shaked, Maya and Maes, Pattie and Singh, Nikhil},
+  booktitle={International Conference on Learning Representations},
+  volume={2026},
+  pages={63296--63326},
+  year={2026}
 }
 ```
 
